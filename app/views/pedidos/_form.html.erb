@@ -1,0 +1,26 @@
+<%= simple_nested_form_for(@pedido) do |f| %>
+  <% if @pedido.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pedido.errors.count, "error") %> prohibited this pedido from being saved:</h2>
+
+      <ul>
+      <% @pedido.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<fieldset>
+  <div class="four columns">
+    <label>Cliente</label>
+      <%= f.collection_select :cliente_id, Cliente.all, :id, :nome %>
+  </div>
+  <div class="twelve columns">
+    <%= f.collection_check_boxes :outdoor_ids, Outdoor.all, :id, :full_title %>
+
+  </div>
+  </fieldset>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

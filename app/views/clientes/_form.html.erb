@@ -1,0 +1,71 @@
+<%= form_for(@cliente) do |f| %>
+  <% if @cliente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+
+      <ul>
+      <% @cliente.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <fieldset>
+    <legend>Dados pessoais</legend>
+
+  <div class="six columns">
+    <label>Nome</label>
+    <%= f.text_field :nome, :placeholder => "" %>
+  </div>
+  <div class="six columns">
+    <label>CPF</label>
+    <%= f.text_field :cpf, :placeholder => "" %>
+  </div>
+  <div class="six columns">
+    <label>E-mail</label>
+    <%= f.email_field :email, :placeholder => "" %>
+  </div>
+  <div class="six columns">
+    <label>Telefone</label>
+    <%= f.telephone_field :tel, :placeholder => "" %>
+  </div>
+</fieldset>
+<fieldset>
+    <legend>Dados da empresa</legend>
+  <div class="six columns">
+    <label>Empresa</label>
+    <%= f.text_field :empresa, :placeholder => "" %>
+  </div>
+  <div class="three columns">
+    <label>Razão Social</label>
+    <%= f.text_field :razao, :placeholder => "" %>
+  </div>
+  <div class="three columns">
+    <label>CNPJ</label>
+    <%= f.text_field :cnpj, :placeholder => "" %>
+  </div>
+    <div class="twelve columns">
+      <label>Endereço</label>
+      <%= f.text_field :endereco, :placeholder => "" %>
+    </div>
+    <div class="three columns">
+      <label>Bairro</label>
+      <%= f.text_field :bairro, :placeholder => "" %>
+    </div>
+    <div class="three columns">
+      <label>Cidade</label>
+      <%= f.text_field :cidade, :placeholder => "" %>
+    </div>
+    <div class="three columns">
+      <label>Estado</label>
+      <%= f.select( :estado, {"AC"=>"Acre", "AL"=>"Alagoas", "AM"=>"Amazonas", "AP"=>"Amapá","BA"=>"Bahia","CE"=>"Ceará","DF"=>"Distrito Federal","ES"=>"Espírito Santo","GO"=>"Goiás","MA"=>"Maranhão","MT"=>"Mato Grosso","MS"=>"Mato Grosso do Sul","MG"=>"Minas Gerais","PA"=>"Pará","PB"=>"Paraíba","PR"=>"Paraná","PE"=>"Pernambuco","PI"=>"Piauí","RJ"=>"Rio de Janeiro","RN"=>"Rio Grande do Norte","RO"=>"Rondônia","RS"=>"Rio Grande do Sul","RR"=>"Roraima","SC"=>"Santa Catarina","SE"=>"Sergipe","SP"=>"São Paulo","TO"=>"Tocantins"}) %>
+    </div>
+    <div class="three columns">
+      <label>CEP</label>
+      <%= f.text_field :cep, :placeholder => "" %>
+    </div>
+</fieldset>
+  <div class="actions">
+    <%= f.submit :class => "button" %>
+  </div>
+<% end %>

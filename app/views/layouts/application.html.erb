@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Uncomment to make IE8 render like IE7 -->
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  
+	<!-- Included CSS Files -->
+	<%= stylesheet_link_tag    "application" %>
+	
+	<!-- Included JS Files  -->
+	<%= javascript_include_tag "application" %>
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <nav class="top-bar">
+    <ul>
+      <li class="name"><h1><a href="#">Mídia Externa</a></h1></li>
+      <li class="toggle-topbar"><a href="#"></a></li>
+    </ul>
+
+    
+  <section>
+      <ul class="right">
+        <li class="has-dropdown">
+          <a href="#">Link</a>
+
+          <ul class="dropdown"><li class="title back js-generated" style=""><h5><a href="#">Link</a></h5></li>
+            <li><a href="#">Dropdown Link</a></li>
+            <li><a href="#">Dropdown Link</a></li>
+            <li><a href="#">Dropdown Link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+</nav>
+  <%= flash_messages %>
+  <aside class="two columns">
+    <ul class="nav-bar vertical">
+      <li class="has-flyout">
+        <%= link_to "Cliente", clientes_path %>
+        <a href="#" class="flyout-toggle"><span> </span></a>
+        <ul class="flyout">
+          <li><%= link_to "Adicionar", new_cliente_path %></li>
+        </ul>
+      </li>
+      <li class="has-flyout">
+        <%= link_to "Outdoor", outdoors_path %>
+        <a href="#" class="flyout-toggle"><span> </span></a>
+        <ul class="flyout">
+          <li><%= link_to "Adicionar", new_outdoor_path %></li>
+        </ul>
+      </li>
+      <li class="has-flyout">
+        <%= link_to "Pedido", pedidos_path %>
+        <a href="#" class="flyout-toggle"><span> </span></a>
+        <ul class="flyout">
+          <li><%= link_to "Adicionar", new_pedido_path %></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+  <div class="ten columns">
+  	<%= yield %>
+  </div>
+</body>
+</html>

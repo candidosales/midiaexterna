@@ -1,0 +1,44 @@
+<%= form_for(@outdoor) do |f| %>
+  <% if @outdoor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@outdoor.errors.count, "error") %> prohibited this outdoor from being saved:</h2>
+
+      <ul>
+      <% @outdoor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <fieldset>
+    <legend>Dados de localização</legend>
+  <div class="four columns">
+    <label>Número</label>
+    <%= f.number_field :numero %>
+  </div>
+ 
+    <div class="eight columns">
+      <label>Endereço</label>
+      <%= f.text_field :endereco, :placeholder => "" %>
+    </div>
+    <div class="three columns">
+      <label>Bairro</label>
+      <%= f.text_field :bairro, :placeholder => "" %>
+    </div>
+    <div class="three columns">
+      <label>Cidade</label>
+      <%= f.text_field :cidade, :placeholder => "" %>
+    </div>
+    <div class="three columns">
+      <label>Estado</label>
+       <%= f.select( :estado, {"AC"=>"Acre", "AL"=>"Alagoas", "AM"=>"Amazonas", "AP"=>"Amapá","BA"=>"Bahia","CE"=>"Ceará","DF"=>"Distrito Federal","ES"=>"Espírito Santo","GO"=>"Goiás","MA"=>"Maranhão","MT"=>"Mato Grosso","MS"=>"Mato Grosso do Sul","MG"=>"Minas Gerais","PA"=>"Pará","PB"=>"Paraíba","PR"=>"Paraná","PE"=>"Pernambuco","PI"=>"Piauí","RJ"=>"Rio de Janeiro","RN"=>"Rio Grande do Norte","RO"=>"Rondônia","RS"=>"Rio Grande do Sul","RR"=>"Roraima","SC"=>"Santa Catarina","SE"=>"Sergipe","SP"=>"São Paulo","TO"=>"Tocantins"}) %>
+    </div>
+   <div class="three columns">
+    <label>Posição</label>
+    <%= f.select(:posicao,{"Inclinado"=>"inclinado", "De frente"=> "frente"}) %>
+  </div>
+</fieldset>
+  <div class="actions">
+    <%= f.submit :class => "button" %>
+  </div>
+<% end %>

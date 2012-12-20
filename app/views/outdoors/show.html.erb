@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Numero:</b>
+  <%= @outdoor.numero %>
+</p>
+
+<p>
+  <b>Endereco:</b>
+  <%= @outdoor.endereco %>
+</p>
+
+<p>
+  <b>Bairro:</b>
+  <%= @outdoor.bairro %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%= @outdoor.cidade %>
+</p>
+
+<p>
+  <b>Posicao:</b>
+  <%= @outdoor.posicao %>
+</p>
+
+
+<%= link_to 'Edit', edit_outdoor_path(@outdoor) %> |
+<%= link_to 'Back', outdoors_path %>

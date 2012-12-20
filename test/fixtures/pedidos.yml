@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  criado_em: 2012-12-20 02:05:36
+
+two:
+  criado_em: 2012-12-20 02:05:36
