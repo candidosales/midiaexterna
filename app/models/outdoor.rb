@@ -5,7 +5,8 @@ class Outdoor
   field :bairro, type: String
   field :cidade, type: String
   field :estado, type: String
-  field :posicao, type: String
+  field :sentido, type: String
+  field :status, type: String, default: "aberto"
 
   has_and_belongs_to_many :pedidos
 

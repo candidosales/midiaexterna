@@ -1,5 +1,21 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+  <b>Cliente:</b>
+  <%= @pedido.cliente.nome %>
+</p>
+
+<p>
+  <b>Início da reserva:</b>
+  <%= @pedido.inicio_reserva %>
+</p>
+
+<p>
+  <b>Término da reserva:</b>
+  <%= @pedido.termino_reserva %>
+</p>
+
 <p>
   <b>Criado em:</b>
   <%= @pedido.criado_em %>

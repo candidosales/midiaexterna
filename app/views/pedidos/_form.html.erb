@@ -11,16 +11,24 @@
     </div>
   <% end %>
 <fieldset>
-  <div class="four columns">
+  <div class="five columns">
     <label>Cliente</label>
       <%= f.collection_select :cliente_id, Cliente.all, :id, :nome %>
   </div>
+  <div class="five columns">
+    <label>Início da reserva</label>
+    <%= f.date_select :inicio_reserva, {:order => [:day, :month, :year], :date_separator => "/"},{:class => "select_date"}  %>
+    <label>Término da reserva</label>
+    <%= f.date_select :termino_reserva, {:order => [:day, :month, :year], :date_separator => "/"},{:class => "select_date"} %>
+  </div>
   <div class="twelve columns">
-    <%= f.collection_check_boxes :outdoor_ids, Outdoor.all, :id, :full_title %>
+    <label>Escolha os outdoors</label>
+    <%= f.collection_check_boxes :outdoor_ids, Outdoor.all, :id, :full_title, :wrapper_html => { :class => 'options' } %>
 
   </div>
+
   </fieldset>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "button" %>
   </div>
 <% end %>

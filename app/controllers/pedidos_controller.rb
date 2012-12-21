@@ -3,32 +3,21 @@ class PedidosController < ApplicationController
   # GET /pedidos.json
   def index
     @pedidos = Pedido.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @pedidos }
-    end
+    respond_with @pedidos
   end
 
   # GET /pedidos/1
   # GET /pedidos/1.json
   def show
     @pedido = Pedido.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @pedido }
-    end
+    respond_with @pedido
   end
 
   # GET /pedidos/new
   # GET /pedidos/new.json
   def new
     @pedido = Pedido.new
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @pedido }
-    end
+    respond_with @pedido
   end
 
   # GET /pedidos/1/edit
@@ -40,32 +29,21 @@ class PedidosController < ApplicationController
   # POST /pedidos.json
   def create
     @pedido = Pedido.new(params[:pedido])
-
-    respond_to do |format|
-      if @pedido.save
-        format.html { redirect_to @pedido, notice: 'Pedido was successfully created.' }
-        format.json { render json: @pedido, status: :created, location: @pedido }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @pedido.errors, status: :unprocessable_entity }
-      end
+    @pedido.outdoor_ids.each do |o|
+      outdoor = Outdoor.find(o);
+      outdoor.status = "reservado";
+      outdoor.update_attributes();
     end
+    flash[:notice] = 'Pedido foi criado com sucesso.' if @pedido.save
+    respond_with @pedido
   end
 
   # PUT /pedidos/1
   # PUT /pedidos/1.json
   def update
     @pedido = Pedido.find(params[:id])
-
-    respond_to do |format|
-      if @pedido.update_attributes(params[:pedido])
-        format.html { redirect_to @pedido, notice: 'Pedido was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @pedido.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:notice] = 'Pedido foi atualizado com sucesso.' if @pedido.update_attributes(params[:pedido])
+    respond_with @pedido
   end
 
   # DELETE /pedidos/1
@@ -73,10 +51,6 @@ class PedidosController < ApplicationController
   def destroy
     @pedido = Pedido.find(params[:id])
     @pedido.destroy
-
-    respond_to do |format|
-      format.html { redirect_to pedidos_url }
-      format.json { head :no_content }
-    end
+    respond_with @pedido
   end
 end

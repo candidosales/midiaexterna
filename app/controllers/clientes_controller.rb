@@ -37,7 +37,7 @@ class ClientesController < ApplicationController
   # PUT /clientes/1.json
   def update
     @cliente = Cliente.find(params[:id])
-    flash[:notice] = 'CLiente foi atualizado com sucesso.' if @cliente.update_attributes(params[:cliente])
+    flash[:notice] = 'Cliente foi atualizado com sucesso.' if @cliente.update_attributes(params[:cliente])
     respond_with @cliente
   end
 

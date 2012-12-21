@@ -3,33 +3,21 @@ class OutdoorsController < ApplicationController
   # GET /outdoors.json
   def index
     @outdoors = Outdoor.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @outdoors }
-    end
+    respond_with @outdoors
   end
 
   # GET /outdoors/1
   # GET /outdoors/1.json
   def show
     @outdoor = Outdoor.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @outdoor }
-    end
+    respond_with @outdoor
   end
 
   # GET /outdoors/new
   # GET /outdoors/new.json
   def new
     @outdoor = Outdoor.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @outdoor }
-    end
+    respond_with @outdoor
   end
 
   # GET /outdoors/1/edit
@@ -41,32 +29,16 @@ class OutdoorsController < ApplicationController
   # POST /outdoors.json
   def create
     @outdoor = Outdoor.new(params[:outdoor])
-
-    respond_to do |format|
-      if @outdoor.save
-        format.html { redirect_to @outdoor, notice: 'Outdoor was successfully created.' }
-        format.json { render json: @outdoor, status: :created, location: @outdoor }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @outdoor.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:notice] = 'Outdoor foi criado com sucesso.' if @outdoor.save
+    respond_with @outdoor
   end
 
   # PUT /outdoors/1
   # PUT /outdoors/1.json
   def update
     @outdoor = Outdoor.find(params[:id])
-
-    respond_to do |format|
-      if @outdoor.update_attributes(params[:outdoor])
-        format.html { redirect_to @outdoor, notice: 'Outdoor was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @outdoor.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:notice] = 'Outdoor foi atualizado com sucesso.' if @outdoor.update_attributes(params[:outdoor])
+    respond_with @outdoor
   end
 
   # DELETE /outdoors/1
@@ -74,10 +46,6 @@ class OutdoorsController < ApplicationController
   def destroy
     @outdoor = Outdoor.find(params[:id])
     @outdoor.destroy
-
-    respond_to do |format|
-      format.html { redirect_to outdoors_url }
-      format.json { head :no_content }
-    end
+    respond_with @outdoor
   end
 end

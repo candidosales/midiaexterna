@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Cliente</th>
     <th>Criado em</th>
     <th></th>
     <th></th>
@@ -10,6 +11,7 @@
 
 <% @pedidos.each do |pedido| %>
   <tr>
+    <td><%= pedido.cliente.nome %></td>
     <td><%= pedido.criado_em %></td>
     <td><%= link_to 'Show', pedido %></td>
     <td><%= link_to 'Edit', edit_pedido_path(pedido) %></td>
