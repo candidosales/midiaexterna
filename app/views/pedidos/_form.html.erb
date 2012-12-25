@@ -17,9 +17,9 @@
   </div>
   <div class="five columns">
     <label>Início da reserva</label>
-    <%= f.date_select :inicio_reserva, {:order => [:day, :month, :year], :date_separator => "/"},{:class => "select_date"}  %>
+    <%= f.date_select :inicio_reserva, {:order => [:day, :month, :year], :date_separator => "/", :start_year => Time.now.year},{:class => "select_date"}  %>
     <label>Término da reserva</label>
-    <%= f.date_select :termino_reserva, {:order => [:day, :month, :year], :date_separator => "/"},{:class => "select_date"} %>
+    <%= f.date_select :termino_reserva, {:order => [:day, :month, :year], :date_separator => "/", :start_year => Time.now.year},{:class => "select_date"} %>
   </div>
   <div class="twelve columns">
     <label>Escolha os outdoors</label>

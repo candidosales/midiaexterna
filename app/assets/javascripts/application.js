@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.maskedinput-1.3.min
+//= require jquery.price_format.1.7.min
 //= require foundation
 //= require_tree .

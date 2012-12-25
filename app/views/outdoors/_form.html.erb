@@ -26,6 +26,10 @@
       <%= f.text_field :bairro, :placeholder => "" %>
     </div>
     <div class="three columns">
+      <label>Ponto de referência</label>
+      <%= f.text_field :ponto_referencia, :placeholder => "" %>
+    </div>
+    <div class="three columns">
       <label>Cidade</label>
       <%= f.text_field :cidade, :placeholder => "" %>
     </div>
@@ -33,9 +37,13 @@
       <label>Estado</label>
        <%= f.select( :estado, {"AC"=>"Acre", "AL"=>"Alagoas", "AM"=>"Amazonas", "AP"=>"Amapá","BA"=>"Bahia","CE"=>"Ceará","DF"=>"Distrito Federal","ES"=>"Espírito Santo","GO"=>"Goiás","MA"=>"Maranhão","MT"=>"Mato Grosso","MS"=>"Mato Grosso do Sul","MG"=>"Minas Gerais","PA"=>"Pará","PB"=>"Paraíba","PR"=>"Paraná","PE"=>"Pernambuco","PI"=>"Piauí","RJ"=>"Rio de Janeiro","RN"=>"Rio Grande do Norte","RO"=>"Rondônia","RS"=>"Rio Grande do Sul","RR"=>"Roraima","SC"=>"Santa Catarina","SE"=>"Sergipe","SP"=>"São Paulo","TO"=>"Tocantins"}) %>
     </div>
-   <div class="three columns">
+   <div class="five columns">
     <label>Sentido</label>
     <%= f.select(:sentido,{"Inclinado"=>"inclinado", "De frente"=> "frente", "Mão dupla"=> "mao_dupla"}) %>
+  </div>
+  <div class="three columns">
+    <label>Valor do aluguel</label>
+    <%= f.number_field :valor, :placeholder => "" %>
   </div>
 </fieldset>
   <div class="actions">

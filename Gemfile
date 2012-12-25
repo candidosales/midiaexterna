@@ -8,6 +8,7 @@ gem 'rails', '3.2.9'
 #Mongo
 gem 'mongoid', '~> 3.0.14'
 gem 'bson_ext'
+gem 'money-rails'
 
 gem 'nested_form'
 gem 'simple_form'
