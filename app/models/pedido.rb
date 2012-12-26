@@ -1,7 +1,7 @@
 class Pedido
   include Mongoid::Document
   include Mongoid::MultiParameterAttributes 
-  
+
   field :criado_em, type: Time, default: Time.current
   field :status, type: String, default: "aberto"
   field :valor, type: Money
@@ -12,4 +12,15 @@ class Pedido
   belongs_to :cliente, class_name: "Cliente"
   has_and_belongs_to_many :outdoors
  
+  def periodo_reserva
+  	%{#{inicio_reserva} ate #{termino_reserva}}
+  end
+
+  def outdoors_selecionados
+  	
+  end
+
+  def outdoors_nao_selecionados
+  end
+
 end
