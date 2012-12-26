@@ -13,6 +13,6 @@ class Outdoor
   has_and_belongs_to_many :pedidos
 
   def full_title
-  	%{#{numero} - #{endereco}, #{bairro}, #{sentido}}
+  	%{#{numero} - #{endereco}, #{bairro}, #{sentido}, #{status}}
   end
 end

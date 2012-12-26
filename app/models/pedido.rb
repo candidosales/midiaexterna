@@ -1,6 +1,10 @@
 class Pedido
   include Mongoid::Document
+  include Mongoid::MultiParameterAttributes 
+  
   field :criado_em, type: Time, default: Time.current
+  field :status, type: String, default: "aberto"
+  field :valor, type: Money
 
   field :inicio_reserva, type: Date
   field :termino_reserva, type: Date

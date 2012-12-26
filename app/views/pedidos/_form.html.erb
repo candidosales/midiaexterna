@@ -23,7 +23,7 @@
   </div>
   <div class="twelve columns">
     <label>Escolha os outdoors</label>
-    <%= f.collection_check_boxes :outdoor_ids, Outdoor.all, :id, :full_title, :wrapper_html => { :class => 'options' } %>
+    <%= f.collection_check_boxes :outdoor_ids, Outdoor.where(:status => 'aberto'), :id, :full_title, :wrapper_html => { :class => 'options' } %>
 
   </div>
 
