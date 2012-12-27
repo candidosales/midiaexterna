@@ -1,0 +1,11 @@
+
+<% @reservas.each do |r| %>
+<ul>
+	<% r.outdoors.each do |o| %>
+		<li><%= o.numero %></li>
+	<% end %>
+</ul>
+
+<% @outdoors.each do |o| %>
+	<p><%= o.numero %></p>
+<% end %>

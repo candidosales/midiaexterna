@@ -15,7 +15,7 @@ class Cliente
   field :cep, type: String
   field :razao, type: String
 
-  has_one :pedido, inverse_of: :cliente
+  has_one :reserva, inverse_of: :cliente
 
   validates_presence_of :nome, :email
 end

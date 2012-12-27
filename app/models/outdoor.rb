@@ -10,11 +10,13 @@ class Outdoor
   field :sentido, type: String
   field :ponto_referencia, type: String
   field :valor, type: Money
-  field :status, type: String, default: "aberto"
 
-  has_and_belongs_to_many :pedidos
+  has_and_belongs_to_many :reservas
+
+  default_scope asc :numero
+
 
   def full_title
-  	%{#{numero} - #{endereco}, #{bairro}, #{sentido}, #{status}}
+  	%{#{numero} - #{endereco}, #{bairro}, #{sentido}}
   end
 end

@@ -1,5 +1,5 @@
 App::Application.routes.draw do
-  resources :pedidos
+  resources :reservas
 
 
   resources :outdoors
@@ -7,7 +7,7 @@ App::Application.routes.draw do
 
   resources :clientes
 
-  controller :pedidos do
+  controller :reservas do
      post '/pedidos/search_outdoor_available', :action => :search_outdoor_available
   end
 

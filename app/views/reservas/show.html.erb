@@ -1,0 +1,27 @@
+<p>
+  <b>Cliente:</b>
+  <%= @reserva.cliente.nome %>
+</p>
+
+<p>
+  <b>Início da reserva:</b>
+  <%= @reserva.inicio_reserva %>
+</p>
+
+<p>
+  <b>Término da reserva:</b>
+  <%= @reserva.termino_reserva %>
+</p>
+
+<p>
+	<b>Outdoors</b>
+	<ul>
+		<% @reserva.outdoors.each do |o| %>
+		<li><%= "#{o.numero}, #{o.endereco}" %></li>
+		<% end %>
+	</ul>
+</p>
+
+
+<%= link_to 'Edit', edit_reserva_path(@reserva) %> |
+<%= link_to 'Back', reservas_path %>
