@@ -31,7 +31,7 @@
                 .complete ->
                     toggleLoading
                 .success (data)->
-                    $('#outdoors_available').html data 
+                    $('#'+target).html data 
 
                 false
 
