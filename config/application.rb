@@ -64,5 +64,8 @@ module App
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Variável de configuração do ember.js
+    config.ember.variant = :development
   end
 end

@@ -7,6 +7,10 @@ App::Application.routes.draw do
 
   resources :clientes
 
+  controller :pedidos do
+     post '/pedidos/search_outdoor_available', :action => :search_outdoor_available
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

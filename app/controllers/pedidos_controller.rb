@@ -16,8 +16,11 @@ class PedidosController < ApplicationController
   # GET /pedidos/new
   # GET /pedidos/new.json
   def new
-    @pedido = Pedido.new
-    respond_with @pedido
+    #@pedido = Pedido.new
+    #respond_with @pedido
+    if(params.has_key?(:inicio_periodo))
+      params[:inicio_periodo]
+    end
   end
 
   # GET /pedidos/1/edit
@@ -52,5 +55,18 @@ class PedidosController < ApplicationController
     @pedido = Pedido.find(params[:id])
     @pedido.destroy
     respond_with @pedido
+  end
+
+  def search_outdoor_available
+    puts "Aquiooh"+params[:authenticity_token]
+
+    if(params.has_key?(:inicio_periodo))
+      @resposta = params[:inicio_periodo]
+    else
+      @resposta = Pedido.last.status
+    end
+
+    render :partial => 'search_outdoor_available', :content_type => 'text/html'
+
   end
 end

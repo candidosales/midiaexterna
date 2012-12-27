@@ -1,5 +1,7 @@
 class Cliente
   include Mongoid::Document
+  include Mongoid::Timestamps
+  
   field :nome, type: String
   field :email, type: String
   field :tel, type: String

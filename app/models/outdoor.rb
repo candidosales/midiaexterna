@@ -1,5 +1,7 @@
 class Outdoor
   include Mongoid::Document
+  include Mongoid::Timestamps
+  
   field :numero, type: Integer
   field :endereco, type: String
   field :bairro, type: String

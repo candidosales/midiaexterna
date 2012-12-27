@@ -9,9 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+
+ *= require jquery.ui.datepicker
+
  *= require foundation_and_overrides
  *= require_tree .
  */
+ .ui-datepicker th{font-size: 12px}
 input[type="checkbox"] {float:left;}
 span{width: 100%;float:left;margin-bottom: 10px;}
 .collection_check_boxes{
@@ -22,3 +26,5 @@ span{width: 100%;float:left;margin-bottom: 10px;}
  	width:100px;
  	margin-bottom: 15px;
  }
+
+.ui-datepicker-title span{width: auto;margin-left: 15px}

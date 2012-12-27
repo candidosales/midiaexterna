@@ -9,6 +9,7 @@ gem 'rails', '3.2.9'
 gem 'mongoid', '~> 3.0.14'
 gem 'bson_ext'
 gem 'money-rails'
+gem 'ember-rails'
 
 gem 'nested_form'
 gem 'simple_form'
@@ -28,6 +29,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

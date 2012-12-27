@@ -1,8 +1,8 @@
 class Pedido
   include Mongoid::Document
   include Mongoid::MultiParameterAttributes 
+  include Mongoid::Timestamps
 
-  field :criado_em, type: Time, default: Time.current
   field :status, type: String, default: "aberto"
   field :valor, type: Money
 
@@ -20,7 +20,10 @@ class Pedido
   	
   end
 
-  def outdoors_nao_selecionados
+  def outdoors_abertos_periodo(options={})
+    inicio = options.fetch(:inicio_reserva, '');
+    fim = options.fetch(:termino_reserva, '');
+   # p = Pedido.find({}, outdoors: {$and: [{inicio_reserva: {$gte: inicio}, {termino_reserva: {$lte: fim} }]})
   end
-
+  
 end
