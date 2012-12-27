@@ -50,16 +50,21 @@ class ReservasController < ApplicationController
   end
 
   def search_outdoor_available
-
+    @reserva = Reserva.new
     numeros = Array.new
     if(params.has_key?(:inicio_periodo) && params.has_key?(:termino_periodo) )
       @reservas = Reserva.includes(:outdoors).gte(inicio_reserva: params[:inicio_periodo]).lte(termino_reserva: params[:termino_periodo])
-      @reservas.each do |r|
-        r.outdoors.each do |o|
-          numeros.push o.numero
+      if(@reservas.count > 0 )
+        @reservas.each do |r|
+          r.outdoors.each do |o|
+            numeros.push o.numero
+          end
+          @outdoors = Outdoor.nin(numero: numeros)
         end
-        @outdoors << Outdoor.nin(numero: numeros)
+      else
+        @outdoors = Outdoor.all
       end
+      @count = @outdoors.count
     end
 
     render :partial => 'search_outdoor_available', :content_type => 'text/html'

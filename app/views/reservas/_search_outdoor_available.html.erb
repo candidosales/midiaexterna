@@ -1,11 +1,16 @@
-
-<% @reservas.each do |r| %>
-<ul>
-	<% r.outdoors.each do |o| %>
-		<li><%= o.numero %></li>
-	<% end %>
-</ul>
-
-<% @outdoors.each do |o| %>
-	<p><%= o.numero %></p>
+<%= form_for @reserva do |f| %>
+<fieldset>
+   <legend>Outdoors disponíveis</legend>
+  <div class="six columns">
+  	<%= f.collection_check_boxes :outdoor_ids, @outdoors, :id, :full_title, :wrapper_html => { :class => 'options' } %>
+  </div>
+  <div class="six columns">
+    <label>Cliente</label>
+      <%= f.collection_select :cliente_id, Cliente.all, :id, :nome %>
+  </div>
+  <hr/>
+  <div class="twelve columns">
+  	<%= f.submit :class => "button" %>
+  </div>
+</fieldset>
 <% end %>

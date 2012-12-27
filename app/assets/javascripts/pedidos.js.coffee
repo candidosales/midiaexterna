@@ -20,7 +20,7 @@
             toggleLoading = -> $("#loading").toggle()
 
 
-            $('form[data-update-target]').submit ->   
+            $('form[data-update-target]').bind 'submit change',  ->   
                 target = $(this).data 'update-target'
                 $.ajax({
                     url: $(this).attr('action'), 

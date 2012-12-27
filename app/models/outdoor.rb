@@ -17,6 +17,6 @@ class Outdoor
 
 
   def full_title
-  	%{#{numero} - #{endereco}, #{bairro}, #{sentido}}
+  	%{#{numero} - #{endereco}, #{bairro}, #{sentido}, #{valor}}
   end
 end
