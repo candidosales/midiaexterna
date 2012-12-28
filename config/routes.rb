@@ -1,4 +1,9 @@
 App::Application.routes.draw do
+  
+  root :to => "home#index"
+
+  devise_for :usuarios
+
   resources :reservas
 
 
@@ -10,6 +15,8 @@ App::Application.routes.draw do
   controller :reservas do
      post '/pedidos/search_outdoor_available', :action => :search_outdoor_available
   end
+
+
 
 
   # The priority is based upon order of creation:

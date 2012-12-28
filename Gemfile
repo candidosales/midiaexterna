@@ -11,6 +11,8 @@ gem 'bson_ext'
 gem 'money-rails'
 gem 'ember-rails'
 
+gem 'devise'
+
 gem 'nested_form'
 gem 'simple_form'
 

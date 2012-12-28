@@ -22,6 +22,11 @@
 	</ul>
 </p>
 
+<p>
+  <b>Valor:</b>
+  <%= humanized_money_with_symbol @reserva.valor %>
+</p>
+
 
 <%= link_to 'Edit', edit_reserva_path(@reserva) %> |
 <%= link_to 'Back', reservas_path %>

@@ -1,15 +1,5 @@
 <%= simple_nested_form_for(@reserva) do |f| %>
-  <% if @reserva.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@reserva.errors.count, "error") %> prohibited this reserva from being saved:</h2>
-
-      <ul>
-      <% @reserva.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+   <%= error_messages_for @reserva %>
 <fieldset>
   <div class="five columns">
     <label>Cliente</label>
@@ -17,12 +7,15 @@
   </div>
   <div class="five columns">
     <label>Início da reserva</label>
-    <%= f.date_select :inicio_reserva, {:order => [:day, :month, :year], :date_separator => "/", :start_year => Time.now.year},{:class => "select_date"}  %>
+    <input type="text" id="inicio_periodo" name="inicio_periodo" value="<%= @reserva.inicio_reserva%>"/>
     <label>Término da reserva</label>
-    <%= f.date_select :termino_reserva, {:order => [:day, :month, :year], :date_separator => "/", :start_year => Time.now.year},{:class => "select_date"} %>
+    <input type="text" id="termino_periodo" name="termino_periodo" value="<%= @reserva.termino_reserva%>"/>
+    <label>Valor</label>
+     <div id="valor"></div>
+     <%= f.hidden_field :valor %>
   </div>
   <div class="twelve columns">
-    <label>Escolha os outdoors</label>
+    <label>Outdoors da reserva</label>
     <%= f.collection_check_boxes :outdoor_ids, Outdoor.all, :id, :full_title, :wrapper_html => { :class => 'options' } %>
 
   </div>

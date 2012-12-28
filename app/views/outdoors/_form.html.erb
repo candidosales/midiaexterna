@@ -1,15 +1,5 @@
 <%= form_for(@outdoor) do |f| %>
-  <% if @outdoor.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@outdoor.errors.count, "error") %> prohibited this outdoor from being saved:</h2>
-
-      <ul>
-      <% @outdoor.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= error_messages_for @outdoor %>
   <fieldset>
     <legend>Dados de localização</legend>
   <div class="four columns">

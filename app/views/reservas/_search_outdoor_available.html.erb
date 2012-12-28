@@ -8,6 +8,13 @@
     <label>Cliente</label>
       <%= f.collection_select :cliente_id, Cliente.all, :id, :nome %>
   </div>
+  <div class="six columns">
+    <label>Valor</label>
+     <div id="valor"></div>
+     <%= f.hidden_field :valor %>
+     <%= f.hidden_field :inicio_reserva %>
+     <%= f.hidden_field :termino_reserva %>
+  </div>
   <hr/>
   <div class="twelve columns">
   	<%= f.submit :class => "button" %>
