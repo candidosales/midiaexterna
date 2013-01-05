@@ -10,12 +10,13 @@
  *
  *= require_self
 
- *= require jquery.ui.datepicker
-
- *= require screen
- *= require foundation_and_overrides
- *= require scaffolds
- *= require main
+ *= require lib/bootstrap
+ *= require lib/bootstrap-responsive
+ *= require extension
+ *= require boo
+ *= require boo-coloring
+ *= require boo-utility
+ 
  *= require_tree .
  */
 

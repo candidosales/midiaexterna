@@ -1,0 +1,93 @@
+ <nav class="top-bar">
+    <ul>
+      <li class="name"><h1><a href="#">Mídia Externa</a></h1></li>
+      <li class="toggle-topbar"><a href="#"></a></li>
+    </ul>
+
+    
+  <section>
+      <ul class="right">
+        <li class="has-dropdown">
+          <a href="#">Link</a>
+
+          <ul class="dropdown"><li class="title back js-generated" style=""><h5><a href="#">Link</a></h5></li>
+            <li><a href="#">Dropdown Link</a></li>
+            <li><a href="#">Dropdown Link</a></li>
+            <li><a href="#">Dropdown Link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+</nav>
+<div class="twelve columns">
+  <div class="header-drawer">
+                <div class="breadcrumbs-nav hidden-phone">
+                    <ul class="breadcrumb" id="breadcrumbs">
+                        <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
+                        <li class="dropdown"><a href="javascript:void(0);">Table </a> <span class="divider">/</span>
+                            <ul class="dropdown-menu" style="display: none;">
+                                <li><a href="javascript:void(0);">Table</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                                <li><a href="javascript:void(0);">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">Boo Admin </li>
+                    </ul>
+                </div>
+                <!-- // breadcrumbs --> 
+            </div>
+</div>
+  <%= flash_messages %>
+  <aside class="two columns">
+    <div class="sidebar sidebar-inverse">
+      <div class="sidebar-item">
+        <div class="media profile">
+          <div class="media-thumb media-left thumb-bordereb">
+           <a href="javascript:void(0);" class="img-shadow">
+             <%= image_tag("demo-avatar9604.jpg" , :class => "thumb-large") %>
+          </a> 
+        </div>
+            <div class="media-body">
+              <h5 class="media-heading">Cândido <small>Administrator</small></h5>
+              <p class="data">Último acesso: 16 May 15:30</p>
+            </div>
+          </div>
+      </div>
+      <ul id="mainSideMenu" class="nav nav-list nav-side">
+                <li class="accordion-group">
+                    <div class="accordion-heading"> <a href="#accDash" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-users"></span> <i class="chevron fontello-icon-right-open-3"></i> Clientes </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accDash">
+                        <li> <%= link_to "Listar", clientes_path %> </li>
+                        <li> <%= link_to "Adicionar", new_cliente_path %> </li>
+                    </ul>
+                </li>
+                <li class="accordion-group">
+                    <div class="accordion-heading active">
+                     <a href="#accForms" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle">
+                      <span class="item-icon aweso-icon-list-alt"></span>
+                      <i class="chevron fontello-icon-right-open-3"></i> Outdoor </a>
+                    </div>
+                    <ul class="accordion-content nav nav-list collapse in" id="accForms">
+                        <li> <%= link_to "Listar", outdoors_path %> </li>
+                        <li> <%= link_to "Adicionar", new_outdoor_path %> </li>
+                    </ul>
+                </li>
+                <li class="accordion-group">
+                    <div class="accordion-heading">
+                     <a href="#accTables" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle">
+                      <span class="item-icon fontello-icon-calendar"></span> <i class="chevron fontello-icon-right-open-3"></i> Reservas </a> </div>
+                    <ul class="accordion-content nav nav-list collapse" id="accTables">
+                      <li> <%= link_to "Listar", reservas_path %> </li>
+                        <li><%= link_to "Adicionar", new_reserva_path %></li>
+                    </ul>
+                </li>
+   
+            </ul>
+          </div>
+  </aside>
+  <div class="ten columns">
+  	<%= yield %>
+  </div>
+</body>
+</html>
