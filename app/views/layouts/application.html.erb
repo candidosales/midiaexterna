@@ -14,10 +14,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-  
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,900' rel='stylesheet' type='text/css'>
+
 	<!-- Included CSS Files -->
 	<%= stylesheet_link_tag    "application" %>
-	
+  
 	<!-- Included JS Files  -->
 	<%= javascript_include_tag "application" %>
   
@@ -47,6 +48,10 @@
 </nav>
   <%= flash_messages %>
   <aside class="two columns">
+    <section id="user">
+      <img src="http://placehold.it/100x100" />
+      <h5>Cândido Sales <br/> <small>administrador</small></h5>
+    </section>
     <ul class="nav-bar vertical">
       <li class="has-flyout">
         <%= link_to "Cliente", clientes_path %>
