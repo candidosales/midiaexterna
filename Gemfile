@@ -26,7 +26,6 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'compass-rails'
-  gem 'zurb-foundation'
   gem 'uglifier', '>= 1.0.3'
 end
 

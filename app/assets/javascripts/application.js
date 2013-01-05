@@ -75,8 +75,6 @@
 //= require datatables/plugin/jquery.dataTables.plugins 
 //= require datatables/plugin/jquery.dataTables.columnFilter  
 
-//= require main
-
-//= require demo/demo-dashboard1  
+//= require main 
 
 //= require_tree .

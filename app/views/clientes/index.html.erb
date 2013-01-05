@@ -1,37 +1,60 @@
-<h1>Listagem de clientes</h1>
+           <div id="main-content" class="main-content container-fluid">
+            <div class="row-fluid page-head">
+                <h2 class="page-title"><i class="fontello-icon-monitor"></i> Clientes</h2>
+                <p class="pagedesc">Todos os clientes cadastrados </p>
+                <div class="page-bar">
+                    <div class="btn-toolbar"> </div>
+                </div>
+            </div>
+            <!-- // page head -->
 
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Email</th>
-    <th>Tel</th>
-    <th>Cpf</th>
-    <th>Cnpj</th>
-    <th>Empresa</th>
-    <th>Cidade</th>
-    <th>Razao</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+            <div id="page-content" class="page-content">
+                <section>
+                    <div class="row-fluid margin-top20">
+                        <div class="span12">
+                            <div class="well well-box well-nice">
+                                <div class="navbar">
+                                    <div class="navbar-inner no-bg">
+                                        <h4 class="title"><i class="fontello-icon-window"></i> Listagem</h4>
+                                    </div>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Tel</th>
+                                        <th scope="col">Cpf</th>
+                                        <th scope="col">Cnpj</th>
+                                        <th scope="col">Empresa</th>
+                                        <th scope="col">Cidade</th>
+                                        <th scope="col">Razao</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
 
-<% @clientes.each do |cliente| %>
-  <tr>
-    <td><%= cliente.nome %></td>
-    <td><%= cliente.email %></td>
-    <td><%= cliente.tel %></td>
-    <td><%= cliente.cpf %></td>
-    <td><%= cliente.cnpj %></td>
-    <td><%= cliente.empresa %></td>
-    <td><%= cliente.cidade %></td>
-    <td><%= cliente.razao %></td>
-    <td><%= link_to 'Show', cliente %></td>
-    <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
-    <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'Novo Cliente', new_cliente_path, class: "button" %>
+                                <% @clientes.each do |cliente| %>
+                                <tr>
+                                    <td><%= cliente.nome %></td>
+                                    <td><%= cliente.email %></td>
+                                    <td><%= cliente.tel %></td>
+                                    <td><%= cliente.cpf %></td>
+                                    <td><%= cliente.cnpj %></td>
+                                    <td><%= cliente.empresa %></td>
+                                    <td><%= cliente.cidade %></td>
+                                    <td><%= cliente.razao %></td>
+                                    <td><%= link_to 'Show', cliente %></td>
+                                    <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
+                                    <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                                </tr>
+                                <% end %>
+                            </table>
+                            <br />
+                            <%= link_to 'Novo Cliente', new_cliente_path, class: "btn btn-blue" %>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
