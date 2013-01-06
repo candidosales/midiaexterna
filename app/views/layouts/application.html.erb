@@ -34,27 +34,14 @@
                 <input id="globalSearch" class="search search-query input-medium" type="search">
                 <a class="search-button" href="javascript:void(0);"><i class="fontello-icon-search-5"></i></a> </div>
                 <div class="nav-collapse collapse">
-                  <ul class="nav user-menu visible-desktop">
-                    <li><a class="btn-glyph fontello-icon-edit tip-bc" href="javascript:void(0);" title="Messages"><span class="badge badge-important">8</span></a></li>
-                    <li><a class="btn-glyph fontello-icon-mail-1 tip-bc" href="javascript:void(0);" title="Emails"></a></li>
-                    <li><a class="btn-glyph fontello-icon-lifebuoy tip-bc" href="javascript:void(0);" title="Support"><span class="badge badge-important">4</span></a></li>
-                  </ul>
                   <ul class="nav">
-                    <li class="active"> <a href="dashboard-one.html">Dashboard</a> </li>
-                    <li> <a href="javascript:void(0);">Components</a> </li>
-                    <li> <a href="component-fullcalendar-demo.html"><span class="fontello-icon-calendar"></span>Calendar</a> </li>
-                    <li> <a href="javascript:void(0);"><span class="fontello-icon-users"></span>Contacts</a> </li>
-                    <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Customize <b class="caret"></b></a>
+                    <li class="active"> <a href="dashboard-one.html">Painel</a> </li>
+                    <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Devise <b class="caret"></b></a>
                       <ul class="dropdown-menu">
-                        <li><a href="component-form-demo.html">Demo Form</a></li>
-                        <li><a href="component-widgets-remember.html">Remember</a></li>
-                        <li><a href="component-widgets-users.html">User List</a></li>
-                        <li class="divider"></li>
-                        <li class="nav-header">Next Update</li>
-                        <li><a href="javascript:void(0);">Contacts</a></li>
-                        <li><a href="javascript:void(0);">Email</a></li>
+                        <%= render 'shared/navigation' %>
                       </ul>
                     </li>
+
                   </ul>
                 </div>
               </div>
@@ -67,19 +54,16 @@
             <!-- // Resposive navigation -->
             <div class="breadcrumbs-nav hidden-phone">
               <ul id="breadcrumbs" class="breadcrumb">
-                <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
-                <li class="dropdown"><a href="javascript:void(0);">Table </a> <span class="divider">/</span>
-                  <ul class="dropdown-menu">
-                    <li><a href="javascript:void(0);">Table</a></li>
-                    <li><a href="javascript:void(0);">Elements</a></li>
-                    <li><a href="javascript:void(0);">Elements</a></li>
-                    <li><a href="javascript:void(0);">Elements</a></li>
-                  </ul>
-                </li>
-                <li class="active">Boo Admin </li>
+                <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Painel</a> <span class="divider">/</span></li>
+                <li class="active">Admin </li>
               </ul>
             </div>
             <!-- // breadcrumbs --> 
+            <% flash.each do |name, msg| %>
+              <% if msg.is_a?(String) %>
+                <%= content_tag :div, msg, :id => "flash_#{name}" %>
+              <% end %>
+            <% end %>
           </div>
           <!-- // drawer --> 
         </div>
@@ -88,18 +72,7 @@
 
       <div id="main-container">
         <div id="main-sidebar" class="sidebar sidebar-inverse">
-          <div class="sidebar-item">
-            <div class="media profile">
-              <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);">
-
-               <%= image_tag("demo-avatar9604.jpg") %>
-             </a> </div>
-             <div class="media-body">
-              <h5 class="media-heading">Twitter Bootstrap <small>as Administrator</small></h5>
-              <p class="data">Last Access: 16 May 15:30</p>
-            </div>
-          </div>
-        </div>
+        <%= render 'shared/profile' %>  
         <!-- // sidebar item - profile -->
 
         <%= render 'shared/menu_sidebar' %>
@@ -109,6 +82,7 @@
 
       </div>
       <!-- // sidebar -->
+
       <%= yield %>
 
     </div>

@@ -1,24 +1,15 @@
            <div id="main-content" class="main-content container-fluid">
-            <div class="row-fluid page-head">
-                <h2 class="page-title"><i class="fontello-icon-monitor"></i> Clientes</h2>
-                <p class="pagedesc">Todos os clientes cadastrados </p>
-                <div class="page-bar">
-                    <div class="btn-toolbar"> </div>
-                </div>
-            </div>
             <!-- // page head -->
 
             <div id="page-content" class="page-content">
                 <section>
                     <div class="row-fluid margin-top20">
                         <div class="span12">
-                            <div class="well well-box well-nice">
-                                <div class="navbar">
-                                    <div class="navbar-inner no-bg">
-                                        <h4 class="title"><i class="fontello-icon-window"></i> Listagem</h4>
-                                    </div>
+                            <div class="widget widget-box widget-table">
+                                <div class="widget-header">
+                                    <h4><i class="fontello-icon-users"></i> Listagem</h4>
                                 </div>
-                                <table class="table">
+                                <table class="table table-striped table-condensed table-content boo-table">
                                     <thead>
                                       <tr>
                                         <th scope="col">Nome</th>
@@ -29,8 +20,6 @@
                                         <th scope="col">Empresa</th>
                                         <th scope="col">Cidade</th>
                                         <th scope="col">Razao</th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -45,16 +34,20 @@
                                     <td><%= cliente.empresa %></td>
                                     <td><%= cliente.cidade %></td>
                                     <td><%= cliente.razao %></td>
-                                    <td><%= link_to 'Show', cliente %></td>
-                                    <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
-                                    <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                                    <td><%= link_to 'Show', cliente, class: "btn btn-green btn-mini" %>
+                                    <%= link_to 'Edit', edit_cliente_path(cliente), class: "btn btn-blue btn-mini" %>
+                                    <%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-yellow btn-mini" %></td>
                                 </tr>
                                 <% end %>
                             </table>
-                            <br />
-                            <%= link_to 'Novo Cliente', new_cliente_path, class: "btn btn-blue" %>
-                        </div>
+                            <div class="widget-footer">
+                                <div class="btn-toolbar pull-left">
+                                    <%= link_to 'Novo Cliente', new_cliente_path, class: "btn btn-blue" %>
+                                </div>
+                            </div>
+
+                        </div>                           
                     </div>
                 </div>
-            </section>
-        </div>
+        </section>
+    </div>

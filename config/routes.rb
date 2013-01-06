@@ -1,14 +1,13 @@
 App::Application.routes.draw do
-  
+
   root :to => "home#index"
 
   devise_for :usuarios
+  resources :usuarios
 
   resources :reservas
 
-
   resources :outdoors
-
 
   resources :clientes
 

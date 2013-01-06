@@ -1,42 +1,64 @@
-<%= form_for(@outdoor) do |f| %>
-  <%= error_messages_for @outdoor %>
-  <fieldset>
-    <legend>Dados de localização</legend>
-  <div class="four columns">
-    <label>Número</label>
-    <%= f.number_field :numero %>
-  </div>
- 
-    <div class="eight columns">
-      <label>Endereço</label>
+<div class="form-dark">
+<%= form_for @outdoor, :html => {:class => 'form-horizontal' }  do |f| %>
+<%= error_messages_for @outdoor %>
+<ul class="form-list label-left list-bordered dotted">
+  <li class="section-form">
+    <h4>Dados de localização</h4>
+  </li>
+  <li class="control-group">
+    <label class="control-label" for="accountPrefix">Número*</label>
+    <div class="controls">
+      <%= f.number_field :numero, :placeholder => "", :require => true %>
+    </div>
+  </li>
+
+  <li class="control-group">
+    <label class="control-label" for="accountPrefix">Endereço*</label>
+    <div class="controls">
       <%= f.text_field :endereco, :placeholder => "" %>
     </div>
-    <div class="three columns">
-      <label>Bairro</label>
+  </li>
+  <li class="control-group">
+    <label class="control-label" for="accountPrefix">Bairro*</label>
+    <div class="controls">
       <%= f.text_field :bairro, :placeholder => "" %>
     </div>
-    <div class="three columns">
-      <label>Ponto de referência</label>
+  </li>
+  <li class="control-group">
+    <label class="control-label" for="accountPrefix">Ponto de referência</label>
+    <div class="controls">
       <%= f.text_field :ponto_referencia, :placeholder => "" %>
     </div>
-    <div class="three columns">
-      <label>Cidade</label>
+  </li>
+  <li class="control-group">
+    <label class="control-label" for="accountPrefix">Cidade*</label>
+    <div class="controls">
       <%= f.text_field :cidade, :placeholder => "" %>
     </div>
-    <div class="three columns">
-      <label>Estado</label>
-       <%= f.select( :estado, {"AC"=>"Acre", "AL"=>"Alagoas", "AM"=>"Amazonas", "AP"=>"Amapá","BA"=>"Bahia","CE"=>"Ceará","DF"=>"Distrito Federal","ES"=>"Espírito Santo","GO"=>"Goiás","MA"=>"Maranhão","MT"=>"Mato Grosso","MS"=>"Mato Grosso do Sul","MG"=>"Minas Gerais","PA"=>"Pará","PB"=>"Paraíba","PR"=>"Paraná","PE"=>"Pernambuco","PI"=>"Piauí","RJ"=>"Rio de Janeiro","RN"=>"Rio Grande do Norte","RO"=>"Rondônia","RS"=>"Rio Grande do Sul","RR"=>"Roraima","SC"=>"Santa Catarina","SE"=>"Sergipe","SP"=>"São Paulo","TO"=>"Tocantins"}) %>
+  </li>
+  <li class="control-group">
+    <label class="control-label" for="accountPrefix">Estado</label>
+    <div class="controls">
+      <%= f.select( :estado, {"AC"=>"Acre", "AL"=>"Alagoas", "AM"=>"Amazonas", "AP"=>"Amapá","BA"=>"Bahia","CE"=>"Ceará","DF"=>"Distrito Federal","ES"=>"Espírito Santo","GO"=>"Goiás","MA"=>"Maranhão","MT"=>"Mato Grosso","MS"=>"Mato Grosso do Sul","MG"=>"Minas Gerais","PA"=>"Pará","PB"=>"Paraíba","PR"=>"Paraná","PE"=>"Pernambuco","PI"=>"Piauí","RJ"=>"Rio de Janeiro","RN"=>"Rio Grande do Norte","RO"=>"Rondônia","RS"=>"Rio Grande do Sul","RR"=>"Roraima","SC"=>"Santa Catarina","SE"=>"Sergipe","SP"=>"São Paulo","TO"=>"Tocantins"}, { :class => 'select2-choice'}) %>
     </div>
-   <div class="five columns">
-    <label>Sentido</label>
-    <%= f.select(:sentido,{"Duplo"=>"duplo", "Frontal"=> "frontal", "Bairro / Centro"=> "bairro_centro", "Centro / Bairro"=> "centro_bairro"}) %>
-  </div>
-  <div class="three columns">
-    <label>Valor do aluguel</label>
+  </li>
+  <li class="control-group">
+    <label class="control-label" for="accountPrefix">Sentido</label>
+    <div class="controls">
+     <%= f.select(:sentido,{"Duplo"=>"duplo", "Frontal"=> "frontal", "Bairro / Centro"=> "bairro_centro", "Centro / Bairro"=> "centro_bairro"}, { :class => 'select2-choice'}) %>
+   </div>
+ </li>
+
+ <li class="control-group">
+  <label class="control-label" for="accountPrefix">Valor do aluguel</label>
+  <div class="controls">
     <%= f.text_field :valor, :placeholder => "" %>
   </div>
+</li>
+</ul>
 </fieldset>
-  <div class="actions">
-    <%= f.submit :class => "button" %>
-  </div>
+<div class="form-actions">
+  <%= f.submit class: "btn btn-blue" %> <%= link_to 'Voltar', outdoors_path, class: "btn" %>
+</div>
 <% end %>
+</div>

@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.10'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 #Mongo
-gem 'mongoid', '~> 3.0.14'
+gem 'mongoid', '~> 3.0.16'
 gem 'bson_ext'
 gem 'money-rails'
 gem 'ember-rails'
 
-gem 'devise'
+gem 'devise', '~> 2.1.2'
 
 gem 'nested_form'
 gem 'simple_form'
@@ -19,13 +19,14 @@ gem 'simple_form'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
+  
   gem 'compass-rails'
+  gem 'bootstrap-sass', '~> 2.2.2.0'
   gem 'uglifier', '>= 1.0.3'
 end
 
