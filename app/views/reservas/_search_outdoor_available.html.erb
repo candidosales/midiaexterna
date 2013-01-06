@@ -1,23 +1,34 @@
+<div class="form-dark">
 <%= form_for @reserva do |f| %>
-<fieldset>
-   <legend>Outdoors disponíveis</legend>
-  <div class="six columns">
-  	<%= f.collection_check_boxes :outdoor_ids, @outdoors, :id, :full_title, :wrapper_html => { :class => 'options' } %>
-  </div>
-  <div class="six columns">
-    <label>Cliente</label>
+<ul class="form-list label-left list-bordered dotted">
+  <li class="section-form">
+    <h4>Outdoors disponíveis</h4>
+  </li>
+  <li class="control-group">
+    <label class="control-label" for="accountPrefix">Outdoors</label>
+    <div class="controls">
+      <%= f.collection_check_boxes :outdoor_ids, @outdoors, :id, :full_title, :wrapper_html => { :class => 'options' } %>
+    </div>
+  </li>
+  <li class="control-group">
+    <label class="control-label" for="accountPrefix">Cliente</label>
+    <div class="controls">
       <%= f.collection_select :cliente_id, Cliente.all, :id, :nome %>
-  </div>
-  <div class="six columns">
-    <label>Valor</label>
-     <div id="valor"></div>
-     <%= f.hidden_field :valor %>
-     <%= f.hidden_field :inicio_reserva %>
-     <%= f.hidden_field :termino_reserva %>
-  </div>
+    </div>
+  </li>
+  <li class="control-group">
+    <label class="control-label" for="accountPrefix">Valor</label>
+    <div class="controls">
+      <div id="valor"></div>
+      <%= f.hidden_field :valor %>
+      <%= f.hidden_field :inicio_reserva %>
+      <%= f.hidden_field :termino_reserva %>
+    </div>
+  </li>
   <hr/>
-  <div class="twelve columns">
-  	<%= f.submit :class => "button" %>
+  <div class="form-actions">
+  	<%= f.submit :class => "btn" %>
   </div>
 </fieldset>
 <% end %>
+</div>
