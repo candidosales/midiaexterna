@@ -17,8 +17,4 @@ class Outdoor
 
   validates_presence_of :numero, :endereco, :bairro, :cidade, :valor
 
-
-  def full_title
-  	"#{numero} - #{endereco}, #{bairro}, <span class='sentido'>#{sentido}</span>, <span class='valor'> #{valor}</span>".html_safe
-  end
 end

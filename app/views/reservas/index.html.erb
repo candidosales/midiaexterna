@@ -23,9 +23,9 @@
                         <% @reservas.each do |reserva| %>
                         <tr>
                           <td><%= reserva.cliente.nome %></td>
-                          <td><%= reserva.inicio_reserva %></td>
-                          <td><%= reserva.termino_reserva %></td>
-                          <td><%= reserva.created_at %></td>
+                          <td><%= reserva.inicio_reserva.strftime("%d/%m/%Y") %></td>
+                          <td><%= reserva.termino_reserva.strftime("%d/%m/%Y") %></td>
+                          <td><%= reserva.created_at.strftime("%d/%m/%Y - %H:%M:%S") %></td>
                           <td><%= humanized_money_with_symbol reserva.valor %></td>
                           <td><%= link_to 'Show', reserva, class: "btn btn-green btn-mini" %>
                             <%= link_to 'Edit', edit_reserva_path(reserva), class: "btn btn-blue btn-mini" %>

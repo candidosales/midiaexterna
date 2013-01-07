@@ -2,7 +2,6 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
-    jQuery ->
             $( "#inicio_periodo" ).datepicker
                 defaultDate: "+1w",
                 numberOfMonths: 2,
@@ -44,11 +43,12 @@
                 total = 0;
                 $("input[type='checkbox']:checked").each ->
                     id = $(this).attr('id')
-                    val = $("label[for='"+id+"']").find('span.valor').html()
+                    val = $('span.valor'+'-'+id).html()
                     total+=parseInt(val)
        
-                $("#valor").html 'R$ '+total+',00' 
+                $("#valor").val 'R$ '+total+',00' 
                 $('#reserva_valor').val total
                 true
 
             somaCheckbox()
+            

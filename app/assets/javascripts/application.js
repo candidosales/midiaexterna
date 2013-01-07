@@ -14,6 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.price_format.1.7.min
+//= require uniform/jquery.uniform
 //= require bootstrap.js
 //= require jquery.cookie.js
 
@@ -21,58 +22,45 @@
 //= require jquery.ui.widget
 //= require jquery.ui.mouse
 //= require jquery.ui.position
+//= require jquery.ui.draggable
+//= require jquery.ui.droppable
+//= require jquery.ui.resizable
+//= require jquery.ui.selectable
+//= require jquery.ui.sortable
+//= require jquery.ui.effect.all
 //= require jquery.ui.datepicker
 //= require jquery.ui.datepicker-pt-BR
 
 //= require bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min 
 
-//= require bootstrap-datepicker/js/bootstrap-datepicker
-//= require bootstrap-timepicker/js/bootstrap-timepicker
 //= require bootstrap-colorpicker/js/bootstrap-colorpicker
-//= require bootstrap-daterangepicker/js/date
-//= require bootstrap-daterangepicker/js/bootstrap-daterangepicker
-//= require bootstrap-fileupload/js/bootstrap-fileupload
-//= require bootstrap-rowlink/js/bootstrap-rowlink
-//= require bootstrap-progressbar/js/bootstrap-progressbar
+//= require bootstrap-fileupload/bootstrap-fileupload
+//= require bootstrap-rowlink/bootstrap-rowlink
+//= require bootstrap-progressbar/bootstrap-progressbar
 //= require bootstrap-wysihtml5/src/bootstrap-wysihtml5
 //= require bootstrap-select/bootstrap-select
 //= require bootstrap-bootbox/bootbox.min
-//= require bootstrap-modal/js/bootstrap-modalmanager
-//= require bootstrap-modal/js/bootstrap-modal
-//= require bootstrap-wizard/js/bootstrap-wizard
-//= require bootstrap-toggle-buttons/js/bootstrap-toggle-buttons
+//= require bootstrap-modal/bootstrap-modalmanager
+//= require bootstrap-modal/bootstrap-modal
+//= require bootstrap-wizard/bootstrap-wizard
+//= require bootstrap-toggle-buttons/bootstrap-toggle-buttons
 
-//= require google-code-prettify/prettify 
 //= require nicescroll/jquery.nicescroll.min 
-//= require qtip2/dist/jquery.qtip.min 
+//= require qtip2/jquery.qtip.min 
 //= require list/js/list.min 
 //= require list/plugins/list.paging.min 
 //= require fullcalendar/fullcalendar 
 
-//= require uniform/jquery.uniform 
+ 
 //= require select2/select2.min 
 //= require counter/jquery.counter 
 //= require elastic/jquery.elastic 
 //= require inputmask/jquery.inputmask 
 //= require inputmask/jquery.inputmask.extensions 
-//= require validate/js/jquery.validate.min 
+//= require validate/jquery.validate.min 
 //= require xbreadcrumbs/xbreadcrumbs 
 
 //= require sparkline/jquery.sparkline 
-//= require flot/jquery.flot 
-//= require flot/jquery.flot.categories 
-//= require flot/jquery.flot.grow 
-//= require flot/jquery.flot.orderBars 
-//= require flot/jquery.flot.pie 
-//= require flot/jquery.flot.resize 
-//= require flot/jquery.flot.selection 
-//= require flot/jquery.flot.stack 
-//= require flot/jquery.flot.stackpercent 
-//= require flot/jquery.flot.time 
-
-//= require datatables/media/js/jquery.dataTables 
-//= require datatables/plugin/jquery.dataTables.plugins 
-//= require datatables/plugin/jquery.dataTables.columnFilter  
 
 //= require main 
 

@@ -12,10 +12,16 @@
 
  *= require lib/bootstrap
  *= require lib/bootstrap-responsive
- *= require extension
  *= require boo
  *= require boo-coloring
  *= require boo-utility
+ *= require bootstrap-fileupload
+ *= require bootstrap-modal-bootheme
+ *= require jquery.ui.datepicker
+ *= require extension
+ *= require prettify
+ *= require timepicker
+ *= require uniform-theme
  
  *= require_tree .
  */

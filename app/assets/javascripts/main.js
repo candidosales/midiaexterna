@@ -323,27 +323,6 @@
                 radioClass: 'radios' // edited class - the original radio
         });
 
-        // FORM - INPUTMASK PLUGIN
-        // ------------------------------------------------------------------------------------------------ * -->
-        $("input.maskDate").inputmask("99/99/9999", {
-                placeholder: "dd/mm/yyyy"
-        });
-        $("input.maskPhone").inputmask("(999) 999-9999", {
-                completed: function () {
-                        alert("Callback when completed");
-                }
-        });
-        $("input.maskPhoneExt").inputmask("(999) 999-9999? x99999");
-        $("input.maskPhoneInt").inputmask("+43 999 999 999");
-        $("input.maskZipcode").inputmask("99999");
-        $("input.maskTid").inputmask("99-9999999");
-        $("input.maskSsn").inputmask("999-99-9999");
-        $("input.maskProd").inputmask("a*-999-a999-a999");
-        $("input.maskEye").inputmask("~9.99 ~9.99 999");
-        $("input.maskPo").inputmask("MM: aaa-999-*****-9999");
-        $("input.maskPct").inputmask("99%");
-        $("input.maskAcid").inputmask("FP009-99999-2012");
-
         // FORM - ELASTIC TEXTAREA
         // ------------------------------------------------------------------------------------------------ * -->
         $('textarea.auto').elastic();
@@ -352,12 +331,12 @@
 
         // BOOTSTRAP DATEPICKER
         // ------------------------------------------------------------------------------------------------ * -->
-                $('.datepickers').datepicker();
+        $('.datepickers').datepicker();
         $('#articleCreated, #articleCreatedDate, #articlePublishingStart, #articlePublishingFinish, #datePickerVia').datepicker();
                 
         // bootstrap datepicker demo
         $('#datePicker').datepicker({
-                format: 'mm-dd-yyyy'
+                format: 'dd-mm-yyyy'
         });
                 
         // bootstrap datepicker demo
@@ -407,104 +386,6 @@
         $('#DPTD').click(function () {
                 $('#datePickerToDiv').datepicker('update', '01-09-1969');
                 $('#showDate').text($('#datePickerToDiv').data('date'));
-        });
-
-        // BOOTSTRAP DATERANGEPICKER
-        // ------------------------------------------------------------------------------------------------ * -->
-                        
-        $('.datepicker-range').daterangepicker();
-
-        // bootstrap daterangepicker direction the dropdown expands
-        $('#accountForce').daterangepicker({
-                opens: 'left',
-        });
-                
-                // bootstrap daterangepicker demo
-        $('#articlePostFromTo').daterangepicker({
-                opens: 'right',
-        });
-
-        // bootstrap daterangepicker pre-defined Ranges
-        $('#customRange').daterangepicker({
-                opens: 'left',
-                format: 'dd/MM/yyyy',
-                ranges: {
-                        'Today': ['today', 'today'],
-                                'Yesterday': ['yesterday', 'yesterday'],
-                                'Last 7 Days': [Date.today().add({
-                                days: -6
-                        }), 'today'],
-                                'Last 30 Days': [Date.today().add({
-                                days: -29
-                        }), 'today'],
-                                'This Month': [Date.today().moveToFirstDayOfMonth(), Date.today().moveToLastDayOfMonth()],
-                                'Last Month': [Date.today().moveToFirstDayOfMonth().add({
-                                months: -1
-                        }), Date.today().moveToFirstDayOfMonth().add({
-                                days: -1
-                        })]
-                }
-
-        });
-
-        // bootstrap daterangepicker demo
-        $('#selectrange').daterangepicker();
-
-        // bootstrap daterangepicker demo
-        $('#reportdate').daterangepicker({
-                ranges: {
-                        'Today': ['today', 'today'],
-                                'Yesterday': ['yesterday', 'yesterday'],
-                                'Last 7 Days': [Date.today().add({
-                                days: -6
-                        }), 'today'],
-                                'Last 30 Days': [Date.today().add({
-                                days: -29
-                        }), 'today'],
-                                'This Month': [Date.today().moveToFirstDayOfMonth(), Date.today().moveToLastDayOfMonth()],
-                                'Last Month': [Date.today().moveToFirstDayOfMonth().add({
-                                months: -1
-                        }), Date.today().moveToFirstDayOfMonth().add({
-                                days: -1
-                        })]
-                }
-        },
-
-        function (start, end) {
-                $('#reportdate span').html(start.toString('MMMM d, yyyy') + ' - ' + end.toString('MMMM d, yyyy'));
-        });
-
-        // bootstrap daterangepicker demo
-        $('#reportSelect').daterangepicker({
-                changed: true,
-                opens: 'left',
-                ranges: {
-                        'Today': ['today', 'today'],
-                                'Yesterday': ['yesterday', 'yesterday'],
-                                'Last 7 Days': [Date.today().add({
-                                days: -6
-                        }), 'today'],
-                                'Last 30 Days': [Date.today().add({
-                                days: -29
-                        }), 'today'],
-                                'This Month': [Date.today().moveToFirstDayOfMonth(), Date.today().moveToLastDayOfMonth()],
-                                'Last Month': [Date.today().moveToFirstDayOfMonth().add({
-                                months: -1
-                        }), Date.today().moveToFirstDayOfMonth().add({
-                                days: -1
-                        })]
-                }
-        },
-
-        function (start, end) {
-                $('#reportView').val(start.toString('dd-MM-yyyy') + ' - ' + end.toString('dd-MM-yyyy'));
-        });
-
-        // BOOTSTRAP TIMEPICKER
-        // ------------------------------------------------------------------------------------------------ * -->
-        $('.timepicker').timepicker({
-                minuteStep: 5,
-                showInputs: false,
         });
 
         // BOOTSTRAP COLORPICKER

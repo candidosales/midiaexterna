@@ -12,6 +12,8 @@ class Reserva
   belongs_to :cliente, class_name: "Cliente"
   has_and_belongs_to_many :outdoors
 
+  validates_presence_of :cliente, :valor
+
 
   def self.outdoors_search_period(options={})
     inicio = options.fetch(:inicio_reserva, '');
