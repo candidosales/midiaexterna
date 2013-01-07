@@ -4,24 +4,24 @@
              <span class="item-icon fontello-icon-users"></span>
               <i class="chevron fontello-icon-right-open-3"></i> Clientes </a> </div>
             <ul class="accordion-content nav nav-list collapse" id="accDash">
-              <li> <%= link_to 'Adicionar', new_cliente_path %> </li>
-              <li><%= link_to 'Listar', clientes_path %> </li>
+              <li> <%= link_to 'Adicionar', new_admin_cliente_path %> </li>
+              <li><%= link_to 'Listar', admin_clientes_path %> </li>
             </ul>
           </li>
           <!-- // item accordionMenu Dashboard -->
           <li class="accordion-group">
             <div class="accordion-heading"> <a href="#accForms" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon aweso-icon-list-alt"></span><i class="chevron fontello-icon-right-open-3"></i> Outdoors </a> </div>
             <ul class="accordion-content nav nav-list collapse" id="accForms">
-              <li><%= link_to 'Adicionar', new_outdoor_path %> </li>
-              <li><%= link_to 'Listar', outdoors_path %> </li>
+              <li><%= link_to 'Adicionar', new_admin_outdoor_path %> </li>
+              <li><%= link_to 'Listar', admin_outdoors_path %> </li>
             </ul>
           </li>
           <!-- // item accordionMenu Forms -->
           <li class="accordion-group">
             <div class="accordion-heading"> <a href="#accTables" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-calendar"></span> <i class="chevron fontello-icon-right-open-3"></i> Reservas </a> </div>
             <ul class="accordion-content nav nav-list collapse" id="accTables">
-              <li><%= link_to 'Adicionar', new_reserva_path %> </li>
-              <li><%= link_to 'Listar', reservas_path %> </li>
+              <li><%= link_to 'Adicionar', new_admin_reserva_path %> </li>
+              <li><%= link_to 'Listar', admin_reservas_path %> </li>
             </ul>
           </li>
         </ul>

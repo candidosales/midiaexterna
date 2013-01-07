@@ -2,18 +2,24 @@ App::Application.routes.draw do
 
   root :to => "home#index"
 
-  devise_for :usuarios
-  resources :usuarios
+  namespace :admin do
+    root to: "clientes#index"
 
-  resources :reservas
+    devise_for :usuarios
+    resources :usuarios
 
-  resources :outdoors
+    resources :reservas
+    resources :outdoors
+    resources :clientes
 
-  resources :clientes
-
-  controller :reservas do
-     post '/pedidos/search_outdoor_available', :action => :search_outdoor_available
+    controller :reservas do
+       post 'reservas/search_outdoor_available', :action => :search_outdoor_available
+    end
   end
+
+
+
+  
 
 
 
