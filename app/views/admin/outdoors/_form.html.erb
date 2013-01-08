@@ -1,60 +1,95 @@
 <div class="form-dark">
-<%= form_for [:admin, @outdoor], :html => {:class => 'form-horizontal' }  do |f| %>
-<%= error_messages_for @outdoor %>
-<ul class="form-list label-left list-bordered dotted">
-  <li class="section-form">
-    <h4>Dados de localização</h4>
-  </li>
-  <li class="control-group">
-    <label class="control-label" for="accountPrefix">Número*</label>
-    <div class="controls">
-      <%= f.number_field :numero, :placeholder => "", :require => true %>
-    </div>
-  </li>
+  <%= form_for [:admin, @outdoor], :html => {:multipart => true,:class => 'form-horizontal' }  do |f| %>
+  <%= error_messages_for @outdoor %>
+  <ul class="form-list label-left list-bordered dotted">
+    <li class="section-form">
+      <h4>Dados de localização</h4>
+    </li>
+    <li class="control-group">
+      <label class="control-label" for="accountPrefix">Número*</label>
+      <div class="controls">
+        <%= f.number_field :numero, :placeholder => "", :require => true %>
+      </div>
+    </li>
 
-  <li class="control-group">
-    <label class="control-label" for="accountPrefix">Endereço*</label>
-    <div class="controls">
-      <%= f.text_field :endereco, :placeholder => "" %>
-    </div>
-  </li>
-  <li class="control-group">
-    <label class="control-label" for="accountPrefix">Bairro*</label>
-    <div class="controls">
-      <%= f.text_field :bairro, :placeholder => "" %>
-    </div>
-  </li>
-  <li class="control-group">
-    <label class="control-label" for="accountPrefix">Ponto de referência</label>
-    <div class="controls">
-      <%= f.text_field :ponto_referencia, :placeholder => "" %>
-    </div>
-  </li>
-  <li class="control-group">
-    <label class="control-label" for="accountPrefix">Cidade*</label>
-    <div class="controls">
-      <%= f.text_field :cidade, :placeholder => "" %>
-    </div>
-  </li>
-  <li class="control-group">
-    <label class="control-label" for="accountPrefix">Estado</label>
-    <div class="controls">
-      <%= f.select( :estado, {"AC"=>"Acre", "AL"=>"Alagoas", "AM"=>"Amazonas", "AP"=>"Amapá","BA"=>"Bahia","CE"=>"Ceará","DF"=>"Distrito Federal","ES"=>"Espírito Santo","GO"=>"Goiás","MA"=>"Maranhão","MT"=>"Mato Grosso","MS"=>"Mato Grosso do Sul","MG"=>"Minas Gerais","PA"=>"Pará","PB"=>"Paraíba","PR"=>"Paraná","PE"=>"Pernambuco","PI"=>"Piauí","RJ"=>"Rio de Janeiro","RN"=>"Rio Grande do Norte","RO"=>"Rondônia","RS"=>"Rio Grande do Sul","RR"=>"Roraima","SC"=>"Santa Catarina","SE"=>"Sergipe","SP"=>"São Paulo","TO"=>"Tocantins"}, { :class => 'select2-choice'}) %>
-    </div>
-  </li>
-  <li class="control-group">
-    <label class="control-label" for="accountPrefix">Sentido</label>
-    <div class="controls">
-     <%= f.select(:sentido,{"Duplo"=>"duplo", "Frontal"=> "frontal", "Bairro / Centro"=> "bairro_centro", "Centro / Bairro"=> "centro_bairro"}, { :class => 'select2-choice'}) %>
-   </div>
- </li>
+    <li class="control-group">
+      <label class="control-label" for="accountPrefix">Endereço*</label>
+      <div class="controls">
+        <%= f.text_field :endereco, :placeholder => "" %>
+      </div>
+    </li>
+    <li class="control-group">
+      <label class="control-label" for="accountPrefix">Bairro*</label>
+      <div class="controls">
+        <%= f.text_field :bairro, :placeholder => "" %>
+      </div>
+    </li>
+    <li class="control-group">
+      <label class="control-label" for="accountPrefix">Ponto de referência</label>
+      <div class="controls">
+        <%= f.text_field :ponto_referencia, :placeholder => "" %>
+      </div>
+    </li>
+    <li class="control-group">
+      <label class="control-label" for="accountPrefix">Cidade*</label>
+      <div class="controls">
+        <%= f.text_field :cidade, :placeholder => "" %>
+      </div>
+    </li>
+    <li class="control-group">
+      <label class="control-label" for="accountPrefix">Estado</label>
+      <div class="controls">
+        <%= f.select( :estado, {"AC"=>"Acre", "AL"=>"Alagoas", "AM"=>"Amazonas", "AP"=>"Amapá","BA"=>"Bahia","CE"=>"Ceará","DF"=>"Distrito Federal","ES"=>"Espírito Santo","GO"=>"Goiás","MA"=>"Maranhão","MT"=>"Mato Grosso","MS"=>"Mato Grosso do Sul","MG"=>"Minas Gerais","PA"=>"Pará","PB"=>"Paraíba","PR"=>"Paraná","PE"=>"Pernambuco","PI"=>"Piauí","RJ"=>"Rio de Janeiro","RN"=>"Rio Grande do Norte","RO"=>"Rondônia","RS"=>"Rio Grande do Sul","RR"=>"Roraima","SC"=>"Santa Catarina","SE"=>"Sergipe","SP"=>"São Paulo","TO"=>"Tocantins"}, { :class => 'select2-choice'}) %>
+      </div>
+    </li>
+    <li class="control-group">
+      <label class="control-label" for="accountPrefix">Sentido</label>
+      <div class="controls">
+       <%= f.select(:sentido,{"Duplo"=>"duplo", "Frontal"=> "frontal", "Bairro / Centro"=> "bairro_centro", "Centro / Bairro"=> "centro_bairro"}, { :class => 'select2-choice'}) %>
+     </div>
+   </li>
 
- <li class="control-group">
-  <label class="control-label" for="accountPrefix">Valor do aluguel</label>
-  <div class="controls">
-    <%= f.text_field :valor, :placeholder => "" %>
-  </div>
-</li>
+   <li class="control-group">
+    <label class="control-label" for="accountPrefix">Valor do aluguel</label>
+    <div class="controls">
+      <%= f.text_field :valor, :placeholder => "" %>
+    </div>
+  </li>
+  <li class="control-group">
+    <label class="control-label" for="accountPrefix">Enviar uma foto</label>
+    <div class="controls">
+      <div data-provides="fileupload" class="fileupload fileupload-new">
+        <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail"></div>
+        <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
+          <input type="file">
+        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
+      </div>
+      <div data-provides="fileupload" class="fileupload fileupload-new">
+        <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail"></div>
+        <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
+          <input type="file">
+        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
+      </div>
+      <div data-provides="fileupload" class="fileupload fileupload-new">
+        <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail"></div>
+        <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
+          <input type="file">
+        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
+      </div>
+      <div data-provides="fileupload" class="fileupload fileupload-new">
+        <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail"></div>
+        <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
+          <input type="file">
+        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
+      </div>
+      <div data-provides="fileupload" class="fileupload fileupload-new">
+        <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail"></div>
+        <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
+          <input type="file">
+        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
+      </div>
+    </div>
+  </li>
 </ul>
 </fieldset>
 <div class="form-actions">

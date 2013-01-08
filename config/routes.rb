@@ -10,6 +10,8 @@ App::Application.routes.draw do
 
     resources :reservas
     resources :outdoors
+    resources :foto_outdoors
+
     resources :clientes
 
     controller :reservas do

@@ -5,13 +5,15 @@ gem 'rails', '3.2.10'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'devise', '~> 2.1.2'
+
 #Mongo
 gem 'mongoid', '~> 3.0.16'
+gem 'mongoid-paperclip'
 gem 'bson_ext'
+
 gem 'money-rails'
 gem 'ember-rails'
-
-gem 'devise', '~> 2.1.2'
 
 gem 'nested_form'
 gem 'simple_form'
