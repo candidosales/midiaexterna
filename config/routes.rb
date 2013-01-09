@@ -9,7 +9,13 @@ App::Application.routes.draw do
     resources :usuarios
 
     resources :reservas
-    resources :outdoors
+    
+    resources :outdoors do
+      collection do
+        delete 'destroy_multiple'
+      end
+    end
+
     resources :foto_outdoors
 
     resources :clientes

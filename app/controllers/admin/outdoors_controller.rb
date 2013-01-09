@@ -50,4 +50,12 @@ class Admin::OutdoorsController < Admin::BaseController
     @outdoor.destroy
     respond_with @outdoor, :location => admin_outdoors_path
   end
+
+  def destroy_multiple
+    params[:delete].each do |id|
+      Outdoor.find(id.to_i).destroy
+    end
+    respond_with @outdoor, :location => admin_outdoors_path
+  end
+  
 end
