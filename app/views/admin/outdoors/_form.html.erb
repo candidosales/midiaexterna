@@ -70,11 +70,7 @@
           <span class="btn btn-file"> 
             <span class="fileupload-new">Selecionar foto</span>
             <span class="fileupload-exists">Mudar</span>
-
-            <% if image.object.new_record? %>
-              <%= image.file_field :file  %>  
-            <% end %>                              
-
+              <%= image.file_field :file, :class => 'foto_outdoor_input'  %>                           
           </span> 
           <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remover</a>
         </div>
@@ -83,12 +79,8 @@
     </div>
   </li>
 </ul>
-</fieldset>
 <div class="form-actions">
   <%= f.submit class: "btn btn-blue" %> <%= link_to 'Voltar', admin_outdoors_path, class: "btn" %>
 </div>
 <% end %>
 </div>
-<script>
-    $('.fileupload-exists .fileupload-new, .fileupload-new .fileupload-exists').css({'display':'block'});
-</script>

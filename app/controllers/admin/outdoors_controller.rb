@@ -24,7 +24,7 @@ class Admin::OutdoorsController < Admin::BaseController
   # GET /outdoors/1/edit
   def edit
     @outdoor = Outdoor.find(params[:id])
-    5.times { @outdoor.foto_outdoors.build }
+    (5 - @outdoor.foto_outdoors.length).times { @outdoor.foto_outdoors.build }
   end
 
   # POST /outdoors
