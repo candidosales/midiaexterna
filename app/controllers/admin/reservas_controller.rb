@@ -46,7 +46,7 @@ class Admin::ReservasController < Admin::BaseController
   def destroy
     @reserva = Reserva.find(params[:id])
     @reserva.destroy
-    respond_with @reserva
+    respond_with @reserva, , :location => admin_reservas_path
   end
 
   def search_outdoor_available

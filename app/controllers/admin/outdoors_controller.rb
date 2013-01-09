@@ -29,6 +29,14 @@ class Admin::OutdoorsController < Admin::BaseController
   # POST /outdoors.json
   def create
     @outdoor = Outdoor.new(params[:outdoor])
+    #@outdoor.foto_outdoor = @foto_outdoor.id
+    
+    # foto_aux.each do |foto|
+    #    @foto_outdoor = FotoOutdoor.new(foto)
+    #    @foto_outdoor.save
+    #    @outdoor.foto_outdoor.push @foto_outdoor.id
+    # end    
+
     flash[:notice] = 'Outdoor foi criado com sucesso.' if @outdoor.save
     respond_with @outdoor, :location => admin_outdoors_path
   end
@@ -46,6 +54,6 @@ class Admin::OutdoorsController < Admin::BaseController
   def destroy
     @outdoor = Outdoor.find(params[:id])
     @outdoor.destroy
-    respond_with @outdoor
+    respond_with @outdoor, :location => admin_outdoors_path
   end
 end

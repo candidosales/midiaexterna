@@ -46,6 +46,6 @@ class Admin::ClientesController < Admin::BaseController
   def destroy
     @cliente = Cliente.find(params[:id])
     @cliente.destroy
-    respond_with @cliente
+    respond_with @cliente, :location => admin_clientes_path
   end
 end

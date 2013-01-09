@@ -17,6 +17,7 @@
                                     <th>Cidade</th>
                                     <th>Valor</th>
                                     <th>Sentido</th>
+                                    <th>Fotos</th>
                                     <th></th>
                                 </tr>
 
@@ -28,6 +29,7 @@
                                     <td><%= outdoor.cidade %></td>
                                     <td><%= humanized_money_with_symbol outdoor.valor %></td>
                                     <td><%= outdoor.sentido %></td>
+                                    <td><%= image_tag outdoor.foto_outdoor.thumb.url %></td>
                                     <td>
                                         <%= link_to 'Edit', edit_admin_outdoor_path(outdoor), class: "btn btn-blue btn-mini" %>
                                         <%= link_to 'Destroy', [:admin, outdoor], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-yellow btn-mini" %></td>

@@ -9,8 +9,10 @@ gem 'devise', '~> 2.1.2'
 
 #Mongo
 gem 'mongoid', '~> 3.0.16'
-gem 'mongoid-paperclip'
 gem 'bson_ext'
+
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'rmagick', '~> 2.13.1'
 
 gem 'money-rails'
 gem 'ember-rails'

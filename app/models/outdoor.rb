@@ -11,7 +11,7 @@ class Outdoor
   field :ponto_referencia, type: String
   field :valor, type: Money
 
-  belongs_to :foto_outdoor
+  mount_uploader :foto_outdoor, FotoOutdoorUploader
 
   has_and_belongs_to_many :reservas
 

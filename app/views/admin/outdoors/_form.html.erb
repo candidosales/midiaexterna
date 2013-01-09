@@ -1,5 +1,5 @@
 <div class="form-dark">
-  <%= form_for [:admin, @outdoor], :html => {:multipart => true,:class => 'form-horizontal' }  do |f| %>
+  <%= simple_nested_form_for [:admin, @outdoor], :html => {:multipart => true,:class => 'form-horizontal' }  do |f| %>
   <%= error_messages_for @outdoor %>
   <ul class="form-list label-left list-bordered dotted">
     <li class="section-form">
@@ -56,38 +56,21 @@
     </div>
   </li>
   <li class="control-group">
-    <label class="control-label" for="accountPrefix">Enviar uma foto</label>
+    <label class="control-label" for="accountPrefix">Enviar fotos</label>
     <div class="controls">
       <div data-provides="fileupload" class="fileupload fileupload-new">
         <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail"></div>
-        <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
-          <input type="file">
-        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
+        <%= image_tag(@outdoor.foto_outdoor.thumb.url) if :foto_outdoor? %>
+        <div> 
+          <span class="btn btn-file"> 
+            <span class="fileupload-new">Selecionar foto</span>
+             <span class="fileupload-exists">Mudar</span>
+          <%= f.file_field :foto_outdoor %>
+        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remover</a>
+         </div>
+        
       </div>
-      <div data-provides="fileupload" class="fileupload fileupload-new">
-        <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail"></div>
-        <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
-          <input type="file">
-        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
-      </div>
-      <div data-provides="fileupload" class="fileupload fileupload-new">
-        <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail"></div>
-        <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
-          <input type="file">
-        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
-      </div>
-      <div data-provides="fileupload" class="fileupload fileupload-new">
-        <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail"></div>
-        <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
-          <input type="file">
-        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
-      </div>
-      <div data-provides="fileupload" class="fileupload fileupload-new">
-        <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail"></div>
-        <div> <span class="btn btn-file"> <span class="fileupload-new">Select image</span> <span class="fileupload-exists">Change</span>
-          <input type="file">
-        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a> </div>
-      </div>
+     
     </div>
   </li>
 </ul>
