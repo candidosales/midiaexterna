@@ -11,7 +11,7 @@ gem 'devise', '~> 2.1.2'
 gem 'mongoid', '~> 3.0.16'
 gem 'bson_ext'
 
-gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 gem 'rmagick', '~> 2.13.1'
 
 gem 'money-rails'

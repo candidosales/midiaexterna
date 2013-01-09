@@ -1,8 +1,15 @@
 class FotoOutdoor
 	include Mongoid::Document
+	include Mongoid::Paperclip
 
-  	has_many :outdoor, :inverse_of => :foto_outdoor
+  	embedded_in :outdoor, :inverse_of => :foto_outdoors
 
-  	mount_uploader :foto_outdoor, FotoOutdoorUploader
+  	has_mongoid_attached_file :file,
+  	:styles => {
+      :small    => '100x70',
+      :medium   => '300x200'
+    }
+
+  	#mount_uploader :foto_outdoor, FotoOutdoorUploader
 
 end

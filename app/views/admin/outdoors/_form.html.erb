@@ -58,19 +58,28 @@
   <li class="control-group">
     <label class="control-label" for="accountPrefix">Enviar fotos</label>
     <div class="controls">
+      <%= f.fields_for :foto_outdoors do |image| %>
       <div data-provides="fileupload" class="fileupload fileupload-new">
-        <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail"></div>
-        <%= image_tag(@outdoor.foto_outdoor.thumb.url) if :foto_outdoor? %>
+        <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail">
+          <% unless image.object.new_record? %>
+            <%= image_tag image.object.file.url(:medium) %>
+          <% end %>
+        </div>
+
         <div> 
           <span class="btn btn-file"> 
             <span class="fileupload-new">Selecionar foto</span>
-             <span class="fileupload-exists">Mudar</span>
-          <%= f.file_field :foto_outdoor %>
-        </span> <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remover</a>
-         </div>
-        
+            <span class="fileupload-exists">Mudar</span>
+
+            <% if image.object.new_record? %>
+              <%= image.file_field :file  %>  
+            <% end %>                              
+
+          </span> 
+          <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remover</a>
+        </div>
       </div>
-     
+      <% end %> 
     </div>
   </li>
 </ul>
@@ -80,3 +89,6 @@
 </div>
 <% end %>
 </div>
+<script>
+    $('.fileupload-exists .fileupload-new, .fileupload-new .fileupload-exists').css({'display':'block'});
+</script>

@@ -17,26 +17,20 @@ class Admin::OutdoorsController < Admin::BaseController
   # GET /outdoors/new.json
   def new
     @outdoor = Outdoor.new
+    5.times { @outdoor.foto_outdoors.build }
     respond_with @outdoor
   end
 
   # GET /outdoors/1/edit
   def edit
     @outdoor = Outdoor.find(params[:id])
+    5.times { @outdoor.foto_outdoors.build }
   end
 
   # POST /outdoors
   # POST /outdoors.json
   def create
     @outdoor = Outdoor.new(params[:outdoor])
-    #@outdoor.foto_outdoor = @foto_outdoor.id
-    
-    # foto_aux.each do |foto|
-    #    @foto_outdoor = FotoOutdoor.new(foto)
-    #    @foto_outdoor.save
-    #    @outdoor.foto_outdoor.push @foto_outdoor.id
-    # end    
-
     flash[:notice] = 'Outdoor foi criado com sucesso.' if @outdoor.save
     respond_with @outdoor, :location => admin_outdoors_path
   end

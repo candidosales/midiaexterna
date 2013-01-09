@@ -3,3 +3,5 @@ $('#outdoor_valor').priceFormat({
 	centsSeparator: ',',
 	thousandsSeparator: '.'
 });
+
+  $('#edit_outdoor_*').css

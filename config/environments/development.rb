@@ -37,5 +37,5 @@ App::Application.configure do
   config.assets.debug = true
 
   # Use 'which convert' no console para saber onde está a localização do ImageMagick
-  #Paperclip.options[:command_path] = "/usr/bin/"
+  Paperclip.options[:command_path] = "/usr/bin/"
 end
