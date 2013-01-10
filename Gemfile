@@ -32,10 +32,15 @@ group :assets do
   gem 'compass-rails'
   gem 'bootstrap-sass', '~> 2.2.2.0'
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'jquery-rails'
+  gem 'jquery-ui-rails'
 end
 
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
+group :development do
+  gem 'better_errors'
+  gem 'letter_opener'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

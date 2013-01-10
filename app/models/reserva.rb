@@ -9,20 +9,22 @@ class Reserva
   field :inicio_reserva, type: Date
   field :termino_reserva, type: Date
 
+  field :campanha, type: String
+
   belongs_to :cliente, class_name: "Cliente"
   has_and_belongs_to_many :outdoors
 
-  validates_presence_of :cliente, :valor
+  validates_presence_of :cliente, :valor, :campanha, :outdoors
 
 
-  def self.outdoors_search_period(options={})
-    inicio = options.fetch(:inicio_reserva, '');
-    fim = options.fetch(:termino_reserva, '');
+  def self.seek_reserves_period(options={})
+    inicio = options.fetch(:inicio_reserva, '')
+    fim = options.fetch(:termino_reserva, '')
     includes(:outdoors).gte(inicio_reserva: inicio).lte(termino_reserva: fim)
   end
 
   def self.outdoors_on_period(options={})
-    reservas = options.fetch(:reservas, '');
+    reservas = options.fetch(:reservas, '')
     numeros = Array.new
     outdoors = nil
 

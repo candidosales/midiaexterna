@@ -31,8 +31,8 @@
                     toggleLoading
                 .success (data)->
                     $('#'+target).html data
-                    $('#reserva_inicio_reserva').val($('#inicio_periodo').val())
-                    $('#reserva_termino_reserva').val($('#termino_periodo').val()) 
+                    $('#reserva_inicio_reserva, #inicio_reserva').val($('#inicio_periodo').val())
+                    $('#reserva_termino_reserva, #termino_reserva').val($('#termino_periodo').val()) 
                 false
 
             $("input[type='checkbox']").live 'click', ->
@@ -52,3 +52,10 @@
 
             somaCheckbox()
             
+            $('select#reserva_cliente_id').live 'change', ->
+                $('input#cliente_id').val($(this).val())
+                allVals = []
+                $("input[type='checkbox']").each ->
+                    allVals.push($(this).val())
+
+                $('#outdoors').val(allVals)

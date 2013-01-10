@@ -9,7 +9,4 @@ class FotoOutdoor
       :small    => '100x70',
       :medium   => '300x200'
     }
-
-  	#mount_uploader :foto_outdoor, FotoOutdoorUploader
-
 end

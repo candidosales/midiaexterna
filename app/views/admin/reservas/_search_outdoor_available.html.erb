@@ -36,16 +36,24 @@
       </table>
     </div>
     <div class="controls controls-row">
-      <%= f.collection_select :cliente_id, Cliente.all, :id, :nome,  {:prompt => 'Selecione o cliente'},{:class => 'span5'} %>
+      <%= f.collection_select :cliente_id, Cliente.all, :id, :nome,  {:prompt => 'Selecione o cliente'},{:class => 'span3'} %>
+      <%= f.text_field :campanha, :placeholder => "Nome da campanha", :class => 'span3'%>
       <input id="valor" type="text" placeholder="R$ 0,00" class="span3" name="valor" disabled   >
+
     </div>
     <%= f.hidden_field :valor %>
     <%= f.hidden_field :inicio_reserva %>
     <%= f.hidden_field :termino_reserva %>
 
     <div class="form-actions">
-     <%= f.submit :class => "btn btn-green" %>
+     <%= f.submit :class => "btn btn-green" %> 
    </div>
- </fieldset>
  <% end %>
+    <%= form_tag({:action => 'send_email_available_outdoors'}, :id => "tool-form", :remote => true,:'data-update-target' => 'outdoors_available', :html => {:class => 'form-horizontal' } ) do %>
+      <%= submit_tag("Enviar e-mail com as disponiveis", :class => "btn btn-green") %>
+        <%= hidden_field_tag :outdoors %>
+        <%= hidden_field_tag :inicio_reserva %>
+        <%= hidden_field_tag :termino_reserva %>
+        <%= hidden_field_tag :cliente_id %>
+    <% end %>
 </div>

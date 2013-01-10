@@ -2,7 +2,6 @@ class Outdoor
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  
   field :numero, type: Integer
   field :endereco, type: String
   field :bairro, type: String
@@ -20,5 +19,7 @@ class Outdoor
   default_scope asc :numero
 
   validates_presence_of :numero, :endereco, :bairro, :cidade, :valor
+
+  validates :numero, :uniqueness => true
 
 end

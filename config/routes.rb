@@ -21,6 +21,7 @@ App::Application.routes.draw do
     resources :clientes
 
     controller :reservas do
+       post 'send_email_available_outdoors', :action => :send_email_available_outdoors
        post 'reservas/search_outdoor_available', :action => :search_outdoor_available
     end
   end

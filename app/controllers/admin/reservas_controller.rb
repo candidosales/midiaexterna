@@ -53,11 +53,24 @@ class Admin::ReservasController < Admin::BaseController
     @reserva = Reserva.new
 
     if(params.has_key?(:inicio_periodo) && params.has_key?(:termino_periodo) )
-      @reservas = Reserva.outdoors_search_period(:inicio_reserva => params[:inicio_periodo], :termino_reserva => params[:termino_periodo])
+      @reservas = Reserva.seek_reserves_period(:inicio_reserva => params[:inicio_periodo], :termino_reserva => params[:termino_periodo])
       @outdoors = Reserva.outdoors_on_period(:reservas => @reservas)
     end
-
     render :partial => 'search_outdoor_available', :content_type => 'text/html'
+  end
 
+  def send_email_available_outdoors(options={})
+    begin
+      if(params.has_key?(:cliente_id))
+        options[:outdoors] = params[:outdoors]
+        options[:cliente_id] = params[:cliente_id]
+        options[:inicio_periodo] = params[:inicio_reserva]
+        options[:termino_periodo] = params[:termino_reserva]
+        ClienteMailer.available_outdoors(options).deliver
+      end 
+      render :nothing => true, :status => 200
+    rescue
+      render :nothing => true, :status => 500
+    end
   end
 end
