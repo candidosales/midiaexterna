@@ -4,8 +4,7 @@
 	<!-- If you delete this meta tag, the ground will open and swallow you. -->
 	<meta name="viewport" content="width=device-width" />
 
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
 	<style>
 /* ------------------------------------- 
 		GLOBAL 
@@ -17,7 +16,9 @@
 		* { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
 		img { 
-			max-width: 100%; 
+			max-width: 100%;
+    		padding: 5px; 
+    		border: 1px solid #ccc;
 		}
 		.collapse {
 			margin:0;
@@ -127,6 +128,8 @@
 
 		.collapse { margin:0!important;}
 
+		h6.collapse{color:#fff}
+
 		p, ul { 
 			margin-bottom: 10px; 
 			font-weight: normal; 
@@ -190,7 +193,8 @@
 		}
 
 		/* Let's make sure tables in the content area are 100% wide */
-		.content table { width: 100%; }
+		.content table { width: 100%;}
+		.content table.outdoor{border-bottom: 1px solid #AAAAAA; }
 
 
 		/* Odds and ends */
@@ -238,14 +242,14 @@
 	<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
 
 		<!-- HEADER -->
-		<table class="head-wrap" bgcolor="#999999">
+		<table class="head-wrap" bgcolor="#519548">
 			<tr>
 				<td></td>
 				<td class="header container" align="">
 
 					<!-- /content -->
-					<div class="content">
-						<table bgcolor="#999999" >
+					<div class="content outdoor">
+						<table bgcolor="#519548" >
 							<tr>
 								<td><img src="http://placehold.it/200x50/" /></td>
 								<td align="right"><h6 class="collapse">Disponibilidade</h6></td>
@@ -259,7 +263,7 @@
 		</table><!-- /HEADER -->
 
 		<!-- BODY -->
-		<table class="body-wrap" bgcolor="">
+		<table class="body-wrap" bgcolor="#88C425">
 			<tr>
 				<td></td>
 				<td class="container" align="" bgcolor="#FFFFFF">
@@ -279,13 +283,16 @@
 					<% @outdoors.each do |o|
 						outdoor = Outdoor.find(o) %>
 						<div class="content">
-							<table bgcolor="">
+							<table class="outdoor">
 								<tr>
 									<td class="small" width="20%" style="vertical-align: top; padding-right:10px;">
+										
+		                               <% 
+		                                outdoor.foto_outdoors[0..0].each { |foto| %>
+		                               		<%= image_tag(foto.file.url(:small)) %>
+		                               	<% } %>
 
-		                               <% outdoor.foto_outdoors.each do |foto|%>
-                                            <%= image_tag foto.file.url(:small) %>
-                                        <% end %>
+		      
 
 									</td>
 									<td>

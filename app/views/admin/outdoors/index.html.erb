@@ -22,7 +22,7 @@
                                     <th></th>
                                 </tr>
 
-                                <% @outdoors.each do |outdoor| %>
+                                <% @outdoors.each { |outdoor| %>
                                 <tr>
                                     <td><%= check_box_tag("delete[#{outdoor.id}]",1) %></td>
                                     <td><%= link_to outdoor.numero, [:admin, outdoor] %></td>
@@ -32,15 +32,15 @@
                                     <td><%= humanized_money_with_symbol outdoor.valor %></td>
                                     <td><%= outdoor.sentido %></td>
                                     <td>
-                                        <% outdoor.foto_outdoors.each do |foto|%>
+                                        <% outdoor.foto_outdoors.each { |foto|%>
                                             <%= image_tag foto.file.url(:small) %>
-                                        <% end %>
+                                        <% } %>
                                     </td>
                                     <td>
                                         <%= link_to 'Edit', edit_admin_outdoor_path(outdoor), class: "btn btn-blue btn-mini" %>
                                         <%= link_to 'Destroy', [:admin, outdoor], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-yellow btn-mini" %></td>
                                     </tr>
-                                    <% end %>
+                                    <% } %>
                                 </table>
                                 <div class="widget-footer">
                                     <div class="btn-toolbar pull-left">
