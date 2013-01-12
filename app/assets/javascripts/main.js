@@ -605,3 +605,10 @@
         };
 
 })(jQuery, this, document);
+
+            var activeurl = window.location.pathname;
+            var link = $('a[href="'+activeurl+'"]');
+            link.parent('li').addClass('active');
+            link.closest('.accordion-content').addClass('in');
+            var parent = link.parent().parent().parent();
+            parent.children(".accordion-heading").addClass('active');
