@@ -22,3 +22,5 @@ $('#outdoor_valor').priceFormat({
   	}
   });
   
+
+  

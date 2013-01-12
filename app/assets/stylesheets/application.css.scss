@@ -15,13 +15,15 @@
  *= require boo
  *= require boo-coloring
  *= require boo-utility
+
  *= require bootstrap-fileupload
  *= require bootstrap-modal-bootheme
  *= require jquery.ui.datepicker
- *= require extension
- *= require prettify
- *= require timepicker
+ *= require fonts
+ *= require jquery.qtip
  *= require uniform-theme
+ *= require select-theme
+ *= require bootstrap-toggle-buttons-theme
  
  *= require_tree .
  */

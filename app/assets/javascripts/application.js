@@ -14,7 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.price_format.1.7.min
-//= require uniform/jquery.uniform
+
 //= require bootstrap.js
 //= require jquery.cookie.js
 
@@ -31,9 +31,7 @@
 //= require jquery.ui.datepicker
 //= require jquery.ui.datepicker-pt-BR
 
-//= require bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min 
-
-//= require bootstrap-colorpicker/js/bootstrap-colorpicker
+//= require bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min  
 //= require bootstrap-fileupload/bootstrap-fileupload
 //= require bootstrap-rowlink/bootstrap-rowlink
 //= require bootstrap-progressbar/bootstrap-progressbar
@@ -51,7 +49,7 @@
 //= require list/plugins/list.paging.min 
 //= require fullcalendar/fullcalendar 
 
- 
+//= require uniform/jquery.uniform
 //= require select2/select2.min 
 //= require counter/jquery.counter 
 //= require elastic/jquery.elastic 
@@ -59,8 +57,6 @@
 //= require inputmask/jquery.inputmask.extensions 
 //= require validate/jquery.validate.min 
 //= require xbreadcrumbs/xbreadcrumbs 
-
-//= require sparkline/jquery.sparkline 
 
 //= require main 
 

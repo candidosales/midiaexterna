@@ -53,8 +53,6 @@
                 }
         });
 
-
-
         // SIDEBAR - SHOW OR HIDDEN
         // ------------------------------------------------------------------------------------------------ * -->        
         function showSidebar() {
@@ -63,14 +61,14 @@
                         expires: 30
                 });
         };
-                
-                function hideSidebar() {
+        
+        function hideSidebar() {
                 $('body').addClass('sidebar-hidden');
                 $.cookie('sidebar-pref', 'sidebar-hidden', {
                         expires: 30
                 });
         };
-                
+        
         $("#btnToggleSidebar").click(function () {
                 $(this).toggleClass('fontello-icon-resize-full-2 fontello-icon-resize-small-2');
                 $(this).toggleClass('active');
@@ -106,30 +104,42 @@
         // SCROLL - NICESCROLL
         // ------------------------------------------------------------------------------------------------ * -->
         // The document page (body)
-        /**/
-                                $("body").niceScroll({
-                                        cursoropacitymin:0.1,
-                                        cursoropacitymax:0.9,
-                                        cursorcolor:"#adafb5",
-                                        cursorwidth:"8px",
-                                        cursorborder:"",
-                                        cursorborderradius:"8px",
-                                        usetransition:600,
-                                        background:"",
-                                        railoffset:{top:10,left:-3}     
-                                }); 
-                                
-                                $("#main-sidebar").niceScroll({
-                                        cursoropacitymin:0.1,
-                                        cursoropacitymax:0.9,
-                                        cursorcolor:"#adafb5",
-                                        cursorwidth:"6px",
-                                        cursorborder:"",
-                                        cursorborderradius:"6px",
-                                        usetransition:600,
-                                        background:"",
-                                        railoffset:{top:10,left:-1}
-                                });
+        /**/$("html").niceScroll({
+                    cursoropacitymin:0.1,
+                    cursoropacitymax:0.9,
+                    cursorcolor:"#adafb5",
+                    cursorwidth:"8px",
+                    cursorborder:"",
+                    cursorborderradius:"8px",
+                    usetransition:600,
+                    background:"",
+                    railoffset:{top:10,left:-3} 
+                }); 
+                
+                $("#main-sidebar").niceScroll({
+                    cursoropacitymin:0.1,
+                    cursoropacitymax:0.9,
+                    cursorcolor:"#adafb5",
+                    cursorwidth:"6px",
+                    cursorborder:"",
+                    cursorborderradius:"6px",
+                    usetransition:600,
+                    background:"",
+                    railoffset:{top:10,left:-1}
+                });
+                /*
+                $(".bodyscroll").niceScroll({
+                    autohidemode: false,
+                    cursoropacitymin:0.9,
+                    cursoropacitymax:0.9,
+                    cursorcolor:"#adafb5",
+                    cursorwidth:"6px",
+                    cursorborder:"",
+                    cursorborderradius:"6px",
+                    usetransition:600,
+                    railoffset:{top:10,left:-1,bottom:-10}
+                });
+                */
 
         // SCROLL TOP PAGE
         // ------------------------------------------------------------------------------------------------ * -->
@@ -188,47 +198,47 @@
         // FORM - BOOTSTRAP SELECTPICKER
         // ------------------------------------------------------------------------------------------------ * -->
         $(function () {
-                                 $('.selectpicker').selectpicker();
-                                 
-                                 $('.selectpicker-boo').selectpicker({
-                                                btnStyle: 'btn-boo'
-                                 });
-                                 $('.selectpicker-primmary').selectpicker({
-                                                btnStyle: 'btn-primmary'
-                                 });
-                                 $('.selectpicker-info').selectpicker({
-                                                btnStyle: 'btn-info'
-                                 });
-                                 $('.selectpicker-success').selectpicker({
-                                                btnStyle: 'btn-green'
-                                 });
-                                 $('.selectpicker-yellow').selectpicker({
-                                                btnStyle: 'btn-yellow'
-                                 });
-                                 $('.selectpicker-blue').selectpicker({
-                                                btnStyle: 'btn-blue'
-                                 });
-                                 $('.selectpicker-green').selectpicker({
-                                                btnStyle: 'btn-green'
-                                 });
-                });
-                
-                // FORM - SELECT 2
+                 $('.selectpicker').selectpicker();
+                 
+                 $('.selectpicker-boo').selectpicker({
+                        style: 'btn-boo'
+                 });
+                 $('.selectpicker-primmary').selectpicker({
+                        style: 'btn-primmary'
+                 });
+                 $('.selectpicker-info').selectpicker({
+                        style: 'btn-info'
+                 });
+                 $('.selectpicker-success').selectpicker({
+                        style: 'btn-green'
+                 });
+                 $('.selectpicker-yellow').selectpicker({
+                        style: 'btn-yellow'
+                 });
+                 $('.selectpicker-blue').selectpicker({
+                        style: 'btn-blue'
+                 });
+                 $('.selectpicker-green').selectpicker({
+                        style: 'btn-green'
+                 });
+        });
+        
+        // FORM - SELECT 2
         // ------------------------------------------------------------------------------------------------ * -->
         // select2 demo
-                $(".selecttwo").select2({
+        $(".selecttwo").select2({
                 minimumResultsForSearch: 6,
-                                width: "off"
+                width: "off"
         });
         $(".selecttwo-s").select2();
-                
+        
         $(".selecttwo-full").select2({
-                                minimumResultsForSearch: 6,
+                minimumResultsForSearch: 6,
                 width: "100%"
         });
-                
-                $(".selecttwo-full-s").select2({
-                                width: "100%"
+        
+        $(".selecttwo-full-s").select2({
+                width: "100%"
         });
 
         // selec2 tagging support demo  
@@ -323,87 +333,31 @@
                 radioClass: 'radios' // edited class - the original radio
         });
 
+        // FORM - INPUTMASK PLUGIN
+        // ------------------------------------------------------------------------------------------------ * -->
+        $("input.maskDate").inputmask("99/99/9999", {
+                placeholder: "dd/mm/yyyy"
+        });
+        $("input.maskPhone").inputmask("(999) 999-9999", {
+                completed: function () {
+                        alert("Callback when completed");
+                }
+        });
+        $("input.maskPhoneExt").inputmask("(999) 999-9999? x99999");
+        $("input.maskPhoneInt").inputmask("+43 999 999 999");
+        $("input.maskZipcode").inputmask("99999");
+        $("input.maskTid").inputmask("99-9999999");
+        $("input.maskSsn").inputmask("999-99-9999");
+        $("input.maskProd").inputmask("a*-999-a999-a999");
+        $("input.maskEye").inputmask("~9.99 ~9.99 999");
+        $("input.maskPo").inputmask("MM: aaa-999-*****-9999");
+        $("input.maskPct").inputmask("99%");
+        $("input.maskAcid").inputmask("FP009-99999-2012");
+
         // FORM - ELASTIC TEXTAREA
         // ------------------------------------------------------------------------------------------------ * -->
         $('textarea.auto').elastic();
         $('textarea.auto').trigger('update');
-
-
-        // BOOTSTRAP DATEPICKER
-        // ------------------------------------------------------------------------------------------------ * -->
-        $('.datepickers').datepicker();
-        $('#articleCreated, #articleCreatedDate, #articlePublishingStart, #articlePublishingFinish, #datePickerVia').datepicker();
-                
-        // bootstrap datepicker demo
-        $('#datePicker').datepicker({
-                format: 'dd-mm-yyyy'
-        });
-                
-        // bootstrap datepicker demo
-        $('#DPV').click(function (e) {
-                e.stopPropagation();
-                $('#datePickerVia').datepicker('update', '10/10/12');
-        });
-                
-        // bootstrap datepicker demo
-        $('#datePickerComponent').datepicker();
-
-        var startDate = new Date(2012, 1, 20);
-        var endDate = new Date(2012, 1, 25);
-        $('#DTP1').datepicker()
-                .on('changeDate', function (ev) {
-                if(ev.date.valueOf() > endDate.valueOf()) {
-                        $('#alert').show().find('.msg').text('The start date can not be greater then the end date');
-                } else {
-                        $('#alert').hide();
-                        startDate = new Date(ev.date);
-                        $('#startDate').text($('#DTP1').data('date'));
-                }
-                $('#DTP1').datepicker('hide');
-        });
-                
-        // bootstrap datepicker demo
-        $('#DTP2').datepicker()
-                .on('changeDate', function (ev) {
-                if(ev.date.valueOf() < startDate.valueOf()) {
-                        $('#alert').show().find('.msg').text('The end date can not be less then the start date');
-                } else {
-                        $('#alert').hide();
-                        endDate = new Date(ev.date);
-                        $('#endDate').text($('#DTP2').data('date'));
-                }
-                $('#DTP2').datepicker('hide');
-        });
-                
-        // bootstrap datepicker demo
-        $('#datePickerToDiv').datepicker()
-                .on('changeDate', function (ev) {
-                showDate = new Date(ev.date);
-                $('#showDate').text($('#datePickerToDiv').data('date'));
-        });
-                
-                // bootstrap datepicker demo
-        $('#DPTD').click(function () {
-                $('#datePickerToDiv').datepicker('update', '01-09-1969');
-                $('#showDate').text($('#datePickerToDiv').data('date'));
-        });
-
-        // BOOTSTRAP COLORPICKER
-        // ------------------------------------------------------------------------------------------------ * -->
-        $(function () {
-                $('.colorpicker').colorpicker();
-
-                $('.cpHEX').colorpicker({
-                        format: 'hex'
-                });
-
-                $('#cpComponent').colorpicker();
-
-               /* var divStyle = $('#colored')[0].style;
-                $('#cpCHANGE').colorpicker().on('changeColor', function (ev) {
-                        divStyle.backgroundColor = ev.color.toHex();
-                });*/
-        });
 
 
         // BOOTSTRAP BUTTON TOGGLE CHANGE COLOR ON ACTIVE
@@ -431,7 +385,7 @@
         });
 
         // FORM - LIMITER
-        // ------------------------------------------------------------------------------------------------ * -->               
+        // ------------------------------------------------------------------------------------------------ * -->       
         $(".limiteChar15").counter({
                 goal: 15
         });
@@ -635,16 +589,10 @@
                 .click(function (e) {
                 $(this).popover('toggle');
                 e.stopPropagation();
-        });
-
-        // SPARKLINE 
-        // ------------------------------------------------------------------------------------------------ * -->
-        // Change class for tooltip 
-                $.fn.sparkline.defaults.common.tooltipClassname = 'sparktip';
-                
+        });        
 
         // Bootstrap Hack for button radio to hidden input 
-                // ------------------------------------------------------------------------------------------------ * -->
+        // ------------------------------------------------------------------------------------------------ * -->
         var _old_toggle = $.fn.button.prototype.constructor.Constructor.prototype.toggle;
         $.fn.button.prototype.constructor.Constructor.prototype.toggle = function () {
                 _old_toggle.apply(this);
@@ -656,15 +604,4 @@
                 }
         };
 
-
 })(jQuery, this, document);
-
-
-        // SPARKLINE 
-        // ------------------------------------------------------------------------------------------------ * -->
-            var activeurl = window.location.pathname;
-            var link = $('a[href="'+activeurl+'"]');
-            link.parent('li').addClass('active');
-            link.closest('.accordion-content').addClass('in');
-            var parent = link.parent().parent().parent();
-            parent.children(".accordion-heading").addClass('active');

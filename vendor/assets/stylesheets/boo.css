@@ -1000,7 +1000,7 @@ span.arrow-table-action {
   float: left;
   width: 30px;
   height: 30px;
-  background: url('../img/table/arrow-table-action.png') no-repeat 50% 50%;
+  background: url('table/arrow-table-action.png') no-repeat 50% 50%;
 }
 
 .action-table .pagination {
@@ -1353,18 +1353,18 @@ thead th.sorting_desc {
 }
 
 thead th.sorting .column-sorter {
-  background: url('../img/table/arrow-sorting.png') no-repeat right center;
+  background: url('table/arrow-sorting.png') no-repeat right center;
   filter: alpha(opacity=50);
 filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
   opacity: 0.5;
 }
 
 thead th.sorting_asc .column-sorter {
-  background: url('../img/table/arrow-sorting-asc.png') no-repeat right center;
+  background: url('table/arrow-sorting-asc.png') no-repeat right center;
 }
 
 thead th.sorting_desc .column-sorter {
-  background: url('../img/table/arrow-sorting-desc.png') no-repeat right center;
+  background: url('table/arrow-sorting-desc.png') no-repeat right center;
 }
 
 thead th.sorting_disabled,
@@ -1467,7 +1467,7 @@ div.DTS div.dataTables_scrollBody {
 }
 
 div.DTS div.dataTables_scroll {
-  background: url('../img/table/loading-background.png') repeat 0 0;
+  background: url('table/loading-background.png') repeat 0 0;
 }
 
 /* TABLE - DATA ROWLINK
