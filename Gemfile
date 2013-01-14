@@ -8,7 +8,7 @@ gem 'rails', '3.2.11'
 gem 'devise', '~> 2.1.2'
 
 #Mongo
-gem 'mongoid', '~> 3.0.16'
+gem 'mongoid', '~> 3.0.17'
 gem 'bson_ext'
 
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
