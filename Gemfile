@@ -5,13 +5,14 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'devise', '~> 2.1.2'
+gem 'devise', '~> 2.2.3'
 
 #Mongo
-gem 'mongoid', '~> 3.0.17'
+gem 'mongoid', '~> 3.0.19'
 gem 'bson_ext'
 
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
+#Permite cortar imagens ou redimensionar, só funciona se tiver instalado imagemagick
 gem 'rmagick', '~> 2.13.1'
 
 gem 'money-rails'
@@ -19,6 +20,8 @@ gem 'ember-rails'
 
 gem 'nested_form'
 gem 'simple_form'
+
+gem 'capistrano'
 
 # Gems used only for assets and not required
 # in production environments by default.

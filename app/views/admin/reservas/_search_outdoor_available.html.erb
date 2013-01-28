@@ -36,7 +36,7 @@
       </table>
     </div>
     <div class="controls controls-row">
-      <%= f.collection_select :cliente_id, Cliente.all, :id, :nome,  {:prompt => 'Selecione o cliente'},{:class => 'span3'} %>
+      <%= f.collection_select :cliente_id, Cliente.all, :id, :nome,  {:prompt => 'Selecione o cliente'},{:class => 'selecttwo-s span3'} %>
       <%= f.text_field :campanha, :placeholder => "Nome da campanha", :class => 'span3'%>
       <input id="valor" type="text" placeholder="R$ 0,00" class="span3" name="valor" disabled   >
 
