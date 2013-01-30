@@ -21,7 +21,8 @@ gem 'ember-rails'
 gem 'nested_form'
 gem 'simple_form'
 
-gem 'capistrano'
+gem 'puma'
+gem 'capistrano-puma', require: false
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -42,6 +43,7 @@ end
 
 group :development do
   gem 'better_errors'
+  gem 'capistrano'
 end
 
 # To use ActiveModel has_secure_password

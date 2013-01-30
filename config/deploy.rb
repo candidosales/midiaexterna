@@ -1,58 +1,73 @@
-set :stages, %w(production staging)
-set :default_stage, "staging"
-require 'capistrano/ext/multistage'
+require 'bundler/capistrano'
+# =============================================================================
+# GENERAL SETTINGS
+# =============================================================================
 
 set :application, "midiaexterna"
 set :repository, "git@github.com:candidosales/midiaexterna.git"
 set :scm, :git
+set :branch, 'master'
 
-set :deploy_to, "/var/www/midiaexterna"
 
-desc "check production task"
-task :check_production do
+#Uma ótima opção referente ao Github que podemos adicionar é o remote_chache. 
+#Esta opção evita que seja feito o clone de todo o repositório a cada deploy. 
+#Ao invés disso, é feito apenas um fetch das alterações, deixando assim, o deploy bem mais rápido:
+set :deploy_via, :remote_cache
+set :deploy_to, "/var/www/#{application}"
+set :current, "#{deploy_to}/current"
 
-	if stage.to_s == "production"
+server "ec2-23-22-211-226.compute-1.amazonaws.com", :app, :web, :db, :primary => true
 
-		puts " \n Are you REALLY sure you want to deploy to production?"
-		puts " \n Enter the password to continue\n "
-		password = STDIN.gets[0..7] rescue nil
-		if password != 'mypasswd'
+#Por fim precisamos fazer as configurações referente à autenticação (ssh). 
+#Como utilizamos uma chave privada para acessar a Amazon, iremos indicá-la para conseguirmos ter acesso ao servidor, 
+#no meu caso ela se encontra na pasta .ssh:
+ssh_options[:keys] = '/home/candidosg/midiaexterna/config/ssh/midiaexterna.pem'
 
-			puts "\n !!! WRONG PASSWORD !!!"
-			exit
+set :user, 'ubuntu'
+set :runner, 'ubuntu'
+set :group, 'ubuntu'
+set :use_sudo, false
 
-		end
+set :keep_releases, 5
 
+#Para ser possível baixarmos o código da aplicação precisamos da chave SSH cadastrada no Github. 
+#Quem faz a requisição do clone do repositório é o usuário ubuntu lá no servidor, e lá não temos tal chave, a temos 
+#apenas em nossa máquina de deploy. Para evitar a necessidade da cópia da chave local para o servidor existe uma opção chamada 
+#forward_agent que durante o deploy pega a chave local e a utiliza para requisitar o clone do repositório:
+ssh_options[:forward_agent] = true
+
+
+
+#Como o Github pedi para confirmarmos o host de conexão para que o mesmo fique no nosso known host e passar a ser confiável, 
+#vamos habilitar o **pseudo-tty* para que o host já seja aceito:
+default_run_options[:pty] = true
+
+
+namespace :mongodb do
+	desc "Install the latest stable release of Mongodb."
+	task :install, roles: :db, only: { primary: true } do
+		run "#{sudo} apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10"
+		run "#{sudo} touch /etc/apt/sources.list.d/10gen.list"
+		run "#{sudo} echo 'deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen' >> /etc/apt/sources.list.d/10gen.list"
+		run "#{sudo} apt-get -y update"
+		run "#{sudo} apt-get -y install mongodb-10gen"
 	end
-
+	after "deploy:install", "mongodb:install"
 end
 
-before "deploy", "check_production"
+namespace :git do
+	desc "Install Git"
+	task :install_git, :roles => :app do
+		sudo "#{sudo} apt-get install git gitk ssh libssh-dev git-core git-svn -y"  
+	end
+end
 
-##########################
+namespace :imagemagick do
+	desc "Install ImageMagick"
+	task :install_imagemagick, :roles => :app do
+		sudo "#{sudo} apt-get install libxml2-dev libmagick9-dev imagemagick -y"
+		sudo "gem install rmagick mini_magick"
+	end
+end
 
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
 
-# set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
-
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "your app-server here"                          # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
-
-# if you want to clean up old releases on each deploy uncomment this:
-# after "deploy:restart", "deploy:cleanup"
-
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
-
-# If you are using Passenger mod_rails uncomment this:
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
