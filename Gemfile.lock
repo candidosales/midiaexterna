@@ -199,7 +199,7 @@ DEPENDENCIES
   nested_form
   puma
   rails (= 3.2.11)
-  rmagick (~> 2.13.1)
+  rmagick
   sass-rails (~> 3.2.5)
   simple_form
   uglifier (>= 1.0.3)
