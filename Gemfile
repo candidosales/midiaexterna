@@ -13,7 +13,7 @@ gem 'bson_ext'
 
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 #Permite cortar imagens ou redimensionar, só funciona se tiver instalado imagemagick
-gem 'rmagick', '~> 2.13.1'
+gem 'rmagick'
 
 gem 'money-rails'
 gem 'ember-rails'
