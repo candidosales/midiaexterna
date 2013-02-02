@@ -10,22 +10,19 @@ default_run_options[:pty] = true
 set :application, "midiaexterna"
 set :repository, "git@github.com:candidosales/midiaexterna.git"
 set :scm, :git
-set :scm_passphrase, "canj1ca"
-set :scm_user, "candidosales"
 set :scm_verbose, true
 
-
 set :branch, 'master'
-set :domain, "ec2-23-22-211-226.compute-1.amazonaws.com"
+set :domain, "ec2-177-71-146-78.sa-east-1.compute.amazonaws.com" 
 
 #Para ser possível baixarmos o código da aplicação precisamos da chave SSH cadastrada no Github. 
 #Quem faz a requisição do clone do repositório é o usuário ubuntu lá no servidor, e lá não temos tal chave, a temos 
 #apenas em nossa máquina de deploy. Para evitar a necessidade da cópia da chave local para o servidor existe uma opção chamada 
 #forward_agent que durante o deploy pega a chave local e a utiliza para requisitar o clone do repositório:
-ssh_options[:keys] = ["#{ENV['HOME']}/.ec2/midiaexterna.pem"] 
+ssh_options[:keys] = ['~/.ec2/midiaexterna-ec2.pem']
 ssh_options[:forward_agent] = true
 ssh_options[:verbose] = :debug
-set :use_sudo, false
+set :use_sudo, true
 set :keep_releases, 5
 
 #Uma ótima opção referente ao Github que podemos adicionar é o remote_chache. 
@@ -34,7 +31,7 @@ set :keep_releases, 5
 set :deploy_via, :remote_cache
 set :deploy_to, "/var/www/#{application}"
 set :current, "#{deploy_to}/current"
-set :user, "root"
+set :user, 'ec2-user'
 
 # ==============================================================
 # ROLE's
@@ -53,9 +50,9 @@ end
 
 after "deploy", "deploy:restart"
 
-# namespace :mongodb do
+
 # 	desc "Install the latest stable release of Mongodb."
-# 	task :install, roles: :db, only: { primary: true } do
+# 	task :install_mongo, roles: :db, only: { primary: true } do
 # 		run "#{sudo} apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10"
 # 		run "#{sudo} touch /etc/apt/sources.list.d/10gen.list"
 # 		run "#{sudo} echo 'deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen' >> /etc/apt/sources.list.d/10gen.list"
@@ -63,21 +60,30 @@ after "deploy", "deploy:restart"
 # 		run "#{sudo} apt-get -y install mongodb-10gen"
 # 	end
 # 	after "deploy:install", "mongodb:install"
-# end
 
-# namespace :git do
+
 # 	desc "Install Git"
 # 	task :install_git, :roles => :app do
 # 		sudo "#{sudo} apt-get install git gitk ssh libssh-dev git-core git-svn -y"  
 # 	end
-# end
 
-# namespace :imagemagick do
+
+
 # 	desc "Install ImageMagick"
 # 	task :install_imagemagick, :roles => :app do
 # 		sudo "#{sudo} apt-get install libxml2-dev libmagick9-dev imagemagick -y"
 # 		sudo "gem install rmagick mini_magick"
 # 	end
+
+# desc "Update apt-get sources"
+# task :update_apt_get do
+# 	sudo "apt-get update"
 # end
+
+# desc "Install Development Tools"
+# task :install_dev_tools do
+# 	sudo "apt-get install build-essential -y"
+# end
+
 
 
