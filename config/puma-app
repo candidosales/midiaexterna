@@ -1,0 +1,67 @@
+upstream appname {
+  server unix:///var/www/midiaexterna/shared/tmp/puma/midiaexterna-puma.sock;
+}
+
+server {
+  listen 80;
+  server_name 177.71.250.61;
+
+  keepalive_timeout 5;
+
+  root /var/www/midiaexterna/public;
+
+  access_log /var/log/nginx/nginx.access.log;
+  error_log /var/log/nginx/nginx.error.log info;
+
+  if (-f $document_root/maintenance.html) {
+    rewrite  ^(.*)$  /maintenance.html last;
+    break;
+  }
+
+  location ~ ^/(assets)/  {
+    root /var/www/midiaexterna/public;
+    expires max;
+    add_header  Cache-Control public;
+  }
+
+  location / {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+
+    if (-f $request_filename) {
+      break;
+    }
+
+    if (-f $request_filename/index.html) {
+      rewrite (.*) $1/index.html break;
+    }
+
+    if (-f $request_filename.html) {
+      rewrite (.*) $1.html break;
+    }
+
+    if (!-f $request_filename) {
+      proxy_pass http://177.71.250.61;
+      break;
+    }
+  }
+
+  # Now this supposedly should work as it gets the filenames 
+  # with querystrings that Rails provides.
+  # BUT there's a chance it could break the ajax calls.
+  location ~* \.(ico|css|gif|jpe?g|png)(\?[0-9]+)?$ {
+     expires max;
+     break;
+  }
+
+  location ~ ^/javascripts/.*\.js(\?[0-9]+)?$ {
+     expires max;
+     break;
+  }
+
+  # Error pages
+  # error_page 500 502 503 504 /500.html;
+  location = /500.html {
+    root /var/www/midiaexterna/public;
+  }
+}
