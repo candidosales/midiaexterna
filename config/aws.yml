@@ -1,6 +1,0 @@
-aws_access_key: 'AKIAIMP7E2EUN5VTWYNQ'
-aws_secret_access_key: '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'
-aws_account: 'candidosg@gmail.com'
-ec2_id_rsa: '~/.ssh/id_rsa'
-ec2_keypair_name: "midiaexterna_ec2.pem"
-primary_instance_url: 'ec2-177-71-250-61.sa-east-1.compute.amazonaws.com'
