@@ -1,28 +1,25 @@
 # ==============================================================
 # SET's
 # ==============================================================
-set :domain, "177.71.250.61"
-set :application, "midiaexterna"
-set :repository, "git@github.com:candidosales/midiaexterna.git"
-
-
 default_run_options[:pty] = true
-ssh_options[:verbose] = :debug
 ssh_options[:forward_agent] = true
 
+set :domain, "177.71.250.61"
+set :application, "midiaexterna"
+set :repository, "git@github.com:candidosales/#{application}.git"
+
+
+ssh_options[:keys] = [File.join(ENV["HOME"], ".ec2", "me-ec2")]
+
+
 set :user, "ubuntu"
-set :use_sudo, true
+set :use_sudo, false
+
 set :scm, :git
-set :keep_releases, 5
 set :branch, "master"
-
-#Uma ótima opção referente ao Github que podemos adicionar é o remote_chache. 
-#Esta opção evita que seja feito o clone de todo o repositório a cada deploy. 
-#Ao invés disso, é feito apenas um fetch das alterações, deixando assim, o deploy bem mais rápido:
-#set :deploy_via, :remote_cache
+set :deploy_via, :remote_cache
 set :deploy_to, "/home/ubuntu/#{application}"
-set :current, "#{deploy_to}/current"
-
+set :keep_releases, 10
 
 # ==============================================================
 # ROLE's

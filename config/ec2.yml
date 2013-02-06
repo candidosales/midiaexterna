@@ -1,6 +1,0 @@
-:aws_access_key_id: "AKIAIMP7E2EUN5VTWYNQ"
-:aws_secret_access_key: "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"
-:aws_params:
-  :region: 'us-east-1b'
-:load_balanced: true
-:project_tag: "midiaexterna"
