@@ -1,3 +1,5 @@
+require 'bundler/capistrano'
+
 # ==============================================================
 # SET's
 # ==============================================================
@@ -8,12 +10,10 @@ set :domain, "177.71.250.61"
 set :application, "midiaexterna"
 set :repository, "git@github.com:candidosales/#{application}.git"
 
-
-ssh_options[:keys] = [File.join(ENV["HOME"], ".ec2", "me-ec2")]
-
-
 set :user, "ubuntu"
 set :use_sudo, false
+ssh_options[:config] = false
+ssh_options[:keys] = ["./.ec2/me-ec2.pem"]
 
 set :scm, :git
 set :branch, "master"
