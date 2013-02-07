@@ -36,7 +36,7 @@ namespace :deploy do
 	task :start do ; end
 	task :stop do ; end
 	task :restart, :roles => :app, :except => { :no_release => true } do
-		run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+		run "sudo touch #{File.join(current_path,'tmp','restart.txt')}"
 	end
 
 	desc "Install bundle"
@@ -57,7 +57,6 @@ namespace :deploy do
 	desc "Install ImageMagick"
 	task :install_imagemagick, :roles => :app do
 		sudo "apt-get install imagemagick libmagickwand-dev -y"
-
 	end
 
 	

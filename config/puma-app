@@ -1,5 +1,5 @@
 upstream midiaexterna {
-  server unix:///home/ubuntu/midiaexterna/shared/tmp/puma/midiaexterna-puma.sock;
+  server unix:///midiaexterna/shared/tmp/puma/midiaexterna-puma.sock;
 }
 
 server {
@@ -8,10 +8,10 @@ server {
 
   keepalive_timeout 5;
 
-  root /home/ubuntu/midiaexterna/current/public;
+  root /midiaexterna/current/public;
 
-  access_log /data/log/nginx/nginx.access.log;
-  error_log /data/log/nginx/nginx.error.log info;
+  access_log /midiaexterna/log/nginx/nginx.access.log;
+  error_log /midiaexterna/log/nginx/nginx.error.log info;
 
   if (-f $document_root/maintenance.html) {
     rewrite  ^(.*)$  /maintenance.html last;
@@ -19,7 +19,7 @@ server {
   }
 
   location ~ ^/(assets)/  {
-    root /home/ubuntu/midiaexterna/current/public;
+    root /midiaexterna/current/public;
     expires max;
     add_header  Cache-Control public;
   }
@@ -62,6 +62,6 @@ server {
   # Error pages
   # error_page 500 502 503 504 /500.html;
   location = /500.html {
-    root /home/ubuntu/midiaexterna/current/public;
+    root /midiaexterna/current/public;
   }
 }
