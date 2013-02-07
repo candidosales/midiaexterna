@@ -1,4 +1,5 @@
 require 'bundler/capistrano'
+require 'capistrano-puma'
 
 # ==============================================================
 # SET's
@@ -19,6 +20,8 @@ set :branch, "master"
 set :deploy_via, :remote_cache
 set :deploy_to, "/home/#{user}/#{application}"
 set :keep_releases, 5
+
+set :app_server, :puma
 
 # ==============================================================
 # ROLE's
@@ -45,6 +48,7 @@ namespace :deploy do
 	task :install_dev_tools, :roles => :app do
 		sudo "apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion nodejs -y"
 	end
+
 	desc "Install Git"
 	task :install_git, :roles => :app do
 		sudo "apt-get install git-core git-svn git gitk ssh libssh-dev -y"
@@ -54,6 +58,27 @@ namespace :deploy do
 	task :install_imagemagick, :roles => :app do
 		sudo "apt-get install imagemagick libmagickwand-dev -y"
 
+	end
+
+	
+end
+
+namespace :nginx do
+	desc "Install Nginx"
+	task :install, :roles => :app do
+		run "sudo apt-get -y update"
+		run "sudo apt-get -y upgrade"
+		run "sudo apt-get -y install python-software-properties"
+		run "sudo apt-add-repository -y ppa:nginx/stable"
+		run "sudo apt-get -y update"
+		run "sudo apt-get -y install nginx"
+	end
+
+	%w[start stop restart].each do |command|
+		desc "#{command.capitalize} Nginx server."
+		task command do
+			run "sudo service nginx #{command}"
+		end
 	end
 end
 
@@ -74,8 +99,6 @@ namespace :mongodb do
 		end
 	end
 end
-
-
 
 after "deploy", "deploy:restart"
 
