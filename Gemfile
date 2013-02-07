@@ -15,7 +15,6 @@ gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 #Permite cortar imagens ou redimensionar, só funciona se tiver instalado imagemagick
 gem 'rmagick'
 
-gem 'money-rails'
 gem 'ember-rails'
 
 gem 'nested_form'
@@ -23,6 +22,8 @@ gem 'simple_form'
 
 gem 'aws-sdk'
 gem 'unicorn'
+
+gem 'rack', '~> 1.5.1'
 
 # Gems used only for assets and not required
 # in production environments by default.

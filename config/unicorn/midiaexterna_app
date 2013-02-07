@@ -69,4 +69,4 @@
             location = /500.html {
               root /home/ubuntu/midiaexterna/current/public;
             }
-          
+          }
