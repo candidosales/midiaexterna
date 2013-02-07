@@ -44,7 +44,7 @@ end
 group :development do
   gem 'better_errors'
   gem 'capistrano'
-  gem 'capistrano-puma', require: false
+  gem 'capistrano-puma', :require => false
 end
 
 # To use ActiveModel has_secure_password
