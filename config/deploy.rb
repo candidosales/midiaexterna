@@ -10,6 +10,8 @@ set :application, 'midiaexterna'
 set :repository, "git@github.com:candidosales/#{application}.git"
 
 set :user, "ubuntu"
+set :runner, "ubuntu"
+set :group, "ubuntu"
 ssh_options[:keys] =[File.join(ENV["HOME"], ".ec2", "me-ec2.pem")]
 set :use_sudo, false
 
@@ -29,13 +31,6 @@ server domain, :app, :web, :db, :primary => true
 
 namespace :deploy do
   task :start do
-    %w(config/database.yml).each do |path|
-      from  = "#{deploy_to}/#{path}"
-      to    = "#{current}/#{path}"
-
-      run "if [ -f '#{to}' ]; then rm '#{to}'; fi; ln -s #{from} #{to}"
-    end
-
     run "cd #{current} && RAILS_ENV=production && GEM_HOME=/opt/local/ruby/gems && bundle exec unicorn_rails -c #{deploy_to}/config/unicorn.rb -D"
   end
 
