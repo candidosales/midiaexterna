@@ -5,7 +5,7 @@ require 'bundler/capistrano'
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
-set :domain, "177.71.250.61"
+set :domain, "ec2-177-71-149-66.sa-east-1.compute.amazonaws.com"
 set :application, 'midiaexterna'
 set :repository, "git@github.com:candidosales/#{application}.git"
 
@@ -28,18 +28,26 @@ set :app_server, :puma
 
 server domain, :app, :web, :db, :primary => true
 
-#before "deploy:setup", "deploy:install_bundler"
-
 namespace :deploy do
 	task :start do ; end
 	task :stop do ; end
 	task :restart, :roles => :app, :except => { :no_release => true } do
 		run "sudo touch #{File.join(current_path,'tmp','restart.txt')}"
 	end
+end
 
-	desc "Install bundle"
-	task :install_bundler, :roles => :app do
-		run "sudo gem install bundler"
+namespace :ubuntu do
+	desc "Setup Environment"
+	task :setup_env, :roles => :app do
+		update_apt_get
+		install_dev_tools
+		install_git
+	end
+
+	desc "Update ubuntu"
+	task :update_upgrade_apt_get, :roles => :app do
+		run "sudo apt-get -y update"
+		run "sudo apt-get -y upgrade"
 	end
 
 	desc "Install Development Tools"
@@ -57,10 +65,11 @@ namespace :deploy do
 		run "sudo apt-get install imagemagick libmagickwand-dev -y"
 	end
 
-	desc "Update ubuntu"
-	task :update_ubuntu, :roles => :app do
-		run "sudo apt-get -y update"
+	desc "Install bundle"
+	task :install_bundler, :roles => :app do
+		run "sudo gem install bundler"
 	end
+
 
 	desc "Install Ruby Stable"
 	task :install_ruby, :roles => :app do
