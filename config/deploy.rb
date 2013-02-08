@@ -6,7 +6,7 @@ default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
 set :domain, "177.71.250.61"
-set :application, "midiaexterna"
+set :application, 'midiaexterna'
 set :repository, "git@github.com:candidosales/#{application}.git"
 
 set :user, "ubuntu"
