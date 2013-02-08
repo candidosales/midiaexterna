@@ -22,7 +22,6 @@ gem 'nested_form'
 gem 'simple_form'
 
 gem 'aws-sdk'
-gem 'unicorn'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -45,6 +44,10 @@ group :development do
   gem 'better_errors'
   gem 'capistrano'
   gem 'capistrano-unicorn', :require => false
+end
+
+group :production do
+  gem 'unicorn'
 end
 
 # To use ActiveModel has_secure_password

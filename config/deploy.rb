@@ -39,15 +39,18 @@ end
 namespace :ubuntu do
 	desc "Setup Environment"
 	task :setup_env, :roles => :app do
-		update_apt_get
 		install_dev_tools
 		install_git
+		install_imagemagick
 	end
 
 	desc "Update ubuntu"
 	task :update_upgrade_apt_get, :roles => :app do
 		run "sudo apt-get -y update"
 		run "sudo apt-get -y upgrade"
+		run "sudo apt-get -y dist-upgrade"
+		run "sudo apt-get -y autoremove"
+		run "sudo reboot"
 	end
 
 	desc "Install Development Tools"
