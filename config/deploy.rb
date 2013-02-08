@@ -44,20 +44,36 @@ namespace :deploy do
 
 	desc "Install Development Tools"
 	task :install_dev_tools, :roles => :app do
-		sudo "apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion nodejs -y"
+		run "sudo apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion nodejs -y"
 	end
 
 	desc "Install Git"
 	task :install_git, :roles => :app do
-		sudo "apt-get install git-core git-svn git gitk ssh libssh-dev -y"
+		run "sudo apt-get install git-core git-svn git gitk ssh libssh-dev -y"
 	end
 
 	desc "Install ImageMagick"
 	task :install_imagemagick, :roles => :app do
-		sudo "apt-get install imagemagick libmagickwand-dev -y"
+		run "sudo apt-get install imagemagick libmagickwand-dev -y"
 	end
 
-	
+	desc "Update ubuntu"
+	task :update_ubuntu, :roles => :app do
+		run "sudo apt-get -y update"
+	end
+
+	desc "Install Ruby Stable"
+	task :install_ruby, :roles => :app do
+		run "wget -q -O - http://apt.hellobits.com/hellobits.key | sudo apt-key add -"
+		run "echo 'deb http://apt.hellobits.com/ precise main' | sudo tee /etc/apt/sources.list.d/hellobits.list"
+		run "sudo apt-get update"
+		run "sudo apt-get install ruby-stable"
+	end
+
+	desc "Atualizar Gem"
+	task :update_gem, :roles => :app do
+		run "sudo gem update --system"
+	end
 end
 
 namespace :nginx do

@@ -16,6 +16,7 @@ gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 gem 'rmagick'
 
 gem 'ember-rails'
+gem 'money-rails'
 
 gem 'nested_form'
 gem 'simple_form'

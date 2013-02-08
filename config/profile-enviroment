@@ -1,0 +1,4 @@
+export PATH=/usr/lib/bin:/usr/lib/sbin:/usr/lib/ruby/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export RAILS_ENV=production
+export GEM_HOME=/usr/lib/ruby/gems
+export LC_ALL=en_US.UTF-8
