@@ -18,7 +18,6 @@ gem 'rmagick'
 #Engine Yard
 #gem 'ey_config'
 
-gem 'ember-rails'
 gem 'money-rails'
 
 gem 'nested_form'
@@ -52,10 +51,3 @@ end
 group :production do
   gem 'unicorn'
 end
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
