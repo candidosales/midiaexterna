@@ -360,7 +360,6 @@ div.selector span {
 div.selector select {
 	position: absolute;
 	opacity: 0;
- filter: alpha(opacity:0);
 	height: 29px;
 	border: none;
 	background: #fff;
@@ -378,7 +377,6 @@ div.checker span {
 
 div.checker input {
 	opacity: 0;
- filter: alpha(opacity:0);
 	display: inline-block;
 	background: none;
 }
@@ -398,7 +396,6 @@ div.radios span {
 
 div.radios input {
 	opacity: 0;
- filter: alpha(opacity:0);
 	text-align: center;
 	display: inline-block;
 	background: none;
@@ -432,7 +429,6 @@ div.uploader span.filename {
 
 div.uploader input {
 	opacity: 0;
- filter: alpha(opacity:0);
 	position: absolute;
 	top: 0;
 	right: 0;

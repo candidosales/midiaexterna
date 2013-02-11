@@ -1,3 +1,5 @@
+# Automatically precompile assets
+load "deploy/assets"
 require "bundler/capistrano"
 # ==============================================================
 # SET's
