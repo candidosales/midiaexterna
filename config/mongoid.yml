@@ -79,3 +79,7 @@ test:
         max_retries: 1
         retry_interval: 0
 
+production:
+    host: localhost
+    port: 27017
+    database: midiaexterna_production
