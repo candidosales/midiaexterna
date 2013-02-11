@@ -1,4 +1,4 @@
-require 'bundler/capistrano'
+require "bundler/capistrano"
 # ==============================================================
 # SET's
 # ==============================================================
@@ -22,10 +22,12 @@ set :deploy_to, '/var/www/midiaexterna'
 set :current, "#{deploy_to}/current"
 set :keep_releases, 5
 
+set :mongodbname_prod, 'midiaexterna_production'
+set :mongodbname_dev, 'midiaexterna_development'
+
 # ==============================================================
 # ROLE's
 # ==============================================================
-
 
 server domain, :app, :web, :db, :primary => true
 
@@ -131,6 +133,18 @@ namespace :mongodb do
 			run "#{sudo} service mongodb #{command}"
 		end
 	end
+end
+
+namespace :sync do
+
+  desc 'Synchronize local MongoDB with production.'
+  task :mongodb, :hosts => "#{application}" do
+    run "cd"
+    run "mongodump --host localhost -d #{mongodbname}"
+    system "scp -Cr #{user}@#{application}:~/dump/#{mongodbname_prod}/ db/backups/"
+    system "mongorestore -h localhost --drop -d #{mongodbname_dev} db/backups/mongodb/"
+  end
+
 end
 
 after "deploy", "deploy:restart"

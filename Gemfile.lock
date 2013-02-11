@@ -84,6 +84,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    ey_config (0.0.6)
     fssm (0.2.10)
     highline (1.6.15)
     hike (1.2.1)
@@ -206,6 +207,7 @@ DEPENDENCIES
   compass-rails
   devise (~> 2.2.3)
   ember-rails
+  ey_config
   jquery-rails
   jquery-ui-rails
   money-rails
