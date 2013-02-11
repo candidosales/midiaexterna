@@ -102,7 +102,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.20.1)
+    mime-types (1.21)
     money (5.1.0)
       i18n (~> 0.6.0)
     money-rails (0.7.1)
@@ -116,7 +116,7 @@ GEM
       tzinfo (~> 0.3.22)
     mongoid-paperclip (0.0.8)
       paperclip (>= 2.3.6)
-    moped (1.4.0)
+    moped (1.4.2)
     multi_json (1.5.0)
     nested_form (0.3.1)
     net-scp (1.1.0)
@@ -162,7 +162,6 @@ GEM
     rake (10.0.3)
     rdoc (3.12.1)
       json (~> 1.4)
-    rmagick (2.13.2)
     sass (3.2.5)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -215,7 +214,6 @@ DEPENDENCIES
   mongoid-paperclip
   nested_form
   rails (= 3.2.11)
-  rmagick
   sass-rails (~> 3.2.5)
   simple_form
   uglifier (>= 1.0.3)
