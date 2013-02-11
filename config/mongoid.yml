@@ -80,6 +80,8 @@ test:
         retry_interval: 0
 
 production:
-    host: localhost
-    port: 27017
-    database: midiaexterna_production
+  sessions:
+    default:
+      database: midiaexterna_production
+      hosts:
+        - localhost:27017
