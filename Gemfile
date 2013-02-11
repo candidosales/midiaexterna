@@ -15,6 +15,9 @@ gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 #Permite cortar imagens ou redimensionar, só funciona se tiver instalado imagemagick
 gem 'rmagick'
 
+#Engine Yard
+#gem 'ey_config'
+
 gem 'ember-rails'
 gem 'money-rails'
 
@@ -56,11 +59,3 @@ end
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
