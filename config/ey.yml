@@ -1,7 +1,0 @@
-
----
-environments:
-  env_production:
-    precompile_assets: true
-  adminmidiaexterna:
-    migrate: false

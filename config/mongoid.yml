@@ -79,5 +79,3 @@ test:
         max_retries: 1
         retry_interval: 0
 
-production:
-  uri: <%= EY::Config.get(:mongolab, 'MONGOLAB_URI') %>
