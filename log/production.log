@@ -5845,3 +5845,189 @@ Processing by Admin::ClientesController#new as HTML
   Rendered shared/_menu_sidebar.html.erb (0.8ms)
   Rendered shared/_footer.html.erb (0.0ms)
 Completed 200 OK in 21ms (Views: 20.9ms)
+Started GET "/" for 127.0.0.1 at 2013-02-12 18:23:56 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (27.1ms)
+  Rendered shared/_navigation.html.erb (1.6ms)
+  Rendered shared/_profile.html.erb (0.4ms)
+  Rendered shared/_menu_sidebar.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 77.2ms)
+Started GET "/admin/clientes/new" for 127.0.0.1 at 2013-02-12 18:24:01 -0300
+Processing by Admin::ClientesController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered admin/clientes/_form.html.erb (15.0ms)
+  Rendered admin/clientes/new.html.erb within layouts/admin (16.0ms)
+  Rendered shared/_navigation.html.erb (0.6ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 21.8ms)
+Started POST "/admin/clientes" for 127.0.0.1 at 2013-02-12 18:24:56 -0300
+Processing by Admin::ClientesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5+YrLqfSZfSlJ1O1l8f+y5Wl9cx8uOeoB/41zray74=", "cliente"=>{"nome"=>"Cândido", "cpf"=>"006.660.600-60", "email"=>"candidosg@gmail.com", "tel"=>"(86) 9999-2992", "empresa"=>"Vende Publicidade", "razao"=>"Vende Publicidade", "cnpj"=>"26.262.626/2626-26", "endereco"=>"Rua Viscon", "bairro"=>"Ininga", "cidade"=>"Teresina", "estado"=>"Bahia", "cep"=>"64.646-464"}, "commit"=>"Create Cliente"}
+Redirected to http://0.0.0.0:3000/admin/clientes
+Completed 302 Found in 18ms
+Started GET "/admin/clientes" for 127.0.0.1 at 2013-02-12 18:24:56 -0300
+Processing by Admin::ClientesController#index as HTML
+  Rendered admin/clientes/index.html.erb within layouts/admin (297.6ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 303ms (Views: 302.2ms)
+Started GET "/admin/outdoors/new" for 127.0.0.1 at 2013-02-12 18:25:04 -0300
+Processing by Admin::OutdoorsController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered admin/outdoors/_form.html.erb (8.5ms)
+  Rendered admin/outdoors/new.html.erb within layouts/admin (35.1ms)
+  Rendered shared/_navigation.html.erb (0.8ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 43ms (Views: 40.6ms)
+Started POST "/admin/outdoors" for 127.0.0.1 at 2013-02-12 18:25:46 -0300
+Processing by Admin::OutdoorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5+YrLqfSZfSlJ1O1l8f+y5Wl9cx8uOeoB/41zray74=", "outdoor"=>{"numero"=>"12", "endereco"=>"Rua Visconde da Parnaiba", "bairro"=>"32", "ponto_referencia"=>"32", "cidade"=>"Teresina", "estado"=>"Ceará", "sentido"=>"bairro_centro", "valor"=>"R$ 200,00", "foto_outdoors_attributes"=>{"0"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x000000039ccec8 @original_filename="1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"outdoor[foto_outdoors_attributes][0][file]\"; filename=\"1.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/tmp/RackMultipart20130212-4864-nubv74>>}, "1"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x000000039cccc0 @original_filename="7.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"outdoor[foto_outdoors_attributes][1][file]\"; filename=\"7.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/tmp/RackMultipart20130212-4864-1hb6y1d>>}}}, "commit"=>"Create Outdoor"}
+Redirected to http://0.0.0.0:3000/admin/outdoors
+Completed 302 Found in 1217ms
+Started GET "/admin/outdoors" for 127.0.0.1 at 2013-02-12 18:25:47 -0300
+Processing by Admin::OutdoorsController#index as HTML
+  Rendered admin/outdoors/index.html.erb within layouts/admin (41.0ms)
+  Rendered shared/_navigation.html.erb (0.9ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 48ms (Views: 46.7ms)
+Started GET "/admin/outdoors/511ab35b03c2d5dc09000004" for 127.0.0.1 at 2013-02-12 18:25:51 -0300
+Processing by Admin::OutdoorsController#show as HTML
+  Parameters: {"id"=>"511ab35b03c2d5dc09000004"}
+  Rendered admin/outdoors/show.html.erb within layouts/admin (5.6ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 42ms (Views: 27.0ms)
+Started GET "/admin/outdoors/511ab35b03c2d5dc09000004/edit" for 127.0.0.1 at 2013-02-12 18:25:57 -0300
+Processing by Admin::OutdoorsController#edit as HTML
+  Parameters: {"id"=>"511ab35b03c2d5dc09000004"}
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered admin/outdoors/_form.html.erb (11.1ms)
+  Rendered admin/outdoors/edit.html.erb within layouts/admin (12.4ms)
+  Rendered shared/_navigation.html.erb (34.5ms)
+  Rendered shared/_profile.html.erb (0.2ms)
+  Rendered shared/_menu_sidebar.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 52.1ms)
+Started GET "/admin/reservas/new" for 127.0.0.1 at 2013-02-12 18:26:06 -0300
+Processing by Admin::ReservasController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered admin/reservas/new.html.erb within layouts/admin (2.2ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+  Rendered shared/_profile.html.erb (0.0ms)
+  Rendered shared/_menu_sidebar.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms)
+Started POST "/admin/reservas/search_outdoor_available" for 127.0.0.1 at 2013-02-12 18:26:11 -0300
+Processing by Admin::ReservasController#search_outdoor_available as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5+YrLqfSZfSlJ1O1l8f+y5Wl9cx8uOeoB/41zray74=", "inicio_periodo"=>"20/02/2013", "termino_periodo"=>""}
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (no time information in ""):
+  app/models/reserva.rb:23:in `seek_reserves_period'
+  app/controllers/admin/reservas_controller.rb:56:in `search_outdoor_available'
+
+
+Started POST "/admin/reservas/search_outdoor_available" for 127.0.0.1 at 2013-02-12 18:26:12 -0300
+Processing by Admin::ReservasController#search_outdoor_available as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5+YrLqfSZfSlJ1O1l8f+y5Wl9cx8uOeoB/41zray74=", "inicio_periodo"=>"20/02/2013", "termino_periodo"=>"26/03/2013"}
+  Rendered admin/reservas/_search_outdoor_available.html.erb (6.3ms)
+Completed 200 OK in 10ms (Views: 7.9ms)
+Started POST "/admin/send_email_available_outdoors" for 127.0.0.1 at 2013-02-12 18:26:28 -0300
+Processing by Admin::ReservasController#send_email_available_outdoors as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5+YrLqfSZfSlJ1O1l8f+y5Wl9cx8uOeoB/41zray74=", "outdoors"=>"", "inicio_reserva"=>"20/02/2013", "termino_reserva"=>"26/03/2013", "cliente_id"=>"", "commit"=>"Enviar e-mail com as disponiveis"}
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 25ms (Views: 20.6ms)
+Started POST "/admin/send_email_available_outdoors" for 127.0.0.1 at 2013-02-12 18:26:57 -0300
+Processing by Admin::ReservasController#send_email_available_outdoors as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5+YrLqfSZfSlJ1O1l8f+y5Wl9cx8uOeoB/41zray74=", "outdoors"=>"", "inicio_reserva"=>"20/02/2013", "termino_reserva"=>"26/03/2013", "cliente_id"=>"", "commit"=>"Enviar e-mail com as disponiveis"}
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 3ms (Views: 0.5ms)
+Started GET "/admin/reservas" for 127.0.0.1 at 2013-02-12 18:39:36 -0300
+Processing by Admin::ReservasController#index as HTML
+  Rendered admin/reservas/index.html.erb within layouts/admin (6.3ms)
+  Rendered shared/_navigation.html.erb (1.2ms)
+  Rendered shared/_profile.html.erb (0.4ms)
+  Rendered shared/_menu_sidebar.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 61ms (Views: 60.4ms)
+Started GET "/admin/reservas/new" for 127.0.0.1 at 2013-02-12 18:39:39 -0300
+Processing by Admin::ReservasController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered admin/reservas/new.html.erb within layouts/admin (3.9ms)
+  Rendered shared/_navigation.html.erb (0.8ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (25.3ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 33.0ms)
+Started GET "/admin/reservas" for 127.0.0.1 at 2013-02-12 18:39:41 -0300
+Processing by Admin::ReservasController#index as HTML
+  Rendered admin/reservas/index.html.erb within layouts/admin (1.7ms)
+  Rendered shared/_navigation.html.erb (0.6ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms)
+Started GET "/admin/reservas/new" for 127.0.0.1 at 2013-02-12 18:39:43 -0300
+Processing by Admin::ReservasController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered admin/reservas/new.html.erb within layouts/admin (1.5ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.3ms)
+Started POST "/admin/reservas/search_outdoor_available" for 127.0.0.1 at 2013-02-12 18:39:46 -0300
+Processing by Admin::ReservasController#search_outdoor_available as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5+YrLqfSZfSlJ1O1l8f+y5Wl9cx8uOeoB/41zray74=", "inicio_periodo"=>"20/02/2013", "termino_periodo"=>""}
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (no time information in ""):
+  app/models/reserva.rb:23:in `seek_reserves_period'
+  app/controllers/admin/reservas_controller.rb:56:in `search_outdoor_available'
+
+
+Started POST "/admin/reservas/search_outdoor_available" for 127.0.0.1 at 2013-02-12 18:39:48 -0300
+Processing by Admin::ReservasController#search_outdoor_available as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5+YrLqfSZfSlJ1O1l8f+y5Wl9cx8uOeoB/41zray74=", "inicio_periodo"=>"20/02/2013", "termino_periodo"=>"20/03/2013"}
+  Rendered admin/reservas/_search_outdoor_available.html.erb (15.1ms)
+Completed 200 OK in 19ms (Views: 16.9ms)
+Started POST "/admin/send_email_available_outdoors" for 127.0.0.1 at 2013-02-12 18:39:52 -0300
+Processing by Admin::ReservasController#send_email_available_outdoors as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5+YrLqfSZfSlJ1O1l8f+y5Wl9cx8uOeoB/41zray74=", "outdoors"=>"", "inicio_reserva"=>"20/02/2013", "termino_reserva"=>"20/03/2013", "cliente_id"=>"", "commit"=>"Enviar e-mail com as disponiveis"}
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 7ms (Views: 4.9ms)
+Started GET "/admin/reservas/new" for 127.0.0.1 at 2013-02-12 18:42:44 -0300
+Processing by Admin::ReservasController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered admin/reservas/new.html.erb within layouts/admin (8.9ms)
+  Rendered shared/_navigation.html.erb (1.1ms)
+  Rendered shared/_profile.html.erb (0.4ms)
+  Rendered shared/_menu_sidebar.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 48.5ms)
+Started POST "/admin/reservas/search_outdoor_available" for 127.0.0.1 at 2013-02-12 18:42:47 -0300
+Processing by Admin::ReservasController#search_outdoor_available as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5+YrLqfSZfSlJ1O1l8f+y5Wl9cx8uOeoB/41zray74=", "inicio_periodo"=>"20/02/2013", "termino_periodo"=>"20/03/2013"}
+  Rendered admin/reservas/_search_outdoor_available.html.erb (14.8ms)
+Completed 200 OK in 25ms (Views: 16.6ms)
+Started POST "/admin/reservas/search_outdoor_available" for 127.0.0.1 at 2013-02-12 18:42:47 -0300
+Processing by Admin::ReservasController#search_outdoor_available as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5+YrLqfSZfSlJ1O1l8f+y5Wl9cx8uOeoB/41zray74=", "inicio_periodo"=>"20/02/2013", "termino_periodo"=>"20/03/2013", "commit"=>"Buscar"}
+  Rendered admin/reservas/_search_outdoor_available.html.erb (5.9ms)
+Completed 200 OK in 10ms (Views: 8.4ms)
+Started POST "/admin/send_email_available_outdoors" for 127.0.0.1 at 2013-02-12 18:42:55 -0300
+Processing by Admin::ReservasController#send_email_available_outdoors as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5+YrLqfSZfSlJ1O1l8f+y5Wl9cx8uOeoB/41zray74=", "outdoors"=>"", "inicio_reserva"=>"20/02/2013", "termino_reserva"=>"20/03/2013", "cliente_id"=>"", "commit"=>"Enviar e-mail com as disponiveis"}
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 8ms (Views: 5.9ms)

@@ -20,9 +20,6 @@ gem 'money-rails'
 gem 'nested_form'
 gem 'simple_form'
 
-gem 'aws-sdk'
-gem "aws-ses", "~> 0.5.0", :require => 'aws/ses', :git => 'git://github.com/drewblas/aws-ses.git'
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
