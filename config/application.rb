@@ -59,6 +59,10 @@ module App
     # parameters by using an attr_accessible or attr_protected declaration.
     # config.active_record.whitelist_attributes = true
 
+    #Enable @font-face
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.assets.precompile += %w( .svg .eot .woff .ttf ) 
+
     # Enable the asset pipeline
     config.assets.enabled = true
 

@@ -49,7 +49,6 @@
 //= require list/plugins/list.paging.min 
 //= require fullcalendar/fullcalendar 
 
-//= require uniform/jquery.uniform
 //= require select2/select2.min 
 //= require counter/jquery.counter 
 //= require elastic/jquery.elastic 

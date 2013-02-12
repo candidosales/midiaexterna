@@ -15,9 +15,6 @@ gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 #Permite cortar imagens ou redimensionar, só funciona se tiver instalado imagemagick
 gem 'rmagick'
 
-#Engine Yard
-#gem 'ey_config'
-
 gem 'money-rails'
 
 gem 'nested_form'
@@ -29,7 +26,6 @@ gem 'aws-sdk'
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.5'
-  gem 'coffee-rails', '~> 3.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

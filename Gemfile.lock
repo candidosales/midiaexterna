@@ -54,13 +54,6 @@ GEM
     chunky_png (1.2.7)
     cocaine (0.4.2)
     coderay (1.0.8)
-    coffee-rails (3.2.2)
-      coffee-script (>= 2.2.0)
-      railties (~> 3.2.0)
-    coffee-script (2.2.0)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.4.0)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -193,7 +186,6 @@ DEPENDENCIES
   bson_ext
   capistrano
   capistrano-unicorn
-  coffee-rails (~> 3.2.2)
   compass-rails
   devise (~> 2.2.3)
   jquery-rails

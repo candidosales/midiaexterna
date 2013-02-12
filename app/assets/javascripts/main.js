@@ -1,4 +1,4 @@
-(function ($, window, document, undefined) {
+
 
         // REMOVE CSS FROM ELEMENT
         // ------------------------------------------------------------------------------------------------ * --> 
@@ -127,19 +127,6 @@
                     background:"",
                     railoffset:{top:10,left:-1}
                 });
-                /*
-                $(".bodyscroll").niceScroll({
-                    autohidemode: false,
-                    cursoropacitymin:0.9,
-                    cursoropacitymax:0.9,
-                    cursorcolor:"#adafb5",
-                    cursorwidth:"6px",
-                    cursorborder:"",
-                    cursorborderradius:"6px",
-                    usetransition:600,
-                    railoffset:{top:10,left:-1,bottom:-10}
-                });
-                */
 
         // SCROLL TOP PAGE
         // ------------------------------------------------------------------------------------------------ * -->
@@ -224,12 +211,11 @@
         });
         
         // FORM - SELECT 2
-        // ------------------------------------------------------------------------------------------------ * -->
-        // select2 demo
+
         $(".selecttwo").select2({
-                minimumResultsForSearch: 6,
-                width: "off"
+                minimumResultsForSearch: 6
         });
+        
         $(".selecttwo-s").select2();
         
         $(".selecttwo-full").select2({
@@ -325,12 +311,6 @@
         $("#taskTags, #taskTagsModal").select2({
                 tags: ["one", "two", "three"],
                 placeholder: "Select or Enter tag"
-        });
-
-        // FORM - UNIFORM PLUGIN 
-        // ------------------------------------------------------------------------------------------------ * -->
-        $("input.checkbox, input.radio, input:file.input-file").uniform({
-                radioClass: 'radios' // edited class - the original radio
         });
 
         // FORM - INPUTMASK PLUGIN
@@ -604,11 +584,13 @@
                 }
         };
 
-})(jQuery, this, document);
-
             var activeurl = window.location.pathname;
             var link = $('a[href="'+activeurl+'"]');
             link.parent('li').addClass('active');
             link.closest('.accordion-content').addClass('in');
             var parent = link.parent().parent().parent();
             parent.children(".accordion-heading").addClass('active');
+
+
+
+            

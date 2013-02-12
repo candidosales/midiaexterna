@@ -1,3 +1,5 @@
+
+
 $('#outdoor_valor').priceFormat({
 	prefix: 'R$ ',
 	centsSeparator: ',',
@@ -22,5 +24,6 @@ $('#outdoor_valor').priceFormat({
   	}
   });
   
+
 
   
