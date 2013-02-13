@@ -66,11 +66,11 @@ class Admin::ReservasController < Admin::BaseController
         options[:cliente_id] = params[:cliente_id]
         options[:inicio_periodo] = params[:inicio_reserva]
         options[:termino_periodo] = params[:termino_reserva]
-        ClienteMailer.available_outdoors(options).deliver
+        result = ClienteMailer.available_outdoors(options).deliver        
       end 
-      render :nothing => true, :status => 200
+      render :js => "alert('E-mail enviado com sucesso');"
     rescue
-      render :nothing => true, :status => 500
+      render :js => "alert('Selecione o cliente para o envio do email');"
     end
   end
 end

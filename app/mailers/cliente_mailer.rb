@@ -10,7 +10,7 @@ class ClienteMailer < ActionMailer::Base
     
     	mail({
     		:to => @cliente.email,
-    		:bcc => ['sign ups <signups@colcho.net>'],
+    		:bcc => ['sign ups <midiaexterna@midiaexterna.com>'],
     		:subject => "[Midia Externa] Disponibilidade de #{@inicio} a #{@fim}"
     	})
 	end

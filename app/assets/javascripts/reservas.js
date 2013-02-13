@@ -21,8 +21,8 @@ var toggleLoading = function() {
 
 
 $('form[data-update-target]').bind('submit change', function() {
-  var target;
-  target = $(this).data('update-target');
+  var target = $(this).data('update-target');
+  toggleLoading();
   $.ajax({
     url: $(this).attr('action'),
     data: $(this).serialize(),
@@ -31,7 +31,7 @@ $('form[data-update-target]').bind('submit change', function() {
   }).complete(function() {
     toggleLoading();
   }).success(function(data) {
-    toggleLoading();
+    
     $('#' + target).html(data);
     $('#reserva_inicio_reserva, #inicio_reserva').val($('#inicio_periodo').val());
     $('#reserva_termino_reserva, #termino_reserva').val($('#termino_periodo').val());
@@ -39,6 +39,8 @@ $('form[data-update-target]').bind('submit change', function() {
     $("input[type='checkbox']").click(function() {
         somaCheckbox($(this));
     });
+      emailAvailableOutdoors();
+
   });
 });
 
@@ -58,13 +60,17 @@ var somaCheckbox = function(x) {
 
 somaCheckbox();
 
-$('select#reserva_cliente_id').on('change', function() {
-  var allVals;
-  $('input#cliente_id').val($(this).val());
-  allVals = [];
-  $("input[type='checkbox']").each(function() {
-    allVals.push($(this).val());
-  });
-    $('#outdoors').val(allVals);
-});
+var emailAvailableOutdoors = function(x){
+   $('select#reserva_cliente_id').on('change', function() {
+      var allVals;
+      $('input#cliente_id').val($(this).val());
+      allVals = [];
+      $("input[type='checkbox']").each(function() {
+        allVals.push($(this).val());
+      });
+        $('#outdoors').val(allVals);
+    });
+}
+
+
 

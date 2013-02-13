@@ -71,9 +71,8 @@ App::Application.configure do
   config.action_mailer.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :domain               => 'localhost:3000',
-  :user_name            => 'candidosg@vendepublicidade.com.br',
-  :password             => 'canj1cavende',
+  :user_name            => 'candidosg@gmail.com',
+  :password             => 'canj1ca5',
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
 
