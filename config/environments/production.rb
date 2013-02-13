@@ -72,7 +72,7 @@ App::Application.configure do
   :address              => "smtp.gmail.com",
   :port                 => 587,
   :user_name            => 'candidosg@gmail.com',
-  :password             => 'canj1ca5',
+  :password             => '####',
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
 
