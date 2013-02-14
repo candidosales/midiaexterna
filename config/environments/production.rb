@@ -69,11 +69,11 @@ App::Application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
-  :address              => "smtp.gmail.com",
+  :address              => "email-smtp.us-east-1.amazonaws.com",
   :port                 => 587,
-  :user_name            => 'candidosg@gmail.com',
-  :password             => '####',
-  :authentication       => 'plain',
+  :user_name            => 'AKIAJP5VQ5TBF5WNZ6OA',
+  :password             => 'AlQtq7fGv6OA++mjuAqc/PWYHFSJukKgQsIEKnswmFWF',
+  :authentication       => :login,
   :enable_starttls_auto => true  }
 
 end

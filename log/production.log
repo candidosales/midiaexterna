@@ -397,3 +397,314 @@ Processing by Admin::ReservasController#send_email_available_outdoors as JS
 
 Sent mail to candidosg@gmail.com (22795ms)
 Completed 200 OK in 22877ms (Views: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2013-02-14 09:49:12 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 114ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    17:   <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,900' rel='stylesheet' type='text/css'>
+    18: 
+    19:   <!-- Included CSS Files -->
+    20:   <%= stylesheet_link_tag    "application" %>
+    21:   
+    22:   <%= csrf_meta_tags %>
+    23: </head>
+  app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3778409131966350522_36051260'
+
+
+Compiled jquery.js  (1ms)  (pid 3405)
+Compiled jquery_ujs.js  (0ms)  (pid 3405)
+Compiled jquery.price_format.1.7.min.js  (0ms)  (pid 3405)
+Compiled bootstrap.js  (0ms)  (pid 3405)
+Compiled jquery.cookie.js  (0ms)  (pid 3405)
+Compiled jquery.ui.core.js  (0ms)  (pid 3405)
+Compiled jquery.ui.widget.js  (0ms)  (pid 3405)
+Compiled jquery.ui.mouse.js  (3ms)  (pid 3405)
+Compiled jquery.ui.position.js  (0ms)  (pid 3405)
+Compiled jquery.ui.draggable.js  (3ms)  (pid 3405)
+Compiled jquery.ui.droppable.js  (3ms)  (pid 3405)
+Compiled jquery.ui.resizable.js  (4ms)  (pid 3405)
+Compiled jquery.ui.selectable.js  (2ms)  (pid 3405)
+Compiled jquery.ui.sortable.js  (4ms)  (pid 3405)
+Compiled jquery.ui.effect.js  (0ms)  (pid 3405)
+Compiled jquery.ui.effect-blind.js  (5ms)  (pid 3405)
+Compiled jquery.ui.effect-bounce.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-clip.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-drop.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-explode.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-fade.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-fold.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-highlight.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-pulsate.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-scale.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-shake.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-slide.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-transfer.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect.all.js  (103ms)  (pid 3405)
+Compiled jquery.ui.datepicker.js  (1ms)  (pid 3405)
+Compiled jquery.ui.datepicker-pt-BR.js  (0ms)  (pid 3405)
+Compiled bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js  (1ms)  (pid 3405)
+Compiled bootstrap-fileupload/bootstrap-fileupload.js  (0ms)  (pid 3405)
+Compiled bootstrap-rowlink/bootstrap-rowlink.js  (0ms)  (pid 3405)
+Compiled bootstrap-progressbar/bootstrap-progressbar.js  (0ms)  (pid 3405)
+Compiled bootstrap-wysihtml5/src/bootstrap-wysihtml5.js  (0ms)  (pid 3405)
+Compiled bootstrap-select/bootstrap-select.js  (0ms)  (pid 3405)
+Compiled bootstrap-bootbox/bootbox.min.js  (0ms)  (pid 3405)
+Compiled bootstrap-modal/bootstrap-modalmanager.js  (0ms)  (pid 3405)
+Compiled bootstrap-modal/bootstrap-modal.js  (0ms)  (pid 3405)
+Compiled bootstrap-wizard/bootstrap-wizard.js  (0ms)  (pid 3405)
+Compiled bootstrap-toggle-buttons/bootstrap-toggle-buttons.js  (0ms)  (pid 3405)
+Compiled nicescroll/jquery.nicescroll.min.js  (0ms)  (pid 3405)
+Compiled qtip2/jquery.qtip.min.js  (0ms)  (pid 3405)
+Compiled list/js/list.min.js  (0ms)  (pid 3405)
+Compiled list/plugins/list.paging.min.js  (0ms)  (pid 3405)
+Compiled fullcalendar/fullcalendar.js  (1ms)  (pid 3405)
+Compiled select2/select2.min.js  (0ms)  (pid 3405)
+Compiled counter/jquery.counter.js  (0ms)  (pid 3405)
+Compiled elastic/jquery.elastic.js  (0ms)  (pid 3405)
+Compiled inputmask/jquery.inputmask.js  (0ms)  (pid 3405)
+Compiled inputmask/jquery.inputmask.extensions.js  (0ms)  (pid 3405)
+Compiled validate/jquery.validate.min.js  (0ms)  (pid 3405)
+Compiled xbreadcrumbs/xbreadcrumbs.js  (0ms)  (pid 3405)
+Compiled main.js  (0ms)  (pid 3405)
+Compiled clientes.js  (0ms)  (pid 3405)
+Compiled outdoors.js  (0ms)  (pid 3405)
+Compiled reservas.js  (0ms)  (pid 3405)
+Compiled application.js  (743ms)  (pid 3405)
+Compiled lib/bootstrap.css  (0ms)  (pid 3405)
+Compiled lib/bootstrap-responsive.css  (0ms)  (pid 3405)
+Compiled boo.css  (0ms)  (pid 3405)
+Compiled boo-coloring.css  (0ms)  (pid 3405)
+Compiled boo-utility.css  (0ms)  (pid 3405)
+Compiled bootstrap-fileupload.css  (0ms)  (pid 3405)
+Compiled bootstrap-modal-bootheme.css  (0ms)  (pid 3405)
+Compiled jquery.ui.core.css  (1ms)  (pid 3405)
+Compiled jquery.ui.theme.css  (99ms)  (pid 3405)
+Compiled jquery.ui.datepicker.css  (112ms)  (pid 3405)
+Compiled jquery.qtip.css  (0ms)  (pid 3405)
+Compiled select-theme.css  (0ms)  (pid 3405)
+Compiled bootstrap-toggle-buttons-theme.css  (0ms)  (pid 3405)
+Compiled font-awesome.css  (97ms)  (pid 3405)
+Compiled fontello.css  (931ms)  (pid 3405)
+Compiled clientes.css  (1ms)  (pid 3405)
+Compiled ie.css  (1ms)  (pid 3405)
+Compiled outdoors.css  (0ms)  (pid 3405)
+Compiled print.css  (0ms)  (pid 3405)
+Compiled reservas.css  (0ms)  (pid 3405)
+Compiled scaffolds.css  (12ms)  (pid 3405)
+Compiled application.css  (1500ms)  (pid 3405)
+Compiled jquery.js  (44ms)  (pid 3405)
+Compiled jquery_ujs.js  (0ms)  (pid 3405)
+Compiled jquery.price_format.1.7.min.js  (0ms)  (pid 3405)
+Compiled bootstrap.js  (0ms)  (pid 3405)
+Compiled jquery.cookie.js  (0ms)  (pid 3405)
+Compiled jquery.ui.core.js  (0ms)  (pid 3405)
+Compiled jquery.ui.widget.js  (0ms)  (pid 3405)
+Compiled jquery.ui.mouse.js  (3ms)  (pid 3405)
+Compiled jquery.ui.position.js  (1ms)  (pid 3405)
+Compiled jquery.ui.draggable.js  (5ms)  (pid 3405)
+Compiled jquery.ui.droppable.js  (7ms)  (pid 3405)
+Compiled jquery.ui.resizable.js  (6ms)  (pid 3405)
+Compiled jquery.ui.selectable.js  (4ms)  (pid 3405)
+Compiled jquery.ui.sortable.js  (4ms)  (pid 3405)
+Compiled jquery.ui.effect.js  (0ms)  (pid 3405)
+Compiled jquery.ui.effect-blind.js  (6ms)  (pid 3405)
+Compiled jquery.ui.effect-bounce.js  (2ms)  (pid 3405)
+Compiled jquery.ui.effect-clip.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-drop.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-explode.js  (2ms)  (pid 3405)
+Compiled jquery.ui.effect-fade.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-fold.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-highlight.js  (2ms)  (pid 3405)
+Compiled jquery.ui.effect-pulsate.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-scale.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-shake.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-slide.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect-transfer.js  (1ms)  (pid 3405)
+Compiled jquery.ui.effect.all.js  (149ms)  (pid 3405)
+Compiled jquery.ui.datepicker.js  (2ms)  (pid 3405)
+Compiled jquery.ui.datepicker-pt-BR.js  (0ms)  (pid 3405)
+Compiled bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js  (0ms)  (pid 3405)
+Compiled bootstrap-fileupload/bootstrap-fileupload.js  (0ms)  (pid 3405)
+Compiled bootstrap-rowlink/bootstrap-rowlink.js  (0ms)  (pid 3405)
+Compiled bootstrap-progressbar/bootstrap-progressbar.js  (0ms)  (pid 3405)
+Compiled bootstrap-wysihtml5/src/bootstrap-wysihtml5.js  (0ms)  (pid 3405)
+Compiled bootstrap-select/bootstrap-select.js  (0ms)  (pid 3405)
+Compiled bootstrap-bootbox/bootbox.min.js  (0ms)  (pid 3405)
+Compiled bootstrap-modal/bootstrap-modalmanager.js  (0ms)  (pid 3405)
+Compiled bootstrap-modal/bootstrap-modal.js  (0ms)  (pid 3405)
+Compiled bootstrap-wizard/bootstrap-wizard.js  (0ms)  (pid 3405)
+Compiled bootstrap-toggle-buttons/bootstrap-toggle-buttons.js  (0ms)  (pid 3405)
+Compiled nicescroll/jquery.nicescroll.min.js  (0ms)  (pid 3405)
+Compiled qtip2/jquery.qtip.min.js  (0ms)  (pid 3405)
+Compiled list/js/list.min.js  (0ms)  (pid 3405)
+Compiled list/plugins/list.paging.min.js  (0ms)  (pid 3405)
+Compiled fullcalendar/fullcalendar.js  (1ms)  (pid 3405)
+Compiled select2/select2.min.js  (0ms)  (pid 3405)
+Compiled counter/jquery.counter.js  (0ms)  (pid 3405)
+Compiled elastic/jquery.elastic.js  (0ms)  (pid 3405)
+Compiled inputmask/jquery.inputmask.js  (0ms)  (pid 3405)
+Compiled inputmask/jquery.inputmask.extensions.js  (0ms)  (pid 3405)
+Compiled validate/jquery.validate.min.js  (0ms)  (pid 3405)
+Compiled xbreadcrumbs/xbreadcrumbs.js  (0ms)  (pid 3405)
+Compiled main.js  (0ms)  (pid 3405)
+Compiled clientes.js  (0ms)  (pid 3405)
+Compiled outdoors.js  (0ms)  (pid 3405)
+Compiled reservas.js  (0ms)  (pid 3405)
+Compiled application.js  (594ms)  (pid 3405)
+Compiled lib/bootstrap.css  (0ms)  (pid 3405)
+Compiled lib/bootstrap-responsive.css  (0ms)  (pid 3405)
+Compiled boo.css  (0ms)  (pid 3405)
+Compiled boo-coloring.css  (0ms)  (pid 3405)
+Compiled boo-utility.css  (0ms)  (pid 3405)
+Compiled bootstrap-fileupload.css  (0ms)  (pid 3405)
+Compiled bootstrap-modal-bootheme.css  (0ms)  (pid 3405)
+Compiled jquery.ui.core.css  (1ms)  (pid 3405)
+Compiled jquery.ui.theme.css  (8ms)  (pid 3405)
+Compiled jquery.ui.datepicker.css  (19ms)  (pid 3405)
+Compiled jquery.qtip.css  (0ms)  (pid 3405)
+Compiled select-theme.css  (0ms)  (pid 3405)
+Compiled bootstrap-toggle-buttons-theme.css  (0ms)  (pid 3405)
+Compiled font-awesome.css  (101ms)  (pid 3405)
+Compiled fontello.css  (927ms)  (pid 3405)
+Compiled clientes.css  (0ms)  (pid 3405)
+Compiled ie.css  (1ms)  (pid 3405)
+Compiled outdoors.css  (0ms)  (pid 3405)
+Compiled print.css  (0ms)  (pid 3405)
+Compiled reservas.css  (0ms)  (pid 3405)
+Compiled scaffolds.css  (11ms)  (pid 3405)
+Compiled application.css  (1195ms)  (pid 3405)
+Started GET "/" for 127.0.0.1 at 2013-02-14 09:51:07 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navigation.html.erb (4.3ms)
+  Rendered shared/_profile.html.erb (0.6ms)
+  Rendered shared/_menu_sidebar.html.erb (2.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 190ms (Views: 189.9ms)
+Started GET "/admin/reservas/new" for 127.0.0.1 at 2013-02-14 09:51:13 -0300
+Processing by Admin::ReservasController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered admin/reservas/new.html.erb within layouts/admin (3.4ms)
+  Rendered shared/_navigation.html.erb (0.6ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 142ms (Views: 141.6ms)
+Started POST "/admin/reservas/search_outdoor_available" for 127.0.0.1 at 2013-02-14 09:51:16 -0300
+Processing by Admin::ReservasController#search_outdoor_available as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQ1NYZqIbiwvVzQgDqDLz0FMy3497/cCicw4I8UI0o0=", "inicio_periodo"=>"23/02/2013", "termino_periodo"=>""}
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (no time information in ""):
+  app/models/reserva.rb:23:in `seek_reserves_period'
+  app/controllers/admin/reservas_controller.rb:56:in `search_outdoor_available'
+
+
+Started POST "/admin/reservas/search_outdoor_available" for 127.0.0.1 at 2013-02-14 09:51:17 -0300
+Processing by Admin::ReservasController#search_outdoor_available as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQ1NYZqIbiwvVzQgDqDLz0FMy3497/cCicw4I8UI0o0=", "inicio_periodo"=>"23/02/2013", "termino_periodo"=>"15/03/2013"}
+  Rendered admin/reservas/_search_outdoor_available.html.erb (100.8ms)
+Completed 200 OK in 187ms (Views: 184.3ms)
+Started POST "/admin/send_email_available_outdoors" for 127.0.0.1 at 2013-02-14 09:51:21 -0300
+Processing by Admin::ReservasController#send_email_available_outdoors as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQ1NYZqIbiwvVzQgDqDLz0FMy3497/cCicw4I8UI0o0=", "outdoors"=>"511ab35b03c2d5dc09000004", "inicio_reserva"=>"23/02/2013", "termino_reserva"=>"15/03/2013", "cliente_id"=>"511ab32803c2d56369000001", "commit"=>"Enviar e-mail com as disponiveis"}
+  Rendered cliente_mailer/available_outdoors.html.erb (24.2ms)
+
+Sent mail to candidosg@gmail.com (12880ms)
+Completed 200 OK in 13114ms (Views: 0.2ms)
+Started GET "/admin/reservas/new" for 127.0.0.1 at 2013-02-14 09:56:55 -0300
+Processing by Admin::ReservasController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered admin/reservas/new.html.erb within layouts/admin (1.3ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.5ms)
+Started POST "/admin/reservas/search_outdoor_available" for 127.0.0.1 at 2013-02-14 09:56:57 -0300
+Processing by Admin::ReservasController#search_outdoor_available as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQ1NYZqIbiwvVzQgDqDLz0FMy3497/cCicw4I8UI0o0=", "inicio_periodo"=>"23/02/2013", "termino_periodo"=>"15/03/2013"}
+  Rendered admin/reservas/_search_outdoor_available.html.erb (6.8ms)
+Completed 200 OK in 12ms (Views: 7.4ms)
+Started POST "/admin/reservas/search_outdoor_available" for 127.0.0.1 at 2013-02-14 09:56:57 -0300
+Processing by Admin::ReservasController#search_outdoor_available as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQ1NYZqIbiwvVzQgDqDLz0FMy3497/cCicw4I8UI0o0=", "inicio_periodo"=>"23/02/2013", "termino_periodo"=>"15/03/2013", "commit"=>"Buscar"}
+  Rendered admin/reservas/_search_outdoor_available.html.erb (5.7ms)
+Completed 200 OK in 9ms (Views: 7.4ms)
+Started POST "/admin/send_email_available_outdoors" for 127.0.0.1 at 2013-02-14 09:57:01 -0300
+Processing by Admin::ReservasController#send_email_available_outdoors as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQ1NYZqIbiwvVzQgDqDLz0FMy3497/cCicw4I8UI0o0=", "outdoors"=>"511ab35b03c2d5dc09000004", "inicio_reserva"=>"23/02/2013", "termino_reserva"=>"15/03/2013", "cliente_id"=>"511ab32803c2d56369000001", "commit"=>"Enviar e-mail com as disponiveis"}
+  Rendered cliente_mailer/available_outdoors.html.erb (2.6ms)
+
+Sent mail to candidosg@gmail.com (17938ms)
+Completed 200 OK in 17950ms (Views: 0.4ms)
+Started POST "/admin/send_email_available_outdoors" for 127.0.0.1 at 2013-02-14 09:58:28 -0300
+Processing by Admin::ReservasController#send_email_available_outdoors as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQ1NYZqIbiwvVzQgDqDLz0FMy3497/cCicw4I8UI0o0=", "outdoors"=>"511ab35b03c2d5dc09000004", "inicio_reserva"=>"23/02/2013", "termino_reserva"=>"15/03/2013", "cliente_id"=>"511ab32803c2d56369000001", "commit"=>"Enviar e-mail com as disponiveis"}
+  Rendered cliente_mailer/available_outdoors.html.erb (3.8ms)
+
+Sent mail to candidosg@gmail.com (19362ms)
+Completed 200 OK in 19416ms (Views: 0.2ms)
+Started GET "/admin/clientes/new" for 127.0.0.1 at 2013-02-14 10:00:19 -0300
+Processing by Admin::ClientesController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered admin/clientes/_form.html.erb (7.8ms)
+  Rendered admin/clientes/new.html.erb within layouts/admin (19.3ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 102ms (Views: 101.2ms)
+Started POST "/admin/clientes" for 127.0.0.1 at 2013-02-14 10:01:00 -0300
+Processing by Admin::ClientesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQ1NYZqIbiwvVzQgDqDLz0FMy3497/cCicw4I8UI0o0=", "cliente"=>{"nome"=>"Nilo", "cpf"=>"000.000.000-00", "email"=>"nilocoelhojunior@gmail.com", "tel"=>"(88) 8888-8888", "empresa"=>"Vende Publicidade", "razao"=>"Vende Publicidade", "cnpj"=>"44.444.444/4444-4_", "endereco"=>"444ewfwefwe", "bairro"=>"fewfew", "cidade"=>"fwefewf", "estado"=>"Acre", "cep"=>"32.423-423"}, "commit"=>"Create Cliente"}
+Redirected to http://0.0.0.0:3000/admin/clientes
+Completed 302 Found in 45ms
+Started GET "/admin/clientes" for 127.0.0.1 at 2013-02-14 10:01:00 -0300
+Processing by Admin::ClientesController#index as HTML
+  Rendered admin/clientes/index.html.erb within layouts/admin (3.8ms)
+  Rendered shared/_navigation.html.erb (0.6ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 18.8ms)
+Started GET "/admin/reservas/new" for 127.0.0.1 at 2013-02-14 10:01:04 -0300
+Processing by Admin::ReservasController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered admin/reservas/new.html.erb within layouts/admin (1.3ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+  Rendered shared/_profile.html.erb (0.2ms)
+  Rendered shared/_menu_sidebar.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms)
+Started POST "/admin/reservas/search_outdoor_available" for 127.0.0.1 at 2013-02-14 10:01:07 -0300
+Processing by Admin::ReservasController#search_outdoor_available as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQ1NYZqIbiwvVzQgDqDLz0FMy3497/cCicw4I8UI0o0=", "inicio_periodo"=>"28/03/2013", "termino_periodo"=>""}
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (no time information in ""):
+  app/models/reserva.rb:23:in `seek_reserves_period'
+  app/controllers/admin/reservas_controller.rb:56:in `search_outdoor_available'
+
+
+Started POST "/admin/reservas/search_outdoor_available" for 127.0.0.1 at 2013-02-14 10:01:09 -0300
+Processing by Admin::ReservasController#search_outdoor_available as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQ1NYZqIbiwvVzQgDqDLz0FMy3497/cCicw4I8UI0o0=", "inicio_periodo"=>"28/03/2013", "termino_periodo"=>"26/04/2013"}
+  Rendered admin/reservas/_search_outdoor_available.html.erb (5.4ms)
+Completed 200 OK in 10ms (Views: 6.0ms)
+Started POST "/admin/send_email_available_outdoors" for 127.0.0.1 at 2013-02-14 10:01:12 -0300
+Processing by Admin::ReservasController#send_email_available_outdoors as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQ1NYZqIbiwvVzQgDqDLz0FMy3497/cCicw4I8UI0o0=", "outdoors"=>"511ab35b03c2d5dc09000004", "inicio_reserva"=>"28/03/2013", "termino_reserva"=>"26/04/2013", "cliente_id"=>"511ce00c03c2d5619a000001", "commit"=>"Enviar e-mail com as disponiveis"}
+  Rendered cliente_mailer/available_outdoors.html.erb (3.0ms)
+
+Sent mail to nilocoelhojunior@gmail.com (10103ms)
+Completed 200 OK in 10117ms (Views: 0.2ms)
+Started POST "/admin/send_email_available_outdoors" for 127.0.0.1 at 2013-02-14 10:10:26 -0300
+Processing by Admin::ReservasController#send_email_available_outdoors as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQ1NYZqIbiwvVzQgDqDLz0FMy3497/cCicw4I8UI0o0=", "outdoors"=>"511ab35b03c2d5dc09000004", "inicio_reserva"=>"28/03/2013", "termino_reserva"=>"26/04/2013", "cliente_id"=>"511ab32803c2d56369000001", "commit"=>"Enviar e-mail com as disponiveis"}
+  Rendered cliente_mailer/available_outdoors.html.erb (2.8ms)
+
+Sent mail to candidosg@gmail.com (18202ms)
+Completed 200 OK in 18219ms (Views: 0.2ms)
