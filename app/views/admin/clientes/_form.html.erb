@@ -59,7 +59,7 @@
       <li class="control-group">
         <label class="control-label" for="accountPrefix">Endereço</label>
         <div class="controls">
-          <%= f.text_field :endereco, :placeholder => "" %>
+          <%= f.text_field :endereco, :placeholder => "" , :class => "input-xxlarge" %>
         </div>
       </li>
       <li class="control-group">
@@ -71,13 +71,13 @@
       <li class="control-group">
         <label class="control-label" for="accountPrefix">Cidade</label>
         <div class="controls">
-          <%= f.text_field :cidade, :placeholder => "" %>
+          <%= f.text_field :cidade, :placeholder => "" , :value => "Teresina"  %>
         </div>
       </li>
       <li class="control-group">
         <label class="control-label" for="accountPrefix">Estado</label>
         <div class="controls">
-          <%= f.select( :estado, {"AC"=>"Acre", "AL"=>"Alagoas", "AM"=>"Amazonas", "AP"=>"Amapá","BA"=>"Bahia","CE"=>"Ceará","DF"=>"Distrito Federal","ES"=>"Espírito Santo","GO"=>"Goiás","MA"=>"Maranhão","MT"=>"Mato Grosso","MS"=>"Mato Grosso do Sul","MG"=>"Minas Gerais","PA"=>"Pará","PB"=>"Paraíba","PR"=>"Paraná","PE"=>"Pernambuco","PI"=>"Piauí","RJ"=>"Rio de Janeiro","RN"=>"Rio Grande do Norte","RO"=>"Rondônia","RS"=>"Rio Grande do Sul","RR"=>"Roraima","SC"=>"Santa Catarina","SE"=>"Sergipe","SP"=>"São Paulo","TO"=>"Tocantins"},{}, { :class => 'selecttwo-s' }) %>
+          <%= f.select( :estado, {"AC"=>"Acre", "AL"=>"Alagoas", "AM"=>"Amazonas", "AP"=>"Amapá","BA"=>"Bahia","CE"=>"Ceará","DF"=>"Distrito Federal","ES"=>"Espírito Santo","GO"=>"Goiás","MA"=>"Maranhão","MT"=>"Mato Grosso","MS"=>"Mato Grosso do Sul","MG"=>"Minas Gerais","PA"=>"Pará","PB"=>"Paraíba","PR"=>"Paraná","PE"=>"Pernambuco","PI"=>"Piauí","RJ"=>"Rio de Janeiro","RN"=>"Rio Grande do Norte","RO"=>"Rondônia","RS"=>"Rio Grande do Sul","RR"=>"Roraima","SC"=>"Santa Catarina","SE"=>"Sergipe","SP"=>"São Paulo","TO"=>"Tocantins"},{:selected => "Piauí"}, { :class => 'selecttwo-s' }) %>
         </div>
       </li>
       <li class="control-group">

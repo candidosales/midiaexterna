@@ -9665,3 +9665,1868 @@ ans-serif;">Unsubscribe</unsubscribe></a>
 			</html>=
 
 Completed 200 OK in 88ms (Views: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-14 11:11:51 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (25.1939ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=midiaexterna_development collection=usuarios selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (3.2206ms)
+  Rendered home/index.html.erb within layouts/application (31.6ms)
+Compiled lib/bootstrap.css  (0ms)  (pid 4731)
+Compiled lib/bootstrap-responsive.css  (0ms)  (pid 4731)
+Compiled boo.css  (0ms)  (pid 4731)
+Compiled boo-coloring.css  (0ms)  (pid 4731)
+Compiled boo-utility.css  (0ms)  (pid 4731)
+Compiled bootstrap-fileupload.css  (0ms)  (pid 4731)
+Compiled bootstrap-modal-bootheme.css  (0ms)  (pid 4731)
+Compiled jquery.ui.core.css  (1ms)  (pid 4731)
+Compiled jquery.ui.theme.css  (8ms)  (pid 4731)
+Compiled jquery.ui.datepicker.css  (21ms)  (pid 4731)
+Compiled jquery.qtip.css  (0ms)  (pid 4731)
+Compiled select-theme.css  (27ms)  (pid 4731)
+Compiled bootstrap-toggle-buttons-theme.css  (0ms)  (pid 4731)
+Compiled font-awesome.css  (96ms)  (pid 4731)
+Compiled fontello.css  (995ms)  (pid 4731)
+Compiled clientes.css  (1ms)  (pid 4731)
+Compiled ie.css  (2ms)  (pid 4731)
+Compiled outdoors.css  (0ms)  (pid 4731)
+Compiled print.css  (1ms)  (pid 4731)
+Compiled reservas.css  (0ms)  (pid 4731)
+Compiled scaffolds.css  (15ms)  (pid 4731)
+Compiled application.css  (1359ms)  (pid 4731)
+  Rendered shared/_navigation.html.erb (1.2ms)
+  Rendered shared/_profile.html.erb (0.4ms)
+  Rendered shared/_menu_sidebar.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Compiled jquery.js  (30ms)  (pid 4731)
+Compiled jquery_ujs.js  (0ms)  (pid 4731)
+Compiled jquery.price_format.1.7.min.js  (0ms)  (pid 4731)
+Compiled bootstrap.js  (0ms)  (pid 4731)
+Compiled jquery.cookie.js  (0ms)  (pid 4731)
+Compiled jquery.ui.core.js  (0ms)  (pid 4731)
+Compiled jquery.ui.widget.js  (0ms)  (pid 4731)
+Compiled jquery.ui.mouse.js  (2ms)  (pid 4731)
+Compiled jquery.ui.position.js  (0ms)  (pid 4731)
+Compiled jquery.ui.draggable.js  (3ms)  (pid 4731)
+Compiled jquery.ui.droppable.js  (3ms)  (pid 4731)
+Compiled jquery.ui.resizable.js  (3ms)  (pid 4731)
+Compiled jquery.ui.selectable.js  (3ms)  (pid 4731)
+Compiled jquery.ui.sortable.js  (3ms)  (pid 4731)
+Compiled jquery.ui.effect.js  (0ms)  (pid 4731)
+Compiled jquery.ui.effect-blind.js  (5ms)  (pid 4731)
+Compiled jquery.ui.effect-bounce.js  (1ms)  (pid 4731)
+Compiled jquery.ui.effect-clip.js  (1ms)  (pid 4731)
+Compiled jquery.ui.effect-drop.js  (1ms)  (pid 4731)
+Compiled jquery.ui.effect-explode.js  (1ms)  (pid 4731)
+Compiled jquery.ui.effect-fade.js  (1ms)  (pid 4731)
+Compiled jquery.ui.effect-fold.js  (1ms)  (pid 4731)
+Compiled jquery.ui.effect-highlight.js  (2ms)  (pid 4731)
+Compiled jquery.ui.effect-pulsate.js  (1ms)  (pid 4731)
+Compiled jquery.ui.effect-scale.js  (1ms)  (pid 4731)
+Compiled jquery.ui.effect-shake.js  (2ms)  (pid 4731)
+Compiled jquery.ui.effect-slide.js  (1ms)  (pid 4731)
+Compiled jquery.ui.effect-transfer.js  (1ms)  (pid 4731)
+Compiled jquery.ui.effect.all.js  (151ms)  (pid 4731)
+Compiled jquery.ui.datepicker.js  (34ms)  (pid 4731)
+Compiled jquery.ui.datepicker-pt-BR.js  (0ms)  (pid 4731)
+Compiled bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js  (0ms)  (pid 4731)
+Compiled bootstrap-fileupload/bootstrap-fileupload.js  (0ms)  (pid 4731)
+Compiled bootstrap-rowlink/bootstrap-rowlink.js  (0ms)  (pid 4731)
+Compiled bootstrap-progressbar/bootstrap-progressbar.js  (0ms)  (pid 4731)
+Compiled bootstrap-wysihtml5/src/bootstrap-wysihtml5.js  (0ms)  (pid 4731)
+Compiled bootstrap-select/bootstrap-select.js  (0ms)  (pid 4731)
+Compiled bootstrap-bootbox/bootbox.min.js  (0ms)  (pid 4731)
+Compiled bootstrap-modal/bootstrap-modalmanager.js  (0ms)  (pid 4731)
+Compiled bootstrap-modal/bootstrap-modal.js  (0ms)  (pid 4731)
+Compiled bootstrap-wizard/bootstrap-wizard.js  (0ms)  (pid 4731)
+Compiled bootstrap-toggle-buttons/bootstrap-toggle-buttons.js  (0ms)  (pid 4731)
+Compiled nicescroll/jquery.nicescroll.min.js  (0ms)  (pid 4731)
+Compiled qtip2/jquery.qtip.min.js  (0ms)  (pid 4731)
+Compiled list/js/list.min.js  (0ms)  (pid 4731)
+Compiled list/plugins/list.paging.min.js  (0ms)  (pid 4731)
+Compiled fullcalendar/fullcalendar.js  (1ms)  (pid 4731)
+Compiled select2/select2.min.js  (0ms)  (pid 4731)
+Compiled counter/jquery.counter.js  (0ms)  (pid 4731)
+Compiled elastic/jquery.elastic.js  (0ms)  (pid 4731)
+Compiled inputmask/jquery.inputmask.js  (0ms)  (pid 4731)
+Compiled inputmask/jquery.inputmask.extensions.js  (0ms)  (pid 4731)
+Compiled validate/jquery.validate.min.js  (0ms)  (pid 4731)
+Compiled xbreadcrumbs/xbreadcrumbs.js  (0ms)  (pid 4731)
+Compiled main.js  (0ms)  (pid 4731)
+Compiled clientes.js  (0ms)  (pid 4731)
+Compiled outdoors.js  (0ms)  (pid 4731)
+Compiled reservas.js  (0ms)  (pid 4731)
+Compiled application.js  (646ms)  (pid 4731)
+Completed 200 OK in 2287ms (Views: 2286.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /application.css - 200 OK (28ms)
+
+
+Started GET "/assets/lib/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /lib/bootstrap.css - 200 OK (1ms)
+
+
+Started GET "/assets/lib/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /lib/bootstrap-responsive.css - 200 OK (3ms)
+
+
+Started GET "/assets/boo.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /boo.css - 200 OK (39ms)
+
+
+Started GET "/assets/boo-coloring.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /boo-coloring.css - 200 OK (3ms)
+
+
+Started GET "/assets/boo-utility.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /boo-utility.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-fileupload.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /bootstrap-fileupload.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-modal-bootheme.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /bootstrap-modal-bootheme.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.core.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.theme.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.datepicker.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery.qtip.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.qtip.css - 200 OK (2ms)
+
+
+Started GET "/assets/select-theme.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /select-theme.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-toggle-buttons-theme.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /bootstrap-toggle-buttons-theme.css - 200 OK (8ms)
+
+
+Started GET "/assets/fontello.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /fontello.css - 200 OK (3ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /font-awesome.css - 200 OK (1ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /clientes.css - 200 OK (1ms)
+
+
+Started GET "/assets/ie.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /ie.css - 200 OK (2ms)
+
+
+Started GET "/assets/outdoors.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /outdoors.css - 200 OK (3ms)
+
+
+Started GET "/assets/print.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /print.css - 200 OK (2ms)
+
+
+Started GET "/assets/reservas.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /reservas.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery_ujs.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.price_format.1.7.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.price_format.1.7.min.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /bootstrap.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.cookie.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.core.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.widget.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.mouse.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.position.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.draggable.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.droppable.js - 200 OK (57ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.sortable.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.selectable.js - 200 OK (8ms)
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.effect.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.resizable.js - 200 OK (11ms)
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.effect-blind.js - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.effect-bounce.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.effect-clip.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:53 -0300
+Served asset /jquery.ui.effect-explode.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /jquery.ui.effect-drop.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /jquery.ui.effect-fade.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /jquery.ui.effect-fold.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /jquery.ui.effect-highlight.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /jquery.ui.effect-pulsate.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /jquery.ui.effect-scale.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /jquery.ui.effect-shake.js - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /jquery.ui.effect-slide.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /jquery.ui.effect-transfer.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /jquery.ui.effect.all.js - 200 OK (25ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /jquery.ui.datepicker.js - 200 OK (45ms)
+
+
+Started GET "/assets/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.ui.datepicker-pt-BR.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /jquery.ui.datepicker-pt-BR.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-fileupload/bootstrap-fileupload.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /bootstrap-fileupload/bootstrap-fileupload.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-progressbar/bootstrap-progressbar.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /bootstrap-progressbar/bootstrap-progressbar.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-rowlink/bootstrap-rowlink.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /bootstrap-rowlink/bootstrap-rowlink.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /bootstrap-wysihtml5/src/bootstrap-wysihtml5.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-select/bootstrap-select.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /bootstrap-select/bootstrap-select.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-bootbox/bootbox.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /bootstrap-bootbox/bootbox.min.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-modal/bootstrap-modalmanager.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /bootstrap-modal/bootstrap-modalmanager.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-modal/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /bootstrap-modal/bootstrap-modal.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-wizard/bootstrap-wizard.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /bootstrap-wizard/bootstrap-wizard.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-toggle-buttons/bootstrap-toggle-buttons.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /bootstrap-toggle-buttons/bootstrap-toggle-buttons.js - 200 OK (3ms)
+
+
+Started GET "/assets/nicescroll/jquery.nicescroll.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /nicescroll/jquery.nicescroll.min.js - 200 OK (4ms)
+
+
+Started GET "/assets/qtip2/jquery.qtip.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /qtip2/jquery.qtip.min.js - 200 OK (2ms)
+
+
+Started GET "/assets/list/js/list.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /list/js/list.min.js - 200 OK (4ms)
+
+
+Started GET "/assets/list/plugins/list.paging.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /list/plugins/list.paging.min.js - 200 OK (2ms)
+
+
+Started GET "/assets/fullcalendar/fullcalendar.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /fullcalendar/fullcalendar.js - 200 OK (1ms)
+
+
+Started GET "/assets/select2/select2.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /select2/select2.min.js - 200 OK (4ms)
+
+
+Started GET "/assets/counter/jquery.counter.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /counter/jquery.counter.js - 200 OK (3ms)
+
+
+Started GET "/assets/elastic/jquery.elastic.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /elastic/jquery.elastic.js - 200 OK (3ms)
+
+
+Started GET "/assets/inputmask/jquery.inputmask.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /inputmask/jquery.inputmask.js - 200 OK (1ms)
+
+
+Started GET "/assets/inputmask/jquery.inputmask.extensions.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /inputmask/jquery.inputmask.extensions.js - 200 OK (4ms)
+
+
+Started GET "/assets/validate/jquery.validate.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /validate/jquery.validate.min.js - 200 OK (3ms)
+
+
+Started GET "/assets/xbreadcrumbs/xbreadcrumbs.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /xbreadcrumbs/xbreadcrumbs.js - 200 OK (5ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/outdoors.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /outdoors.js - 200 OK (1ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /clientes.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /application.js - 200 OK (65ms)
+
+
+Started GET "/assets/reservas.js?body=1" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /reservas.js - 200 OK (1ms)
+
+
+Started GET "/assets/fontello.woff" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /fontello.woff - 200 OK (3ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /fontawesome-webfont.woff - 200 OK (4ms)
+
+
+Started GET "/assets/background/body-bg-02.jpg" for 127.0.0.1 at 2013-02-14 11:11:54 -0300
+Served asset /background/body-bg-02.jpg - 200 OK (3ms)
+
+
+Started GET "/admin/outdoors/new" for 127.0.0.1 at 2013-02-14 11:12:44 -0300
+Processing by Admin::OutdoorsController#new as HTML
+  Rendered shared/_error_messages.html.erb (1.2ms)
+  Rendered admin/outdoors/_form.html.erb (50.9ms)
+  Rendered admin/outdoors/new.html.erb within layouts/admin (52.0ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 103ms (Views: 91.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/boo.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /boo.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lib/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /lib/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /lib/bootstrap-responsive.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/boo-coloring.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /boo-coloring.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boo-utility.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /boo-utility.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-fileupload.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-fileupload.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal-bootheme.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-modal-bootheme.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/select-theme.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /select-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.qtip.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-toggle-buttons-theme.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-toggle-buttons-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /font-awesome.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/fontello.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /fontello.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ie.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /ie.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/outdoors.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /outdoors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/print.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reservas.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /reservas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.price_format.1.7.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.price_format.1.7.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.mouse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.draggable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.droppable.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.resizable.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.selectable.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.sortable.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-blind.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-bounce.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-clip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-drop.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-explode.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-fade.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-fold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-highlight.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-pulsate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-scale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-shake.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect-transfer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.effect.all.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker-pt-BR.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /jquery.ui.datepicker-pt-BR.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-fileupload/bootstrap-fileupload.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-fileupload/bootstrap-fileupload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-rowlink/bootstrap-rowlink.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-rowlink/bootstrap-rowlink.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-progressbar/bootstrap-progressbar.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-progressbar/bootstrap-progressbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-wysihtml5/src/bootstrap-wysihtml5.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-select/bootstrap-select.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-select/bootstrap-select.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-bootbox/bootbox.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-bootbox/bootbox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal/bootstrap-modalmanager.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-modal/bootstrap-modalmanager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-modal/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-wizard/bootstrap-wizard.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-wizard/bootstrap-wizard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-toggle-buttons/bootstrap-toggle-buttons.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /bootstrap-toggle-buttons/bootstrap-toggle-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nicescroll/jquery.nicescroll.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /nicescroll/jquery.nicescroll.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/qtip2/jquery.qtip.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /qtip2/jquery.qtip.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list/js/list.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /list/js/list.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list/plugins/list.paging.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /list/plugins/list.paging.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fullcalendar/fullcalendar.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /fullcalendar/fullcalendar.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/select2/select2.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /select2/select2.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/counter/jquery.counter.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /counter/jquery.counter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elastic/jquery.elastic.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /elastic/jquery.elastic.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/inputmask/jquery.inputmask.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /inputmask/jquery.inputmask.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputmask/jquery.inputmask.extensions.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /inputmask/jquery.inputmask.extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/validate/jquery.validate.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /validate/jquery.validate.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/xbreadcrumbs/xbreadcrumbs.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /xbreadcrumbs/xbreadcrumbs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /main.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/outdoors.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /outdoors.js - 304 Not Modified (35ms)
+
+
+Started GET "/assets/reservas.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /reservas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-14 11:12:45 -0300
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/select2.png" for 127.0.0.1 at 2013-02-14 11:12:49 -0300
+Served asset /select2.png - 200 OK (3ms)
+
+
+Started GET "/admin/clientes/new" for 127.0.0.1 at 2013-02-14 11:16:51 -0300
+Processing by Admin::ClientesController#new as HTML
+ERROR: compiling _app_views_admin_clientes__form_html_erb__1396142790429972099_70056121657440 RAISED /home/candidosg/midiaexterna/app/views/admin/clientes/_form.html.erb:80: syntax error, unexpected ')', expecting tASSOC
+...", { :class => 'selecttwo-s' }) );@output_buffer.safe_concat...
+...                               ^
+/home/candidosg/midiaexterna/app/views/admin/clientes/_form.html.erb:94: syntax error, unexpected keyword_end, expecting ')'
+');     end 
+           ^
+/home/candidosg/midiaexterna/app/views/admin/clientes/_form.html.erb:97: syntax error, unexpected keyword_ensure, expecting ')'
+/home/candidosg/midiaexterna/app/views/admin/clientes/_form.html.erb:99: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_admin_clientes__form_html_erb__1396142790429972099_70056121657440(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "admin/clientes/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<div class="form-dark">
+  ');@output_buffer.append=  form_for [:admin, @cliente], :html => {:class => 'form-horizontal' } do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( error_messages_for @cliente );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  
+  <fieldset>
+    <ul class="form-list label-left list-bordered dotted">
+      <li class="section-form">
+        <h4>Dados pessoais</h4>
+      </li>
+      <li class="control-group">
+        <label class="control-label" for="accountPrefix">Nome*</label>
+        <div class="controls">
+          ');@output_buffer.append= ( f.text_field :nome, :placeholder => "", :require => true );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+      </li>
+      <li class="control-group">
+        <label class="control-label" for="accountPrefix">CPF</label>
+        <div class="controls">
+          ');@output_buffer.append= ( f.text_field :cpf, :placeholder => "" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+      </li>
+      <li class="control-group">
+        <label class="control-label" for="accountPrefix">E-mail*</label>
+        <div class="controls">
+          ');@output_buffer.append= ( f.text_field :email, :placeholder => "" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+      </li>
+      <li class="control-group">
+        <label class="control-label" for="accountPrefix">Telefone</label>
+        <div class="controls">
+          ');@output_buffer.append= ( f.text_field :tel, :placeholder => "" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset>
+    <ul class="form-list label-left list-bordered dotted">
+      <li class="section-form">
+        <h4>Dados da empresa</h4>
+      </li>
+      <li class="control-group">
+        <label class="control-label" for="accountPrefix">Empresa</label>
+        <div class="controls">
+          ');@output_buffer.append= ( f.text_field :empresa, :placeholder => "" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+      </li>
+      <li class="control-group">
+        <label class="control-label" for="accountPrefix">Razão Social</label>
+        <div class="controls">
+          ');@output_buffer.append= ( f.text_field :razao, :placeholder => "" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+      </li>
+      <li class="control-group">
+        <label class="control-label" for="accountPrefix">CNPJ</label>
+        <div class="controls">
+          ');@output_buffer.append= ( f.text_field :cnpj, :placeholder => "" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+      </li>
+      <li class="control-group">
+        <label class="control-label" for="accountPrefix">Endereço</label>
+        <div class="controls">
+          ');@output_buffer.append= ( f.text_field :endereco, :placeholder => "" , :class => "input-xxlarge" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+      </li>
+      <li class="control-group">
+        <label class="control-label" for="accountPrefix">Bairro</label>
+        <div class="controls">
+          ');@output_buffer.append= ( f.text_field :bairro, :placeholder => "" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+      </li>
+      <li class="control-group">
+        <label class="control-label" for="accountPrefix">Cidade</label>
+        <div class="controls">
+          ');@output_buffer.append= ( f.text_field :cidade, :placeholder => "" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+      </li>
+      <li class="control-group">
+        <label class="control-label" for="accountPrefix">Estado</label>
+        <div class="controls">
+          ');@output_buffer.append= ( f.select( :estado, {"AC"=>"Acre", "AL"=>"Alagoas", "AM"=>"Amazonas", "AP"=>"Amapá","BA"=>"Bahia","CE"=>"Ceará","DF"=>"Distrito Federal","ES"=>"Espírito Santo","GO"=>"Goiás","MA"=>"Maranhão","MT"=>"Mato Grosso","MS"=>"Mato Grosso do Sul","MG"=>"Minas Gerais","PA"=>"Pará","PB"=>"Paraíba","PR"=>"Paraná","PE"=>"Pernambuco","PI"=>"Piauí","RJ"=>"Rio de Janeiro","RN"=>"Rio Grande do Norte","RO"=>"Rondônia","RS"=>"Rio Grande do Sul","RR"=>"Roraima","SC"=>"Santa Catarina","SE"=>"Sergipe","SP"=>"São Paulo","TO"=>"Tocantins"},:selected => "Piauí", { :class => 'selecttwo-s' }) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+      </li>
+      <li class="control-group">
+        <label class="control-label" for="accountPrefix">CEP</label>
+        <div class="controls">
+          ');@output_buffer.append= ( f.text_field :cep, :placeholder => "" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+      </li>
+    </ul>
+    </fieldset>
+    <div class="form-actions">
+      ');@output_buffer.append= ( f.submit class: "btn btn-blue" );@output_buffer.safe_concat(' ');@output_buffer.append= ( link_to 'Voltar', admin_clientes_path, class: "btn" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </div>
+');     end 
+@output_buffer.safe_concat('  </div>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `module_eval'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `compile'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/template.rb:232:in `compile!'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/template.rb:144:in `block in render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/home/candidosg/midiaexterna/app/views/admin/clientes/new.html.erb:14:in `_app_views_admin_clientes_new_html_erb__4208381208195157790_70056119975440'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/template.rb:145:in `block in render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:88:in `render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/candidosg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/responder.rb:232:in `default_render'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/responder.rb:160:in `to_html'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/responder.rb:153:in `respond'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/responder.rb:146:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/mime_responds.rb:239:in `respond_with'
+/home/candidosg/midiaexterna/app/controllers/admin/clientes_controller.rb:20:in `new'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:414:in `_run__2741890069156453184__process_action__661584003057608723__callbacks'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/mongoid-3.0.21/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/mongoid-3.0.21/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/mongoid-3.0.21/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__3187923595792668572__call__558117620070943793__callbacks'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/better_errors-0.5.0/lib/better_errors/middleware.rb:71:in `protected_app_call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/better_errors-0.5.0/lib/better_errors/middleware.rb:66:in `better_errors_call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/better_errors-0.5.0/lib/better_errors/middleware.rb:41:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/railties-3.2.11/lib/rails/engine.rb:479:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/railties-3.2.11/lib/rails/application.rb:223:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/candidosg/.rvm/gems/ruby-1.9.3-p327/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/home/candidosg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/candidosg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/candidosg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered admin/clientes/_form.html.erb (35.9ms)
+  Rendered admin/clientes/new.html.erb within layouts/admin (36.9ms)
+Completed 500 Internal Server Error in 40ms
+
+SyntaxError - /home/candidosg/midiaexterna/app/views/admin/clientes/_form.html.erb:80: syntax error, unexpected ')', expecting tASSOC
+...", { :class => 'selecttwo-s' }) );@output_buffer.safe_concat...
+...                               ^
+/home/candidosg/midiaexterna/app/views/admin/clientes/_form.html.erb:94: syntax error, unexpected keyword_end, expecting ')'
+');     end 
+           ^
+/home/candidosg/midiaexterna/app/views/admin/clientes/_form.html.erb:97: syntax error, unexpected keyword_ensure, expecting ')'
+/home/candidosg/midiaexterna/app/views/admin/clientes/_form.html.erb:99: syntax error, unexpected keyword_end, expecting ')':
+  app/views/admin/clientes/_form.html.erb:80:in `'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:297:in `module_eval'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:297:in `compile'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:244:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:232:in `compile!'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:144:in `block in render'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  (gem) actionpack-3.2.11/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+  app/views/admin/clientes/new.html.erb:14:in `_app_views_admin_clientes_new_html_erb__4208381208195157790_70056119975440'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/candidosg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/responder.rb:232:in `default_render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/responder.rb:160:in `to_html'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/responder.rb:153:in `respond'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/responder.rb:146:in `call'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/mime_responds.rb:239:in `respond_with'
+  app/controllers/admin/clientes_controller.rb:20:in `new'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:414:in `_run__2741890069156453184__process_action__661584003057608723__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+  (gem) mongoid-3.0.21/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.0.21/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.0.21/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__3187923595792668572__call__558117620070943793__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.5.0/lib/better_errors/middleware.rb:71:in `protected_app_call'
+  (gem) better_errors-0.5.0/lib/better_errors/middleware.rb:66:in `better_errors_call'
+  (gem) better_errors-0.5.0/lib/better_errors/middleware.rb:41:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+  (gem) railties-3.2.11/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.11/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+  /home/candidosg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/candidosg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/candidosg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/28011000/variables" for 127.0.0.1 at 2013-02-14 11:16:51 -0300
+
+
+Started GET "/admin/clientes/new" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Processing by Admin::ClientesController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered admin/clientes/_form.html.erb (5.8ms)
+  Rendered admin/clientes/new.html.erb within layouts/admin (6.5ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 63.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/lib/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /lib/bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lib/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /lib/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boo-coloring.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /boo-coloring.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boo.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /boo.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boo-utility.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /boo-utility.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-fileupload.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /bootstrap-fileupload.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal-bootheme.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /bootstrap-modal-bootheme.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.theme.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.qtip.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select-theme.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /select-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-toggle-buttons-theme.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /bootstrap-toggle-buttons-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontello.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /fontello.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ie.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /ie.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/outdoors.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /outdoors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/print.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reservas.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /reservas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.price_format.1.7.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.price_format.1.7.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.widget.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.draggable.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.droppable.js - 304 Not Modified (40ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.resizable.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.selectable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.sortable.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect-blind.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect-bounce.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect-clip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect-drop.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect-explode.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect-fold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect-fade.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect-highlight.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect-pulsate.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect-scale.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect-shake.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:07 -0300
+Served asset /jquery.ui.effect-slide.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /jquery.ui.effect-transfer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /jquery.ui.effect.all.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker-pt-BR.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /jquery.ui.datepicker-pt-BR.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-fileupload/bootstrap-fileupload.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /bootstrap-fileupload/bootstrap-fileupload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-rowlink/bootstrap-rowlink.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /bootstrap-rowlink/bootstrap-rowlink.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-progressbar/bootstrap-progressbar.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /bootstrap-progressbar/bootstrap-progressbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /bootstrap-wysihtml5/src/bootstrap-wysihtml5.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-select/bootstrap-select.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /bootstrap-select/bootstrap-select.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-bootbox/bootbox.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /bootstrap-bootbox/bootbox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal/bootstrap-modalmanager.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /bootstrap-modal/bootstrap-modalmanager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /bootstrap-modal/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-wizard/bootstrap-wizard.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /bootstrap-wizard/bootstrap-wizard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-toggle-buttons/bootstrap-toggle-buttons.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /bootstrap-toggle-buttons/bootstrap-toggle-buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nicescroll/jquery.nicescroll.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /nicescroll/jquery.nicescroll.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/qtip2/jquery.qtip.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /qtip2/jquery.qtip.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list/js/list.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /list/js/list.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list/plugins/list.paging.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /list/plugins/list.paging.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fullcalendar/fullcalendar.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /fullcalendar/fullcalendar.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/select2/select2.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /select2/select2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/counter/jquery.counter.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /counter/jquery.counter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elastic/jquery.elastic.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /elastic/jquery.elastic.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputmask/jquery.inputmask.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /inputmask/jquery.inputmask.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/inputmask/jquery.inputmask.extensions.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /inputmask/jquery.inputmask.extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/validate/jquery.validate.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /validate/jquery.validate.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/xbreadcrumbs/xbreadcrumbs.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /xbreadcrumbs/xbreadcrumbs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/outdoors.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /outdoors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reservas.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /reservas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /application.js - 304 Not Modified (48ms)
+
+
+Started GET "/assets/background/body-bg-02.jpg" for 127.0.0.1 at 2013-02-14 11:17:08 -0300
+Served asset /background/body-bg-02.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontello.woff" for 127.0.0.1 at 2013-02-14 11:17:09 -0300
+Served asset /fontello.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-02-14 11:17:09 -0300
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.png" for 127.0.0.1 at 2013-02-14 11:17:09 -0300
+Served asset /select2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2013-02-14 11:17:12 -0300
+Served asset /spinner.gif - 200 OK (3ms)
+
+
+Started GET "/admin/outdoors/new" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Processing by Admin::OutdoorsController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered admin/outdoors/_form.html.erb (5.3ms)
+  Rendered admin/outdoors/new.html.erb within layouts/admin (5.7ms)
+  Rendered shared/_navigation.html.erb (0.6ms)
+  Rendered shared/_profile.html.erb (0.1ms)
+  Rendered shared/_menu_sidebar.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 34.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/lib/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /lib/bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lib/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /lib/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boo.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /boo.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/boo-utility.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /boo-utility.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boo-coloring.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /boo-coloring.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-fileupload.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /bootstrap-fileupload.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal-bootheme.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /bootstrap-modal-bootheme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /jquery.qtip.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select-theme.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /select-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-toggle-buttons-theme.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:52 -0300
+Served asset /bootstrap-toggle-buttons-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontello.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /fontello.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /clientes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/outdoors.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /outdoors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ie.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /ie.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/print.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reservas.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /reservas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.price_format.1.7.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.price_format.1.7.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.cookie.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.mouse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.draggable.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.droppable.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.resizable.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.selectable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.sortable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-blind.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-bounce.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-clip.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-drop.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-explode.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-fade.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-fold.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-highlight.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-pulsate.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-scale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-shake.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect-transfer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.effect.all.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker-pt-BR.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /jquery.ui.datepicker-pt-BR.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-fileupload/bootstrap-fileupload.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /bootstrap-fileupload/bootstrap-fileupload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-rowlink/bootstrap-rowlink.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /bootstrap-rowlink/bootstrap-rowlink.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-progressbar/bootstrap-progressbar.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /bootstrap-progressbar/bootstrap-progressbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /bootstrap-wysihtml5/src/bootstrap-wysihtml5.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-select/bootstrap-select.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /bootstrap-select/bootstrap-select.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-bootbox/bootbox.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /bootstrap-bootbox/bootbox.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-modal/bootstrap-modalmanager.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /bootstrap-modal/bootstrap-modalmanager.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-modal/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /bootstrap-modal/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-wizard/bootstrap-wizard.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /bootstrap-wizard/bootstrap-wizard.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-toggle-buttons/bootstrap-toggle-buttons.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /bootstrap-toggle-buttons/bootstrap-toggle-buttons.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/nicescroll/jquery.nicescroll.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /nicescroll/jquery.nicescroll.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/qtip2/jquery.qtip.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /qtip2/jquery.qtip.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/list/js/list.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /list/js/list.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list/plugins/list.paging.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /list/plugins/list.paging.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fullcalendar/fullcalendar.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /fullcalendar/fullcalendar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2/select2.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /select2/select2.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/counter/jquery.counter.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /counter/jquery.counter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elastic/jquery.elastic.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /elastic/jquery.elastic.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/inputmask/jquery.inputmask.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /inputmask/jquery.inputmask.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/inputmask/jquery.inputmask.extensions.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /inputmask/jquery.inputmask.extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/validate/jquery.validate.min.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /validate/jquery.validate.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/xbreadcrumbs/xbreadcrumbs.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /xbreadcrumbs/xbreadcrumbs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/outdoors.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /outdoors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reservas.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /reservas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-14 11:19:53 -0300
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/background/body-bg-02.jpg" for 127.0.0.1 at 2013-02-14 11:19:54 -0300
+Served asset /background/body-bg-02.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontello.woff" for 127.0.0.1 at 2013-02-14 11:19:54 -0300
+Served asset /fontello.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-02-14 11:19:54 -0300
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.png" for 127.0.0.1 at 2013-02-14 11:19:54 -0300
+Served asset /select2.png - 304 Not Modified (0ms)
