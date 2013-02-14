@@ -35,8 +35,8 @@
                                     <td><%= cliente.cidade %></td>
                                     <td><%= cliente.razao %></td>
                                     <td>
-                                    <%= link_to 'Edit', edit_admin_cliente_path(cliente), class: "btn btn-blue btn-mini" %>
-                                    <%= link_to 'Destroy', [:admin, cliente], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-yellow btn-mini" %></td>
+                                    <%= link_to 'Editar', edit_admin_cliente_path(cliente), class: "btn btn-blue btn-mini" %>
+                                    <%= link_to 'Apagar', [:admin, cliente], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-yellow btn-mini" %></td>
                                 </tr>
                                 <% end %>
                             </table>
