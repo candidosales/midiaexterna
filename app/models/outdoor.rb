@@ -7,6 +7,7 @@ class Outdoor
   field :bairro, type: String
   field :cidade, type: String
   field :estado, type: String
+  field :zona, type: String
   field :sentido, type: String
   field :ponto_referencia, type: String
   field :valor, type: Money

@@ -75,5 +75,6 @@ App::Application.configure do
   :password             => 'AlQtq7fGv6OA++mjuAqc/PWYHFSJukKgQsIEKnswmFWF',
   :authentication       => :login,
   :enable_starttls_auto => true  }
+  config.action_mailer.asset_host = "http://ec2-177-71-149-66.sa-east-1.compute.amazonaws.com"
 
 end

@@ -251,8 +251,8 @@
 					<div class="content outdoor">
 						<table bgcolor="#519548" >
 							<tr>
-								<td><img src="http://placehold.it/200x50/" /></td>
-								<td align="right"><h6 class="collapse">Disponibilidade</h6></td>
+								<td><a href="http://www.midiaexterna.com" target="_blank"><%= image_tag("logo.png") %></a></td>
+								<td align="right"><h6 class="collapse">Disponibilidade de Outdoors</h6></td>
 							</tr>
 						</table>
 					</div><!-- /content -->
@@ -274,7 +274,7 @@
 							<tr>
 								<td>
 
-									<h1>Oi, <%= @cliente.nome %></h1>
+									<h1>Oi, <%= @cliente.first_name %></h1>
 									<p class="lead">Obrigado por entrar em contato conosco, veja abaixo a disponibilidade das placas no período entre <%= @inicio %> à <%= @fim %></p>
 								</td>
 							</tr>
@@ -326,9 +326,6 @@
 																	<h5 class="">Siga a gente:</h5>
 																	<p class=""><a href="https://www.facebook.com/MidiaExterna" class="soc-btn fb" target="blank">Facebook</a>
 																	 <a href="https://twitter.com/midiaexterna_pi" class="soc-btn tw" target="blank">Twitter</a>
-																	  <a href="#" class="soc-btn gp">Google+</a></p>
-
-
 																</td>
 															</tr>
 														</table><!-- /column 1 -->
@@ -365,32 +362,5 @@
 						<td></td>
 					</tr>
 				</table><!-- /BODY -->
-
-				<!-- FOOTER -->
-				<table class="footer-wrap">
-					<tr>
-						<td></td>
-						<td class="container">
-
-							<!-- content -->
-							<div class="content">
-								<table>
-									<tr>
-										<td align="center">
-											<p>
-												<a href="#">Termos</a> |
-												<a href="#">Privacidade</a> |
-												<a href="#"><unsubscribe>Unsubscribe</unsubscribe></a>
-											</p>
-										</td>
-									</tr>
-								</table>
-							</div><!-- /content -->
-
-						</td>
-						<td></td>
-					</tr>
-				</table><!-- /FOOTER -->
-
 			</body>
 			</html>

@@ -15,7 +15,12 @@ class Cliente
   field :cep, type: String
   field :razao, type: String
 
-  has_one :reserva, inverse_of: :cliente
+  has_one :reserva, :class_name => "Reserva", inverse_of: :cliente, validate: false
 
   validates_presence_of :nome, :email
+
+  def first_name
+    name = self.nome.split
+    name[0].capitalize
+  end
 end

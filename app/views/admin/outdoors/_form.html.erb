@@ -42,6 +42,12 @@
       </div>
     </li>
     <li class="control-group">
+      <label class="control-label" for="accountPrefix">Zona</label>
+      <div class="controls">
+       <%= f.select(:zona,{"Leste"=>"leste", "Norte"=> "norte", "Sudeste"=> "sudeste", "Sul"=> "sul", "Shopping"=> "shopping"},{}, { :class => 'selecttwo-s' }) %>
+     </div>
+   </li>
+    <li class="control-group">
       <label class="control-label" for="accountPrefix">Sentido</label>
       <div class="controls">
        <%= f.select(:sentido,{"Duplo"=>"duplo", "Frontal"=> "frontal", "Bairro / Centro"=> "bairro_centro", "Centro / Bairro"=> "centro_bairro"},{}, { :class => 'selecttwo-s' }) %>
