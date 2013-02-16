@@ -11,3 +11,4 @@ def flash_messages
     end.join.html_safe
   end
 end
+

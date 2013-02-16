@@ -14,5 +14,33 @@ class ClienteMailer < ActionMailer::Base
     		:subject => "[Midia Externa] Disponibilidade de #{@inicio} a #{@fim}"
     	})
 	end
+
+  def new_reserva(reserva)
+    @reserva = Reserva.find(reserva)
+    @inicio = @reserva.inicio_reserva
+    @fim = @reserva.termino_reserva
+    @cliente = @reserva.cliente
+    @outdoors= @reserva.outdoors
+
+    mail({
+        :to => @reserva.cliente.email,
+        :bcc => ['Candido <candido@vendepublicidade.com.br>'],
+        :subject => "[Midia Externa] Voce possui uma nova reserva de #{@inicio} a #{@fim}"
+      })
+  end
+
+  def reserva_confirmed(reserva)
+    @reserva = Reserva.find(reserva)
+    @inicio = @reserva.inicio_reserva
+    @fim = @reserva.termino_reserva
+    @cliente = @reserva.cliente
+    @outdoors= @reserva.outdoors
+
+    mail({
+        :to => @reserva.cliente.email,
+        :bcc => ['Candido <candido@vendepublicidade.com.br>'],
+        :subject => "[Midia Externa] Reserva confirmada: #{@inicio} a #{@fim}"
+      })
+  end
   
 end

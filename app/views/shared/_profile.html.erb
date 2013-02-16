@@ -1,4 +1,4 @@
-<% if admin_usuario_signed_in? %>
+<% if usuario_signed_in? %>
 
 <div class="sidebar-item">
   <div class="media profile">
@@ -7,8 +7,8 @@
      <%= image_tag("demo-avatar9604.jpg") %>
    </a> </div>
    <div class="media-body">
-    <h5 class="media-heading">Twitter Bootstrap <small>as Administrator</small></h5>
-    <p class="data">Last Access: 16 May 15:30</p>
+    <h5 class="media-heading"><%= current_usuario.name %> <small>Administrator</small></h5>
+    <p class="data">Último acesso: <%= current_usuario.last_sign_in_at.strftime("%d/%m/%Y")  %></p>
   </div>
 </div>
 </div>

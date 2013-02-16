@@ -1,12 +1,13 @@
 App::Application.routes.draw do
-
+  
   root :to => "home#index"
+
+  devise_for :usuarios
+  resources :usuarios
+  
 
   namespace :admin do
     root to: "clientes#index"
-
-    devise_for :usuarios
-    resources :usuarios
 
     resources :reservas
     

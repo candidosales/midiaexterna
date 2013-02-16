@@ -29,7 +29,14 @@ class Admin::ReservasController < Admin::BaseController
   # POST /reservas.json
   def create
     @reserva = Reserva.new(params[:reserva])
-    flash[:notice] = 'Reserva foi criado com sucesso.' if @reserva.save
+      if @reserva.save
+
+        #Enviar e-mail sobre a nova reserva 
+        logger.debug "The object is #{@reserva}"
+        ClienteMailer.new_reserva(@reserva).deliver
+        flash[:notice] = 'Reserva foi criado com sucesso e enviado um e-mail contendo informacoes sobre prazo ao cliente.'
+      end
+    
     respond_with @reserva, :location => admin_reservas_path
   end
 

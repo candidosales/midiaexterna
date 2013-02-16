@@ -11,13 +11,16 @@
                       </div>
                       <div class="widget-content">
                         <ul class="form-list label-left list-bordered dotted">
-                         <li class="section-form">
-                           <h4>Dados da reserva</h4>
-                         </li>
                          <li class="control-group">
                           <label class="control-label" for="accountPrefix">Cliente</label>
                           <div class="controls">
                             <%= @reserva.cliente.nome %> / <%= @reserva.cliente.empresa %>
+                          </div>
+                        </li>
+                        <li class="control-group">
+                          <label class="control-label" for="accountPrefix">Situação</label>
+                          <div class="controls">
+                            <%= status_reserva(@reserva.status) %>
                           </div>
                         </li>
                         <li class="control-group">

@@ -9,14 +9,6 @@ class Usuario
   ## Database authenticatable
   field :email,              :type => String, :default => ""
   field :encrypted_password, :type => String, :default => ""
-  field :name
-
-  validates_presence_of :name
-  validates_presence_of :email
-  validates_uniqueness_of :name, :email, :case_sensitive => false
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
-  
-  validates_presence_of :encrypted_password
   
   ## Recoverable
   field :reset_password_token,   :type => String
@@ -31,6 +23,11 @@ class Usuario
   field :last_sign_in_at,    :type => Time
   field :current_sign_in_ip, :type => String
   field :last_sign_in_ip,    :type => String
+
+  field :name
+  validates_presence_of :name
+  validates_uniqueness_of :name, :email, :case_sensitive => false
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
   ## Confirmable
   # field :confirmation_token,   :type => String

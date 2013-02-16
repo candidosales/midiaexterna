@@ -1,18 +1,18 @@
-<% if admin_usuario_signed_in? %>
+<% if usuario_signed_in? %>
   <li>
   <%= link_to('Logout', destroy_usuario_session_path, :method=>'delete') %>
   </li>
 <% else %>
   <li>
-  <%= link_to('Login', new_admin_usuario_session_path)  %>
+  <%= link_to('Login', new_usuario_session_path)  %>
   </li>
 <% end %>
-<% if admin_usuario_signed_in? %>
+<% if usuario_signed_in? %>
   <li>
-  <%= link_to('Edit account', edit_admin_usuario_registration_path) %>
+  <%= link_to('Edit account', edit_usuario_registration_path) %>
   </li>
 <% else %>
   <li>
-  <%= link_to('Sign up', new_admin_usuario_registration_path)  %>
+  <%= link_to('Sign up', new_usuario_registration_path)  %>
   </li>
 <% end %>

@@ -1,25 +1,86 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+           <div id="main-content" class="main-content container-fluid">
+            <!-- // page head -->
 
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= f.error_notification %>
+            <div id="page-content" class="page-content">
+              <section>
+                <div class="row-fluid margin-top20">
+                  <div class="span12">
+                    <div class="widget widget-simple">
+                      <div class="widget-header">
+                        <h4><i class="fontello-icon-user"></i> Editar Usuário </h4>
+                      </div>
+                      <div class="widget-content">
+                        <div class="form-dark">
 
-  <div class="form-inputs">
-    <p><%= f.label :name %><br />
-    <%= f.text_field :name %></p>
-    
-    <%= f.input :email, :required => true, :autofocus => true %>
-    <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
-    <%= f.input :password_confirmation, :required => false %>
-    <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
-  </div>
+                          <%= simple_form_for(resource, :as => resource_name , :url => registration_path(resource_name), :html => { :method => :put,:class => 'form-horizontal' }) do |f| %>
+                          <%= f.error_notification %>
+                          <fieldset>
+                            <ul class="form-list label-left list-bordered dotted">
+                              <li class="control-group">
+                                <label class="control-label" for="accountPrefix">Nome</label>
+                                <div class="controls">
+                                  <%= f.text_field :name, :autofocus => true %>
+                                </div>
+                              </li>
+                              <li class="control-group">
+                                <label class="control-label" for="accountPrefix">E-mail</label>
+                                <div class="controls">
+                                  <%= f.text_field :email, :required => false, :autofocus => true %>
+                                </div>
+                              </li>
+                              <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                              <li class="control-group">
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
+                                <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
 
-<h3>Cancel my account</h3>
+                              </li>
+                              <% end %>
+                              <li class="control-group">
+                                <label class="control-label" for="accountPrefix">Senha</label>
+                                <div class="controls">
+                                  <%= f.password_field :password, :autocomplete => "off", :required => false %>
+                                  <span class="hint">deixar em branco se você não quiser mudá-lo</span>
+                                </div>
+                              </li>
+                              <li class="control-group">
+                                <label class="control-label" for="accountPrefix">Confirme a senha</label>
+                                <div class="controls">
+                                  <%= f.password_field :password_confirmation, :required => false %>
+                                </div>
+                              </li>
+                              <li class="control-group">
+                                <label class="control-label" for="accountPrefix">Senha atual</label>
+                                <div class="controls">
+                                  <%= f.password_field :current_password, :required => true %>
+                                  <span class="hint">precisamos de sua senha atual para confirmar as alterações</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </fieldset>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
+                          <div class="form-actions">
+                            <%= f.button :submit, "Atualizar", class: "btn btn-blue"  %>
+                          </div>
+                          <% end %>
 
-<%= link_to "Back", :back %>
+
+
+                          
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="widget widget-simple">
+                      <div class="widget-header">
+                        <h4><i class="fontello-icon-user"></i> Cancelar conta </h4>
+                      </div>
+                      <div class="widget-content">
+                        <p>Infelizmente? <%= link_to "Cancelar minha conta", registration_path(resource_name), :data => { :confirm => "Você tem certeza?" }, :method => :delete %>.</p>
+
+                        <%= link_to "Voltar", :back, class: "btn"  %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>

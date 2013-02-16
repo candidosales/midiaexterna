@@ -3,7 +3,7 @@ class Reserva
   include Mongoid::MultiParameterAttributes 
   include Mongoid::Timestamps
 
-  field :status, type: String, default: "aberto"
+  field :status, type: String, default: "pendente"
   field :valor, type: Money
 
   field :inicio_reserva, type: Date
