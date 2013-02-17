@@ -6,6 +6,7 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'devise', '~> 2.2.3'
+gem 'cancan', '~> 1.6.9'
 
 #Mongo
 gem 'mongoid', '~> 3.0.19'
