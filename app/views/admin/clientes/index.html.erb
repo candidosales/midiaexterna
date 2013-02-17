@@ -1,10 +1,4 @@
-           <div id="main-content" class="main-content container-fluid">
-            <!-- // page head -->
 
-            <div id="page-content" class="page-content">
-                <section>
-                    <div class="row-fluid margin-top20">
-                        <div class="span12">
                             <div class="widget widget-box widget-table">
                                 <div class="widget-header">
                                     <h4><i class="fontello-icon-users"></i> Listagem</h4>
@@ -36,7 +30,7 @@
                                     <td><%= cliente.razao %></td>
                                     <td>
                                     <%= link_to 'Editar', edit_admin_cliente_path(cliente), class: "btn btn-blue btn-mini" %>
-                                    <%= link_to 'Apagar', [:admin, cliente], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-yellow btn-mini" %></td>
+                                    <%= link_to 'Apagar', [:admin, cliente], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini" %></td>
                                 </tr>
                                 <% end %>
                             </table>
@@ -47,7 +41,4 @@
                             </div>
 
                         </div>                           
-                    </div>
-                </div>
-        </section>
-    </div>
+

@@ -7,7 +7,7 @@ require "bundler/capistrano"
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
-set :domain, "ec2-177-71-149-66.sa-east-1.compute.amazonaws.com"
+set :domain, "177.71.250.61"
 set :application, 'midiaexterna'
 set :repository, "git@github.com:candidosales/#{application}.git"
 

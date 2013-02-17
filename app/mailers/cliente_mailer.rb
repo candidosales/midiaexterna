@@ -17,8 +17,8 @@ class ClienteMailer < ActionMailer::Base
 
   def new_reserva(reserva)
     @reserva = Reserva.find(reserva)
-    @inicio = @reserva.inicio_reserva
-    @fim = @reserva.termino_reserva
+    @inicio = @reserva.inicio_reserva.strftime("%d/%m/%Y")
+    @fim = @reserva.termino_reserva.strftime("%d/%m/%Y")
     @cliente = @reserva.cliente
     @outdoors= @reserva.outdoors
 
@@ -31,8 +31,8 @@ class ClienteMailer < ActionMailer::Base
 
   def reserva_confirmed(reserva)
     @reserva = Reserva.find(reserva)
-    @inicio = @reserva.inicio_reserva
-    @fim = @reserva.termino_reserva
+    @inicio = @reserva.inicio_reserva.strftime("%d/%m/%Y")
+    @fim = @reserva.termino_reserva.strftime("%d/%m/%Y")
     @cliente = @reserva.cliente
     @outdoors= @reserva.outdoors
 

@@ -1,5 +1,6 @@
 class Usuario
   include Mongoid::Document
+  include Mongoid::Paperclip
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -28,6 +29,12 @@ class Usuario
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :case_sensitive => false
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+
+  has_mongoid_attached_file :avatar,
+    :styles => {
+      :small    => '90x90',
+      :medium   => '300x300'
+    }
 
   ## Confirmable
   # field :confirmation_token,   :type => String

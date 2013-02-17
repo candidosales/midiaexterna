@@ -30,14 +30,14 @@
             <div class="container-fluid">
               <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span>
                <span class="icon-bar"></span> </button>
-              <a class="brand" href="javascript:void(0);"><img src=""></a>
-              <div class="search-global">
+               <a class="brand" href="javascript:void(0);"><img src=""></a>
+               <div class="search-global">
                 <input id="globalSearch" class="search search-query input-medium" type="search">
                 <a class="search-button" href="javascript:void(0);"><i class="fontello-icon-search-5"></i></a> </div>
                 <div class="nav-collapse collapse">
                   <ul class="nav">
                     <li class="active"> <a href="dashboard-one.html">Painel</a> </li>
-                    <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Devise <b class="caret"></b></a>
+                    <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Entrar <b class="caret"></b></a>
                       <ul class="dropdown-menu">
                         <%= render 'shared/navigation' %>
                       </ul>
@@ -60,11 +60,7 @@
               </ul>
             </div>
             <!-- // breadcrumbs --> 
-            <% flash.each do |name, msg| %>
-              <% if msg.is_a?(String) %>
-                <%= content_tag :div, msg, :id => "flash_#{name}" %>
-              <% end %>
-            <% end %>
+            
           </div>
           <!-- // drawer --> 
         </div>
@@ -73,29 +69,45 @@
 
       <div id="main-container">
         <div id="main-sidebar" class="sidebar sidebar-inverse">
-        <%= render 'shared/profile' %>  
-        <!-- // sidebar item - profile -->
+          <%= render 'shared/profile' %>  
+          <!-- // sidebar item - profile -->
 
-        <%= render 'shared/menu_sidebar' %>
+          <%= render 'shared/menu_sidebar' %>
 
-        <div class="sidebar-item"></div>
-        <!-- // sidebar item --> 
+          <div class="sidebar-item"></div>
+          <!-- // sidebar item --> 
+
+        </div>
+
+        <!-- // sidebar -->
+
+        <div id="main-content" class="main-content container-fluid">
+          <!-- // page head -->
+
+          <div id="page-content" class="page-content">
+            <section>
+              <div class="row-fluid margin-top20">
+                <div class="span12">
+              <% flash.each do |name, msg| %>
+              <% if msg.is_a?(String) %>
+              <%= content_tag :div, msg, :id => "flash_#{name}" %>
+              <% end %>
+              <% end %>
+              <%= yield %>
+            </div>
+            </div>
+            </section>
+          </div>
+        </div>
+        <!-- // main-content --> 
 
       </div>
-      <!-- // sidebar -->
+      <!-- // main-container  -->
 
-      <%= yield %>
+      <%= render 'shared/footer' %>
 
     </div>
-    <!-- // main-content --> 
-
-  </div>
-  <!-- // main-container  -->
-
- <%= render 'shared/footer' %>
-
-</div>
-<!-- Included JS Files  -->
-<%= javascript_include_tag "application" %>
-</body>
-</html>
+    <!-- Included JS Files  -->
+    <%= javascript_include_tag "application" %>
+  </body>
+  </html>

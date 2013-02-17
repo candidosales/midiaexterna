@@ -20,7 +20,7 @@ class Reserva
   def self.seek_reserves_period(options={})
     inicio = options.fetch(:inicio_reserva, '')
     fim = options.fetch(:termino_reserva, '')
-    includes(:outdoors).gte(inicio_reserva: inicio).lte(termino_reserva: fim)
+    includes(:outdoors).ne(status:'cancelado').gte(inicio_reserva: inicio).lte(termino_reserva: fim)
   end
 
   def self.outdoors_on_period(options={})
