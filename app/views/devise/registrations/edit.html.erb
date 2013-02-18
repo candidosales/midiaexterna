@@ -6,14 +6,36 @@
                       <div class="widget-content">
                         <div class="form-dark">
 
-                          <%= simple_form_for(resource, :as => resource_name , :url => registration_path(resource_name), :html => { :method => :put,:class => 'form-horizontal' }) do |f| %>
+                          <%= simple_form_for(resource, :as => resource_name , :url => registration_path(resource_name), :html => {:multipart => true,  :method => :put,:class => 'form-horizontal' }) do |f| %>
                           <%= f.error_notification %>
                           <fieldset>
                             <ul class="form-list label-left list-bordered dotted">
                               <li class="control-group">
                                 <label class="control-label" for="accountPrefix">Nome</label>
                                 <div class="controls">
-                                  <%= f.text_field :name, :autofocus => true %>
+                                  <%= f.text_field :nome, :autofocus => true %>
+                                </div>
+                              </li>
+                                 <li class="control-group">
+                                  <label class="control-label" for="accountPrefix">Enviar fotos</label>
+                                  <div class="controls">
+                                   <div class="fileupload fileupload-new pull-left" data-provides="fileupload">
+                                    <div class="fileupload-new thumbnail" style="width: 50px; height: 50px;"> 
+                                      <% unless @usuario.avatar.blank? %>
+                                            <%= image_tag @usuario.avatar.url(:small) %>
+                                          <% end %>
+                                    </div>
+                                      <div class="fileupload-preview fileupload-exists thumbnail" style="width: 50px; height: 50px;">
+
+                                      </div>
+                                      
+                                      <span class="btn btn-file" style="vertical-align:top">
+                                         <span class="fileupload-new">Selecionar imagem</span> 
+                                        <span class="fileupload-exists">Mudar</span>
+                                      <%= f.file_field :avatar, :class => 'foto_outdoor_input'  %>  
+                                    </span>
+                                    <a href="#" class="btn btn-red fileupload-exists" data-dismiss="fileupload" style="vertical-align:top">Remover</a>
+                                  </div>
                                 </div>
                               </li>
                               <li class="control-group">

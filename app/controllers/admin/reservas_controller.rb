@@ -32,7 +32,6 @@ class Admin::ReservasController < Admin::BaseController
       if @reserva.save
 
         #Enviar e-mail sobre a nova reserva 
-        logger.debug "The object is #{@reserva}"
         ClienteMailer.new_reserva(@reserva).deliver
         flash[:notice] = 'Reserva foi criado com sucesso e enviado um e-mail contendo informacoes sobre prazo ao cliente.'
       end
@@ -71,6 +70,7 @@ class Admin::ReservasController < Admin::BaseController
       if(params.has_key?(:cliente_id))
         options[:outdoors] = params[:outdoors]
         options[:cliente_id] = params[:cliente_id]
+        options[:usuario_id] = params[:usuario_id]
         options[:inicio_periodo] = params[:inicio_reserva]
         options[:termino_periodo] = params[:termino_reserva]
         result = ClienteMailer.available_outdoors(options).deliver        

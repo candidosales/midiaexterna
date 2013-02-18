@@ -1,11 +1,12 @@
 class ClienteMailer < ActionMailer::Base
-  default from: "candidosg@gmail.com"
+  default from: "midiaexterna@midiaexterna.com"
 
   def available_outdoors(options={})
   	@inicio = options.fetch(:inicio_periodo, '')
     @fim = options.fetch(:termino_periodo, '')
     @outdoors = options.fetch(:outdoors, '').split(',')
     
+    @usuario = Usuario.find(options[:usuario_id])
     @cliente = Cliente.find(options[:cliente_id])
     
     	mail({
@@ -21,6 +22,7 @@ class ClienteMailer < ActionMailer::Base
     @fim = @reserva.termino_reserva.strftime("%d/%m/%Y")
     @cliente = @reserva.cliente
     @outdoors= @reserva.outdoors
+    @usuario = @reserva.usuario
 
     mail({
         :to => @reserva.cliente.email,
@@ -35,6 +37,7 @@ class ClienteMailer < ActionMailer::Base
     @fim = @reserva.termino_reserva.strftime("%d/%m/%Y")
     @cliente = @reserva.cliente
     @outdoors= @reserva.outdoors
+    @usuario = @reserva.usuario
 
     mail({
         :to => @reserva.cliente.email,

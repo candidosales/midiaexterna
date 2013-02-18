@@ -322,10 +322,10 @@
 							<table>
 								<tr>
 									<td class="small" width="20%" style="vertical-align: top; padding-right:10px;">
-										<img src="http://placehold.it/90x90" alt="http://placehold.it/350x150" class="decoded">
+										<%= image_tag @usuario.avatar.url(:small) %>
 									</td>
 									<td>
-										<h4>Roberval Júnior <small>Atendimento</small></h4>
+										<h4><%= @usuario.nome %> <small>Atendimento</small></h4>
 										<p class="">midiaexterna@midiaexterna.com</p>
 									</td>
 								</tr>

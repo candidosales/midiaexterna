@@ -1,50 +1,65 @@
 
-           					<div class="widget widget-simple">
-           						<div class="widget-header">
-           							<h4><i class="fontello-icon-calendar"></i> Sign up</h4>
-           						</div>
-           						<div class="widget-content">
-           							<div class="form-dark">
+<div class="widget widget-simple">
+ <div class="widget-header">
+  <h4><i class="fontello-icon-calendar"></i> Sign up</h4>
+</div>
+<div class="widget-content">
+  <div class="form-dark">
 
-           								<%= simple_form_for(resource, :as => resource_name, :html => {:class => 'form-horizontal' } , :url => registration_path(resource_name)) do |f| %>
-           								<%= f.error_notification %>
-           									<fieldset>
-           									<ul class="form-list label-left list-bordered dotted">
-           										<li class="control-group">
-           											<label class="control-label" for="accountPrefix">Nome</label>
-           											<div class="controls">
-           												<%= f.text_field :name, :required => false, :autofocus => true %>
-           											</div>
-           										</li>
-           										<li class="control-group">
-           											<label class="control-label" for="accountPrefix">E-mail</label>
-           											<div class="controls">
-           												<%= f.text_field :email, :required => true, :autofocus => true %>
-           											</div>
-           										</li>
-           										<li class="control-group">
-           											<label class="control-label" for="accountPrefix">Senha</label>
-           											<div class="controls">
-           												<%= f.password_field :password, :required => true, :autofocus => true %>
-           											</div>
-           										</li>
-           										<li class="control-group">
-           											<label class="control-label" for="accountPrefix">Confirme a senha</label>
-           											<div class="controls">
-           												<%= f.password_field :password_confirmation, :required => true %>
-           											</div>
-           										</li>
-           									</ul>
-           								</fieldset>
+   <%= simple_form_for(resource, :as => resource_name, :html => {:multipart => true, :class => 'form-horizontal' } , :url => registration_path(resource_name)) do |f| %>
+   <%= f.error_notification %>
+   <fieldset>
+    <ul class="form-list label-left list-bordered dotted">
+     <li class="control-group">
+      <label class="control-label" for="accountPrefix">Nome</label>
+      <div class="controls">
+       <%= f.text_field :nome, :required => false, :autofocus => true %>
+     </div>
+   </li>
+   <li class="control-group">
+    <label class="control-label" for="accountPrefix">Enviar fotos</label>
+    <div class="controls">
+     <div class="fileupload fileupload-new pull-left" data-provides="fileupload">
+      <div class="fileupload-new thumbnail" style="width: 50px; height: 50px;"> 
+        <img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA" /> </div>
+        <div class="fileupload-preview fileupload-exists thumbnail" style="width: 50px; height: 50px;"></div>
+        <span class="btn btn-file" style="vertical-align:top"> <span class="fileupload-new">Selecionar imagem</span> 
+        <span class="fileupload-exists">Mudar</span>
+        <%= f.file_field :avatar, :class => 'foto_outdoor_input'  %>  
+      </span>
+      <a href="#" class="btn btn-red fileupload-exists" data-dismiss="fileupload" style="vertical-align:top">Remover</a>
+    </div>
+  </div>
+</li>
+<li class="control-group">
+  <label class="control-label" for="accountPrefix">E-mail</label>
+  <div class="controls">
+   <%= f.text_field :email, :required => true, :autofocus => true %>
+ </div>
+</li>
+<li class="control-group">
+  <label class="control-label" for="accountPrefix">Senha</label>
+  <div class="controls">
+   <%= f.password_field :password, :required => true, :autofocus => true %>
+ </div>
+</li>
+<li class="control-group">
+  <label class="control-label" for="accountPrefix">Confirme a senha</label>
+  <div class="controls">
+   <%= f.password_field :password_confirmation, :required => true %>
+ </div>
+</li>
+</ul>
+</fieldset>
 
-           									<div class="form-actions">
-           										<%= f.button :submit, "Sign up" %>
-           									</div>
-           									<% end %>
+<div class="form-actions">
+ <%= f.button :submit, "Sign up" %>
+</div>
+<% end %>
 
-           									<%= render "devise/shared/links" %>
-           								</div>
-           							</div>
-           						</div>
+<%= render "devise/shared/links" %>
+</div>
+</div>
+</div>
 
 

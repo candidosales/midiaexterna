@@ -10,7 +10,7 @@
                           <th>Cliente</th>
                           <th>Início</th>
                           <th>Término</th>
-                          <th>Criado em</th>
+                          <th>Criado por</th>
                           <th>Valor</th>
                           <th></th>
                         </tr>
@@ -21,10 +21,10 @@
                           <td><%= "#{reserva.cliente.nome} / #{reserva.cliente.empresa}" %></td>
                           <td><%= reserva.inicio_reserva.strftime("%d/%m/%Y") %></td>
                           <td><%= reserva.termino_reserva.strftime("%d/%m/%Y") %></td>
-                          <td><%= reserva.created_at.strftime("%d/%m/%Y - %H:%M:%S") %></td>
+                          <td><%= "#{reserva.usuario.nome} | #{reserva.created_at.strftime('%d/%m/%Y - %H:%M:%S')}" %></td>
                           <td><%= humanized_money_with_symbol reserva.valor %></td>
                           <td><%= link_to 'Editar', edit_admin_reserva_path(reserva), class: "btn btn-blue btn-mini" %>
-                            <%= link_to 'Apagar', [:admin, reserva], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-yellow btn-mini" %></td>
+                            <%= link_to 'Apagar', [:admin, reserva], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini" %></td>
                           </tr>
                           <% end %>
                         </table>

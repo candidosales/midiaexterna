@@ -35,6 +35,7 @@ $('form[data-update-target]').bind('submit change', function() {
     $('#' + target).html(data);
     $('#reserva_inicio_reserva, #inicio_reserva').val($('#inicio_periodo').val());
     $('#reserva_termino_reserva, #termino_reserva').val($('#termino_periodo').val());
+    $('#usuario_id').val($('#reserva_usuario_id').val());
 
     $("input[type='checkbox']").click(function() {
         somaCheckbox($(this));

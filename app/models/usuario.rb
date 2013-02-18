@@ -25,16 +25,23 @@ class Usuario
   field :current_sign_in_ip, :type => String
   field :last_sign_in_ip,    :type => String
 
-  field :name
-  validates_presence_of :name
-  validates_uniqueness_of :name, :email, :case_sensitive => false
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+  ## Customizable
+  field :nome
+  has_one :reserva, :class_name => "Reserva", inverse_of: :usuario, validate: false
 
-  has_mongoid_attached_file :avatar,
+  ## Avatar
+   has_mongoid_attached_file :avatar,
     :styles => {
       :small    => '90x90',
       :medium   => '300x300'
     }
+
+  validates_presence_of :nome
+  validates_uniqueness_of :nome, :email, :case_sensitive => false
+  attr_accessible :nome, :email, :password, :password_confirmation, :remember_me, :avatar
+
+ 
+
 
   ## Confirmable
   # field :confirmation_token,   :type => String

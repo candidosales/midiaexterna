@@ -18,6 +18,12 @@
                           </div>
                         </li>
                         <li class="control-group">
+                          <label class="control-label" for="accountPrefix">Criado:</label>
+                          <div class="controls">
+                            <%= @reserva.usuario.nome %>  <%= @reserva.created_at.strftime('%d/%m/%Y - %H:%M:%S') %>
+                          </div>
+                        </li>
+                        <li class="control-group">
                           <label class="control-label" for="accountPrefix">Início da reserva:</label>
                           <div class="controls">
                             <%= @reserva.inicio_reserva.strftime("%d/%m/%Y") %>

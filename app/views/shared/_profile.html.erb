@@ -4,10 +4,12 @@
   <div class="media profile">
     <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);">
 
-     <%= image_tag("demo-avatar9604.jpg") %>
+	<%= image_tag current_usuario.avatar.url(:small) %>
+
+
    </a> </div>
    <div class="media-body">
-    <h5 class="media-heading"><%= current_usuario.name %> <small>Administrator</small></h5>
+    <h5 class="media-heading"><%= current_usuario.nome %> <small>Administrator</small></h5>
     <p class="data">Último acesso: <%= current_usuario.last_sign_in_at.strftime("%d/%m/%Y")  %></p>
   </div>
 </div>
