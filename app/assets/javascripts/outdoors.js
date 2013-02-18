@@ -1,6 +1,6 @@
 
 
-$('#outdoor_valor').priceFormat({
+$('#outdoor_valor_veiculacao, #outdoor_valor_impressao').priceFormat({
 	prefix: 'R$ ',
 	centsSeparator: ',',
 	thousandsSeparator: '.'

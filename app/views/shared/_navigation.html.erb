@@ -1,6 +1,6 @@
 <% if usuario_signed_in? %>
   <li>
-  <%= link_to('Logout', destroy_usuario_session_path, :method=>'delete') %>
+  <%= link_to('Sair', destroy_usuario_session_path, :method=>'delete') %>
   </li>
 <% else %>
   <li>
@@ -9,10 +9,10 @@
 <% end %>
 <% if usuario_signed_in? %>
   <li>
-  <%= link_to('Edit account', edit_usuario_registration_path) %>
+  <%= link_to('Editar conta', edit_usuario_registration_path) %>
   </li>
 <% else %>
   <li>
-  <%= link_to('Sign up', new_usuario_registration_path)  %>
+  <%= link_to('Cadastrar', new_usuario_registration_path)  %>
   </li>
 <% end %>

@@ -51,9 +51,15 @@
                           </div>
                         </li>
                         <li class="control-group">
-                          <label class="control-label" for="accountPrefix">Valor</label>
+                          <label class="control-label" for="accountPrefix">Valor da veiculação</label>
                           <div class="controls">
-                            <%= humanized_money_with_symbol @outdoor.valor %>
+                            <%= humanized_money_with_symbol @outdoor.valor_veiculacao %>
+                          </div>
+                        </li>
+                        <li class="control-group">
+                          <label class="control-label" for="accountPrefix">Valor da impressão</label>
+                          <div class="controls">
+                            <%= humanized_money_with_symbol @outdoor.valor_impressao %>
                           </div>
                         </li>
                       </ul>

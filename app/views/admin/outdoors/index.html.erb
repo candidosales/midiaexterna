@@ -36,7 +36,7 @@
                                                 <th class="sorting" scope="col">Endereço <span class="column-sorter"></span></th>
                                                 <th class="sorting" scope="col">Bairro <span class="column-sorter"></span></th>
                                                 <th class="sorting" scope="col">Cidade <span class="column-sorter"></span></th>
-                                                <th class="sorting" scope="col">Valor <span class="column-sorter"></span></th>
+                                                <th class="sorting" scope="col">Veiculação / Impressão <span class="column-sorter"></span></th>
                                                 <th class="sorting" scope="col">Sentido <span class="column-sorter"></span></th>
                                                 <th class="sorting" scope="col">Action <span class="column-sorter"></span></th>
                                             </tr>
@@ -63,7 +63,8 @@
                                                 <%= outdoor.cidade %>
                                             </td>
                                             <td>
-                                                <%= humanized_money_with_symbol outdoor.valor %>
+                                                <%= humanized_money_with_symbol outdoor.valor_veiculacao %> /
+                                                <%= humanized_money_with_symbol outdoor.valor_impressao %>
                                             </td>
                                             <td>
                                                 <%= outdoor.sentido %>

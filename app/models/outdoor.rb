@@ -10,7 +10,8 @@ class Outdoor
   field :zona, type: String
   field :sentido, type: String
   field :ponto_referencia, type: String
-  field :valor, type: Money
+  field :valor_veiculacao, type: Money
+  field :valor_impressao, type: Money
 
   embeds_many :foto_outdoors, :cascade_callbacks => true
   accepts_nested_attributes_for :foto_outdoors, :allow_destroy => true
@@ -19,7 +20,7 @@ class Outdoor
 
   default_scope asc :numero
 
-  validates_presence_of :numero, :endereco, :bairro, :cidade, :valor
+  validates_presence_of :numero, :endereco, :bairro, :cidade, :valor_veiculacao, :valor_impressao
 
   validates :numero, :uniqueness => true
 

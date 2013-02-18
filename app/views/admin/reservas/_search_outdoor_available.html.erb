@@ -14,7 +14,7 @@
             <th>Endereço</th>
             <th>Bairro</th>
             <th>Cidade</th>
-            <th>Valor</th>
+            <th>Veiculação / Impressão</th>
             <th>Sentido</th>
           </tr>
         </thead>
@@ -29,18 +29,24 @@
           <td><%= outdoor.endereco %></td>
           <td><%= outdoor.bairro %></td>
           <td><%= outdoor.cidade %></td>
-          <td>R$ <span class="valor-<%= outdoor.id %>"><%=outdoor.valor %></span></td>
+          <td>R$ <span class="valor_veiculacao-<%= outdoor.id %>"><%=outdoor.valor_veiculacao %></span> / R$ <span class="valor_impressao-<%= outdoor.id %>"><%= outdoor.valor_impressao %></span></td>
           <td><%= outdoor.sentido %></td>
         </tr>
         <% end %>
       </table>
     </div>
     <div class="controls controls-row">
-      <%= f.collection_select :cliente_id, Cliente.all, :id, :nome,  {:prompt => 'Selecione o cliente'},{:class => 'selecttwo-s span3'} %>
+      <div class="span12">
+      <%= f.collection_select :cliente_id, Cliente.all, :id, :nome,  {:prompt => 'Selecione o cliente'},{:class => 'selecttwo-s span2'} %>
       <%= f.text_field :campanha, :placeholder => "Nome da campanha", :class => 'span3'%>
-      <input id="valor" type="text" placeholder="R$ 0,00" class="span3" name="valor" disabled   >
-
+ 
+      <input id="total_veiculacao" type="text" placeholder="Veiculação" class="span2" name="total_veiculacao"  >
+        <div class="operator">+</div>
+      <input id="total_impressao" type="text" placeholder="Impressão" class="span2" name="total_impressao" >
+        <div class="operator">=</div>
+      <input id="total" type="text" placeholder="R$ 0,00" class="span2" name="total" >
     </div>
+
     <%= f.hidden_field :valor %>
     <%= f.hidden_field :inicio_reserva %>
     <%= f.hidden_field :termino_reserva %>

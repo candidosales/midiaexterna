@@ -42,20 +42,34 @@ $('form[data-update-target]').bind('submit change', function() {
     });
       emailAvailableOutdoors();
 
+   $("#total_veiculacao, #total_impressao").change(function() {
+       reserva_valor = parseInt($("#total_veiculacao").val()) + parseInt($("#total_impressao").val());
+       $('#total').val('R$ ' + reserva_valor + ',00');
+       $('#reserva_valor').val(reserva_valor);
+    });
+
   });
 });
 
 var somaCheckbox = function(x) {
-  var total;
-  total = 0;
+  var total_veiculacao = 0 , val_veiculacao = 0, total_impressao = 0 , val_impressao = 0, reserva_valor = 0;
+
   $("input[type='checkbox']:checked").each(function() {
     var id, val;
     id = $(this).attr('id');
-    val = $('span.valor' + '-' + id).html();
-    total += parseInt(val);
+    val_veiculacao = $('span.valor_veiculacao' + '-' + id).html();
+    val_impressao = $('span.valor_impressao' + '-' + id).html();
+
+    total_veiculacao += parseInt(val_veiculacao);
+    total_impressao += parseInt(val_impressao);
   });
-  $("#valor").val('R$ ' + total + ',00');
-  $('#reserva_valor').val(total);
+  $("#total_veiculacao").val(total_veiculacao);
+  $("#total_impressao").val(total_impressao);
+
+  reserva_valor = total_veiculacao + total_impressao;
+
+  $('#total').val('R$ ' + reserva_valor + ',00');
+  $('#reserva_valor').val(reserva_valor);
   return true;
 };
 
