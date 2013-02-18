@@ -53,7 +53,7 @@
                               <th>Endereço</th>
                               <th>Bairro</th>
                               <th>Cidade</th>
-                              <th>Valor</th>
+                              <th>Veiculação / Impressão</th>
                               <th>Sentido</th>
                             </tr>
                           </thead>
@@ -63,7 +63,7 @@
                             <td><%= outdoor.endereco %></td>
                             <td><%= outdoor.bairro %></td>
                             <td><%= outdoor.cidade %></td>
-                            <td>R$ <span class="valor-<%= outdoor.id %>"><%=outdoor.valor %></span></td>
+                            <td>R$ <span class="valor_veiculacao-<%= outdoor.id %>"><%=outdoor.valor_veiculacao %></span> / R$ <span class="valor_impressao-<%= outdoor.id %>"><%= outdoor.valor_impressao %></span></td>
                             <td><%= outdoor.sentido %></td>
                           </tr>
                           <% end %>
