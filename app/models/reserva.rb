@@ -10,6 +10,8 @@ class Reserva
   field :termino_reserva, type: Date
 
   field :campanha, type: String
+  field :confirmado, type: Boolean, default: false
+  field :data_confirmacao, type: DateTime
 
   belongs_to :cliente, class_name: "Cliente"
 

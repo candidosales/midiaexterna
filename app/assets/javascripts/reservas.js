@@ -31,32 +31,33 @@ $('form[data-update-target]').bind('submit change', function() {
   }).complete(function() {
     toggleLoading();
   }).success(function(data) {
-    
+
     $('#' + target).html(data);
     $('#reserva_inicio_reserva, #inicio_reserva').val($('#inicio_periodo').val());
     $('#reserva_termino_reserva, #termino_reserva').val($('#termino_periodo').val());
     $('#usuario_id').val($('#reserva_usuario_id').val());
 
     $("input[type='checkbox']").click(function() {
-        somaCheckbox($(this));
+      somaCheckbox($(this));
     });
-      emailAvailableOutdoors();
+    emailAvailableOutdoors();
 
-   $("#total_veiculacao, #total_impressao").change(function() {
-       reserva_valor = parseInt($("#total_veiculacao").val()) + parseInt($("#total_impressao").val());
-       $('#total').val('R$ ' + reserva_valor + ',00');
-       $('#reserva_valor').val(reserva_valor);
-    });
+    $("#total_veiculacao, #total_impressao").change(function() {
+     reserva_valor = parseInt($("#total_veiculacao").val()) + parseInt($("#total_impressao").val());
+     $('#total').val('R$ ' + reserva_valor + ',00');
+     $('#reserva_valor').val(reserva_valor);
+   });
 
   });
 });
+
+
 
 var somaCheckbox = function(x) {
   var total_veiculacao = 0 , val_veiculacao = 0, total_impressao = 0 , val_impressao = 0, reserva_valor = 0;
 
   $("input[type='checkbox']:checked").each(function() {
-    var id, val;
-    id = $(this).attr('id');
+    var id = $(this).attr('id');
     val_veiculacao = $('span.valor_veiculacao' + '-' + id).html();
     val_impressao = $('span.valor_impressao' + '-' + id).html();
 
@@ -70,21 +71,20 @@ var somaCheckbox = function(x) {
 
   $('#total').val('R$ ' + reserva_valor + ',00');
   $('#reserva_valor').val(reserva_valor);
-  return true;
 };
 
 somaCheckbox();
 
 var emailAvailableOutdoors = function(x){
-   $('select#reserva_cliente_id').on('change', function() {
-      var allVals;
-      $('input#cliente_id').val($(this).val());
-      allVals = [];
-      $("input[type='checkbox']").each(function() {
-        allVals.push($(this).val());
-      });
-        $('#outdoors').val(allVals);
-    });
+ $('select#reserva_cliente_id').on('change', function() {
+  var allVals;
+  $('input#cliente_id').val($(this).val());
+  allVals = [];
+  $("input[type='checkbox']").each(function() {
+    allVals.push($(this).val());
+  });
+  $('#outdoors').val(allVals);
+});
 }
 
 

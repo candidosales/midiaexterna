@@ -23,7 +23,7 @@ App::Application.routes.draw do
 
     controller :reservas do
        post 'send_email_available_outdoors', :action => :send_email_available_outdoors
-       post 'reservas/search_outdoor_available', :action => :search_outdoor_available
+       post 'search_outdoor_available', :action => :search_outdoor_available
     end
   end
 

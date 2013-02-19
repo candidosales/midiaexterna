@@ -56,7 +56,7 @@
      <%= f.submit :class => "btn btn-green" %> 
    </div>
  <% end %>
-    <%= form_tag({:action => 'send_email_available_outdoors'}, :id => "tool-form", :remote => true,:'data-update-target' => 'outdoors_available', :html => {:class => 'form-horizontal' } ) do %>
+    <%= form_tag({:action => 'send_email_available_outdoors'}, :id => 'form-email', :remote => true, :class => 'form-horizontal') do %>
       <%= submit_tag("Enviar e-mail com as disponiveis", :class => "btn btn-green") %>
         <%= hidden_field_tag :outdoors %>
         <%= hidden_field_tag :inicio_reserva %>
@@ -65,3 +65,4 @@
         <%= hidden_field_tag :usuario_id %>
     <% end %>
 </div>
+<div id="fuck"></div>

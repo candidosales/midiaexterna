@@ -29,22 +29,37 @@ class Admin::ReservasController < Admin::BaseController
   # POST /reservas.json
   def create
     @reserva = Reserva.new(params[:reserva])
-      if @reserva.save
+    if @reserva.save
 
         #Enviar e-mail sobre a nova reserva 
         ClienteMailer.new_reserva(@reserva).deliver
         flash[:notice] = 'Reserva foi criado com sucesso e enviado um e-mail contendo informacoes sobre prazo ao cliente.'
       end
-    
-    respond_with @reserva, :location => admin_reservas_path
-  end
+
+      respond_with @reserva, :location => admin_reservas_path
+    end
 
   # PUT /reservas/1
   # PUT /reservas/1.json
   def update
     @reserva = Reserva.find(params[:id])
     flash[:notice] = 'Reserva foi atualizado com sucesso.' if @reserva.update_attributes(params[:reserva])
-    respond_with @reserva, :location => edit_admin_reserva_path(@reserva)
+    
+    #Após confirmado uma vez, ele envia o e-mail
+    if @reserva.status == 'confirmado' and @reserva.confirmado == false
+      @reserva.confirmado = true
+      @reserva.data_confirmacao = DateTime.now
+      @reserva.save
+      ClienteMailer.reserva_confirmed(@reserva).deliver
+    end
+
+    #Se for cancelado deletar o objeto
+    if @reserva.status == 'cancelado'
+      @reserva.destroy
+      respond_with @reserva, :location => admin_reservas_path
+    else
+      respond_with @reserva, :location => edit_admin_reserva_path(@reserva)
+    end
   end
 
   # DELETE /reservas/1
@@ -75,9 +90,9 @@ class Admin::ReservasController < Admin::BaseController
         options[:termino_periodo] = params[:termino_reserva]
         result = ClienteMailer.available_outdoors(options).deliver        
       end 
-      render :js => "alert('E-mail enviado com sucesso');"
-    rescue
-      render :js => "alert('Selecione o cliente para o envio do email');"
     end
+    flash[:notice] = 'E-mail enviado com sucesso.'
+    redirect_to :action => "new"
+
   end
 end

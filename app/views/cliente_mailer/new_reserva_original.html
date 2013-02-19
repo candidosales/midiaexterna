@@ -97,6 +97,7 @@
 		------------------------------------- */
 		table.body-wrap { width: 100%;}
 		table .colaborador{background:#ECF8FF;padding:15px;margin:15px;}
+		table .space-top{padding: 15px 0 0 0;margin:20px 0 15px 0;border-top: 1px solid #AAAAAA}
 
 /* ------------------------------------- 
 		FOOTER 
@@ -270,7 +271,7 @@
 		</table><!-- /HEADER -->
 
 		<!-- BODY -->
-		<table class="body-wrap" bgcolor="#88C425">
+		<table class="body-wrap" bgcolor="#ECEAEA">
 			<tr>
 				<td></td>
 				<td class="container" align="" bgcolor="#FFFFFF">
@@ -284,13 +285,13 @@
 									<h2>Ótimo <%= @cliente.first_name %>,</h2>
 									<p class="lead">Você iníciou uma reserva com a gente.</p>
 									<p class="callout">Importante lembrar que sua reserva é válida para as próximas <strong>24hs</strong>, por isso confirme logo sua reserva com um de nossos atendentes, por <a href="mailto:midiaexterna@midiaexterna.com">e-mail</a> ou <a href="tel:8632342869">telefone</a>.</p>
-									<h3>Sobre a Reserva
-										<small><%= @inicio %> à <%= @fim %> </small>
-									</h3>
-									<h3 class="subheader">Outdoors</h3>
+									<h3 class="space-top">Sobre a Reserva</h3>
+									<p><strong>Período:</strong> <%= @inicio %> à <%= @fim %><br/>
+									<strong>Criado em:</strong> <%= @reserva.created_at.strftime('%d/%m/%Y - %Hh %Mm %Ss') %><br/></p>
+									<h4 class="subheader">Outdoors</h4>
 								</td>
 							</tr>
-						</table>
+						</table>	
 					</div><!-- /content -->
 					<% @outdoors.each do |o|
 						outdoor = Outdoor.find(o) %>
