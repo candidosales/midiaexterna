@@ -10,16 +10,19 @@
                           <fieldset>
                            <legend>Qual o período da reserva?</legend>
                            <div class="input-append">
-                                <input data-date-format="dd/mm/yy" type="text" id="inicio_periodo" name="inicio_periodo" class="span7" placeholder="Início"/>
+                                <input data-date-format="dd/mm/yy" type="text" id="inicio_periodo" name="inicio_periodo" class="span9" placeholder="Início"/>
                                 <span class="add-on"><i class="fontello-icon-calendar"></i></span>
                              </div>
                           <div class="input-append">
-                                <input data-date-format="dd/mm/yy" type="text" id="termino_periodo" name="termino_periodo" class="span7" placeholder="Término"/>
+                                <input data-date-format="dd/mm/yy" type="text" id="termino_periodo" name="termino_periodo" class="span9" placeholder="Fim"/>
                                 <span class="add-on"><i class="fontello-icon-calendar"></i></span>
                              </div>
 
                         </fieldset>
-                        <%= submit_tag("Buscar", :class => "btn btn-blue") %><%= link_to 'Voltar', admin_reservas_path, class: "btn" %>
+                        <div class="form-actions">
+                        <%= link_to '', admin_reservas_path, class: "btn fontello-icon-left-1" %>
+                         <%= button_tag("", :class => "btn btn-blue fontello-icon-search") %>
+                       </div>
                         <% end %>
                         <div id="outdoors_available">
 

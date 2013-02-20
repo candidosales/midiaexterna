@@ -1,26 +1,26 @@
 <div class="form-dark">
-  <%= simple_nested_form_for [:admin, @outdoor], :html => {:multipart => true,:class => 'form-horizontal' }  do |f| %>
+  <%= simple_nested_form_for [:admin, @outdoor], :html => {:multipart => true,:class => 'form-horizontal', 'data-validate' => "parsley" }  do |f| %>
   <%= error_messages_for @outdoor %>
   <ul class="form-list label-left list-bordered dotted">
     <li class="section-form">
       <h4>Dados de localização</h4>
     </li>
     <li class="control-group">
-      <label class="control-label" for="accountPrefix">Número*</label>
+      <label class="control-label" for="accountPrefix">Número *</label>
       <div class="controls">
-        <%= f.number_field :numero, :placeholder => "", :require => true %>
+        <%= f.number_field :numero, :placeholder => "", 'data-required' => "true" %>
       </div>
     </li>
     <li class="control-group">
-      <label class="control-label" for="accountPrefix">Endereço*</label>
+      <label class="control-label" for="accountPrefix">Endereço *</label>
       <div class="controls">
-        <%= f.text_field :endereco, :placeholder => "", :class => "input-xxlarge" %>
+        <%= f.text_field :endereco, :placeholder => "", :class => "input-xxlarge", 'data-required' => "true" %>
       </div>
     </li>
     <li class="control-group">
-      <label class="control-label" for="accountPrefix">Bairro*</label>
+      <label class="control-label" for="accountPrefix">Bairro *</label>
       <div class="controls">
-        <%= f.text_field :bairro, :placeholder => "" %>
+        <%= f.text_field :bairro, :placeholder => "", 'data-required' => "true" %>
       </div>
     </li>
     <li class="control-group">
@@ -30,9 +30,9 @@
       </div>
     </li>
     <li class="control-group">
-      <label class="control-label" for="accountPrefix">Cidade*</label>
+      <label class="control-label" for="accountPrefix">Cidade *</label>
       <div class="controls">
-        <%= f.text_field :cidade, :placeholder => "" , :value => "Teresina" %>
+        <%= f.text_field :cidade, :placeholder => "" , :value => "Teresina", 'data-required' => "true" %>
       </div>
     </li>
     <li class="control-group">
@@ -44,13 +44,13 @@
     <li class="control-group">
       <label class="control-label" for="accountPrefix">Zona</label>
       <div class="controls">
-       <%= f.select(:zona,{"Leste"=>"leste", "Norte"=> "norte", "Sudeste"=> "sudeste", "Sul"=> "sul", "Shopping"=> "shopping"},{}, { :class => 'selecttwo-s' }) %>
+       <%= f.select(:zona,{"Centro" => "centro" , "Leste"=>"leste", "Norte"=> "norte", "Sudeste"=> "sudeste", "Sul"=> "sul", "Shopping"=> "shopping"},{}, { :class => 'selecttwo-s' }) %>
      </div>
    </li>
     <li class="control-group">
       <label class="control-label" for="accountPrefix">Sentido</label>
       <div class="controls">
-       <%= f.select(:sentido,{"Duplo"=>"duplo", "Frontal"=> "frontal", "Bairro / Centro"=> "bairro_centro", "Centro / Bairro"=> "centro_bairro"},{}, { :class => 'selecttwo-s' }) %>
+       <%= f.select(:sentido,{"Duplo"=>"duplo", "Frontal"=> "frontal", "Bairro / Centro"=> "bairro_centro", "Centro / Bairro"=> "centro_bairro","Centro / Norte" => "centro_norte", "Norte / Centro"=> "norte_centro"},{}, { :class => 'selecttwo-s input-large' }) %>
      </div>
    </li>
 
@@ -91,7 +91,7 @@
   </li>
 </ul>
 <div class="form-actions">
-  <%= f.submit class: "btn btn-blue" %> <%= link_to 'Voltar', admin_outdoors_path, class: "btn" %>
+   <%= link_to '', admin_outdoors_path, class: "btn fontello-icon-left-1" %> <%= f.submit class: "btn btn-blue" %>
 </div>
 <% end %>
 </div>

@@ -60,6 +60,7 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
+    devise-i18n (0.6.4)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -128,6 +129,8 @@ GEM
       activesupport (= 3.2.11)
       bundler (~> 1.0)
       railties (= 3.2.11)
+    rails-i18n (0.7.2)
+      i18n (~> 0.5)
     railties (3.2.11)
       actionpack (= 3.2.11)
       activesupport (= 3.2.11)
@@ -180,6 +183,7 @@ DEPENDENCIES
   capistrano
   compass-rails
   devise (~> 2.2.3)
+  devise-i18n
   jquery-rails
   jquery-ui-rails
   money-rails
@@ -187,6 +191,7 @@ DEPENDENCIES
   mongoid-paperclip
   nested_form
   rails (= 3.2.11)
+  rails-i18n
   rmagick
   sass-rails (~> 3.2.5)
   simple_form

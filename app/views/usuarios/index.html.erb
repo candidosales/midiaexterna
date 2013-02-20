@@ -1,38 +1,61 @@
 
-<div class="widget widget-box widget-table">
-    <div class="widget-header">
-        <h4><i class="fontello-icon-users"></i> Listagem</h4>
+<div class="well well-nice well-box no-border">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <h4 class="title"><i class="fontello-icon-user"></i> Listagem</h4>
+            <ul class="btn-toolbar pull-right">
+                <li class="divider-vertical"></li>
+                <li><%= link_to 'Novo Cliente', new_admin_cliente_path, class: "btn btn-green" %></li>
+            </ul>
+            <!-- // btn-toolbar -->
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a data-toggle="tab" href="#tab1A">PDF</a></li>
+            </ul>
+            <!-- // nav-pills --> 
+        </div>
     </div>
-    <table class="table table-striped table-condensed table-content boo-table">
+    <table class="table boo-table table-striped table-content table-hover">
         <thead>
           <tr>
-            <th scope="col">Nome</th>
-            <th scope="col">Email</th>
-            <th scope="col"></th>
+            <th class="sorting" scope="col">Nome</th>
+            <th class="sorting" scope="col">Email</th>
+            <th class="sorting" scope="col">Ações</th>
         </tr>
     </thead>
 
     <% @usuarios.each do |usuario| %>
     <tr>
         <td>
-            <div class="media-thumb"> 
-                <a class="img-shadow">
-                    <%= image_tag usuario.avatar.url(:small) %>
+            <div class="media-thumb media-left"> 
+                <a class="img-shadow" href="javascript:void(0);">
+                    <%= image_tag(usuario.avatar.url(:small),:class => "thumb") %>
                 </a>
             </div>
-            <%= link_to usuario.nome, [usuario] %></td>
+            <strong><%= link_to usuario.nome, [usuario] %></strong></td>
             <td><%= usuario.email %></td>
             <td>
-                <%= link_to 'Editar', edit_usuario_registration_path, class: "btn btn-blue btn-mini" %>
-                <%= link_to 'Apagar', [usuario], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-yellow btn-mini" %></td>
+                <%= link_to '', edit_usuario_registration_path, class: "btn btn-blue btn-mini fontello-icon-edit" %>
+                <%= link_to '', [usuario], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
             </tr>
             <% end %>
         </table>
-        <div class="widget-footer">
+        <div class="action-table">
             <div class="btn-toolbar pull-left">
-                <%= link_to 'Novo Usuário', new_usuario_path, class: "btn btn-blue" %>
+                <div class="action-select-wraper">
+                   <span class="arrow-table-action"></span>
+                   <select name="actionTable" id="actionTable" class="selectpicker-boo " >
+                    <option value="" selected="selected">Action for selected...</option>
+                    <option value="validate">Validate</option>
+                    <option value="delete">Delete</option>
+                </select>
+                <button type="submit" class="btn btn-boo">Perform the action</button>
             </div>
         </div>
+        <ul class="btn-toolbar pull-right">
+            <li class="divider-vertical small"></li>
+            <li><%= link_to 'Novo Usuário', new_usuario_path, class: "btn btn-green" %></li>
+        </ul>
+    </div>
 
-    </div>                           
+</div>                           
 

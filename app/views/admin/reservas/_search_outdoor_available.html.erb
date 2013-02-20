@@ -52,12 +52,12 @@
     <%= f.hidden_field :termino_reserva %>
     <%= f.hidden_field :usuario_id, :value => current_usuario.id %>
 
-    <div class="form-actions">
+    <div class="form-actions span3">
      <%= f.submit :class => "btn btn-green" %> 
    </div>
  <% end %>
-    <%= form_tag({:action => 'send_email_available_outdoors'}, :id => 'form-email', :remote => true, :class => 'form-horizontal') do %>
-      <%= submit_tag("Enviar e-mail com as disponiveis", :class => "btn btn-green") %>
+    <%= form_tag({:action => 'send_email_available_outdoors'}, :id => 'form-email', :remote => true, :class => 'span12') do %>
+      <%= submit_tag("Enviar e-mail com as disponiveis", :class => "btn btn-blue") %>
         <%= hidden_field_tag :outdoors %>
         <%= hidden_field_tag :inicio_reserva %>
         <%= hidden_field_tag :termino_reserva %>

@@ -283,12 +283,13 @@
 								<td>
 
 									<h2>Parabéns <%= @cliente.first_name %>,</h2>
-									<p class="lead">É um privilégio tornar sua campanha mais lucrativa sendo divulgada em nossos outdoors.</p>
+									<p class="lead">Você acaba de confirmar sua reserva.<br/>
+										É um privilégio cuidar da sua campanha tendo a certeza de que ela será bem vista.</p>
 									<p>Estamos aguardando seu outdoor para colagem ou a arte para nós imprimirmos.</p>
 									<h3 class="space-top">Sobre a Reserva</h3>
 									<p><strong>Período:</strong> <%= @inicio %> à <%= @fim %><br/>
-									<strong>Criado em:</strong> <%= @reserva.created_at.strftime('%d/%m/%Y - %Hh %Mm %Ss') %><br/>
-									<strong>Confirmado em:</strong> <%= @reserva.data_confirmacao.strftime('%d/%m/%Y - %Hh %Mm %Ss') %></p>
+									<strong>Criado em:</strong> <%= @reserva.created_at.strftime('%d/%m/%Y - %Hh %Mm') %><br/>
+									<strong>Confirmado em:</strong> <%= @reserva.data_confirmacao.strftime('%d/%m/%Y - %Hh %Mm') %></p>
 									<h4 class="subheader">Outdoors</h4>
 								</td>
 							</tr>

@@ -1,13 +1,13 @@
 
 <div class="widget widget-simple">
  <div class="widget-header">
-  <h4><i class="fontello-icon-calendar"></i> Sign up</h4>
+  <h4><i class="fontello-icon-user"></i> Novo usuário</h4>
 </div>
 <div class="widget-content">
   <div class="form-dark">
 
    <%= simple_form_for(resource, :as => resource_name, :html => {:multipart => true, :class => 'form-horizontal' } , :url => registration_path(resource_name)) do |f| %>
-   <%= f.error_notification %>
+    <%= error_messages_for resource %>
    <fieldset>
     <ul class="form-list label-left list-bordered dotted">
      <li class="control-group">
@@ -53,7 +53,7 @@
 </fieldset>
 
 <div class="form-actions">
- <%= f.button :submit, "Sign up" %>
+ <%= f.button :submit, "Cadastrar", :class => "btn btn-green" %>
 </div>
 <% end %>
 

@@ -48,6 +48,12 @@ $('form[data-update-target]').bind('submit change', function() {
      $('#reserva_valor').val(reserva_valor);
    });
 
+    $('input[type=checkbox].checkbox').change(function(){
+      $(this).closest('tr').removeClass('success');
+      if($(this).prop('checked')){
+       $(this).closest('tr').addClass('success');
+     }
+    });
   });
 });
 

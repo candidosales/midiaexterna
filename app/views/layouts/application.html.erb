@@ -30,7 +30,7 @@
             <div class="container-fluid">
               <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span>
                <span class="icon-bar"></span> </button>
-               <a class="brand" href="javascript:void(0);"><img src=""></a>
+               <a class="brand" href="/admin"><%= image_tag("logo-mini.png") %></a>
                <div class="search-global">
                 <input id="globalSearch" class="search search-query input-medium" type="search">
                 <a class="search-button" href="javascript:void(0);"><i class="fontello-icon-search-5"></i></a> </div>
@@ -78,7 +78,6 @@
           <!-- // sidebar item --> 
 
         </div>
-
         <!-- // sidebar -->
 
         <div id="main-content" class="main-content container-fluid">
@@ -90,7 +89,10 @@
                 <div class="span12">
               <% flash.each do |name, msg| %>
                 <% if msg.is_a?(String) %>
-                  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+                  <div id="flash_<%= name %>">
+                  <button data-dismiss="alert" class="close" type="button">×</button>
+                  <%= msg %>
+                </div>
                 <% end %>
               <% end %>
               <%= yield %>

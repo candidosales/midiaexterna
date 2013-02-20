@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
+gem 'rails-i18n'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'devise', '~> 2.2.3'
+gem 'devise-i18n'
 gem 'cancan', '~> 1.6.9'
 
 #Mongo

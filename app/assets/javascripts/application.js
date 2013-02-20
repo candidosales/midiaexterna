@@ -31,6 +31,9 @@
 //= require jquery.ui.datepicker
 //= require jquery.ui.datepicker-pt-BR
 
+//= require parsley/messages.pt_br
+//= require parsley/parsley
+
 //= require bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min  
 //= require bootstrap-fileupload/bootstrap-fileupload
 //= require bootstrap-rowlink/bootstrap-rowlink

@@ -1,43 +1,59 @@
 
-                            <div class="widget widget-box widget-table">
-                                <div class="widget-header">
-                                    <h4><i class="fontello-icon-users"></i> Listagem</h4>
+                            <div class="well well-nice well-box no-border">
+                                <div class="navbar">
+                                    <div class="navbar-inner">
+                                        <h4 class="title"><i class="fontello-icon-users"></i> Listagem</h4>
+                                        <ul class="btn-toolbar pull-right">
+                                            <li class="divider-vertical"></li>
+                                            <li><%= link_to 'Novo Cliente', new_admin_cliente_path, class: "btn btn-green" %></li>
+                                        </ul>
+                                        <!-- // btn-toolbar -->
+                                        <ul class="nav nav-pills pull-right">
+                                            <li class="active"><a data-toggle="tab" href="#tab1A">PDF</a></li>
+                                        </ul>
+                                        <!-- // nav-pills --> 
+                                    </div>
                                 </div>
-                                <table class="table table-striped table-condensed table-content boo-table">
+                                <table class="table boo-table table-striped table-content table-hover">
                                     <thead>
                                       <tr>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Tel</th>
-                                        <th scope="col">Cpf</th>
-                                        <th scope="col">Cnpj</th>
-                                        <th scope="col">Empresa</th>
-                                        <th scope="col">Cidade</th>
-                                        <th scope="col">Razao</th>
-                                        <th scope="col"></th>
+                                        <th class="check-col" scope="col"></th>
+                                        <th class="sorting" scope="col">Nome</th>
+                                        <th class="sorting" scope="col">Email</th>
+                                        <th class="sorting" scope="col">Tel</th>
+                                        <th class="sorting" scope="col">Empresa</th>
+                                        <th class="sorting" scope="col">Cidade</th>
                                     </tr>
                                 </thead>
 
                                 <% @clientes.each do |cliente| %>
                                 <tr>
-                                    <td><%= link_to cliente.first_name, [:admin, cliente] %></td>
+                                    <td><%= check_box_tag cliente.id, cliente.id, false, :class => 'checkbox' %></td>
+                                    <td><%= link_to cliente.first_name, [:admin, cliente], :class => 'text-left' %><%= link_to '', edit_admin_cliente_path(cliente), class: "btn btn-blue btn-mini fontello-icon-edit" %>
+                                    <%= link_to '', [:admin, cliente], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
                                     <td><%= cliente.email %></td>
                                     <td><%= cliente.tel %></td>
-                                    <td><%= cliente.cpf %></td>
-                                    <td><%= cliente.cnpj %></td>
                                     <td><%= cliente.empresa %></td>
                                     <td><%= cliente.cidade %></td>
-                                    <td><%= cliente.razao %></td>
-                                    <td>
-                                    <%= link_to 'Editar', edit_admin_cliente_path(cliente), class: "btn btn-blue btn-mini" %>
-                                    <%= link_to 'Apagar', [:admin, cliente], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini" %></td>
                                 </tr>
                                 <% end %>
                             </table>
-                            <div class="widget-footer">
-                                <div class="btn-toolbar pull-left">
-                                    <%= link_to 'Novo Cliente', new_admin_cliente_path, class: "btn btn-blue" %>
+                             <div class="action-table">
+                                <div class="btn-toolbar pull-left" style="display:none">
+                                    <div class="action-select-wraper">
+                                     <span class="arrow-table-action"></span>
+                                             <select name="actionTable" id="actionTable" class="selectpicker-boo " >
+                                                    <option value="" selected="selected">Action for selected...</option>
+                                                    <option value="validate">Validate</option>
+                                                    <option value="delete">Delete</option>
+                                                </select>
+                                        <button type="submit" class="btn btn-boo">Perform the action</button>
+                                    </div>
                                 </div>
+                                <ul class="btn-toolbar pull-right">
+                                    <li class="divider-vertical small"></li>
+                                    <li><%= link_to 'Novo Cliente', new_admin_cliente_path, class: "btn btn-green" %></li>
+                                </ul>
                             </div>
 
                         </div>                           

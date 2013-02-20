@@ -1,106 +1,93 @@
 
-                            <div class="well well-nice well-box no-border">
-                                <div class="navbar">
-                                    <div class="navbar-inner">
-                                        <h4 class="title"><i class="fontello-icon-users"></i> Listagem</h4>
-                                        <ul class="btn-toolbar pull-right">
-                                            <li class="divider-vertical"></li>
-                                            <li><%= link_to 'Novo Outdoor', new_admin_outdoor_path, class: "btn btn-green" %></li>
-                                        </ul>
-                                        <!-- // btn-toolbar -->
-                                        <ul class="nav nav-pills pull-right">
-                                            <li class="active"><a data-toggle="tab" href="#tab1A">example 1</a></li>
-                                        </ul>
-                                        <!-- // nav-pills --> 
-                                    </div>
-                                </div>
-                                <div class="tab-content overflow no-padding">
-                                    <div id="tab1A" class="tab-pane active">
-                                        <table class="table boo-table table-striped table-content table-hover">
-                                            <colgroup>
-                                            <col>
-                                            <col class="col2">
-                                            <col>
-                                            <col>
-                                            <col class="col15">
-                                            <col>
-                                        </colgroup>
-                                        <thead>
+<div class="well well-nice well-box no-border">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <h4 class="title"><i class="fontello-icon-users"></i> Listagem</h4>
+            <ul class="btn-toolbar pull-right">
+                <li class="divider-vertical"></li>
+                <li><%= link_to 'Novo Outdoor', new_admin_outdoor_path, class: "btn btn-green" %></li>
+            </ul>
+            <!-- // btn-toolbar -->
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a data-toggle="tab" href="#tab1A">PDF</a></li>
+            </ul>
+            <!-- // nav-pills --> 
+        </div>
+    </div>
+    <div class="tab-content overflow no-padding">
+        <div id="tab1A" class="tab-pane active">
+            <table class="table boo-table table-striped table-content table-hover">
+                <thead>
+                    <tr>
+                        <th class="check-col" scope="col">
 
-                                            <tr>
-                                                <th class="check-col" scope="col">
+                        </th>
+                        <th class="sorting" scope="col">N° <span class="column-sorter"></span></th>
+                        <th scope="col">Foto</th>
+                        
+                        <th class="sorting" scope="col">Endereço <span class="column-sorter"></span></th>
+                        <th class="sorting" scope="col">Bairro <span class="column-sorter"></span></th>
+                        <th class="sorting" scope="col">Cidade <span class="column-sorter"></span></th>
+                        <th class="sorting" scope="col">Veiculação / Impressão <span class="column-sorter"></span></th>
+                        <th class="sorting" scope="col">Sentido <span class="column-sorter"></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @outdoors.each { |outdoor| %>
+                    <tr>
 
-                                                </th>
-                                                <th scope="col">Foto</th>
-                                                <th class="sorting" scope="col">N° <span class="column-sorter"></span></th>
-                                                <th class="sorting" scope="col">Endereço <span class="column-sorter"></span></th>
-                                                <th class="sorting" scope="col">Bairro <span class="column-sorter"></span></th>
-                                                <th class="sorting" scope="col">Cidade <span class="column-sorter"></span></th>
-                                                <th class="sorting" scope="col">Veiculação / Impressão <span class="column-sorter"></span></th>
-                                                <th class="sorting" scope="col">Sentido <span class="column-sorter"></span></th>
-                                                <th class="sorting" scope="col">Action <span class="column-sorter"></span></th>
-                                            </tr>
-                                            
-                                        </thead>
-                                        <tbody>
-                                            <% @outdoors.each { |outdoor| %>
-                                            <tr>
-                                                <td><%= check_box_tag outdoor.id,outdoor.id, false, :class => 'checkbox' %></td>
-                                                <td class="thumb-mini"><div class="media-thumb"> 
-                                                    <a class="img-shadow" href="javascript:void(0);">
-                                                        <% outdoor.foto_outdoors[0..0].each { |foto|%>
-                                                        <%= image_tag foto.file.url(:small) %>
-                                                        <% } %>
-                                                    </a>
-                                                </div>
-                                            </td>
-                                            <td><strong><%= link_to outdoor.numero, [:admin, outdoor] %></strong></td>
-                                            <td><%= outdoor.endereco %></td>
-                                            <td>
-                                                <%= outdoor.bairro %>
-                                            </td>
-                                            <td>
-                                                <%= outdoor.cidade %>
-                                            </td>
-                                            <td>
-                                                <%= humanized_money_with_symbol outdoor.valor_veiculacao %> /
-                                                <%= humanized_money_with_symbol outdoor.valor_impressao %>
-                                            </td>
-                                            <td>
-                                                <%= outdoor.sentido %>
-                                            </td>
-                                            <td class="action">
-                                               <%= link_to 'Editar', edit_admin_outdoor_path(outdoor), class: "btn btn-blue btn-mini" %>
-                                               <%= link_to 'Apagar', [:admin, outdoor], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini" %></td>
-
-
-                                           </td>
-                                       </tr>
-                                       <% } %>
-                                   </tbody>
-                               </table>
-                               <div class="action-table">
-                                <div class="btn-toolbar pull-left">
-                                    <div class="action-select-wraper">
-                                     <span class="arrow-table-action"></span>
-                                             <select name="actionTable" id="actionTable" class="selectpicker-boo " >
-                                                    <option value="" selected="selected">Action for selected...</option>
-                                                    <option value="validate">Validate</option>
-                                                    <option value="delete">Delete</option>
-                                                </select>
-                                        <button type="submit" class="btn btn-boo">Perform the action</button>
-                                    </div>
-                                </div>
-                                <ul class="btn-toolbar pull-right">
-                                    <li class="divider-vertical small"></li>
-                                    <li><a href="javascript:void(0)" class="btn btn-boo btn-small">button</a></li>
-                                </ul>
-                            </div>
-
+                           <td><%= check_box_tag outdoor.id,outdoor.id, false, :class => 'checkbox' %></td>
+                           <td><strong><%= link_to outdoor.numero, [:admin, outdoor], :class=>"text-left" %></strong>    <%= link_to '', edit_admin_outdoor_path(outdoor), class: "btn btn-blue btn-mini fontello-icon-edit" %>
+                           <%= link_to '', [:admin, outdoor], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
+                           <td class="thumb-mini"><div class="media-thumb"> 
+                            <a class="img-shadow" href="javascript:void(0);">
+                                <% outdoor.foto_outdoors[0..0].each { |foto|%>
+                                <%= image_tag foto.file.url(:small) %>
+                                <% } %>
+                            </a>
                         </div>
-                        <!-- // tab1 -->
-                    </div>
-                    <!-- // tabs --> 
-                </div>                          
+                    </td>
+                    <td><%= outdoor.endereco %></td>
+                    <td>
+                        <%= outdoor.bairro %>
+                    </td>
+                    <td>
+                        <%= outdoor.cidade %>
+                    </td>
+                    <td>
+                        <%= humanized_money_with_symbol outdoor.valor_veiculacao %> /
+                        <%= humanized_money_with_symbol outdoor.valor_impressao %>
+                    </td>
+                    <td>
+                        <%= outdoor.sentido %>
+                    </td>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <div class="action-table">
+        <div class="btn-toolbar pull-left" style="display:none">
+            <div class="action-select-wraper">
+             <span class="arrow-table-action"></span>
+             <select name="actionTable" id="actionTable" class="selectpicker-boo " >
+                <option value="" selected="selected">Action for selected...</option>
+                <option value="validate">Validate</option>
+                <option value="delete">Delete</option>
+            </select>
+            <button type="submit" class="btn btn-boo">Perform the action</button>
+        </div>
+    </div>
+    <ul class="btn-toolbar pull-right">
+        <li class="divider-vertical small"></li>
+        <li><%= link_to 'Novo Outdoor', new_admin_outdoor_path, class: "btn btn-green" %></li>
+    </ul>
+</div>
+
+</div>
+<!-- // tab1 -->
+</div>
+<!-- // tabs --> 
+</div>                          
 
 
