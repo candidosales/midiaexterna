@@ -46,7 +46,10 @@
         <div class="operator">=</div>
       <input id="total" type="text" placeholder="R$ 0,00" class="span2" name="total" >
     </div>
+<div class="span12">
+          <%= check_box_tag :enviar_email, true, true, :class => 'left' %> <p class="left">Enviar e-mail com a criação da reserva</p>
 
+</div>
     <%= f.hidden_field :valor %>
     <%= f.hidden_field :inicio_reserva %>
     <%= f.hidden_field :termino_reserva %>

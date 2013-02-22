@@ -11,7 +11,7 @@ class ClienteMailer < ActionMailer::Base
     
     	mail({
     		:to => @cliente.email,
-    		:bcc => ['Candido <candido@vendepublicidade.com.br>'],
+    		:bcc => ['Midia Externa <midiaexterna@midiaexterna.com>'],
     		:subject => "[Midia Externa] Disponibilidade de #{@inicio} a #{@fim}"
     	})
 	end
@@ -26,7 +26,7 @@ class ClienteMailer < ActionMailer::Base
 
     mail({
         :to => @reserva.cliente.email,
-        :bcc => ['Candido <candido@vendepublicidade.com.br>'],
+        :bcc => ['Midia Externa <midiaexterna@midiaexterna.com>'],
         :subject => "[Midia Externa] Voce possui uma nova reserva de #{@inicio} a #{@fim}"
       })
   end
@@ -41,7 +41,7 @@ class ClienteMailer < ActionMailer::Base
 
     mail({
         :to => @reserva.cliente.email,
-        :bcc => ['Candido <candido@vendepublicidade.com.br>'],
+        :bcc => ['Candido <candido@vendepublicidade.com.br>, Midia Externa <midiaexterna@midiaexterna.com>'],
         :subject => "[Midia Externa] Reserva confirmada: #{@inicio} a #{@fim}"
       })
   end

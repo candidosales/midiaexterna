@@ -62,13 +62,15 @@ $('form[data-update-target]').bind('submit change', function() {
 var somaCheckbox = function(x) {
   var total_veiculacao = 0 , val_veiculacao = 0, total_impressao = 0 , val_impressao = 0, reserva_valor = 0;
 
-  $("input[type='checkbox']:checked").each(function() {
+  $(".checkbox:checked").each(function() {
     var id = $(this).attr('id');
     val_veiculacao = $('span.valor_veiculacao' + '-' + id).html();
     val_impressao = $('span.valor_impressao' + '-' + id).html();
+    console.log('impressao: '+val_impressao+' veiculacao: '+val_veiculacao);
 
     total_veiculacao += parseInt(val_veiculacao);
     total_impressao += parseInt(val_impressao);
+    console.log('t_impressao: '+total_impressao+' t_veiculacao: '+total_veiculacao);
   });
   $("#total_veiculacao").val(total_veiculacao);
   $("#total_impressao").val(total_impressao);

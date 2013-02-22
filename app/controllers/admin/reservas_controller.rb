@@ -30,9 +30,10 @@ class Admin::ReservasController < Admin::BaseController
   def create
     @reserva = Reserva.new(params[:reserva])
     if @reserva.save
-
+      if(params[:enviar_email])
         #Enviar e-mail sobre a nova reserva 
         ClienteMailer.new_reserva(@reserva).deliver
+      end
         flash[:notice] = 'Reserva foi criado com sucesso e enviado um e-mail contendo informacoes sobre prazo ao cliente.'
       end
 
