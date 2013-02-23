@@ -26,6 +26,15 @@
             </ul>
           </li>
           <li class="accordion-group">
+            <div class="accordion-heading"> <a href="#accParceiro" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle">
+             <span class="item-icon fontello-icon-user"></span>
+              <i class="chevron fontello-icon-right-open-3"></i> Parceiros </a> </div>
+            <ul class="accordion-content nav nav-list collapse" id="accParceiro">
+              <li> <%= link_to 'Adicionar', new_admin_parceiro_path %> </li>
+              <li><%= link_to 'Listar', admin_parceiros_path %> </li>
+            </ul>
+          </li>
+          <li class="accordion-group">
             <div class="accordion-heading"> <a href="#accUser" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle">
              <span class="item-icon fontello-icon-user"></span>
               <i class="chevron fontello-icon-right-open-3"></i> Usuários </a> </div>

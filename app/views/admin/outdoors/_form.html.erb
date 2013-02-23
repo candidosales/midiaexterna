@@ -67,6 +67,12 @@
     </div>
   </li>
   <li class="control-group">
+    <label class="control-label" for="accountPrefix">Proprietário</label>
+    <div class="controls">
+   <%= f.collection_select :parceiro_id, Parceiro.all, :id, :nome,{}, {:class => 'selecttwo-s input-large'} %>
+       </div>
+  </li>
+  <li class="control-group">
     <label class="control-label" for="accountPrefix">Enviar fotos</label>
     <div class="controls">
       <%= f.fields_for :foto_outdoors do |image| %>
@@ -83,7 +89,7 @@
             <span class="fileupload-exists">Mudar</span>
               <%= image.file_field :file, :class => 'foto_outdoor_input'  %>                           
           </span> 
-          <a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remover</a>
+          <a data-dismiss="fileupload" class="btn btn-red fileupload-exists" href="#">Remover</a>
         </div>
       </div>
       <% end %> 

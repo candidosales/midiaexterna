@@ -23,6 +23,8 @@
 
                         </th>
                         <th class="sorting" scope="col">N° <span class="column-sorter"></span></th>
+                        
+                        
                         <th scope="col">Foto</th>
                         
                         <th class="sorting" scope="col">Endereço <span class="column-sorter"></span></th>
@@ -30,12 +32,13 @@
                         <th class="sorting" scope="col">Cidade <span class="column-sorter"></span></th>
                         <th class="sorting" scope="col">Veiculação / Impressão <span class="column-sorter"></span></th>
                         <th class="sorting" scope="col">Sentido <span class="column-sorter"></span></th>
+                        <th class="sorting" scope="col">Proprietário <span class="column-sorter"></span></th>
                     </tr>
                 </thead>
                 <tbody>
                     <% @outdoors.each { |outdoor| %>
                     <tr>
-
+                           
                            <td><%= check_box_tag outdoor.id,outdoor.id, false, :class => 'checkbox' %></td>
                            <td><strong><%= link_to outdoor.numero, [:admin, outdoor], :class=>"text-left" %></strong>    <%= link_to '', edit_admin_outdoor_path(outdoor), class: "btn btn-blue btn-mini fontello-icon-edit" %>
                            <%= link_to '', [:admin, outdoor], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
@@ -61,7 +64,11 @@
                     <td>
                         <%= outdoor.sentido %>
                     </td>
-                </td>
+                    <td><div class="media-thumb media-left"> 
+                <a class="img-shadow" href="javascript:void(0);">
+                    <%= image_tag(outdoor.parceiro.avatar.url(:small),:class => "thumb") %>
+                </a>
+            </div><%= outdoor.parceiro.nome %></td>
             </tr>
             <% } %>
         </tbody>

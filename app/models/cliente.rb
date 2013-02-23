@@ -18,6 +18,7 @@ class Cliente
   has_one :reserva, :class_name => "Reserva", inverse_of: :cliente, validate: false
 
   validates_presence_of :nome, :email
+  validates_uniqueness_of :email
 
   def first_name
     name = self.nome.split

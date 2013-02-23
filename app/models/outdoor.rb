@@ -17,6 +17,7 @@ class Outdoor
   accepts_nested_attributes_for :foto_outdoors, :allow_destroy => true
 
   has_and_belongs_to_many :reservas
+  belongs_to :parceiro, class_name: "Parceiro"
 
   default_scope asc :numero
 

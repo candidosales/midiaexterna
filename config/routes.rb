@@ -19,6 +19,8 @@ App::Application.routes.draw do
 
     resources :foto_outdoors
 
+    resources :parceiros
+
     resources :clientes
 
     controller :reservas do
