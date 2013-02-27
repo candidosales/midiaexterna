@@ -28,7 +28,7 @@
                                 <tr>
                                     <td><div class="media-thumb media-left"> 
                 <a class="img-shadow" href="javascript:void(0);">
-                    <%= image_tag(parceiro.avatar.url(:small),:class => "thumb") %>
+                    <%= image_tag(parceiro.logo.url(:small),:class => "thumb") %>
                 </a>
             </div> <%= link_to parceiro.nome, [:admin, parceiro], :class => 'text-left' %><%= link_to '', edit_admin_parceiro_path(parceiro), class: "btn btn-blue btn-mini fontello-icon-edit" %>
                                         <%= link_to '', [:admin, parceiro], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>

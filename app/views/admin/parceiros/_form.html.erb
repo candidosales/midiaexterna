@@ -15,8 +15,8 @@
         <div class="controls">
          <div class="fileupload fileupload-new pull-left" data-provides="fileupload">
           <div class="fileupload-new thumbnail" style="width: 50px; height: 50px;"> 
-            <% unless @parceiro.avatar.blank? %>
-            <%= image_tag @parceiro.avatar.url(:small) %>
+            <% unless @parceiro.logo.blank? %>
+            <%= image_tag @parceiro.logo.url(:small) %>
             <% end %>
           </div>
           <div class="fileupload-preview fileupload-exists thumbnail" style="width: 50px; height: 50px;">
@@ -26,7 +26,7 @@
           <span class="btn btn-file" style="vertical-align:top">
            <span class="fileupload-new">Selecionar imagem</span> 
            <span class="fileupload-exists">Mudar</span>
-           <%= f.file_field :avatar, :class => 'foto_outdoor_input'  %>  
+           <%= f.file_field :logo, :class => 'foto_outdoor_input'  %>  
          </span>
          <a href="#" class="btn btn-red fileupload-exists" data-dismiss="fileupload" style="vertical-align:top">Remover</a>
        </div>

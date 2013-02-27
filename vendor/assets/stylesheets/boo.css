@@ -1244,7 +1244,7 @@ span.arrow-table-action {
   float: left;
   width: 30px;
   height: 30px;
-  background: url('../img/table/arrow-table-action.png') no-repeat 50% 50%;
+  background: url('table/arrow-table-action.png') no-repeat 50% 50%;
 }
 
 .action-table .pagination {
@@ -1657,18 +1657,18 @@ thead th.sorting_desc {
 }
 
 thead th.sorting .column-sorter {
-  background: url('../img/table/arrow-sorting.png') no-repeat right center;
+  background: url('table/arrow-sorting.png') no-repeat right center;
   filter: alpha(opacity=50);
 filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
   opacity: 0.5;
 }
 
 thead th.sorting_asc .column-sorter {
-  background: url('../img/table/arrow-sorting-asc.png') no-repeat right center;
+  background: url('table/arrow-sorting-asc.png') no-repeat right center;
 }
 
 thead th.sorting_desc .column-sorter {
-  background: url('../img/table/arrow-sorting-desc.png') no-repeat right center;
+  background: url('table/arrow-sorting-desc.png') no-repeat right center;
 }
 
 thead th.sorting_disabled,
@@ -1776,7 +1776,7 @@ div.DTS div.dataTables_scrollBody {
 }
 
 div.DTS div.dataTables_scroll {
-  background: url('../img/table/loading-background.png') repeat 0 0;
+  background: url('table/loading-background.png') repeat 0 0;
 }
 
 /* TABLE - DATA ROWLINK
@@ -2285,7 +2285,7 @@ a.rowlink {
 /* SPRITES 
  ---------------------------------------------------------------------------- */
 [class^="icon-"], [class*=" icon-"] {
-background-image: url("../img/glyphicons-halflings.png");
+background-image: url("glyphicons-halflings.png");
 }
  
 /* ARROW ICON
@@ -2296,7 +2296,7 @@ background-image: url("../img/glyphicons-halflings.png");
  height: 16px;
  line-height: 16px;
  vertical-align: text-top;
- background-image: url('../img/icon/arrows/arrows.png');
+ background-image: url('icon/arrows/arrows.png');
  background-position: 16px 16px;
  background-repeat: no-repeat;
  *margin-right: .3em;
@@ -5598,7 +5598,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   position: fixed;
   top: 76px;
   width: 270px;
-  background: url("../img/background/body-bg-02-15.jpg") repeat scroll 0 0 #c5c6ca;
+  background: url("background/body-bg-02-15.jpg") repeat scroll 0 0 #c5c6ca;
   background-color: rgba(0, 0, 0, 0.15);
 }
 
@@ -5654,7 +5654,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
 .sidebar-item .profile {
   padding: 15px;
   height: 70px;
-  background: url("../img/background/body-bg-02a.jpg") repeat 0 0;
+  background: url("background/body-bg-02a.jpg") repeat 0 0;
   -webkit-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5) inset, -2px 0 10px -2px rgba(0, 0, 0, 0.5) inset;
   -moz-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5) inset, -2px 0 10px -2px rgba(0, 0, 0, 0.5) inset;
   -o-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5) inset, -2px 0 10px -2px rgba(0, 0, 0, 0.5) inset;
@@ -5726,7 +5726,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
 }
 
 .nav-side .accordion-group > .active {
-  background: url("../img/background/body-bg-02.jpg") repeat scroll 0 0;
+  background: url("background/body-bg-02.jpg") repeat scroll 0 0;
 }
 
 .sidebar-left .nav-side .accordion-group > .active {
@@ -5752,7 +5752,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
 }
 
 .nav-side .accordion-toggle:hover {
-  background: url("../img/background/transparent-25.png") repeat scroll 0 0; /* ie */
+  background: url("background/transparent-25.png") repeat scroll 0 0; /* ie */
   background: rgba(0,0,0, 0.05);
 }
 
@@ -5862,7 +5862,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
 
 
 .nav-side .accordion-content {
-  background: url("../img/background/body-bg-02-25.jpg") repeat scroll 0 0; /* ie */
+  background: url("background/body-bg-02-25.jpg") repeat scroll 0 0; /* ie */
   background: rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: inset 0 2px 6px -1px rgba(0, 0, 0, 0.3), inset 0 -2px 6px -1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 2px 6px -1px rgba(0, 0, 0, 0.3), inset 0 -2px 6px -1px rgba(0, 0, 0, 0.1);
@@ -5913,7 +5913,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
 
 .sidebar-inverse .nav-side ul > li > a:hover {
   color: #ffffff;
-  background: url("../img/background/transparent-25.png") repeat scroll 0 0; /* ie */
+  background: url("background/transparent-25.png") repeat scroll 0 0; /* ie */
   background: rgba(0, 0, 0, 0.1);
 }
 
@@ -5921,7 +5921,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
 .sidebar-inverse .nav-side ul > .active > a:hover {
   color: #222;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-  background: url("../img/background/body-bg-02-25.jpg") repeat scroll 0 0;
+  background: url("background/body-bg-02-25.jpg") repeat scroll 0 0;
   background: rgba(255, 255, 255, 0.6);
 }
 
@@ -5965,7 +5965,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   height: 40px;
   width: 100%;
   bottom: 0;
-  background: url("../img/background/transparent-foo-fix.png") repeat scroll 0 0;
+  background: url("background/transparent-foo-fix.png") repeat scroll 0 0;
   background: rgba(43, 45, 48, 0.95);
   z-index: 9005;
 }
@@ -6095,7 +6095,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
   padding: 0 20px;
   min-height: 100px;
   border-bottom: 1px solid #babecc;
-  background: url("../img/background/body-bg-02-15.jpg") repeat scroll 0 0;
+  background: url("background/body-bg-02-15.jpg") repeat scroll 0 0;
 }
 
 .page-head .page-title {
@@ -6149,7 +6149,7 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff59B14F', en
 .page-bar .nav-tabs > .active > a,
 .page-bar .nav-tabs > .active > a:hover {
   color: #3399ff;
-  background: url("../img/background/body-bg-02.jpg") repeat scroll 0 0 #f5f5f5;
+  background: url("background/body-bg-02.jpg") repeat scroll 0 0 #f5f5f5;
 }
 
 /** Page Content 
