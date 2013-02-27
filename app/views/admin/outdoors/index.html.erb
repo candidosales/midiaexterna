@@ -64,13 +64,18 @@
                     <td>
                         <%= outdoor.sentido %>
                     </td>
-                    <td><div class="media-thumb media-left"> 
+                    <td>
+                     <% if (outdoor.parceiro?) %>
+                        <div class="media-thumb media-left"> 
                 <a class="img-shadow" href="javascript:void(0);">
-                    <% if (outdoor.parceiro?) %>
+                   
                     <%= image_tag(outdoor.parceiro.logo.url(:small),:class => "thumb") %>
-                    <% end %>
+                    
                 </a>
             </div><%= outdoor.parceiro.nome %></td>
+            <% else %>
+            <p>Sem parceiro</p>
+            <% end %>
             </tr>
             <% } %>
         </tbody>
