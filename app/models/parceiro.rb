@@ -13,7 +13,7 @@ class Parceiro
   field :email, type: String
   field :cnpj, type: String
 
-  has_mongoid_attached_file :avatar,
+  has_mongoid_attached_file :logo,
     :styles => {
       :small    => '90x90#',
       :medium   => '150x100'

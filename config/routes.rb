@@ -2,7 +2,7 @@ App::Application.routes.draw do
   
   root :to => "home#index"
 
-  devise_for :usuarios
+  devise_for :usuarios, :controllers => { :sessions => "sessions" }
   resources :usuarios
   
 

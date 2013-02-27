@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Uncomment to make IE8 render like IE7 -->
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title><%= content_for?(:title) ? yield(:title) : "Admin" %></title>
+  <!-- Included CSS Files -->
+  <%= stylesheet_link_tag    "application" %>
+  <%= csrf_meta_tags %>
+
+  <style type="text/css">
+.signin-content {
+  max-width: 360px;
+  margin: 0 auto 20px;
+}
+</style>
+  
+</head>
+<body class="signin signin-vertical">
+  <div class="page-container">
+    <div id="header-container">
+        <div id="header">
+            <div class="navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container"> </div>
+                </div>
+            </div>
+            <!-- // navbar -->
+            
+            <div class="header-drawer" style="height:3px"> </div>
+            <!-- // breadcrumbs --> 
+        </div>
+        <!-- // drawer --> 
+    </div>
+    <!-- // header-container -->
+             <% flash.each do |name, msg| %>
+              <% if msg.is_a?(String) %>
+                <div id="flash_<%= name %>">
+                  <button data-dismiss="alert" class="close" type="button">×</button>
+                  <%= msg %>
+                </div>
+              <% end %>
+              <% end %>
+      <div id="main-container">
+
+              <%= yield %>
+
+      </div>
+      <!-- // main-container  -->
+  </div>
+<!-- // page-container --> 
+
+  <!-- Included JS Files  -->
+  <%= javascript_include_tag "application" %>
+</body>
+</html>

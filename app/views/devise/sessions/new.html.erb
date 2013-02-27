@@ -1,40 +1,100 @@
-
-
-           					<div class="widget widget-simple">
-           						<div class="widget-header">
-           							<h4><i class="fontello-icon-user"></i> Login</h4>
-           						</div>
-           						<div class="widget-content">
-           							<div class="form-dark">
-
-           								<%= simple_form_for(resource, :as => resource_name, :html => {:class => 'form-horizontal' } , :url => session_path(resource_name)) do |f| %>
-           								<fieldset>
-           									<ul class="form-list label-left list-bordered dotted">
-           										<li class="control-group">
-           											<label class="control-label" for="accountPrefix">E-mail</label>
-           											<div class="controls">
-           												<%= f.text_field :email, :required => false, :autofocus => true %>
-           											</div>
-           										</li>
-           										<li class="control-group">
-           											<label class="control-label" for="accountPrefix">Senha*</label>
-           											<div class="controls">
-           												<%= f.password_field :password, :required => false %>
-           												<%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
-           											</div>
-           										</li>
-           									</ul>
-           								</fieldset>
-
-           								<div class="form-actions">
-           									<%= f.button :submit, "Entrar", :class => "btn btn-green" %>
-           								</div>
-           								<% end %>
-
-           								<%= render "devise/shared/links" %>
-           							</div>
-           						</div>
-           					</div>
-
-
-
+        <div id="main-content" class="main-content container">
+            <div class="signin-content">
+                <h1 class="welcome text-center" style="line-height: 0.6;"><span style="margin-left: -45px;">Bem vindo a</span><br />
+                    <small>Mídia Externa</small></h1>
+                <div class="well well-nice form-dark">
+                    <div class="tab-content overflow">
+                        <div class="tab-pane fade in active" id="login">
+                            <h3 class="no-margin-top"><i class="fontello-icon-user-4"></i>Login</h3>
+                            <%= simple_form_for(resource, :as => resource_name, :html => {:class => 'form-tied margin-00' } , :url => session_path(resource_name)) do |f| %>
+                                <fieldset>
+                                    <ul>
+                                        <li>
+     
+                                            <%= f.text_field :email, :required => true, :autofocus => true, :placeholder => "E-mail", :class => "input-block-level" %>
+                                        </li>
+                                        <li>
+                                            <%= f.password_field :password, :required => true,:placeholder => "Senha", :class => "input-block-level" %>
+                                        </li>
+                                    </ul>
+                                    
+                                    <button type="submit" class="btn btn-envato btn-block btn-large">Entrar</button>
+                                    <hr class="margin-xm">
+                                    <label class="checkbox pull-left">
+                                        <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+                                    </label>
+                                    <a href="#forgot" class="link pull-right" data-toggle="tab">Esqueceu sua senha?</a>
+                                </fieldset>
+                            <% end %>
+                            <!-- // form --> 
+                            
+                        </div>
+                        <!-- // Tab Login -->
+                        
+                        <div class="tab-pane fade" id="forgot">
+                            <h3 class="no-margin-top">Esqueceu sua senha?</h3>
+                            <form class="margin-00" method="post" action="dashboard-one.html" name="forgot_password">
+                                <p class="note">Digite seu endereço de e-mail, nós lhe enviaremos um código de e-mail de redefinição de senha.</p>
+                                <input id="email" class="input-block-level" type="email" name="id_email_forgot" placeholder="your email">
+                                <p class="text-center">or</p>
+                                <input id="email" class="input-block-level" type="tel" name="id_phone_forgot" placeholder="number phone">
+                                <hr class="margin-xm">
+                                <button type="submit" class="btn btn-envato">Enviar</button>
+                                <p>Have you remembered? <a href="#login" class="link pull-right" data-toggle="tab">Tente logar novamente.</a></p>
+                            </form>
+                            <!-- // form --> 
+                            
+                        </div>
+                        <!-- // Tab Forgot -->
+                        
+                        <div class="tab-pane fade" id="register">
+                            <h3 class="no-margin-top"><i class="fontello-icon-users"></i> New User Registration</h3>
+                            <form class="form-tied margin-00" method="post" action="dashboard-one.html" name="login_form">
+                                <fieldset>
+                                    <legend class="two"><span>Account information</span></legend>
+                                    <ul>
+                                        <li>
+                                            <input id="idLogin" class="input-block-level" type="text" name="id_name" placeholder="name">
+                                        </li>
+                                        <li>
+                                            <input id="idLogin" class="input-block-level" type="text" name="id_username" placeholder="username">
+                                        </li>
+                                        <li>
+                                            <input id="idLogin" class="input-block-level" type="text" name="id_email_address" placeholder="email address">
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset>
+                                    <legend class="two"><span>Password</span></legend>
+                                    <ul>
+                                        <li>
+                                            <input id="idPassw" class="input-block-level" type="password" name="password" placeholder="password">
+                                        </li>
+                                        <li>
+                                            <input id="idPassw" class="input-block-level" type="password" name="confirm_password" placeholder="confirm password">
+                                        </li>
+                                    </ul>
+                                    <button type="submit" class="btn btn-green btn-block btn-large">REGISTER TO BOO</button>
+                                    <hr class="margin-xm">
+                                    <p>Have you remembered? <a href="#login" class="link pull-right" data-toggle="tab">Try to log in again.</a></p>
+                                </fieldset>
+                            </form>
+                            <!-- // form --> 
+                            
+                        </div>
+                        <!-- // Tab Forgot --> 
+                        
+                    </div>
+                </div>
+                <!-- // Well-Nice --> 
+                
+                <a href="#register" class="btn btn-block btn-yellow btn-large f12" data-toggle="tab">No account yet? Register now for free!</a>
+                <div class="web-description">
+                    <h5>Copyright &copy; 2013 midiaexterna.com</h5>
+                    <p>Mídia Externa Todos os direitos reservados.</p>
+                </div>
+            </div>
+            <!-- // sign-content --> 
+            
+        </div>
+        <!-- // main-content --> 
