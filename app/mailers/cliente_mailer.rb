@@ -41,7 +41,7 @@ class ClienteMailer < ActionMailer::Base
 
     mail({
         :to => @reserva.cliente.email,
-        :bcc => ['Candido <candido@vendepublicidade.com.br>, Midia Externa <midiaexterna@midiaexterna.com>'],
+        :bcc => ['Candido <candido@vendepublicidade.com.br>, Midia Externa <midiaexterna@midiaexterna.com>, Financeiro Midia externa <financeiro@midiaexterna.com>'],
         :subject => "[Midia Externa] Reserva confirmada: #{@inicio} a #{@fim}"
       })
   end

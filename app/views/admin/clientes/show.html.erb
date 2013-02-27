@@ -2,6 +2,8 @@
                     <div class="widget widget-simple">
                       <div class="widget-header">
                         <h4><i class="fontello-icon-user"></i>Cliente</h4>
+                        <%= link_to 'Create PDF document', admin_cliente_path(@cliente, :format => :pdf) %>
+
                       </div>
                       <div class="widget-content">
                         <ul class="form-list label-left list-bordered dotted">

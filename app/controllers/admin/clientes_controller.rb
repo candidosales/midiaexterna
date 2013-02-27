@@ -10,7 +10,27 @@ class Admin::ClientesController < Admin::BaseController
   # GET /clientes/1.json
   def show
     @cliente = Cliente.find(params[:id])
-    respond_with @cliente
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render :pdf => "ok",
+          :margin => {
+                  :top => 45,
+                  :bottom => 20
+               },
+          :header => {
+                :spacing => 5,
+                          :html => {
+                             :template => 'shared/pdf/header.html'
+                          }
+                       },
+          :footer => {
+                          :html => {
+                             :template => 'shared/pdf/footer.html'
+                          }
+                       }            
+      end
+    end
   end
 
   # GET /clientes/new
