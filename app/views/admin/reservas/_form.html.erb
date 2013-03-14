@@ -39,8 +39,7 @@
     <li class="control-group">
       <label class="control-label" for="accountPrefix">Valor</label>
       <div class="controls">
-       <input id="valor" type="text" value="<%= @reserva.valor %>" placeholder="R$ 0,00" class="span3" name="valor" disabled   >
-       <%= f.hidden_field :valor %>
+       <input id="valor" type="text" value="<%= @reserva.valor %>" placeholder="R$ 0,00" class="span3" name="reserva[valor]"  >
      </div>
    </li>
  </ul>
