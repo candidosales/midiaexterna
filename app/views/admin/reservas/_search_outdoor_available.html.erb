@@ -55,17 +55,26 @@
     <%= f.hidden_field :termino_reserva %>
     <%= f.hidden_field :usuario_id, :value => current_usuario.id %>
 
-    <div class="form-actions span3">
+    <div class="form-actions span11">
      <%= f.submit :class => "btn btn-green" %> 
    </div>
  <% end %>
+ <div class="widget-header">
+   <h4><i class="fontello-icon-list-alt"></i> Enviar disponibilidade </h4>
+ </div>
+ <div class="widget-content">
+  <div class="widget-body">
     <%= form_tag({:action => 'send_email_available_outdoors'}, :id => 'form-email', :remote => true, :class => 'span12') do %>
-      <%= submit_tag("Enviar e-mail com as disponiveis", :class => "btn btn-blue") %>
+      <label for="accountNotes">E-mail dos clientes:</label>
+      <textarea rows="4" class="input-block-level" id="cliente" name="cliente" style="width: 332px; height: 87px;"></textarea>
+      <p class="help-block"><strong>OBS:</strong> Separe os e-mails por vírgula</p>
+      <%= submit_tag("Enviar", :class => "btn btn-blue") %>
         <%= hidden_field_tag :outdoors %>
         <%= hidden_field_tag :inicio_reserva %>
         <%= hidden_field_tag :termino_reserva %>
-        <%= hidden_field_tag :cliente_id %>
         <%= hidden_field_tag :usuario_id %>
     <% end %>
+  </div>
+</div>
 </div>
 <div id="fuck"></div>

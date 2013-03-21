@@ -1,19 +1,28 @@
 class ClienteMailer < ActionMailer::Base
+
   default from: "midiaexterna@midiaexterna.com"
 
   def available_outdoors(options={})
   	@inicio = options.fetch(:inicio_periodo, '')
     @fim = options.fetch(:termino_periodo, '')
     @outdoors = options.fetch(:outdoors, '').split(',')
+    @clientes = options.fetch(:cliente, '').split(',')
+    @emails = Array.new
+    
+    @clientes.each do |email|
+      @emails.push email.removeaccents
+    end
     
     @usuario = Usuario.find(options[:usuario_id])
-    @cliente = Cliente.find(options[:cliente_id])
     
-    	mail({
-    		:to => @cliente.email,
-    		:bcc => ['Midia Externa <midiaexterna@midiaexterna.com>'],
-    		:subject => "[Midia Externa] Disponibilidade de #{@inicio} a #{@fim}"
-    	})
+
+   # @clientes.each do |email|
+      mail({
+        :to => @emails,
+        :bcc => ['Midia Externa <midiaexterna@midiaexterna.com>'],
+        :subject => "[Midia Externa] Disponibilidade de #{@inicio} a #{@fim}"
+      })
+    #end
 	end
 
   def new_reserva(reserva)

@@ -83,9 +83,9 @@ class Admin::ReservasController < Admin::BaseController
 
   def send_email_available_outdoors(options={})
     begin
-      if(params.has_key?(:cliente_id))
+      if(params.has_key?(:cliente))
         options[:outdoors] = params[:outdoors]
-        options[:cliente_id] = params[:cliente_id]
+        options[:cliente] = params[:cliente]
         options[:usuario_id] = params[:usuario_id]
         options[:inicio_periodo] = params[:inicio_reserva]
         options[:termino_periodo] = params[:termino_reserva]
