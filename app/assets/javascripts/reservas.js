@@ -54,6 +54,11 @@ $('form[data-update-target]').bind('submit change', function() {
        $(this).closest('tr').addClass('success');
      }
     });
+
+    $('#form-email').submit(function(){
+      console.log('form-email');
+      outdoorsAvailable();
+    });
   });
 });
 
@@ -85,15 +90,18 @@ somaCheckbox();
 
 var emailAvailableOutdoors = function(x){
  $('select#reserva_cliente_id').on('change', function() {
-  var allVals;
-  $('input#cliente_id').val($(this).val());
-  allVals = [];
-  $("input[type='checkbox']").each(function() {
-    allVals.push($(this).val());
-  });
-  $('#outdoors').val(allVals);
+  outdoorsAvailable();
 });
 }
 
+function outdoorsAvailable(){
+  var allVals = [];
+  $("input[type='checkbox'].outdoor").each(function() {
+    if($(this).is(':checked')){
+      allVals.push($(this).val());
+    }
+  });
+  $('#outdoors').val(allVals);
+}
 
 

@@ -92,8 +92,6 @@ class Admin::ReservasController < Admin::BaseController
         result = ClienteMailer.available_outdoors(options).deliver        
       end 
     end
-    flash[:notice] = 'E-mail enviado com sucesso.'
-    redirect_to :action => "new"
-
+    render :js => "alert('E-mail(s) enviado(s) com sucesso!');"
   end
 end

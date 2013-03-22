@@ -134,7 +134,17 @@ namespace :mongodb do
 	end
 end
 
+namespace :assets do
+	desc "Limpar assets antes de enviar Gem"
+	task :clean, :roles => :app do
+		run "rake assets:clean"
+	end
+end
+
+
+before "deploy", "assets:clean"
 after "deploy", "deploy:restart"
+
 
 
 

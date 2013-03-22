@@ -16,7 +16,7 @@ class ClienteMailer < ActionMailer::Base
     @usuario = Usuario.find(options[:usuario_id])
     
 
-   # @clientes.each do |email|
+    #@emails.each do |email|
       mail({
         :to => @emails,
         :bcc => ['Midia Externa <midiaexterna@midiaexterna.com>'],

@@ -22,7 +22,7 @@
         <tr>
           <td>
             <label>
-            <input id="<%= outdoor.id %>" type="checkbox" name="reserva[outdoor_ids][]" value="<%= outdoor.id %>" class="checkbox">
+            <input id="<%= outdoor.id %>" type="checkbox" name="reserva[outdoor_ids][]" value="<%= outdoor.id %>" class="outdoor checkbox">
           </label>
           </td>
           <td><%= outdoor.numero %></td>
@@ -46,10 +46,10 @@
         <div class="operator">=</div>
       <input id="total" type="text" placeholder="R$ 0,00" class="span2" name="total" >
     </div>
-<div class="span12">
+    <div class="span12">
           <%= check_box_tag :enviar_email, true, true, :class => 'left' %> <p class="left">Enviar e-mail com a criação da reserva</p>
 
-</div>
+    </div>
     <%= f.hidden_field :valor %>
     <%= f.hidden_field :inicio_reserva %>
     <%= f.hidden_field :termino_reserva %>
@@ -59,6 +59,7 @@
      <%= f.submit :class => "btn btn-green" %> 
    </div>
  <% end %>
+</div>
  <div class="widget-header">
    <h4><i class="fontello-icon-list-alt"></i> Enviar disponibilidade </h4>
  </div>
