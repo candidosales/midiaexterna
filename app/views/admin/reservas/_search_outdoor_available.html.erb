@@ -61,15 +61,19 @@
  <% end %>
 </div>
  <div class="widget-header">
-   <h4><i class="fontello-icon-list-alt"></i> Enviar disponibilidade </h4>
+   <h4><i class="fontello-icon-mail-2"></i> Enviar disponibilidade </h4>
  </div>
  <div class="widget-content">
   <div class="widget-body">
     <%= form_tag({:action => 'send_email_available_outdoors'}, :id => 'form-email', :remote => true, :class => 'span12') do %>
-      <label for="accountNotes">E-mail dos clientes:</label>
-      <textarea rows="4" class="input-block-level" id="cliente" name="cliente" style="width: 332px; height: 87px;"></textarea>
+      <label for="accountNotes">E-mail dos clientes</label>
+      <textarea rows="4" class="input-block-level" id="cliente" name="cliente" style="width: 432px; height: 47px;"></textarea>
       <p class="help-block"><strong>OBS:</strong> Separe os e-mails por vírgula</p>
-      <%= submit_tag("Enviar", :class => "btn btn-blue") %>
+      <hr class="margin-mx">
+      <label for="accountNotes">Mensagem</label>
+      <textarea rows="4" class="input-block-level" id="some-textarea" name="mensagem" style="width: 90%; height: 200px;"></textarea>
+      <%= button_tag("", :class => "btn btn-blue fontello-icon-mail-2 Ttip", :title => "Enviar e-mail") %>
+
         <%= hidden_field_tag :outdoors %>
         <%= hidden_field_tag :inicio_reserva %>
         <%= hidden_field_tag :termino_reserva %>
@@ -79,3 +83,5 @@
 </div>
 </div>
 <div id="fuck"></div>
+
+

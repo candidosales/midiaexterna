@@ -39,6 +39,7 @@
 //= require bootstrap-rowlink/bootstrap-rowlink
 //= require bootstrap-progressbar/bootstrap-progressbar
 //= require bootstrap-wysihtml5/src/bootstrap-wysihtml5
+//= require bootstrap-wysihtml5/src/bootstrap-wysihtml5.pt-BR
 //= require bootstrap-select/bootstrap-select
 //= require bootstrap-bootbox/bootbox.min
 //= require bootstrap-modal/bootstrap-modalmanager

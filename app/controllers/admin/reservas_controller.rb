@@ -89,6 +89,7 @@ class Admin::ReservasController < Admin::BaseController
         options[:usuario_id] = params[:usuario_id]
         options[:inicio_periodo] = params[:inicio_reserva]
         options[:termino_periodo] = params[:termino_reserva]
+        options[:mensagem] = params[:mensagem]
         result = ClienteMailer.available_outdoors(options).deliver        
       end 
     end

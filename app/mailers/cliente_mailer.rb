@@ -5,6 +5,7 @@ class ClienteMailer < ActionMailer::Base
   def available_outdoors(options={})
   	@inicio = options.fetch(:inicio_periodo, '')
     @fim = options.fetch(:termino_periodo, '')
+    @mensagem = options.fetch(:mensagem, '')
     @outdoors = options.fetch(:outdoors, '').split(',')
     @clientes = options.fetch(:cliente, '').split(',')
     @emails = Array.new

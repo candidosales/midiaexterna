@@ -141,8 +141,6 @@ namespace :assets do
 	end
 end
 
-
-before "deploy", "assets:clean"
 after "deploy", "deploy:restart"
 
 

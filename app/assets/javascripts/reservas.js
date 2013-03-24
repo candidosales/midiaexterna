@@ -59,6 +59,8 @@ $('form[data-update-target]').bind('submit change', function() {
       console.log('form-email');
       outdoorsAvailable();
     });
+
+    $('#some-textarea').wysihtml5({locale: "pt-BR"});
   });
 });
 
@@ -103,5 +105,7 @@ function outdoorsAvailable(){
   });
   $('#outdoors').val(allVals);
 }
+
+
 
 
