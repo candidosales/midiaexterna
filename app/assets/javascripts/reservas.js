@@ -60,7 +60,7 @@ $('form[data-update-target]').bind('submit change', function() {
       outdoorsAvailable();
     });
 
-    $('#some-textarea').wysihtml5({locale: "pt-BR"});
+    $('.editor').wysihtml5({locale: "pt-BR","stylesheets": [""]});
   });
 });
 
