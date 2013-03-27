@@ -61,6 +61,8 @@ $('form[data-update-target]').bind('submit change', function() {
     });
 
     $('.editor').wysihtml5({locale: "pt-BR","stylesheets": [""]});
+
+    $('#nova-reserva a:last').tab('show');
   });
 });
 
