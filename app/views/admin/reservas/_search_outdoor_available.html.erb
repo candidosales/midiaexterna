@@ -1,95 +1,96 @@
   <hr/>
-  <div class="tabbable tabbable-bordered tabs-top">
+<div class="tabbable tabbable-bordered tabs-top">
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#nova-reserva" data-toggle="tab"><i class="fontello-icon-calendar"></i> Nova reserva</a></li>
-    <li><a href="#disponibilidade" data-toggle="tab"><i class="fontello-icon-mail-2"></i> Enviar disponibilidade</a></li>
+    <li class="active">
+      <a href="#nova-reserva" data-toggle="tab">
+        <i class="aweso-icon-table"></i> Outdoors disponíveis</a>
+    </li>
+    <li>
+      <a href="#disponibilidade" data-toggle="tab">
+        <i class="fontello-icon-mail-2"></i> Enviar disponibilidade</a>
+    </li>
   </ul>
-  <div class="tab-content">
+    <div class="tab-content">
       <div class="tab-pane active" id="nova-reserva">
-      <div class="form-dark">
-        <%= form_for [:admin, @reserva] do |f| %>
+        <div class="form-dark">
+          <%= form_for [:admin, @reserva] do |f| %>
 
-        <div class="widget widget-box widget-table">
-          <div class="widget-header">
-            <h4><i class="aweso-icon-table"></i> Outdoors disponíveis</h4>
-          </div>
-          <table class="table table-striped table-condensed table-content boo-table">
-            <thead>
+            <div class="widget widget-simple widget-table">
+              <table id="exampleDTB-1" class="table boo-table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th class="check-col" scope="col"></th>
+                  <th>Número <span class="column-sorter"></span></th>
+                  <th>Endereço <span class="column-sorter"></span></th>
+                  <th>Ponto de referência <span class="column-sorter"></span></th>
+                  <th>Cidade <span class="column-sorter"></span></th>
+                  <th>Veiculação / Impressão <span class="column-sorter"></span></th>
+                  <th>Sentido <span class="column-sorter"></span></th>
+                  <th>Proprietário <span class="column-sorter"></span></th>
+                </tr>
+              </thead>
+              <% @outdoors.each do |outdoor| %>
               <tr>
-                <th class="check-col" scope="col"></th>
-                <th>Número</th>
-                <th>Endereço</th>
-                <th>Bairro</th>
-                <th>Cidade</th>
-                <th>Veiculação / Impressão</th>
-                <th>Sentido</th>
+                <td>
+                  <label>
+                  <input id="<%= outdoor.id %>" type="checkbox" name="reserva[outdoor_ids][]" value="<%= outdoor.id %>" class="outdoor checkbox">
+                </label>
+                </td>
+                <td><%= outdoor.numero %></td>
+                <td><%= outdoor.endereco %>, <%= outdoor.bairro %></td>
+                <td><%= outdoor.ponto_referencia %></td>
+                <td><%= outdoor.cidade %></td>
+                <td>R$ <span class="valor_veiculacao-<%= outdoor.id %>"><%=outdoor.valor_veiculacao %></span> / R$ <span class="valor_impressao-<%= outdoor.id %>"><%= outdoor.valor_impressao %></span></td>
+                <td><%= outdoor.sentido %></td>
+                <td><%= outdoor.parceiro.nome %></td>
               </tr>
-            </thead>
-            <% @outdoors.each do |outdoor| %>
-            <tr>
-              <td>
-                <label>
-                <input id="<%= outdoor.id %>" type="checkbox" name="reserva[outdoor_ids][]" value="<%= outdoor.id %>" class="outdoor checkbox">
-              </label>
-              </td>
-              <td><%= outdoor.numero %></td>
-              <td><%= outdoor.endereco %></td>
-              <td><%= outdoor.bairro %></td>
-              <td><%= outdoor.cidade %></td>
-              <td>R$ <span class="valor_veiculacao-<%= outdoor.id %>"><%=outdoor.valor_veiculacao %></span> / R$ <span class="valor_impressao-<%= outdoor.id %>"><%= outdoor.valor_impressao %></span></td>
-              <td><%= outdoor.sentido %></td>
-            </tr>
-            <% end %>
-          </table>
-        </div>
-        <div class="controls controls-row">
-          <div class="span12">
-              <%= f.collection_select :cliente_id, Cliente.all, :id, :nome,  {:prompt => 'Selecione o cliente'},{:class => 'selecttwo-s span2'} %>
-              <%= f.text_field :campanha, :placeholder => "Nome da campanha", :class => 'span3'%>
-         
-              <input id="total_veiculacao" type="text" placeholder="Veiculação" class="span2" name="total_veiculacao"  >
-                <div class="operator">+</div>
-              <input id="total_impressao" type="text" placeholder="Impressão" class="span2" name="total_impressao" >
-                <div class="operator">=</div>
-              <input id="total" type="text" placeholder="R$ 0,00" class="span2" name="total" >
-            </div>
-            <div class="span11">
-                  <%= check_box_tag :enviar_email, true, true, :class => 'left' %> <p class="left">Enviar e-mail com a criação da reserva</p>
+              <% end %>
+            </table>
+          </div>
+          <div class="controls controls-row">
+            <div class="span12">
+                <%= f.collection_select :cliente_id, Cliente.all, :id, :nome,  {:prompt => 'Selecione o cliente'},{:class => 'selecttwo-s span2'} %>
+                <%= f.text_field :campanha, :placeholder => "Nome da campanha", :class => 'span3'%>
+           
+                <input id="total_veiculacao" type="text" placeholder="Veiculação" class="span2" name="total_veiculacao"  >
+                  <div class="operator">+</div>
+                <input id="total_impressao" type="text" placeholder="Impressão" class="span2" name="total_impressao" >
+                  <div class="operator">=</div>
+                <input id="total" type="text" placeholder="R$ 0,00" class="span2" name="total" >
+              </div>
+              <div class="span11">
+                    <%= check_box_tag :enviar_email, true, true, :class => 'left' %> <p class="left">Enviar e-mail com a criação da reserva</p>
 
-            </div>
-            <%= f.hidden_field :valor %>
-            <%= f.hidden_field :inicio_reserva %>
-            <%= f.hidden_field :termino_reserva %>
-            <%= f.hidden_field :usuario_id, :value => current_usuario.id %>
+              </div>
+              <%= f.hidden_field :valor %>
+              <%= f.hidden_field :inicio_reserva %>
+              <%= f.hidden_field :termino_reserva %>
+              <%= f.hidden_field :usuario_id, :value => current_usuario.id %>
 
-            <div class="form-actions span10">
-             <%= f.submit :class => "btn btn-green" %> 
-           </div>
-         <% end %>
+              <div class="form-actions span10">
+               <%= f.submit :class => "btn btn-green" %> 
+             </div>
+           <% end %>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="tab-pane" id="disponibilidade">
-       <div class="widget-content">
-        <div class="widget-body">
-          <%= form_tag({:action => 'send_email_available_outdoors'}, :id => 'form-email', :remote => true, :class => 'span12') do %>
-            <label for="accountNotes">E-mail dos clientes</label>
-            <textarea rows="4" class="input-block-level" id="cliente" name="cliente" style="width: 432px; height: 47px;"></textarea>
-            <p class="help-block"><strong>OBS:</strong> Separe os e-mails por vírgula</p>
-            <hr class="margin-mx">
-            <label for="accountNotes">Mensagem</label>
-            <textarea rows="4" class="input-block-level editor" id="some-textarea" name="mensagem" style="width: 90%; height: 200px;"></textarea>
-            <%= button_tag("", :class => "btn btn-blue fontello-icon-mail-2 Ttip", :title => "Enviar e-mail") %>
+      <div class="tab-pane" id="disponibilidade">
+              <%= form_tag({:action => 'send_email_available_outdoors'}, :id => 'form-email', :remote => true, :class => 'span12') do %>
+                <label for="accountNotes">E-mail dos clientes</label>
+                <textarea rows="4" class="input-block-level" id="emails" name="emails" style="width: 432px; height: 47px;" data="<%= @emails_clients %>"></textarea>
+                <p class="help-block"><strong>OBS:</strong> Separe os e-mails por vírgula</p>
+                <hr class="margin-mx">
+                <label for="accountNotes">Mensagem</label>
+                <textarea rows="4" class="input-block-level editor" id="some-textarea" name="mensagem" style="width: 90%; height: 200px;"></textarea>
+                <%= button_tag("", :class => "btn btn-blue fontello-icon-mail-2 Ttip", :title => "Enviar e-mail") %>
 
-              <%= hidden_field_tag :outdoors %>
-              <%= hidden_field_tag :inicio_reserva %>
-              <%= hidden_field_tag :termino_reserva %>
-              <%= hidden_field_tag :usuario_id %>
-          <% end %>
-        </div>
+                  <%= hidden_field_tag :outdoors %>
+                  <%= hidden_field_tag :inicio_reserva %>
+                  <%= hidden_field_tag :termino_reserva %>
+                  <%= hidden_field_tag :usuario_id %>
+              <% end %>
       </div>
     </div>
-  </div>
 </div>
    <hr class="margin-xxx">
 

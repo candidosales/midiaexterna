@@ -7,23 +7,21 @@ class ClienteMailer < ActionMailer::Base
     @fim = options.fetch(:termino_periodo, '')
     @mensagem = options.fetch(:mensagem, '')
     @outdoors = options.fetch(:outdoors, '').split(',')
-    @clientes = options.fetch(:cliente, '').split(',')
-    @emails = Array.new
+    @emails = JSON.parse options.fetch(:emails, '')
+
+    @emails_without_accents = Array.new
     
-    @clientes.each do |email|
-      @emails.push email.removeaccents
+    @emails.each do |email|
+      @emails_without_accents.push email.removeaccents
     end
     
     @usuario = Usuario.find(options[:usuario_id])
-    
 
-    #@emails.each do |email|
       mail({
-        :to => @emails,
+        :to => @emails_without_accents,
         :bcc => ['Midia Externa <midiaexterna@midiaexterna.com>'],
         :subject => "[Midia Externa] Disponibilidade de #{@inicio} a #{@fim}"
       })
-    #end
 	end
 
   def new_reserva(reserva)

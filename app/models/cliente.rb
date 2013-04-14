@@ -24,4 +24,13 @@ class Cliente
     name = self.nome.split
     name[0].capitalize
   end
+
+  def self.all_emails
+    emails = Array.new
+    only(:email).all.each do |u|
+     emails << u.email
+    end
+    emails
+  end
+
 end

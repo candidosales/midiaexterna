@@ -51,7 +51,12 @@
 //= require qtip2/jquery.qtip.min 
 //= require list/js/list.min 
 //= require list/plugins/list.paging.min 
-//= require fullcalendar/fullcalendar 
+//= require fullcalendar/fullcalendar
+
+//= require datatables/media/js/jquery.dataTables
+//= require datatables/plugin/jquery.dataTables.plugins 
+//= require datatables/plugin/jquery.dataTables.columnFilter 
+//= require demo/demo-jquery.dataTables
 
 //= require select2/select2.min 
 //= require counter/jquery.counter 
@@ -60,6 +65,7 @@
 //= require inputmask/jquery.inputmask.extensions 
 //= require validate/jquery.validate.min 
 //= require xbreadcrumbs/xbreadcrumbs 
+//= require magicsuggest-1.2.7.js
 
 //= require main 
 

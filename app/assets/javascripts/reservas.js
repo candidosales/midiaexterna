@@ -63,6 +63,56 @@ $('form[data-update-target]').bind('submit change', function() {
     $('.editor').wysihtml5({locale: "pt-BR","stylesheets": [""]});
 
     $('#nova-reserva a:last').tab('show');
+
+    //Autocomplete e-mails
+    $('#emails').magicSuggest({});
+
+    $('#exampleDTB-1').dataTable({
+                        oLanguage: {
+                                sSearch: "Buscar",
+                                sZeroRecords: 'Nada foi encontrado <button class="btn btn-danger resetTable">Resetar a buscar</button>',
+                                 "oPaginate": {
+                                      "sFirst":    "Primeiro",
+                                      "sPrevious": "Anterior",
+                                      "sNext":     "Seguinte",
+                                      "sLast":     "Último"
+                                  },
+                                "sProcessing":   "Processando...",
+                                "sLengthMenu":   "Mostrar _MENU_ registros",
+                                "sInfo":         "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                                "sInfoEmpty":    "Mostrando de 0 até 0 de 0 registros",
+                                "sInfoFiltered": "(filtrado de _MAX_ registros no total)",
+                        },
+                        iDisplayLength: 3,
+                        aaSorting: [
+                                [1, 'asc']
+                        ],
+                        aoColumnDefs: [{
+                                "aTargets": [2],
+                                'sClass': 'hidden-phone'
+                        }, {
+                                "aTargets": [3],
+                                'sClass': 'hidden-phone hidden-tablet'
+                        }, {
+                                "aTargets": [4],
+                                'sType': 'eu_date'
+                        }],
+                        sPaginationType: 'full_numbers',
+                        sDom: "<'row-fluid' <'widget-header' <'span4'l> <'span8'<'table-reset-wrapper'>f<'table-tool-wrapper'> > > >  rt <'row-fluid' <'widget-footer' <'span12'p> >",
+                });
+                //* inject  to datatable DTB
+                $('#exampleDTB-1_wrapper .table-global-filter input')
+                        .attr("placeholder", "enter search terms");
+                $('#exampleDTB-1_wrapper .table-tool-wrapper')
+                        .html($('.DTB_toolBar')
+                        .html());
+                $('#exampleDTB-1_wrapper .table-reset-wrapper')
+                        .html($('.DTB_resetTable')
+                        .html());
+        $('#exampleDTB-1_length select').select2({
+            minimumResultsForSearch: 6,
+            width: "off"
+        });
   });
 });
 

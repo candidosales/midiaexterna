@@ -289,11 +289,11 @@
 						<div class="content">
 							<table class="outdoor">
 								<tr>
-									<td class="small" width="20%" style="vertical-align: top; padding-right:10px;">
+									<td class="small" width="40%" style="vertical-align: top; padding-right:10px;">
 										
 		                               <% 
 		                                outdoor.foto_outdoors[0..0].each { |foto| %>
-		                               		<%= image_tag(foto.file.url(:small)) %>
+		                               		<%= image_tag(foto.file.url(:medium)) %>
 		                               	<% } %>
 
 		      

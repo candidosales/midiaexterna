@@ -73,6 +73,7 @@ class Admin::ReservasController < Admin::BaseController
 
   def search_outdoor_available
     @reserva = Reserva.new
+    @emails_clients = Cliente.all_emails.join(",")
 
     if(params.has_key?(:inicio_periodo) && params.has_key?(:termino_periodo) )
       @reservas = Reserva.seek_reserves_period(:inicio_reserva => params[:inicio_periodo], :termino_reserva => params[:termino_periodo])
@@ -83,9 +84,9 @@ class Admin::ReservasController < Admin::BaseController
 
   def send_email_available_outdoors(options={})
     begin
-      if(params.has_key?(:cliente))
+      if(params.has_key?(:emails))
         options[:outdoors] = params[:outdoors]
-        options[:cliente] = params[:cliente]
+        options[:emails] = params[:emails]
         options[:usuario_id] = params[:usuario_id]
         options[:inicio_periodo] = params[:inicio_reserva]
         options[:termino_periodo] = params[:termino_reserva]
