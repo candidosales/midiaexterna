@@ -3,9 +3,10 @@ class ClienteMailer < ActionMailer::Base
   default from: "midiaexterna@midiaexterna.com"
 
   def available_outdoors(options={})
-  	@inicio = options.fetch(:inicio_periodo, '')
-    @fim = options.fetch(:termino_periodo, '')
+  	@inicio = options.fetch(:inicio_reserva, '')
+    @fim = options.fetch(:termino_reserva, '')
     @mensagem = options.fetch(:mensagem, '')
+    @anexo = options.fetch(:anexo, '')
     @outdoors = options.fetch(:outdoors, '').split(',')
     @emails = JSON.parse options.fetch(:emails, '')
 
@@ -17,6 +18,7 @@ class ClienteMailer < ActionMailer::Base
     
     @usuario = Usuario.find(options[:usuario_id])
 
+    attachments[@anexo.original_filename] = File.read(@anexo.tempfile.path)
       mail({
         :to => @emails_without_accents,
         :bcc => ['Midia Externa <midiaexterna@midiaexterna.com>'],

@@ -65,7 +65,9 @@ $('form[data-update-target]').bind('submit change', function() {
     $('#nova-reserva a:last').tab('show');
 
     //Autocomplete e-mails
-    $('#emails').magicSuggest({});
+    $('#emails').magicSuggest({
+      width: 400
+    });
 
     $('#exampleDTB-1').dataTable({
                         oLanguage: {

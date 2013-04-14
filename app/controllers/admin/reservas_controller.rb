@@ -85,15 +85,10 @@ class Admin::ReservasController < Admin::BaseController
   def send_email_available_outdoors(options={})
     begin
       if(params.has_key?(:emails))
-        options[:outdoors] = params[:outdoors]
-        options[:emails] = params[:emails]
-        options[:usuario_id] = params[:usuario_id]
-        options[:inicio_periodo] = params[:inicio_reserva]
-        options[:termino_periodo] = params[:termino_reserva]
-        options[:mensagem] = params[:mensagem]
-        result = ClienteMailer.available_outdoors(options).deliver        
-      end 
+        result = ClienteMailer.available_outdoors(params).deliver        
+      end
     end
-    render :js => "alert('E-mail(s) enviado(s) com sucesso!');"
+    flash[:notice] = 'E-mail enviado com sucesso. =]' 
+    redirect_to new_admin_reserva_path
   end
 end
