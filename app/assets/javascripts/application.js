@@ -65,7 +65,7 @@
 //= require inputmask/jquery.inputmask.extensions 
 //= require validate/jquery.validate.min 
 //= require xbreadcrumbs/xbreadcrumbs 
-//= require magicsuggest-1.2.7.js
+//= require magicsuggest-1.2.7
 
 //= require main 
 
