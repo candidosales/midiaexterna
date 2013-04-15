@@ -42,7 +42,13 @@
                 <td><%= outdoor.cidade %></td>
                 <td>R$ <span class="valor_veiculacao-<%= outdoor.id %>"><%=outdoor.valor_veiculacao %></span> / R$ <span class="valor_impressao-<%= outdoor.id %>"><%= outdoor.valor_impressao %></span></td>
                 <td><%= outdoor.sentido %></td>
-                <td><%= outdoor.parceiro.nome %></td>
+                <td>
+                  <% if (outdoor.parceiro?) %>
+                    <%= outdoor.parceiro.nome %>
+                  <% else %>
+                    Sem parceiro
+                  <% end %>
+                </td>
               </tr>
               <% end %>
             </table>
