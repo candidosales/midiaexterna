@@ -6,19 +6,20 @@ class ClienteMailer < ActionMailer::Base
   	@inicio = options.fetch(:inicio_reserva, '')
     @fim = options.fetch(:termino_reserva, '')
     @mensagem = options.fetch(:mensagem, '')
-    @anexo = options.fetch(:anexo, '')
     @outdoors = options.fetch(:outdoors, '').split(',')
     @emails = JSON.parse options.fetch(:emails, '')
-
-    @emails_without_accents = Array.new
-    
-    @emails.each do |email|
-      @emails_without_accents.push email.removeaccents
-    end
-    
     @usuario = Usuario.find(options[:usuario_id])
 
-    attachments[@anexo.original_filename] = File.read(@anexo.tempfile.path)
+    if(options[:anexo])
+       @anexo = options.fetch(:anexo, '')
+      attachments[@anexo.original_filename] = File.read(@anexo.tempfile.path) 
+    end
+
+    @emails_without_accents = Array.new
+    @emails.each do |email|
+      @emails_without_accents.push email.removeaccents
+    end   
+    
       mail({
         :to => @emails_without_accents,
         :bcc => ['Midia Externa <midiaexterna@midiaexterna.com>'],
