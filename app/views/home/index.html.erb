@@ -1,4 +1,11 @@
-<h3>Home</h3>
-<% @usuarios.each do |u| %>
-  <p>User: <%=link_to u.nome, u %></p>
-<% end %>
+<h3>Painel</h3>
+<nav>
+                    <ul class="btn-toolbar page-nav margin-btn">
+                        <li><a class="btn btn-well btn-glyph" href="/admin/reservas/new" style="width:80px"><i class="fontello-icon-check f30"></i><span class="block">DISPONIBIL.</span></a></li>
+                        <li><a class="btn btn-well btn-glyph" href="/admin/outdoors" style="width:80px"><i class="fontello-icon-list-alt f30"></i><span class="block">OUTDOORS</span></a></li>
+                        <li><a class="btn btn-well btn-glyph" href="/admin/clientes" style="width:80px"><i class="fontello-icon-users f30"></i><span class="block">CLIENTES</span></a></li>
+                    </ul>
+                    <hr class="margin-0x">
+                </nav>
+
+   

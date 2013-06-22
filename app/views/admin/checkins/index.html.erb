@@ -1,0 +1,48 @@
+
+                            <div class="well well-nice well-box no-border">
+                                <div class="navbar">
+                                    <div class="navbar-inner">
+                                        <h4 class="title"><i class="fontello-icon-users"></i> Listagem</h4>
+                                        <!-- // btn-toolbar -->
+                                        <ul class="nav nav-pills pull-right">
+                                            <li class="active"><a data-toggle="tab" href="#tab1A">PDF</a></li>
+                                        </ul>
+                                        <!-- // nav-pills --> 
+                                    </div>
+                                </div>
+                                <table class="table boo-table table-striped table-content table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th class="check-col" scope="col">ID</th>
+                                        <th class="sorting" scope="col">Reserva</th>
+                                        <th class="sorting" scope="col">Outdoors</th>
+                                    </tr>
+                                </thead>
+
+                                <% @checkins.each do |checkin| %>
+                                <tr>                  
+                                    <td><%= link_to checkin.id, [:admin, checkin], :class => 'text-left' %><%= link_to '', edit_admin_checkin_path(checkin), class: "btn btn-blue btn-mini fontello-icon-edit" %>
+                                    <%= link_to '', [:admin, checkin], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
+                                    <td>
+                                        <%= checkin.reserva.id %> - <%= checkin.reserva.campanha %>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <% end %>
+                            </table>
+                             <div class="action-table">
+                                <div class="btn-toolbar pull-left" style="display:none">
+                                    <div class="action-select-wraper">
+                                     <span class="arrow-table-action"></span>
+                                             <select name="actionTable" id="actionTable" class="selectpicker-boo " >
+                                                    <option value="" selected="selected">Action for selected...</option>
+                                                    <option value="validate">Validate</option>
+                                                    <option value="delete">Delete</option>
+                                                </select>
+                                        <button type="submit" class="btn btn-boo">Perform the action</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>                           
+

@@ -13,11 +13,14 @@ class Outdoor
   field :valor_veiculacao, type: Money
   field :valor_impressao, type: Money
 
+  #Fotos
   embeds_many :foto_outdoors, :cascade_callbacks => true
   accepts_nested_attributes_for :foto_outdoors, :allow_destroy => true
 
   has_and_belongs_to_many :reservas
   belongs_to :parceiro, class_name: "Parceiro"
+
+  has_many :checkin_outdoors
 
   default_scope asc :numero
 

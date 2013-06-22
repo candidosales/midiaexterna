@@ -101,36 +101,6 @@
             $('#main-sidebar').toggleClass('sidebar-inverse');
         });
 
-        // SCROLL - NICESCROLL
-        // ------------------------------------------------------------------------------------------------ * -->
-        // The document page (body)
-        /**/
-        $(window).load(function(){
-            $("html").niceScroll({
-                cursoropacitymin:0.1,
-                cursoropacitymax:0.9,
-                cursorcolor:"#adafb5",
-                cursorwidth:"8px",
-                cursorborder:"",
-                cursorborderradius:"8px",
-                usetransition:600,
-                background:"",
-                railoffset:{top:10,left:-3} 
-            }); 
-            
-            $("#main-sidebar").niceScroll({
-                cursoropacitymin:0.1,
-                cursoropacitymax:0.9,
-                cursorcolor:"#adafb5",
-                cursorwidth:"6px",
-                cursorborder:"",
-                cursorborderradius:"6px",
-                usetransition:600,
-                background:"",
-                railoffset:{top:10,left:-1}
-            });
-        });
-
         // SCROLL TOP PAGE
         // ------------------------------------------------------------------------------------------------ * -->
         $(window).scroll(function () {

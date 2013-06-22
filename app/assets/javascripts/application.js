@@ -47,7 +47,6 @@
 //= require bootstrap-wizard/bootstrap-wizard
 //= require bootstrap-toggle-buttons/bootstrap-toggle-buttons
 
-//= require nicescroll/jquery.nicescroll.min 
 //= require qtip2/jquery.qtip.min 
 //= require list/js/list.min 
 //= require list/plugins/list.paging.min 
@@ -57,6 +56,8 @@
 //= require datatables/plugin/jquery.dataTables.plugins 
 //= require datatables/plugin/jquery.dataTables.columnFilter 
 //= require demo/demo-jquery.dataTables
+
+//= require jquery.checkall
 
 //= require select2/select2.min 
 //= require counter/jquery.counter 

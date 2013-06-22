@@ -21,101 +21,92 @@ var toggleLoading = function() {
 
 
 $('form[data-update-target]').bind('submit change', function() {
-  var target = $(this).data('update-target');
-  toggleLoading();
-  $.ajax({
-    url: $(this).attr('action'),
-    data: $(this).serialize(),
-    dataType: "HTML",
-    type: "POST"
-  }).complete(function() {
+  if($('#inicio_periodo').val()!='' && $('#termino_periodo').val()!=''){
+    var target = $(this).data('update-target');
     toggleLoading();
-  }).success(function(data) {
+    $.ajax({
+      url: $(this).attr('action'),
+      data: $(this).serialize(),
+      dataType: "HTML",
+      type: "POST"
+    }).complete(function() {
+      toggleLoading();
+    }).success(function(data) {
 
-    $('#' + target).html(data);
-    $('#reserva_inicio_reserva, #inicio_reserva').val($('#inicio_periodo').val());
-    $('#reserva_termino_reserva, #termino_reserva').val($('#termino_periodo').val());
-    $('#usuario_id').val($('#reserva_usuario_id').val());
+      $('#' + target).html(data);
+      $('#reserva_inicio_reserva, #inicio_reserva').val($('#inicio_periodo').val());
+      $('#reserva_termino_reserva, #termino_reserva').val($('#termino_periodo').val());
+      $('#usuario_id').val($('#reserva_usuario_id').val());
 
-    $("input[type='checkbox']").click(function() {
-      somaCheckbox($(this));
+      emailAvailableOutdoors();
+
+      $("#total_veiculacao, #total_impressao").change(function() {
+       reserva_valor = parseInt($("#total_veiculacao").val()) + parseInt($("#total_impressao").val());
+       $('#total').val('R$ ' + reserva_valor + ',00');
+       $('#reserva_valor').val(reserva_valor);
+     });
+
+      $('#form-email').submit(function(){
+        console.log('form-email');
+        outdoorsAvailable();
+      });
+
+      $('.editor').wysihtml5({locale: "pt-BR","stylesheets": [""]});
+
+      $('#nova-reserva a:last').tab('show');
+
+      //Autocomplete e-mails
+      $('#emails').magicSuggest({
+        width: 400
+      });
+
+      //Selecionar todos
+
+      $(".checkbox").click(function(){
+        somaCheckbox();
+      });
+  
+    $('#select-all').checkAll('.checkbox';
+
+
+      $('#exampleDTB-1').dataTable({
+                          oLanguage: {
+                                  sSearch: "Buscar",
+                                  sZeroRecords: 'Nada foi encontrado <button class="btn btn-danger resetTable">Resetar a buscar</button>',
+                                   "oPaginate": {
+                                        "sFirst":    "Primeiro",
+                                        "sPrevious": "Anterior",
+                                        "sNext":     "Seguinte",
+                                        "sLast":     "Último"
+                                    },
+                                  "sProcessing":   "Processando...",
+                                  "sLengthMenu":   "Mostrar _MENU_ registros",
+                                  "sInfo":         "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                                  "sInfoEmpty":    "Mostrando de 0 até 0 de 0 registros",
+                                  "sInfoFiltered": "(filtrado de _MAX_ registros no total)",
+                          },
+                          iDisplayLength: 3,
+                          aaSorting: [
+                                  [1, 'asc']
+                          ],
+                          aoColumnDefs: [{
+                                  "aTargets": [2],
+                                  'sClass': 'hidden-phone'
+                          }, {
+                                  "aTargets": [3],
+                                  'sClass': 'hidden-phone hidden-tablet'
+                          }, {
+                                  "aTargets": [4],
+                                  'sType': 'eu_date'
+                          }],
+                          sPaginationType: 'full_numbers',
+                          sDom: "<'row-fluid' <'widget-header' <'span4'l> <'span8'<'table-reset-wrapper'>f<'table-tool-wrapper'> > > >  rt <'row-fluid' <'widget-footer' <'span12'p> >",
+                  });
+
     });
-    emailAvailableOutdoors();
-
-    $("#total_veiculacao, #total_impressao").change(function() {
-     reserva_valor = parseInt($("#total_veiculacao").val()) + parseInt($("#total_impressao").val());
-     $('#total').val('R$ ' + reserva_valor + ',00');
-     $('#reserva_valor').val(reserva_valor);
-   });
-
-    $('input[type=checkbox].checkbox').change(function(){
-      $(this).closest('tr').removeClass('success');
-      if($(this).prop('checked')){
-       $(this).closest('tr').addClass('success');
-     }
-    });
-
-    $('#form-email').submit(function(){
-      console.log('form-email');
-      outdoorsAvailable();
-    });
-
-    $('.editor').wysihtml5({locale: "pt-BR","stylesheets": [""]});
-
-    $('#nova-reserva a:last').tab('show');
-
-    //Autocomplete e-mails
-    $('#emails').magicSuggest({
-      width: 400
-    });
-
-    $('#exampleDTB-1').dataTable({
-                        oLanguage: {
-                                sSearch: "Buscar",
-                                sZeroRecords: 'Nada foi encontrado <button class="btn btn-danger resetTable">Resetar a buscar</button>',
-                                 "oPaginate": {
-                                      "sFirst":    "Primeiro",
-                                      "sPrevious": "Anterior",
-                                      "sNext":     "Seguinte",
-                                      "sLast":     "Último"
-                                  },
-                                "sProcessing":   "Processando...",
-                                "sLengthMenu":   "Mostrar _MENU_ registros",
-                                "sInfo":         "Mostrando de _START_ até _END_ de _TOTAL_ registros",
-                                "sInfoEmpty":    "Mostrando de 0 até 0 de 0 registros",
-                                "sInfoFiltered": "(filtrado de _MAX_ registros no total)",
-                        },
-                        iDisplayLength: 3,
-                        aaSorting: [
-                                [1, 'asc']
-                        ],
-                        aoColumnDefs: [{
-                                "aTargets": [2],
-                                'sClass': 'hidden-phone'
-                        }, {
-                                "aTargets": [3],
-                                'sClass': 'hidden-phone hidden-tablet'
-                        }, {
-                                "aTargets": [4],
-                                'sType': 'eu_date'
-                        }],
-                        sPaginationType: 'full_numbers',
-                        sDom: "<'row-fluid' <'widget-header' <'span4'l> <'span8'<'table-reset-wrapper'>f<'table-tool-wrapper'> > > >  rt <'row-fluid' <'widget-footer' <'span12'p> >",
-                });
-                //* inject  to datatable DTB
-                $('#exampleDTB-1_wrapper .table-global-filter input')
-                        .attr("placeholder", "enter search terms");
-                $('#exampleDTB-1_wrapper .table-tool-wrapper')
-                        .html($('.DTB_toolBar')
-                        .html());
-                $('#exampleDTB-1_wrapper .table-reset-wrapper')
-                        .html($('.DTB_resetTable')
-                        .html());
-        $('#exampleDTB-1_length select').select2({
-            minimumResultsForSearch: 6,
-            width: "off"
-        });
-  });
+  }else{
+    console.log("Está faltando uma data");
+  }
 });
 
 
@@ -124,6 +115,7 @@ var somaCheckbox = function(x) {
   var total_veiculacao = 0 , val_veiculacao = 0, total_impressao = 0 , val_impressao = 0, reserva_valor = 0;
 
   $(".checkbox:checked").each(function() {
+    console.log('verdadeiro-soma');
     var id = $(this).attr('id');
     val_veiculacao = $('span.valor_veiculacao' + '-' + id).html();
     val_impressao = $('span.valor_impressao' + '-' + id).html();
@@ -153,13 +145,18 @@ var emailAvailableOutdoors = function(x){
 function outdoorsAvailable(){
   var allVals = [];
   $("input[type='checkbox'].outdoor").each(function() {
-    if($(this).is(':checked')){
+    if($(this).prop('checked')){
       allVals.push($(this).val());
     }
   });
   $('#outdoors').val(allVals);
 }
 
+function toggleChecked(status) {
+  $(".checkbox").each( function() {
+    $(this).attr("checked",status);
+  })
+}
 
 
 

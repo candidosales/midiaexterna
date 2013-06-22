@@ -20,6 +20,8 @@ class Reserva
 
   has_and_belongs_to_many :outdoors
 
+  has_one :checkin, :class_name => "Checkin", validate: false
+
   validates_presence_of :cliente, :valor, :campanha, :outdoors
 
 

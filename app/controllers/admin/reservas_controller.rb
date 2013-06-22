@@ -9,8 +9,8 @@ class Admin::ReservasController < Admin::BaseController
   # GET /reservas/1
   # GET /reservas/1.json
   def show
-    @reserva = Reserva.includes(:outdoors).find(params[:id])
-    respond_with @reserva
+    @reserva = Reserva.includes(:outdoors, :checkin).find(params[:id])
+    respond_with @reserva 
   end
 
   # GET /reservas/new

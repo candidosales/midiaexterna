@@ -9,15 +9,20 @@ App::Application.routes.draw do
   namespace :admin do
     root to: "clientes#index"
 
-    resources :reservas
+    resources :reservas do
+      resources :checkins do
+        resources :foto_checkins
+      end
+    end
+
+    resources :checkins
     
     resources :outdoors do
       collection do
         delete 'destroy_multiple'
       end
+      resources :foto_outdoors
     end
-
-    resources :foto_outdoors
 
     resources :parceiros
 
