@@ -5,33 +5,36 @@
     <li class="section-form">
       <h4>Outdoors</h4>
     </li>
-    <% @checkin.reserva.outdoors.each do |outdoor| %>
-    <li class="control-group">
-      <label class="control-label" for="accountPrefix"> <%= "#{outdoor.numero} - #{outdoor.endereco}"%></label>
-      <div class="controls">
-        <%= f.fields_for :foto_checkins do |image| %>
-        <div data-provides="fileupload" class="fileupload fileupload-new">
-          <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail">
-            <% unless image.object.new_record? %>
-              <%= image_tag image.object.file.url(:medium) %>
-            <% end %>
-          </div>
+    <% count = 0 %>
+    <%= f.fields_for :outdoor_checkins do |outdoor_checkin| %>
+        <li class="control-group">
+          <label class="control-label" for="accountPrefix"> <%= "#{@checkin.reserva.outdoors[count].numero} - #{@checkin.reserva.outdoors[count].endereco}"%></label>
+          <div class="controls">
+            <%= outdoor_checkin.fields_for :foto_checkins do |image| %>
+            <div data-provides="fileupload" class="fileupload fileupload-new">
+              <div style="width: 200px; height: 120px;" class="fileupload-preview thumbnail">
+                <% unless image.object.new_record? %>
+                  <%= image_tag image.object.file.url(:medium) %>
+                <% end %>
+              </div>
 
-          <div> 
-            <span class="btn btn-file"> 
-              <span class="fileupload-new">Selecionar foto</span>
-              <span class="fileupload-exists">Mudar</span>
-                <%= image.file_field :file, :class => 'foto_outdoor_input'  %>                          
-            </span> 
-            <a data-dismiss="fileupload" class="btn btn-red fileupload-exists" href="#">Remover</a>
+              <div> 
+                <span class="btn btn-file"> 
+                  <span class="fileupload-new">Selecionar foto</span>
+                  <span class="fileupload-exists">Mudar</span>
+                    <%= image.file_field :file, :class => 'foto_outdoor_input'  %>                          
+                </span> 
+                <a data-dismiss="fileupload" class="btn btn-red fileupload-exists" href="#">Remover</a>
+              </div>
+            </div>
+            
+            <% end %> 
           </div>
-        </div>
-        <% end %> 
-      </div>
-    </li>
-    <%= f.hidden_field :reserva_id, :value => @checkin.reserva.id %>
-    <%= f.hidden_field :outdoor_id, :value => outdoor.id %> 
+        </li>
+        <%= outdoor_checkin.hidden_field :outdoor_id, :value => @checkin.reserva.outdoors[count].id %>    
+        <% count = count+1  %>
     <% end %> 
+    <%= f.hidden_field :reserva_id, :value => @checkin.reserva.id %>
 </ul>
 <div class="form-actions">
    <%= link_to '', admin_reserva_path(@checkin.reserva), class: "btn fontello-icon-left-1" %> <%= f.submit class: "btn btn-blue" %>

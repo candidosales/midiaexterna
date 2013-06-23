@@ -2,7 +2,7 @@ class FotoCheckin
 	include Mongoid::Document
 	include Mongoid::Paperclip
 	
-  	embedded_in :checkin, :inverse_of => :foto_checkins
+  	embedded_in :outdoor_checkin, :inverse_of => :foto_checkins
 
   	has_mongoid_attached_file :file,
   	:styles => {

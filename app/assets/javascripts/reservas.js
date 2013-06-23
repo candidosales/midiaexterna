@@ -66,7 +66,7 @@ $('form[data-update-target]').bind('submit change', function() {
         somaCheckbox();
       });
   
-    $('#select-all').checkAll('.checkbox';
+    $('#select-all').checkAll('.checkbox');
 
 
       $('#exampleDTB-1').dataTable({

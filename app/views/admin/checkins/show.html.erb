@@ -7,10 +7,7 @@
                         <ul class="form-list label-left list-bordered dotted">
 
                         <li class="control-group">
-                          <label class="control-label" for="accountPrefix">Cliente: Campanha</label>
-                          <div class="controls">
-                            <%= "#{@checkin.reserva.cliente.nome}: #{@checkin.reserva.campanha}" %> 
-                          </div>
+                          <label class="control-label" for="accountPrefix"><%= "#{@checkin.reserva.cliente.nome}: #{@checkin.reserva.campanha}" %> </label>
                         </li>
                         <li class="control-group">
                           <label class="control-label" for="accountPrefix">Período:</label>
@@ -31,13 +28,14 @@
                               <th>Fotos</th>
                             </tr>
                           </thead>
+                          <% @checkin.outdoor_checkins.each do |outdoor_checkin|%>
                           <tr>
-                            <td><%= @checkin.outdoor.id %></td>
+                            <td><%= outdoor_checkin.outdoor.numero %></td>
                             <td>
-                              <%= "#{@checkin.outdoor.endereco}, #{@checkin.outdoor.bairro}, #{@checkin.outdoor.cidade}" %>
+                              <%= "#{outdoor_checkin.outdoor.endereco}, #{outdoor_checkin.outdoor.bairro}, #{outdoor_checkin.outdoor.cidade}" %>
                             </td>
                             <td class="thumb-mini">
-                            <% @checkin.foto_checkins.each do |foto|%>
+                            <% outdoor_checkin.foto_checkins.each do |foto|%>
                             
                                   <div class="media-thumb"> 
                                       <a class="img-shadow">
@@ -48,6 +46,7 @@
                             <% end %>
                             </td>
                           </tr>
+                          <% end %>
                         </table>
                       </div>
                       <div class="form-actions">

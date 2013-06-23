@@ -22,7 +22,7 @@ set :branch, "master"
 set :deploy_via, :remote_cache
 set :deploy_to, '/var/www/midiaexterna'
 set :current, "#{deploy_to}/current"
-set :keep_releases, 5
+set :keep_releases, 1
 
 # ==============================================================
 # ROLE's
@@ -135,6 +135,7 @@ namespace :mongodb do
 end
 
 after "deploy", "deploy:restart"
+after "deploy:restart", "deploy:cleanup" 
 
 
 

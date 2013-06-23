@@ -3,6 +3,14 @@
                     		<h4><i class="fontello-icon-calendar"></i> Editar reserva</h4>
                     	</div>
                     	<div class="widget-content">
+                    		<ul class="margin-0s nav nav-pills">
+                            <% if(@reserva.checkin) %>
+                              <li><%= link_to 'Editar check-in', edit_admin_reserva_checkin_path(@reserva, @reserva.checkin) %></li>
+                              <li><%= link_to 'Enviar check-in para cliente', new_admin_reserva_checkin_path(@reserva) %></li>
+                            <% elsif(@reserva.status=='confirmado') %>
+                              <li><%= link_to 'Criar check-in', new_admin_reserva_checkin_path(@reserva) %></li>
+                            <% end %>
+                          </ul>
 
                     		<%= render 'form' %>
 
