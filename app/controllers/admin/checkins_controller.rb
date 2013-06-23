@@ -5,6 +5,11 @@ class Admin::CheckinsController < Admin::BaseController
     respond_with @checkins
   end
 
+  def show
+    @checkin = Checkin.includes(:reserva,:outdoor).find(params[:id])
+    respond_with @checkin
+  end
+
   def new
     @checkin = Checkin.new({:reserva_id => params[:reserva_id]})
     2.times { @checkin.foto_checkins.build }
@@ -13,9 +18,8 @@ class Admin::CheckinsController < Admin::BaseController
 
   def create
     @checkin = Checkin.new(params[:checkin])
-    @reserva = Reserva.find(params[:reserva_id])
     flash[:notice] = 'Checkin foi criado com sucesso.' if @checkin.save
-    respond_with @reserva, :location => admin_reserva_path(@reserva)
+    respond_with @checkin.reserva, :location => admin_reserva_path(@checkin.reserva)
   end
 
   def edit

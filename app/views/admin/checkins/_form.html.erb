@@ -21,8 +21,7 @@
             <span class="btn btn-file"> 
               <span class="fileupload-new">Selecionar foto</span>
               <span class="fileupload-exists">Mudar</span>
-                <%= image.file_field :file, :class => 'foto_outdoor_input'  %> 
-                <%= image.hidden_field :outdoor, :value => outdoor.id %>                          
+                <%= image.file_field :file, :class => 'foto_outdoor_input'  %>                          
             </span> 
             <a data-dismiss="fileupload" class="btn btn-red fileupload-exists" href="#">Remover</a>
           </div>
@@ -31,6 +30,7 @@
       </div>
     </li>
     <%= f.hidden_field :reserva_id, :value => @checkin.reserva.id %>
+    <%= f.hidden_field :outdoor_id, :value => outdoor.id %> 
     <% end %> 
 </ul>
 <div class="form-actions">
