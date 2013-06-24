@@ -12,7 +12,7 @@ class ClienteMailer < ActionMailer::Base
 
     @inicio_periodo = Date.parse(@inicio).strftime("%Y-%m-%d")
     @termino_periodo = Date.parse(@fim).strftime("%Y-%m-%d")
-    @disponibilidade = "http://localhost:3000/disponibilidade/#{@inicio_periodo}/#{@termino_periodo}"
+    @disponibilidade = "http://177.71.250.61/disponibilidade/#{@inicio_periodo}/#{@termino_periodo}"
 
     if(options[:anexo])
        @anexo = options.fetch(:anexo, '')
