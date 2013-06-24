@@ -83,7 +83,7 @@
         </div>
       </div>
       <div class="tab-pane" id="disponibilidade">
-              <%= form_tag({:action => 'send_email_available_outdoors'}, :id => 'form-email',:multipart => true, :remote => true, :class => 'span12') do %>
+              <%= form_tag({:action => 'send_email_available_outdoors'}, :id => 'form-email',:multipart => true, :class => 'span12') do %>
                 <label for="accountNotes">E-mail dos clientes</label>
                 <input type="text" id="emails" name="emails" data="<%= @emails_clients %>"></input>
                 <p class="help-block"><strong>OBS:</strong> Separe os e-mails por vírgula</p>
@@ -92,7 +92,6 @@
                 <label for="accountNotes">Mensagem</label>
                 <textarea rows="4" class="input-block-level editor" id="some-textarea" name="mensagem" style="width: 90%; height: 200px;"></textarea>
 
-                <div class="span12">
                   <label for="accountNotes">Anexo</label>
                   <div class="fileupload fileupload-new" data-provides="fileupload">
                     <div class="input-append">
@@ -102,8 +101,7 @@
                         </span> <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remover</a>
                     </div>
                   </div>
-                </div>
-                <%= button_tag("", :class => "btn btn-blue fontello-icon-mail-2 Ttip", :title => "Enviar e-mail") %>
+                <%= button_tag("Enviar", :class => "btn btn-blue fontello-icon-mail-2 Ttip", :title => "Enviar e-mail") %>
 
                   <%= hidden_field_tag :outdoors %>
                   <%= hidden_field_tag :inicio_reserva %>

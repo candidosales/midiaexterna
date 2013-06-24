@@ -26,7 +26,7 @@ class Cliente
   end
 
   def self.all_emails
-    emails = Array.new
+    emails = []
     only(:email).all.each do |u|
      emails << u.email
     end

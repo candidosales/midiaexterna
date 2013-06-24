@@ -75,6 +75,14 @@ class Admin::ReservasController < Admin::BaseController
     @reserva = Reserva.new
     @emails_clients = Cliente.all_emails.join(",")
 
+    #Tentar selecionar todos os emails
+      a = []
+      (1..Cliente.all_emails.length).each{ |i| a << i}
+      @array_emails_selected = a.join(",")
+
+      p "Array olha ae: #{@array_emails_selected} --------------------------------------------"
+    #Tentar selecionar todos os emails
+
     if(params.has_key?(:inicio_periodo) && params.has_key?(:termino_periodo) )
       @reservas = Reserva.seek_reserves_period(:inicio_reserva => params[:inicio_periodo], :termino_reserva => params[:termino_periodo])
       @outdoors = Reserva.outdoors_on_period(:reservas => @reservas)
@@ -88,7 +96,8 @@ class Admin::ReservasController < Admin::BaseController
         result = ClienteMailer.available_outdoors(params).deliver        
       end
     end
-    flash[:notice] = 'E-mail enviado com sucesso. =]' 
+    flash[:notice] = 'E-mail da disponibilidade enviado com sucesso. =]' 
     redirect_to new_admin_reserva_path
   end
+
 end

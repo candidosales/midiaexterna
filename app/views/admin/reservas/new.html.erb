@@ -21,7 +21,7 @@
                         </fieldset>
                         <div class="form-actions">
                         <%= link_to '', admin_reservas_path, class: "btn fontello-icon-left-1 Ttip", title: "Voltar" %>
-                        <a href="<%= @reserva %>" class="btn btn-disponibilidade ">Veja a Disponibilidade</a>
+                        <a href="<%= @reserva %>" class="btn btn-disponibilidade hidden">Veja a Disponibilidade</a>
                          <%= button_tag("", :class => "btn btn-blue fontello-icon-search Ttip", :title => "Buscar disponibilidade") %>
                           
                        </div>
@@ -30,14 +30,20 @@
                           
 
                         </div>
-                        <div id="loading" style="display: none">
-                          <h2>Carregando</h2>
+                        <div class="bubblingG" >
+                          <span id="bubblingG_1" display="none">
+                          </span>
+                          <span id="bubblingG_2" display="none">
+                          </span>
+                          <span id="bubblingG_3" display="none">
+                          </span>
                         </div>
                       </div>
                     </div>
                   </div>
          
     
+
 
 
 

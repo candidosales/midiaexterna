@@ -60,5 +60,19 @@ class ClienteMailer < ActionMailer::Base
         :subject => "[Midia Externa] Reserva confirmada: #{@inicio} a #{@fim}"
       })
   end
-  
+
+  def checkin_cliente(checkin)
+    @checkin = checkin
+    @inicio = @checkin.reserva.inicio_reserva.strftime("%d/%m/%Y")
+    @fim = @checkin.reserva.termino_reserva.strftime("%d/%m/%Y")
+    @usuario = @checkin.reserva.usuario
+
+    @checkin_link = "http://177.71.250.61/checkin/#{@checkin.id}"
+
+    mail({
+        :to => @checkin.reserva.cliente.email,
+        :bcc => ['Candido <candido@vendepublicidade.com.br>, Midia Externa <midiaexterna@midiaexterna.com>, Financeiro Midia externa <financeiro@midiaexterna.com>'],
+        :subject => "[Midia Externa] Checkin dos Outdoors | #{@checkin.reserva.campanha} - #{@inicio} a #{@fim}"
+      })
+  end
 end

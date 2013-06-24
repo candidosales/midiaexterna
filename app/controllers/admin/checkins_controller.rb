@@ -44,4 +44,16 @@ class Admin::CheckinsController < Admin::BaseController
     @checkin.destroy
     respond_with @checkin, :location => admin_checkins_path
   end
+
+  
+  def send_checkin_cliente(options={})
+    @checkin = Checkin.find(params[:checkin])
+    begin
+      if(params.has_key?(:checkin))
+        result = ClienteMailer.checkin_cliente(@checkin).deliver        
+      end
+    end
+    flash[:notice] = "E-mail enviado para o #{@checkin.reserva.cliente.nome} com sucesso. =]" 
+    redirect_to admin_reserva_path(@checkin.reserva)
+  end
 end

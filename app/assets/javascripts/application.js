@@ -72,6 +72,7 @@
 //= require validate/jquery.validate.min 
 //= require xbreadcrumbs/xbreadcrumbs 
 //= require magicsuggest-1.2.7
+//= require dump
 
 //= require main 
 

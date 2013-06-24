@@ -252,7 +252,9 @@
 						<table bgcolor="#519548" >
 							<tr>
 								<td><a href="http://www.midiaexterna.com" target="_blank"><%= image_tag("logo.png") %></a></td>
-								<td align="right"><h6 class="collapse">Disponibilidade de Outdoors</h6></td>
+								<td align="right"><h6 class="collapse">Disponibilidade de Outdoors<br/>
+									<%= @inicio %> à <%= @fim %>
+								</h6></td>
 							</tr>
 						</table>
 					</div><!-- /content -->
@@ -273,13 +275,9 @@
 						<table>
 							<tr>
 								<td>
-									<p class="lead">Você já está sabendo da nova disponibilidade de nossos outdoors?</p>
-									<p>Pois confira abaixo a disponibilidade do período de <%= @inicio %> à <%= @fim %></p>
 									<%= @mensagem.html_safe %>
-									<br/>
-									<br/>
+									<p class="callout">Não consegue visualizar as fotos? Acesse este link:  <strong><a href="<%= @disponibilidade %>" target="_blank">Disponibilidade</a></strong></p>
 									<p>Aguardamos seu contato para fecharmos mais um negócio =] .</p>
-									<p class="callout">Se você não conseguir visualizar as imagens acesse este link:  <strong> <a href='<%= @disponibilidade %>'>Veja disponibilidade</a></strong>.</p>
 								</td>
 							</tr>
 						</table>
@@ -295,7 +293,7 @@
 		                               		<%= image_tag(foto.file.url(:medium)) %>
 		                               	<% } %>
 									</td>
-									<td>
+									<td class="small" width="40%" style="vertical-align: top; padding-right:20px;">
 										<h4><%= outdoor.numero %> <small><%= outdoor.sentido %></small></h4>
 										<p class=""><%= outdoor.endereco%> , <%= outdoor.bairro %>, <%= outdoor.cidade %>-<%= outdoor.estado%> <br/><%= outdoor.ponto_referencia%></p>
 									</td>

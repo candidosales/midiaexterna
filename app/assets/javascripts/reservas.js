@@ -15,7 +15,7 @@ $("#termino_periodo").datepicker({
 });
 
 var toggleLoading = function() {
-  $("#loading").toggle();
+  $(".bubblingG span").toggle();
 };
 
 
@@ -60,8 +60,9 @@ $('form[data-update-target]').bind('submit change', function() {
       $('#nova-reserva a:last').tab('show');
 
       //Autocomplete e-mails
-      $('#emails').magicSuggest({
-        width: 400
+      var ms = $('#emails').magicSuggest({
+        resultAsString: true,
+        width:  400
       });
 
       //Selecionar todos
@@ -69,7 +70,11 @@ $('form[data-update-target]').bind('submit change', function() {
       $(".checkbox").click(function(){
         somaCheckbox();
       });
-  
+
+    $('#select-all-emails').click(function() {
+        $('#countries option').prop('selected', 'selected');
+    });
+
     $('#select-all').checkAll('.checkbox');
 
 
@@ -111,6 +116,7 @@ $('form[data-update-target]').bind('submit change', function() {
   }else{
     console.log("Está faltando uma data");
   }
+  
 });
 
 

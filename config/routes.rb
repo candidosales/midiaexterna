@@ -33,6 +33,10 @@ App::Application.routes.draw do
 
     resources :clientes
 
+    controller :checkins do
+      get 'send_checkin_cliente', :action => :send_checkin_cliente
+    end
+
     controller :reservas do
        post 'send_email_available_outdoors', :action => :send_email_available_outdoors
        post 'search_outdoor_available', :action => :search_outdoor_available

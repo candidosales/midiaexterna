@@ -7,7 +7,7 @@
                           <ul class="margin-0s nav nav-pills">
                             <% if(@reserva.checkin) %>
                               <li><%= link_to 'Editar check-in', edit_admin_reserva_checkin_path(@reserva, @reserva.checkin) %></li>
-                              <li><%= link_to 'Enviar check-in para cliente', new_admin_reserva_checkin_path(@reserva) %></li>
+                              <li><%= link_to 'Enviar check-in para cliente', admin_send_checkin_cliente_path({:checkin => @reserva.checkin}) %></li>
                             <% elsif(@reserva.status=='confirmado') %>
                               <li><%= link_to 'Criar check-in', new_admin_reserva_checkin_path(@reserva) %></li>
                             <% end %>
