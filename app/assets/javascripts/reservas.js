@@ -167,8 +167,7 @@ function toggleChecked(status) {
     $(this).attr("checked",status);
   })
 }
-
  
- $('.nailthumb-container').nailthumb();
+$('.nailthumb-container').nailthumb();
  
 

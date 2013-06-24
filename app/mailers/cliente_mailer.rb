@@ -7,8 +7,14 @@ class ClienteMailer < ActionMailer::Base
     @fim = options.fetch(:termino_reserva, '')
     @mensagem = options.fetch(:mensagem, '')
     @outdoors = options.fetch(:outdoors, '').split(',')
-    @emails = JSON.parse options.fetch(:emails, '')
     @usuario = Usuario.find(options[:usuario_id])
+    @enviar_todos = options.fetch(:enviar_todos, '')
+
+    if(@enviar_todos == "true")
+      @emails = Cliente.all_emails
+    else
+      @emails = JSON.parse options.fetch(:emails, '')
+    end
 
     @inicio_periodo = Date.parse(@inicio).strftime("%Y-%m-%d")
     @termino_periodo = Date.parse(@fim).strftime("%Y-%m-%d")

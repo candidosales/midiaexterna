@@ -92,7 +92,7 @@ class Admin::ReservasController < Admin::BaseController
 
   def send_email_available_outdoors(options={})
     begin
-      if(params.has_key?(:emails))
+      if(params.has_key?(:emails) or params.has_key?(:enviar_todos))
         result = ClienteMailer.available_outdoors(params).deliver        
       end
     end
