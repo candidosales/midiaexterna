@@ -1,0 +1,64 @@
+
+  <div class="widget widget-simple">
+      <div class="widget-header">
+          <h4><i class="fontello-icon-check"></i> Disponibilidade
+            <br/>
+            <small>Período: <%= "#{@inicio_reserva} - #{@termino_reserva}"%></small>
+          </h4>
+      </div>
+      <div class="widget widget-box widget-table">
+        <div class="widget-header">
+          <h4><i class="aweso-icon-table"></i> Outdoors</h4>
+        </div>
+        <table class="table table-striped table-condensed table-content boo-table">
+          <thead>
+            <tr>
+              <th>Informações</th>
+              <th>Fotos</th>
+            </tr>
+          </thead>
+                <tbody>
+                  <% @outdoors.each do |o|
+                     outdoor = Outdoor.find(o) %>
+                  <tr>
+                    <td>
+                      <h4><%= outdoor.numero %> <small><%= outdoor.sentido %></small></h4>
+                      <p class=""><%= outdoor.endereco%> , <%= outdoor.bairro %>, <%= outdoor.cidade %>-<%= outdoor.estado%> <br/><%= outdoor.ponto_referencia%></p>
+                    </td>
+                    <td> 
+                    <ul id="gallery" class="thumbnails gallery-small" data-toggle="modal-gallery" data-target="#modal-gallery">            
+                       <% 
+                        outdoor.foto_outdoors[0..4].each { |foto| %>
+                         <li class="square-thumb thumbnail show-loading nailthumb-container">
+                                <a data-href="<%= foto.file.url(:original)%>" rel="gallery">
+                                  <%= image_tag(foto.file.url(:medium), :class => "nailthumb-image") %>
+                                </a>
+                          </li>
+                        <% } %>
+                        </ul>
+                    </td>
+                  </tr>
+                  <% end %>
+                </tbody>
+              </table>
+
+            </div><!-- /content -->
+
+            
+        
+      </div>
+    </div>
+
+    <div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">&times;</a>
+        <h3 class="modal-title"></h3>
+    </div>
+    <div class="modal-body"><div class="modal-image"></div></div>
+    <div class="modal-footer">
+        <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
+        <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+        <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
+        <a class="btn modal-download" target="_blank"><i class="icon-download"></i> Download</a>
+    </div>
+</div>

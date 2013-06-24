@@ -46,11 +46,16 @@
 //= require bootstrap-modal/bootstrap-modal
 //= require bootstrap-wizard/bootstrap-wizard
 //= require bootstrap-toggle-buttons/bootstrap-toggle-buttons
+//= require bootstrap-image-gallery/js/load-image.min
+//= require bootstrap-image-gallery/js/bootstrap-image-gallery
 
 //= require qtip2/jquery.qtip.min 
 //= require list/js/list.min 
 //= require list/plugins/list.paging.min 
 //= require fullcalendar/fullcalendar
+
+//= require pl-gallery/nailthumb/jquery.nailthumb.1.1.min
+//= require pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min
 
 //= require datatables/media/js/jquery.dataTables
 //= require datatables/plugin/jquery.dataTables.plugins 

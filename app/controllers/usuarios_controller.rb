@@ -1,5 +1,5 @@
 class UsuariosController < ApplicationController
-
+  
   def index
     @usuarios = Usuario.all
     respond_with @usuarios

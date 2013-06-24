@@ -4,14 +4,19 @@ App::Application.routes.draw do
 
   devise_for :usuarios, :controllers => { :sessions => "sessions" }
   resources :usuarios
-  
+
+  match 'disponibilidade/*inicio_periodo/*termino_periodo' => 'public#available_outdoors' , :as => :disponibilidade
+  match 'checkin/*id' => 'public#checkin', :as => :checkin
 
   namespace :admin do
-    root to: "clientes#index"
+
+    root :to => "home#index"
 
     resources :reservas do
       resources :checkins do
-        resources :foto_checkins
+        resources :outdoor_checkins do
+          resources :foto_checkins
+        end
       end
     end
 

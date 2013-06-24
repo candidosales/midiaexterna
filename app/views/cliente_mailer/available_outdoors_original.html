@@ -279,7 +279,7 @@
 									<br/>
 									<br/>
 									<p>Aguardamos seu contato para fecharmos mais um negócio =] .</p>
-									<p class="callout">Se você não conseguir visualizar as imagens e estiver usando o <strong>GMail</strong> habilite no e-mail para "Sempre exibir imagens de midiaexterna@midiaexterna.com".</p>
+									<p class="callout">Se você não conseguir visualizar as imagens acesse este link:  <strong> <a href='<%= @disponibilidade %>'>Veja disponibilidade</a></strong>.</p>
 								</td>
 							</tr>
 						</table>
@@ -289,15 +289,11 @@
 						<div class="content">
 							<table class="outdoor">
 								<tr>
-									<td class="small" width="40%" style="vertical-align: top; padding-right:10px;">
-										
+									<td class="small" width="40%" style="vertical-align: top; padding-right:10px;">				
 		                               <% 
 		                                outdoor.foto_outdoors[0..0].each { |foto| %>
 		                               		<%= image_tag(foto.file.url(:medium)) %>
 		                               	<% } %>
-
-		      
-
 									</td>
 									<td>
 										<h4><%= outdoor.numero %> <small><%= outdoor.sentido %></small></h4>

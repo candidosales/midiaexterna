@@ -1,4 +1,7 @@
 <% if usuario_signed_in? %>
+<div id="main-sidebar" class="sidebar sidebar-inverse">
+  <%= render 'shared/profile' %>  
+          <!-- // sidebar item - profile -->
         <ul id="mainSideMenu" class="nav nav-list nav-side">
           <li class="accordion-group">
             <div class="accordion-heading"> <a href="#accDash" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle">
@@ -50,5 +53,6 @@
             </ul>
           </li>
         </ul>
+</div>
 <% end %>
         <!-- // sidebar menu -->

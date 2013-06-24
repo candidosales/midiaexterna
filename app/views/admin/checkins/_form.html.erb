@@ -37,7 +37,8 @@
     <%= f.hidden_field :reserva_id, :value => @checkin.reserva.id %>
 </ul>
 <div class="form-actions">
-   <%= link_to '', admin_reserva_path(@checkin.reserva), class: "btn fontello-icon-left-1" %> <%= f.submit class: "btn btn-blue" %>
+   <%= link_to '', admin_reserva_path(@checkin.reserva), class: "btn fontello-icon-left-1" %>
+    <%= f.submit class: "btn btn-blue" %>
 </div>
 <% end %>
 </div>

@@ -21,7 +21,9 @@
                         </fieldset>
                         <div class="form-actions">
                         <%= link_to '', admin_reservas_path, class: "btn fontello-icon-left-1 Ttip", title: "Voltar" %>
+                        <a href="<%= @reserva %>" class="btn btn-disponibilidade ">Veja a Disponibilidade</a>
                          <%= button_tag("", :class => "btn btn-blue fontello-icon-search Ttip", :title => "Buscar disponibilidade") %>
+                          
                        </div>
                         <% end %>
                         <div id="outdoors_available">                          

@@ -43,7 +43,7 @@
                            <td><strong><%= link_to outdoor.numero, [:admin, outdoor], :class=>"text-left" %></strong>    <%= link_to '', edit_admin_outdoor_path(outdoor), class: "btn btn-blue btn-mini fontello-icon-edit" %>
                            <%= link_to '', [:admin, outdoor], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
                            <td class="thumb-mini"><div class="media-thumb"> 
-                            <a class="img-shadow" href="javascript:void(0);">
+                            <a class="img-shadow">
                                 <% outdoor.foto_outdoors[0..0].each { |foto|%>
                                 <%= image_tag foto.file.url(:small) %>
                                 <% } %>

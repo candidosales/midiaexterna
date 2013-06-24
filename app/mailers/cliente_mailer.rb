@@ -10,6 +10,10 @@ class ClienteMailer < ActionMailer::Base
     @emails = JSON.parse options.fetch(:emails, '')
     @usuario = Usuario.find(options[:usuario_id])
 
+    @inicio_periodo = Date.parse(@inicio).strftime("%Y-%m-%d")
+    @termino_periodo = Date.parse(@fim).strftime("%Y-%m-%d")
+    @disponibilidade = "http://localhost:3000/disponibilidade/#{@inicio_periodo}/#{@termino_periodo}"
+
     if(options[:anexo])
        @anexo = options.fetch(:anexo, '')
       attachments[@anexo.original_filename] = File.read(@anexo.tempfile.path) 

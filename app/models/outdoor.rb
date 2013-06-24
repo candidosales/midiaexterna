@@ -17,10 +17,10 @@ class Outdoor
   embeds_many :foto_outdoors, :cascade_callbacks => true
   accepts_nested_attributes_for :foto_outdoors, :allow_destroy => true
 
+  has_many :outdoor_checkins
+
   has_and_belongs_to_many :reservas
   belongs_to :parceiro, class_name: "Parceiro"
-
-  has_many :checkin_outdoors
 
   default_scope asc :numero
 

@@ -38,6 +38,10 @@ $('form[data-update-target]').bind('submit change', function() {
       $('#reserva_termino_reserva, #termino_reserva').val($('#termino_periodo').val());
       $('#usuario_id').val($('#reserva_usuario_id').val());
 
+      var inicio = $('#inicio_periodo').val().replace(/\//g,'-');
+      var termino = $('#termino_periodo').val().replace(/\//g,'-');
+      $('.btn-disponibilidade').removeClass('hidden').prop('href', "/disponibilidade/"+inicio+"/"+termino+"");
+
       emailAvailableOutdoors();
 
       $("#total_veiculacao, #total_impressao").change(function() {
@@ -158,5 +162,7 @@ function toggleChecked(status) {
   })
 }
 
-
+ 
+ $('.nailthumb-container').nailthumb();
+ 
 
