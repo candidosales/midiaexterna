@@ -13,19 +13,15 @@
                                 <table class="table boo-table table-striped table-content table-hover">
                                     <thead>
                                       <tr>
-                                        <th class="check-col" scope="col">ID</th>
-                                        <th class="sorting" scope="col">Reserva</th>
+                                        <th class="check-col" scope="col">Cliente - Reserva</th>
                                         <th class="sorting" scope="col">Outdoors</th>
                                     </tr>
                                 </thead>
 
                                 <% @checkins.each do |checkin| %>
                                 <tr>                  
-                                    <td><%= link_to checkin.id, [:admin, checkin], :class => 'text-left' %><%= link_to '', edit_admin_checkin_path(checkin), class: "btn btn-blue btn-mini fontello-icon-edit" %>
+                                    <td width="40%"><%= link_to "#{checkin.reserva.cliente.nome} - #{checkin.reserva.campanha}", [:admin, checkin], :class => 'text-left' %><%= link_to '', edit_admin_checkin_path(checkin), class: "btn btn-blue btn-mini fontello-icon-edit" %>
                                     <%= link_to '', [:admin, checkin], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
-                                    <td>
-                                        <%= checkin.reserva.id %> - <%= checkin.reserva.campanha %>
-                                    </td>
                                     <td></td>
                                 </tr>
                                 <% end %>

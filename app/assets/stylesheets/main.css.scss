@@ -1,3 +1,42 @@
+/*-------------------------- Boo --------------------------*/
+html, body{
+  background: #fafafa;
+}
+#header .header-drawer{
+  background: #e7e7e7;
+  box-shadow: none;
+  border: #e7e7e7;
+  margin-top: 40px;
+}
+.navbar-inverse .navbar-inner{
+  background: #18925a;
+  border: #18925a; 
+}
+a , .navbar-inverse .brand, .navbar-inverse .title, .navbar-inverse .nav > li > a{
+  text-shadow:none;
+}
+
+.navbar-inverse .brand, .navbar-inverse .title, .navbar-inverse .nav > li > a{
+  color: #fff;
+}
+
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus{
+  background-color:#197e4f;
+}
+.search-global .search, .search-global input[type="search"]{
+  background-color:#197e4f;
+}
+.sidebar{
+  top: 74px;
+}
+.sidebar-inverse, .sidebar-item .profile{
+  background: #363431; 
+}
+.nav-side .accordion-group > .active{
+  background: #fafafa;
+}
+/*-------------------------- Boo --------------------------*/
+
 .left{float: left;}
 .right{float: right;  }
 

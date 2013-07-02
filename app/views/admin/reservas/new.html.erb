@@ -10,11 +10,11 @@
                           <fieldset>
                            <legend>Qual o período da reserva?</legend>
                            <div class="input-append">
-                                <input data-date-format="dd/mm/yy" type="text" id="inicio_periodo" name="inicio_periodo" class="span9" placeholder="Início"/>
+                                <input data-date-format="dd/mm/yy" type="text" id="inicio_periodo" name="inicio_periodo" class="span9" placeholder="Início" required/>
                                 <span class="add-on"><i class="fontello-icon-calendar"></i></span>
                              </div>
                           <div class="input-append">
-                                <input data-date-format="dd/mm/yy" type="text" id="termino_periodo" name="termino_periodo" class="span9" placeholder="Fim"/>
+                                <input data-date-format="dd/mm/yy" type="text" id="termino_periodo" name="termino_periodo" class="span9" placeholder="Fim" required/>
                                 <span class="add-on"><i class="fontello-icon-calendar"></i></span>
                              </div>
 
@@ -30,13 +30,8 @@
                           
 
                         </div>
-                        <div class="bubblingG" >
-                          <span id="bubblingG_1" display="none">
-                          </span>
-                          <span id="bubblingG_2" display="none">
-                          </span>
-                          <span id="bubblingG_3" display="none">
-                          </span>
+                        <div class="loading" >
+                          <h3>Carregando...</h3>
                         </div>
                       </div>
                     </div>

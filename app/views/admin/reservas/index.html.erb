@@ -30,7 +30,10 @@
     <tr>
       <td><%= link_to reserva.campanha, [:admin, reserva], :class => "text-left" %> <%= status_reserva(reserva.status) %> <%= link_to '', edit_admin_reserva_path(reserva), class: "btn btn-blue btn-mini fontello-icon-edit" %>
         <%= link_to '', [:admin, reserva], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
-      <td><%= "#{reserva.cliente.nome} / #{reserva.cliente.empresa}" %></td>
+      <td>
+      <%= "#{reserva.cliente.nome} / #{reserva.cliente.empresa}" unless reserva.cliente.blank? %>
+    
+      </td>
       <td><%= reserva.inicio_reserva.strftime("%d/%m/%Y") %></td>
       <td><%= reserva.termino_reserva.strftime("%d/%m/%Y") %></td>
       <td><%= "#{reserva.usuario.nome} | #{reserva.created_at.strftime('%d/%m/%Y - %H:%M:%S')}" %></td>

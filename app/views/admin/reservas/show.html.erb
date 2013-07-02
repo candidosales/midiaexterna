@@ -5,6 +5,9 @@
                       </div>
                       <div class="btn-toolbar">
                           <ul class="margin-0s nav nav-pills">
+                            <li>
+                              <%= link_to 'Editar', edit_admin_reserva_path(@reserva) %>
+                            </li>
                             <% if(@reserva.checkin) %>
                               <li><%= link_to 'Editar check-in', edit_admin_reserva_checkin_path(@reserva, @reserva.checkin) %></li>
                               <li><%= link_to 'Enviar check-in para cliente', admin_send_checkin_cliente_path({:checkin => @reserva.checkin}) %></li>

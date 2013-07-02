@@ -57,8 +57,8 @@
           </div>
           <div class="controls controls-row">
             <div class="span12">
-                <%= f.collection_select :cliente_id, Cliente.all, :id, :nome,  {:prompt => 'Selecione o cliente'},{:class => 'selecttwo-s span2'} %>
-                <%= f.text_field :campanha, :placeholder => "Nome da campanha", :class => 'span3'%>
+                <%= f.collection_select :cliente_id, Cliente.all, :id, :nome,  {:prompt => 'Selecione o cliente'},{:class => 'selecttwo-s span2', :required => 'true'} %>
+                <%= f.text_field :campanha, :placeholder => "Nome da campanha", :class => 'span3', :required => 'true' %>
            
                 <input id="total_veiculacao" type="text" placeholder="Veiculação" class="span2" name="total_veiculacao"  >
                   <div class="operator">+</div>
@@ -82,24 +82,25 @@
           </div>
         </div>
       </div>
-      <div class="tab-pane" id="disponibilidade">
+      <div class="tab-pane row" id="disponibilidade">
               <%= form_tag({:action => 'send_email_available_outdoors'}, :id => 'form-email',:multipart => true, :class => 'span12') do %>
-              <div class="span12">
-                <div class="span6">
-                  <label for="accountNotes">E-mail dos clientes</label>
-                  <input type="text" id="emails" name="emails" data="<%= @emails_clients %>">
-                  <p class="help-block"><strong>OBS:</strong> Separe os e-mails por vírgula</p>
+                <div class="span12">
+                  <div class="span6">
+                    <label for="accountNotes">E-mail dos clientes</label>
+                    <input type="text" id="emails" name="emails" data="<%= @emails_clients %>">
+                    <p class="help-block"><strong>OBS:</strong> Separe os e-mails por vírgula</p>
+                  </div>
+                  <div class="span6">
+                    <label> <input class="checkbox" type="checkbox" value="true" name="enviar_todos">  </input>Enviar para todos os clientes cadastrados
+                     
+                     </label>
+                  </div>
                 </div>
-                <div class="span6">
-                  <label> <input class="checkbox" type="checkbox" value="true" name="enviar_todos">  </input>Enviar para todos os clientes
-                   
-                   </label>
-                </div>
-              </div>
-      
-                <label for="accountNotes">Mensagem</label>
-                <textarea rows="4" class="input-block-level editor" id="some-textarea" name="mensagem" style="width: 90%; height: 200px;"></textarea>
-
+                <div class="span12">
+                  <label for="accountNotes">Mensagem</label>
+                  <textarea rows="4" class="input-block-level editor" id="some-textarea" name="mensagem" style="width: 60%; height: 200px;"></textarea>
+                
+              
                   <label for="accountNotes">Anexo</label>
                   <div class="fileupload fileupload-new" data-provides="fileupload">
                     <div class="input-append">
@@ -110,7 +111,7 @@
                     </div>
                   </div>
                 <%= button_tag("Enviar", :class => "btn btn-blue fontello-icon-mail-2 Ttip", :title => "Enviar e-mail") %>
-
+                  </div>
                   <%= hidden_field_tag :outdoors %>
                   <%= hidden_field_tag :inicio_reserva %>
                   <%= hidden_field_tag :termino_reserva %>

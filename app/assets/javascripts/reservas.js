@@ -15,7 +15,7 @@ $("#termino_periodo").datepicker({
 });
 
 var toggleLoading = function() {
-  $(".bubblingG span").toggle();
+  $(".loading").toggle();
 };
 
 
