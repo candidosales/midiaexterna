@@ -1,6 +1,5 @@
 class Reserva
   include Mongoid::Document
-  include Mongoid::MultiParameterAttributes 
   include Mongoid::Timestamps
 
   field :status, type: String, default: "pendente"

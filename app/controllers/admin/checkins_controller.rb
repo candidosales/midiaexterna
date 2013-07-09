@@ -21,14 +21,14 @@ class Admin::CheckinsController < Admin::BaseController
   end
 
   def create
-    @checkin = Checkin.new(params[:checkin])
+    @checkin = Checkin.new(checkin_params)
     flash[:notice] = 'Checkin foi criado com sucesso.' if @checkin.save
     respond_with @checkin.reserva, :location => admin_reserva_path(@checkin.reserva)
   end
 
   def update
     @checkin = Checkin.find(params[:id])
-    flash[:notice] = 'Checkin foi atualizado com sucesso.' if @checkin.update_attributes(params[:checkin])
+    flash[:notice] = 'Checkin foi atualizado com sucesso.' if @checkin.update_attributes(checkin_params)
     respond_with @checkin, :location => edit_admin_reserva_checkin_path(@checkin.reserva, @checkin)
   end
 
@@ -46,7 +46,7 @@ class Admin::CheckinsController < Admin::BaseController
   end
 
   
-  def send_checkin_cliente(options={})
+  def send_checkin_cliente
     @checkin = Checkin.find(params[:checkin])
     begin
       if(params.has_key?(:checkin))
@@ -56,4 +56,9 @@ class Admin::CheckinsController < Admin::BaseController
     flash[:notice] = "E-mail enviado para o #{@checkin.reserva.cliente.nome} com sucesso. =]" 
     redirect_to admin_reserva_path(@checkin.reserva)
   end
+
+  private
+    def checkin_params
+      params.require(:checkin).permit!
+    end
 end

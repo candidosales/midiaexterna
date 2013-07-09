@@ -18,13 +18,16 @@
                                     </tr>
                                 </thead>
 
-                                <% @checkins.each do |checkin| %>
+                                <% @checkins.each do |checkin| 
+                                    unless checkin.reserva.blank? %>
                                 <tr>                  
                                     <td width="40%"><%= link_to "#{checkin.reserva.cliente.nome} - #{checkin.reserva.campanha}", [:admin, checkin], :class => 'text-left' %><%= link_to '', edit_admin_checkin_path(checkin), class: "btn btn-blue btn-mini fontello-icon-edit" %>
                                     <%= link_to '', [:admin, checkin], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
                                     <td></td>
                                 </tr>
-                                <% end %>
+                                <% 
+                                    end
+                                end %>
                             </table>
                              <div class="action-table">
                                 <div class="btn-toolbar pull-left" style="display:none">

@@ -28,7 +28,7 @@ class Admin::ParceirosController < Admin::BaseController
   # POST /parceiros
   # POST /parceiros.json
   def create
-    @parceiro = Parceiro.new(params[:parceiro])
+    @parceiro = Parceiro.new(parceiro_params)
     flash[:notice] = 'Parceiro foi criado com sucesso.' if @parceiro.save
     respond_with @parceiro, :location => admin_parceiros_path
   end
@@ -37,7 +37,7 @@ class Admin::ParceirosController < Admin::BaseController
   # PUT /parceiros/1.json
   def update
     @parceiro = Parceiro.find(params[:id])
-    flash[:notice] = 'Parceiro foi atualizado com sucesso.' if @parceiro.update_attributes(params[:parceiro])
+    flash[:notice] = 'Parceiro foi atualizado com sucesso.' if @parceiro.update_attributes(parceiro_params)
     respond_with @parceiro, :location => edit_admin_parceiro_path(@parceiro)
   end
 
@@ -48,4 +48,9 @@ class Admin::ParceirosController < Admin::BaseController
     @parceiro.destroy
     respond_with @parceiro, :location => admin_parceiros_path
   end
+
+  private
+    def parceiro_params
+      params.require(:parceiro).permit!
+    end
 end

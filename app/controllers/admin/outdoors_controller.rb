@@ -30,7 +30,7 @@ class Admin::OutdoorsController < Admin::BaseController
   # POST /outdoors
   # POST /outdoors.json
   def create
-    @outdoor = Outdoor.new(params[:outdoor])
+    @outdoor = Outdoor.new(outdoor_params)
     flash[:notice] = 'Outdoor foi criado com sucesso.' if @outdoor.save
     respond_with @outdoor, :location => admin_outdoors_path
   end
@@ -39,7 +39,7 @@ class Admin::OutdoorsController < Admin::BaseController
   # PUT /outdoors/1.json
   def update
     @outdoor = Outdoor.find(params[:id])
-    flash[:notice] = 'Outdoor foi atualizado com sucesso.' if @outdoor.update_attributes(params[:outdoor])
+    flash[:notice] = 'Outdoor foi atualizado com sucesso.' if @outdoor.update_attributes(outdoor_params)
     respond_with @outdoor, :location => edit_admin_outdoor_path(@outdoor)
   end
 
@@ -58,4 +58,9 @@ class Admin::OutdoorsController < Admin::BaseController
     respond_with @outdoor, :location => admin_outdoors_path
   end
   
+  private
+    def outdoor_params
+      params.require(:outdoor).permit!
+    end
 end
+

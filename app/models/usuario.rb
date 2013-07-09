@@ -38,7 +38,7 @@ class Usuario
 
   validates_presence_of :nome
   validates_uniqueness_of :nome, :email, :case_sensitive => false
-  attr_accessible :nome, :email, :password, :password_confirmation, :remember_me, :avatar
+  #attr_accessible :nome, :email, :password, :password_confirmation, :remember_me, :avatar
 
  
 

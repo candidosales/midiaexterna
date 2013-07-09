@@ -154,6 +154,10 @@ input.parsley-error, textarea.parsley-error {
   -webkit-background-clip: padding-box;
 }
 
+.thumbnails > li a{
+  cursor: pointer;
+}
+
 /* Button action table
 *****************************************/
 td a.fontello-icon-edit, td a.fontello-icon-trash{display: none}

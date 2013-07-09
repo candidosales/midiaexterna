@@ -28,7 +28,7 @@ class Admin::ReservasController < Admin::BaseController
   # POST /reservas
   # POST /reservas.json
   def create
-    @reserva = Reserva.new(params[:reserva])
+    @reserva = Reserva.new(reserva_params)
     if @reserva.save
       if(params[:enviar_email])
         #Enviar e-mail sobre a nova reserva 
@@ -44,7 +44,7 @@ class Admin::ReservasController < Admin::BaseController
   # PUT /reservas/1.json
   def update
     @reserva = Reserva.find(params[:id])
-    flash[:notice] = 'Reserva foi atualizado com sucesso.' if @reserva.update_attributes(params[:reserva])
+    flash[:notice] = 'Reserva foi atualizado com sucesso.' if @reserva.update_attributes(reserva_params)
     
     #Após confirmado uma vez, ele envia o e-mail
     if @reserva.status == 'confirmado' and @reserva.confirmado == false
@@ -99,5 +99,10 @@ class Admin::ReservasController < Admin::BaseController
     flash[:notice] = 'E-mail da disponibilidade enviado com sucesso. =]' 
     redirect_to new_admin_reserva_path
   end
+
+  private
+    def reserva_params
+      params.require(:reserva).permit!
+    end
 
 end

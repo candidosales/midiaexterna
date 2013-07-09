@@ -1,8 +1,12 @@
-      
+
                     <div class="widget widget-simple">
                       <div class="widget-header">
                         <h4><i class="fontello-icon-check"></i>Checkin</h4>
                       </div>
+                      <ul class="margin-0s nav nav-pills">
+                        <li><%= link_to 'Editar check-in', edit_admin_reserva_checkin_path(@checkin.reserva, @checkin) %></li>
+                         <li><%= link_to 'Enviar check-in para cliente', admin_send_checkin_cliente_path({:checkin => @checkin}) %></li>
+                      </ul>
                       <div class="widget-content">
                         <ul class="form-list label-left list-bordered dotted">
 

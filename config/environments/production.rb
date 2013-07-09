@@ -20,6 +20,10 @@ App::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  #Rails 4
+  config.eager_load = true
+  config.assets.js_compressor = :uglifier
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

@@ -48,7 +48,7 @@ class Admin::ClientesController < Admin::BaseController
   # POST /clientes
   # POST /clientes.json
   def create
-    @cliente = Cliente.new(params[:cliente])
+    @cliente = Cliente.new(cliente_params)
     flash[:notice] = 'Cliente foi criado com sucesso.' if @cliente.save
     respond_with @cliente, :location => admin_clientes_path
   end
@@ -57,7 +57,7 @@ class Admin::ClientesController < Admin::BaseController
   # PUT /clientes/1.json
   def update
     @cliente = Cliente.find(params[:id])
-    flash[:notice] = 'Cliente foi atualizado com sucesso.' if @cliente.update_attributes(params[:cliente])
+    flash[:notice] = 'Cliente foi atualizado com sucesso.' if @cliente.update_attributes(cliente_params)
     respond_with @cliente, :location => edit_admin_cliente_path(@cliente)
   end
 
@@ -68,4 +68,10 @@ class Admin::ClientesController < Admin::BaseController
     @cliente.destroy
     respond_with @cliente, :location => admin_clientes_path
   end
+
+  private
+    def cliente_params
+      params.require(:cliente).permit!
+    end
+
 end

@@ -1,0 +1,94 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+@page {
+    font-family: Arial;
+    margin: 1cm 1cm;
+
+    counter-increment: page;
+
+    @top-center {
+        content: "Headline, yo!"
+    }
+ 
+    @bottom-right {
+        counter-increment: page;
+        content: "Page " counter(page);
+    }
+}
+
+
+
+body{
+    font-family: Arial;
+}
+h1, h2, h3, h4{
+    margin: 10px;
+}
+h1{
+    font-size: 2em;
+}
+h2{
+    font-size: 1.8em;
+}
+h3{
+    font-size: 1.6em;
+}
+h4{
+    font-size: 1.4em;
+}
+
+button,.header-drawer, .modal{
+    display: none;
+}
+.navbar-inverse .navbar-inner {
+background: #18925a;
+border: #18925a;
+padding: 10px 20px;
+}
+
+.form-list{
+    list-style: none;
+}
+.control-group{
+    margin-bottom: 20px;
+    label{
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}
+h2 {
+    page-break-after: avoid;
+}
+
+.widget-header{
+    border-bottom: 1px solid #ccc;
+}
+
+table{
+  width:100%;
+  border-bottom: 1px solid #ccc;
+  thead{
+    background: #ccc;
+    th{
+        padding: 20px;
+    }
+  }
+  tr:nth-child(even) {background: #eee}
+  tr{
+        border-bottom: 1px solid #ccc;
+    th{
+        border-bottom: 1px solid #ccc;
+    }
+  }
+}
+.thumbnails{
+    .thumbnail{
+        img{
+            width: 100% !important;
+            height: 100% !important;
+            margin-left: 10px;
+        }
+        float: left;
+    }
+}

@@ -95,6 +95,28 @@ namespace :ubuntu do
 	task :update_gem, :roles => :app do
 		run "sudo gem update --system"
 	end
+
+	#wbotelhos.com/2012/10/23/ruby-unicorn-e-nginx-na-amazon-ec2
+	desc "Configure simbolin links ruby" 
+	task :simbol_link, :roles => :app do
+		#run "sudo ln -s /opt/local/ruby/current/bin/erb    /opt/local/bin/erb"
+		#run "sudo ln -s /opt/local/ruby/current/bin/gem    /opt/local/bin/gem"
+		#run "sudo ln -s /opt/local/ruby/current/bin/irb    /opt/local/bin/irb"
+		#run "sudo ln -s /opt/local/ruby/current/bin/rake   /opt/local/bin/rake"
+		#run "sudo ln -s /opt/local/ruby/current/bin/rdoc   /opt/local/bin/rdoc"
+		#run "sudo ln -s /opt/local/ruby/current/bin/ri     /opt/local/bin/ri"
+		#run "sudo ln -s /opt/local/ruby/current/bin/ruby   /opt/local/bin/ruby"
+		#run "sudo ln -s /opt/local/ruby/current/bin/testrb /opt/local/bin/testrb"
+
+		#run "sudo ln -s /opt/local/ruby/current/sbin/erb     /opt/local/sbin/erb"
+		#run "sudo ln -s /opt/local/ruby/current/sbin/gem     /opt/local/sbin/gem"
+		#run "sudo ln -s /opt/local/ruby/current/sbin/irb     /opt/local/sbin/irb"
+		#run "sudo ln -s /opt/local/ruby/current/sbin/rake    /opt/local/sbin/rake"
+		#run "sudo ln -s /opt/local/ruby/current/sbin/rdoc    /opt/local/sbin/rdoc"
+		#run "sudo ln -s /opt/local/ruby/current/sbin/ri      /opt/local/sbin/ri"
+		#run "sudo ln -s /opt/local/ruby/current/sbin/ruby    /opt/local/sbin/ruby"
+		#run "sudo ln -s /opt/local/ruby/current/sbin/testrb  /opt/local/sbin/testrb"
+	end
 end
 
 namespace :nginx do
