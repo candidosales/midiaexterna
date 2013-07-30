@@ -1,7 +1,7 @@
 class Admin::CheckinsController < Admin::BaseController
 
   def index
-    @checkins = Checkin.all
+    @checkins = Checkin.desc(:created_at)
     respond_with @checkins
   end
 

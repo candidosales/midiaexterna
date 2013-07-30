@@ -564,10 +564,6 @@ $('.clear-textarea').clearicon({
         var parent = link.parent().parent().parent();
         parent.children(".accordion-heading").addClass('active');
 
-        $('table tr').hover(function() {
-            $(this).find('.fontello-icon-edit, .fontello-icon-trash').toggle('fade');
-        });
-
         $('input[type=checkbox].checkbox').change(function(){
           $(this).closest('tr').removeClass('success');
           if($(this).prop('checked')){

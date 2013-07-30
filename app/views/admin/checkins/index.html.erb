@@ -21,9 +21,12 @@
                                 <% @checkins.each do |checkin| 
                                     unless checkin.reserva.blank? %>
                                 <tr>                  
-                                    <td width="40%"><%= link_to "#{checkin.reserva.cliente.nome} - #{checkin.reserva.campanha}", [:admin, checkin], :class => 'text-left' %><%= link_to '', edit_admin_checkin_path(checkin), class: "btn btn-blue btn-mini fontello-icon-edit" %>
-                                    <%= link_to '', [:admin, checkin], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
-                                    <td></td>
+                                    <td width="40%"><%= link_to "#{checkin.reserva.cliente.nome} - #{checkin.reserva.campanha}", [:admin, checkin], :class => 'text-left' %>
+                                    <span class="action">
+                                    <%= link_to '', edit_admin_checkin_path(checkin), class: "fontello-icon-edit", title: "Editar" %>
+                                    <%= link_to '', [:admin, checkin], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "fontello-icon-trash", title: "Excluir" %>
+                                    </span>
+                                </td>
                                 </tr>
                                 <% 
                                     end

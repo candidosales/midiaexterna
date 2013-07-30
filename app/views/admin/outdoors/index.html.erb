@@ -40,8 +40,12 @@
                     <tr>
                            
                            <td><%= check_box_tag outdoor.id,outdoor.id, false, :class => 'checkbox' %></td>
-                           <td><strong><%= link_to outdoor.numero, [:admin, outdoor], :class=>"text-left" %></strong>    <%= link_to '', edit_admin_outdoor_path(outdoor), class: "btn btn-blue btn-mini fontello-icon-edit" %>
-                           <%= link_to '', [:admin, outdoor], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
+                           <td><strong><%= link_to outdoor.numero, [:admin, outdoor], :class=>"text-left" %></strong>
+                            <span class="action">
+                               <%= link_to '', edit_admin_outdoor_path(outdoor), class: "fontello-icon-edit", title: "Editar" %>
+                           <%= link_to '', [:admin, outdoor], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "fontello-icon-trash", title: "Excluir" %>
+                            </span>
+                       </td>
                            <td class="thumb-mini"><div class="media-thumb"> 
                             <a class="img-shadow">
                                 <% outdoor.foto_outdoors[0..0].each { |foto|%>

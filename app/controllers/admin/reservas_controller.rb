@@ -2,7 +2,7 @@ class Admin::ReservasController < Admin::BaseController
   # GET /reservas
   # GET /reservas.json
   def index
-    @reservas = Reserva.all
+    @reservas = Reserva.desc(:created_at)
     respond_with @reservas
   end
 

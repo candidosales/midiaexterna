@@ -28,8 +28,12 @@
 
     <% @reservas.each do |reserva| %>
     <tr>
-      <td><%= link_to reserva.campanha, [:admin, reserva], :class => "text-left" %> <%= status_reserva(reserva.status) %> <%= link_to '', edit_admin_reserva_path(reserva), class: "btn btn-blue btn-mini fontello-icon-edit" %>
-        <%= link_to '', [:admin, reserva], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
+      <td><%= link_to reserva.campanha, [:admin, reserva], :class => "text-left" %> <%= status_reserva(reserva.status) %> 
+      <span class="action">
+        <%= link_to '', edit_admin_reserva_path(reserva), class: "fontello-icon-edit", title: "Editar" %>
+        <%= link_to '', [:admin, reserva], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "fontello-icon-trash", title: "Excluir" %>
+      </span>
+      </td>
       <td>
       <%= "#{reserva.cliente.nome} / #{reserva.cliente.empresa}" unless reserva.cliente.blank? %>
     
