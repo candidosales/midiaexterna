@@ -29,8 +29,12 @@
                                 <% @clientes.each do |cliente| %>
                                 <tr>
                                     <td><%= check_box_tag cliente.id, cliente.id, false, :class => 'checkbox' %></td>
-                                    <td><%= link_to cliente.first_name, [:admin, cliente], :class => 'text-left' %><%= link_to '', edit_admin_cliente_path(cliente), class: "btn btn-blue btn-mini fontello-icon-edit" %>
-                                    <%= link_to '', [:admin, cliente], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
+                                    <td><%= link_to cliente.first_name, [:admin, cliente], :class => 'text-left' %>
+                                    <span class="action">
+                                    <%= link_to '', edit_admin_cliente_path(cliente), class: "fontello-icon-edit", title: "Editar" %>
+                                    <%= link_to '', [:admin, cliente], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "fontello-icon-trash", title: "Excluir" %>
+                                    </span>
+                                    </td>
                                     <td><%= cliente.email %></td>
                                     <td><%= cliente.tel %></td>
                                     <td><%= cliente.empresa %></td>

@@ -34,8 +34,8 @@
             <strong><%= link_to usuario.nome, [usuario] %></strong></td>
             <td><%= usuario.email %></td>
             <td>
-                <%= link_to '', edit_usuario_registration_path, class: "btn btn-blue btn-mini fontello-icon-edit" %>
-                <%= link_to '', [usuario], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
+                <%= link_to '', edit_usuario_registration_path, class: "fontello-icon-edit" %>
+                <%= link_to '', [usuario], method: :delete, data: { confirm: 'Are you sure?' }, class: "fontello-icon-trash" %></td>
             </tr>
             <% end %>
         </table>

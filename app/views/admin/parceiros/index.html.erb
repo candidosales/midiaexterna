@@ -30,8 +30,12 @@
                 <a class="img-shadow" href="javascript:void(0);">
                     <%= image_tag(parceiro.logo.url(:small),:class => "thumb") %>
                 </a>
-            </div> <%= link_to parceiro.nome, [:admin, parceiro], :class => 'text-left' %><%= link_to '', edit_admin_parceiro_path(parceiro), class: "btn btn-blue btn-mini fontello-icon-edit" %>
-                                        <%= link_to '', [:admin, parceiro], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-yellow btn-mini fontello-icon-trash" %></td>
+            </div> <%= link_to parceiro.nome, [:admin, parceiro], :class => 'text-left' %>
+                                        <span class="action">
+                                        <%= link_to '', edit_admin_parceiro_path(parceiro), class: "fontello-icon-edit", title: "Editar" %>
+                                        <%= link_to '', [:admin, parceiro], method: :delete, data: { confirm: 'Você tem certeza?' }, class: "fontello-icon-trash", title: "Excluir" %>
+                                        </span>
+                                        </td>
                                         
                                         <td><%= parceiro.tel %></td>
                                         <td><%= parceiro.email %></td>
