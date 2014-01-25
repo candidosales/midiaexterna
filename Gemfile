@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~>4.0.0'
+gem 'rails', '~>4.0.2'
 gem 'rails-i18n'
 
 # Bundle edge Rails instead:
@@ -15,6 +15,7 @@ gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
 
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
+gem 'paperclip', '3.4.2'
 #Permite cortar imagens ou redimensionar, só funciona se tiver instalado imagemagick
 gem 'rmagick'
 
