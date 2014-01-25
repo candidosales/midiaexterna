@@ -11,7 +11,7 @@ gem 'devise-i18n'
 gem 'cancan'
 
 #Mongo
-gem 'mongoid', github: 'mongoid/mongoid'
+gem 'mongoid', '4.0.0.alpha2'
 gem 'bson_ext'
 
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
@@ -45,7 +45,7 @@ end
 
 group :development do
   gem 'better_errors'
-  gem 'capistrano'
+  gem 'capistrano','2.15.5'
 end
 
 group :production do
