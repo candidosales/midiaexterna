@@ -45,7 +45,6 @@ GEM
     bootstrap-sass (3.0.3.0)
       sass (~> 3.2)
     bson (2.2.0)
-    bson_ext (1.5.1)
     builder (3.1.4)
     cancan (1.6.10)
     capistrano (2.15.5)
@@ -181,7 +180,6 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   bootstrap-sass
-  bson_ext
   cancan
   capistrano (= 2.15.5)
   devise!

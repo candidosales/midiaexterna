@@ -12,7 +12,7 @@ gem 'cancan'
 
 #Mongo
 gem 'mongoid', '4.0.0.alpha2'
-gem 'bson_ext'
+#gem 'bson_ext'
 
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 gem 'paperclip', '3.4.2'
